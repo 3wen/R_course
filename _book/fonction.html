@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>3 Fonction | Notes de cours de R - Version 2</title>
+  <meta name="description" content="3 Fonction | Notes de cours de R - Version 2" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="3 Fonction | Notes de cours de R - Version 2" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="3 Fonction | Notes de cours de R - Version 2" />
+  
+  
+  
+
+<meta name="author" content="Ewen Gallic" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="données.html"/>
+<link rel="next" href="boucles.html"/>
+<script src="libs/header-attrs-2.3/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="styles/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="avant-propos.html"><a href="avant-propos.html"><i class="fa fa-check"></i>Avant Propos</a>
+<ul>
+<li class="chapter" data-level="0.1" data-path="avant-propos.html"><a href="avant-propos.html#objectifs"><i class="fa fa-check"></i><b>0.1</b> Objectifs</a></li>
+<li class="chapter" data-level="0.2" data-path="avant-propos.html"><a href="avant-propos.html#à-qui-sadressent-ces-notes"><i class="fa fa-check"></i><b>0.2</b> À qui s’adressent ces notes ?</a></li>
+<li class="chapter" data-level="0.3" data-path="avant-propos.html"><a href="avant-propos.html#remerciements"><i class="fa fa-check"></i><b>0.3</b> Remerciements</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#historique"><i class="fa fa-check"></i><b>1.1</b> Historique</a></li>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#présentation-de-lespace-de-travail"><i class="fa fa-check"></i><b>1.2</b> Présentation de l’espace de travail</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="introduction.html"><a href="introduction.html#la-console-et-les-fenêtres-de-script"><i class="fa fa-check"></i><b>1.2.1</b> La console et les fenêtres de script</a></li>
+<li class="chapter" data-level="1.2.2" data-path="introduction.html"><a href="introduction.html#les-variables"><i class="fa fa-check"></i><b>1.2.2</b> Les variables</a></li>
+<li class="chapter" data-level="1.2.3" data-path="introduction.html"><a href="introduction.html#les-packages"><i class="fa fa-check"></i><b>1.2.3</b> Les <em>packages</em></a></li>
+<li class="chapter" data-level="1.2.4" data-path="introduction.html"><a href="introduction.html#laide"><i class="fa fa-check"></i><b>1.2.4</b> L’aide</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#un-environnement-de-développement-rstudio"><i class="fa fa-check"></i><b>1.3</b> Un environnement de développement : RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="données.html"><a href="données.html"><i class="fa fa-check"></i><b>2</b> Données</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="données.html"><a href="données.html#types-de-données"><i class="fa fa-check"></i><b>2.1</b> Types de données</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="données.html"><a href="données.html#donnees-mode"><i class="fa fa-check"></i><b>2.1.1</b> Mode</a></li>
+<li class="chapter" data-level="2.1.2" data-path="données.html"><a href="données.html#longueur"><i class="fa fa-check"></i><b>2.1.2</b> Longueur</a></li>
+<li class="chapter" data-level="2.1.3" data-path="données.html"><a href="données.html#lobjet-vide"><i class="fa fa-check"></i><b>2.1.3</b> L’objet vide</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="données.html"><a href="données.html#structures"><i class="fa fa-check"></i><b>2.2</b> Structure des données</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="données.html"><a href="données.html#structures-de-base"><i class="fa fa-check"></i><b>2.2.1</b> Structures de base</a></li>
+<li class="chapter" data-level="2.2.2" data-path="données.html"><a href="données.html#tableaux-de-données"><i class="fa fa-check"></i><b>2.2.2</b> Tableaux de données</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="données.html"><a href="données.html#importation-exportation-et-création-de-données"><i class="fa fa-check"></i><b>2.3</b> Importation, exportation et création de données</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="données.html"><a href="données.html#importation"><i class="fa fa-check"></i><b>2.3.1</b> Importation</a></li>
+<li class="chapter" data-level="2.3.2" data-path="données.html"><a href="données.html#exportation"><i class="fa fa-check"></i><b>2.3.2</b> Exportation</a></li>
+<li class="chapter" data-level="2.3.3" data-path="données.html"><a href="données.html#génération"><i class="fa fa-check"></i><b>2.3.3</b> Génération</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="données.html"><a href="données.html#manipulation-des-données"><i class="fa fa-check"></i><b>2.4</b> Manipulation des données</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="données.html"><a href="données.html#opérateurs"><i class="fa fa-check"></i><b>2.4.1</b> Opérateurs</a></li>
+<li class="chapter" data-level="2.4.2" data-path="données.html"><a href="données.html#manip-acces"><i class="fa fa-check"></i><b>2.4.2</b> Accès aux valeurs, modifications</a></li>
+<li class="chapter" data-level="2.4.3" data-path="données.html"><a href="données.html#chaînes-de-caractères"><i class="fa fa-check"></i><b>2.4.3</b> Chaînes de caractères</a></li>
+<li class="chapter" data-level="2.4.4" data-path="données.html"><a href="données.html#dates-1"><i class="fa fa-check"></i><b>2.4.4</b> Dates</a></li>
+<li class="chapter" data-level="2.4.5" data-path="données.html"><a href="données.html#calculs-matriciels"><i class="fa fa-check"></i><b>2.4.5</b> Calculs matriciels</a></li>
+<li class="chapter" data-level="2.4.6" data-path="données.html"><a href="données.html#tableaux_de_donnees"><i class="fa fa-check"></i><b>2.4.6</b> Tableaux de données</a></li>
+<li class="chapter" data-level="2.4.7" data-path="données.html"><a href="données.html#data-tables"><i class="fa fa-check"></i><b>2.4.7</b> Data tables</a></li>
+<li class="chapter" data-level="2.4.8" data-path="données.html"><a href="données.html#quelques-fonctions-utiles"><i class="fa fa-check"></i><b>2.4.8</b> Quelques fonctions utiles</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="données.html"><a href="données.html#exercices"><i class="fa fa-check"></i><b>2.5</b> Exercices</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="fonction.html"><a href="fonction.html"><i class="fa fa-check"></i><b>3</b> Fonction</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="fonction.html"><a href="fonction.html#définition"><i class="fa fa-check"></i><b>3.1</b> Définition</a></li>
+<li class="chapter" data-level="3.2" data-path="fonction.html"><a href="fonction.html#fonctions_structure"><i class="fa fa-check"></i><b>3.2</b> La structure d’une fonction</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="fonction.html"><a href="fonction.html#fonctions_structure_corps"><i class="fa fa-check"></i><b>3.2.1</b> Le corps d’une fonction</a></li>
+<li class="chapter" data-level="3.2.2" data-path="fonction.html"><a href="fonction.html#fonctions_structure_parametres"><i class="fa fa-check"></i><b>3.2.2</b> Les arguments d’une fonction</a></li>
+<li class="chapter" data-level="3.2.3" data-path="fonction.html"><a href="fonction.html#fonctions_structure_environnement"><i class="fa fa-check"></i><b>3.2.3</b> Portée des fonctions</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="fonction.html"><a href="fonction.html#documentation"><i class="fa fa-check"></i><b>3.3</b> Documentation</a></li>
+<li class="chapter" data-level="3.4" data-path="fonction.html"><a href="fonction.html#exercices-1"><i class="fa fa-check"></i><b>3.4</b> Exercices</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="boucles.html"><a href="boucles.html"><i class="fa fa-check"></i><b>4</b> Boucles et calculs vectoriels</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="boucles.html"><a href="boucles.html#boucles_boucles"><i class="fa fa-check"></i><b>4.1</b> Les boucles</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="boucles.html"><a href="boucles.html#boucles_boucles_while"><i class="fa fa-check"></i><b>4.1.1</b> Les boucles avec <code>while()</code></a></li>
+<li class="chapter" data-level="4.1.2" data-path="boucles.html"><a href="boucles.html#boucles_boucles_for"><i class="fa fa-check"></i><b>4.1.2</b> Les boucles avec <code>for()</code></a></li>
+<li class="chapter" data-level="4.1.3" data-path="boucles.html"><a href="boucles.html#boucles_boucles_conditions"><i class="fa fa-check"></i><b>4.1.3</b> Les conditions</a></li>
+<li class="chapter" data-level="4.1.4" data-path="boucles.html"><a href="boucles.html#boucles_boucles_repeat"><i class="fa fa-check"></i><b>4.1.4</b> L’instruction <code>repeat</code> … <code>break</code></a></li>
+<li class="chapter" data-level="4.1.5" data-path="boucles.html"><a href="boucles.html#boucles_boucles_next"><i class="fa fa-check"></i><b>4.1.5</b> L’instruction <code>next</code> … <code>break</code></a></li>
+<li class="chapter" data-level="4.1.6" data-path="boucles.html"><a href="boucles.html#boucles_boucles_progressbar"><i class="fa fa-check"></i><b>4.1.6</b> Barre de progression</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation"><i class="fa fa-check"></i><b>4.2</b> La vectorisation</a></li>
+<li class="chapter" data-level="4.3" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_purrr"><i class="fa fa-check"></i><b>4.3</b> Avec {<code>purrr</code>}</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="boucles.html"><a href="boucles.html#listes-ou-vecteurs-en-input"><i class="fa fa-check"></i><b>4.3.1</b> Listes ou vecteurs en <em>input</em></a></li>
+<li class="chapter" data-level="4.3.2" data-path="boucles.html"><a href="boucles.html#tibbles-en-input"><i class="fa fa-check"></i><b>4.3.2</b> Tibbles en <em>input</em></a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_plyr"><i class="fa fa-check"></i><b>4.4</b> Avec {<code>plyr</code>}</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_plyr_a_ply"><i class="fa fa-check"></i><b>4.4.1</b> Array en <em>input</em></a></li>
+<li class="chapter" data-level="4.4.2" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_plyr_d_ply"><i class="fa fa-check"></i><b>4.4.2</b> <em>Data frame</em> en <em>input</em></a></li>
+<li class="chapter" data-level="4.4.3" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_plyr_l_ply"><i class="fa fa-check"></i><b>4.4.3</b> <em>List</em> en <em>input</em></a></li>
+<li class="chapter" data-level="4.4.4" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_plyr_parallel"><i class="fa fa-check"></i><b>4.4.4</b> Calcul parallèle</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_apply"><i class="fa fa-check"></i><b>4.5</b> Avec {<code>base</code>}</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_apply_lapply"><i class="fa fa-check"></i><b>4.5.1</b> La fonction <code>lapply</code></a></li>
+<li class="chapter" data-level="4.5.2" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_apply_sapply"><i class="fa fa-check"></i><b>4.5.2</b> La fonction <code>sapply()</code></a></li>
+<li class="chapter" data-level="4.5.3" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_apply_vapply"><i class="fa fa-check"></i><b>4.5.3</b> La fonction <code>vapply</code></a></li>
+<li class="chapter" data-level="4.5.4" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_apply_apply"><i class="fa fa-check"></i><b>4.5.4</b> La fonction <code>apply()</code></a></li>
+<li class="chapter" data-level="4.5.5" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_apply_tapply"><i class="fa fa-check"></i><b>4.5.5</b> La fonction <code>tapply()</code></a></li>
+<li class="chapter" data-level="4.5.6" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_apply_mapply"><i class="fa fa-check"></i><b>4.5.6</b> La fonction <code>mapply()</code></a></li>
+<li class="chapter" data-level="4.5.7" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_Vectorize"><i class="fa fa-check"></i><b>4.5.7</b> La fonction <code>Vectorize()</code></a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="boucles.html"><a href="boucles.html#boucles_exercices"><i class="fa fa-check"></i><b>4.6</b> Exercices</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="graphiques.html"><a href="graphiques.html"><i class="fa fa-check"></i><b>5</b> Graphiques</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="graphiques.html"><a href="graphiques.html#graphiques_structure"><i class="fa fa-check"></i><b>5.1</b> Structure</a></li>
+<li class="chapter" data-level="5.2" data-path="graphiques.html"><a href="graphiques.html#graphiques_ggplot"><i class="fa fa-check"></i><b>5.2</b> Des graphiques élaborés avec <code>ggplot()</code></a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="graphiques.html"><a href="graphiques.html#graphiques_ggplot_aes"><i class="fa fa-check"></i><b>5.2.1</b> Arguments esthétiques</a></li>
+<li class="chapter" data-level="5.2.2" data-path="graphiques.html"><a href="graphiques.html#graphiques_ggplot_geom"><i class="fa fa-check"></i><b>5.2.2</b> Arguments géométriques (fonctions <code>geom_*</code>)</a></li>
+<li class="chapter" data-level="5.2.3" data-path="graphiques.html"><a href="graphiques.html#graphiques_ggplot_stat"><i class="fa fa-check"></i><b>5.2.3</b> Arguments statistiques</a></li>
+<li class="chapter" data-level="5.2.4" data-path="graphiques.html"><a href="graphiques.html#graphiques_ggplot_scale"><i class="fa fa-check"></i><b>5.2.4</b> Échelles (fonction <code>scale_*()</code>)</a></li>
+<li class="chapter" data-level="5.2.5" data-path="graphiques.html"><a href="graphiques.html#graphiques_ggplot_group"><i class="fa fa-check"></i><b>5.2.5</b> Groupes</a></li>
+<li class="chapter" data-level="5.2.6" data-path="graphiques.html"><a href="graphiques.html#graphiques_ggplot_annotations"><i class="fa fa-check"></i><b>5.2.6</b> Annotations</a></li>
+<li class="chapter" data-level="5.2.7" data-path="graphiques.html"><a href="graphiques.html#graphiques_ggplot_position"><i class="fa fa-check"></i><b>5.2.7</b> Positions</a></li>
+<li class="chapter" data-level="5.2.8" data-path="graphiques.html"><a href="graphiques.html#graphiques_ggplot_facet"><i class="fa fa-check"></i><b>5.2.8</b> Facettes</a></li>
+<li class="chapter" data-level="5.2.9" data-path="graphiques.html"><a href="graphiques.html#graphiques_ggplot_coord"><i class="fa fa-check"></i><b>5.2.9</b> Coordonnées</a></li>
+<li class="chapter" data-level="5.2.10" data-path="graphiques.html"><a href="graphiques.html#graphiques_ggplot_axes"><i class="fa fa-check"></i><b>5.2.10</b> Titres, axes, légendes</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="graphiques.html"><a href="graphiques.html#graphiques_enregistrement"><i class="fa fa-check"></i><b>5.3</b> Enregistrement des graphiques</a></li>
+<li class="chapter" data-level="5.4" data-path="graphiques.html"><a href="graphiques.html#graphiques_maps"><i class="fa fa-check"></i><b>5.4</b> Cartes</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="graphiques.html"><a href="graphiques.html#graphiques_maps_recup"><i class="fa fa-check"></i><b>5.4.1</b> Récupérer des cartes toutes faites</a></li>
+<li class="chapter" data-level="5.4.2" data-path="graphiques.html"><a href="graphiques.html#graphiques_maps_choroplethe"><i class="fa fa-check"></i><b>5.4.2</b> Carte choroplèthe</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="graphiques.html"><a href="graphiques.html#graphiques_3d"><i class="fa fa-check"></i><b>5.5</b> Graphiques en 3D</a></li>
+<li class="chapter" data-level="5.6" data-path="graphiques.html"><a href="graphiques.html#graphiques_exercices"><i class="fa fa-check"></i><b>5.6</b> Exercices</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="régressions-linéaires.html"><a href="régressions-linéaires.html"><i class="fa fa-check"></i><b>6</b> Régressions linéaires</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="régressions-linéaires.html"><a href="régressions-linéaires.html#rappels"><i class="fa fa-check"></i><b>6.1</b> Rappels</a></li>
+<li class="chapter" data-level="6.2" data-path="régressions-linéaires.html"><a href="régressions-linéaires.html#regressions_donnees"><i class="fa fa-check"></i><b>6.2</b> Données de l’exemple</a></li>
+<li class="chapter" data-level="6.3" data-path="régressions-linéaires.html"><a href="régressions-linéaires.html#estimation-des-paramètres"><i class="fa fa-check"></i><b>6.3</b> Estimation des paramètres {#}</a></li>
+<li class="chapter" data-level="6.4" data-path="régressions-linéaires.html"><a href="régressions-linéaires.html#regressions_lecture"><i class="fa fa-check"></i><b>6.4</b> Lecture des sorties</a></li>
+<li class="chapter" data-level="6.5" data-path="régressions-linéaires.html"><a href="régressions-linéaires.html#regressions_extractions"><i class="fa fa-check"></i><b>6.5</b> Extractions</a></li>
+<li class="chapter" data-level="6.6" data-path="régressions-linéaires.html"><a href="régressions-linéaires.html#regressions_facteurs"><i class="fa fa-check"></i><b>6.6</b> Variables catégorielles</a></li>
+<li class="chapter" data-level="6.7" data-path="régressions-linéaires.html"><a href="régressions-linéaires.html#regressions_tests"><i class="fa fa-check"></i><b>6.7</b> Tests de nullité des coefficients et intervalles de confiance</a></li>
+<li class="chapter" data-level="6.8" data-path="régressions-linéaires.html"><a href="régressions-linéaires.html#regressions_previsions"><i class="fa fa-check"></i><b>6.8</b> Prévisions</a></li>
+<li class="chapter" data-level="6.9" data-path="régressions-linéaires.html"><a href="régressions-linéaires.html#exercices-sur-la-régression"><i class="fa fa-check"></i><b>6.9</b> Exercices sur la régression</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="regex.html"><a href="regex.html"><i class="fa fa-check"></i><b>7</b> Expressions régulières</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="regex.html"><a href="regex.html#manip_regex_structure"><i class="fa fa-check"></i><b>7.1</b> Les recherches basiques</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="regex.html"><a href="regex.html#manip_regex_stringr_detect"><i class="fa fa-check"></i><b>7.1.1</b> Détection d’un motif avec <code>str_detect()</code></a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="regex.html"><a href="regex.html#manip_regex_classes"><i class="fa fa-check"></i><b>7.2</b> Les classes de caractères</a></li>
+<li class="chapter" data-level="7.3" data-path="regex.html"><a href="regex.html#manip_regex_quantificateurs"><i class="fa fa-check"></i><b>7.3</b> Les quantificateurs</a></li>
+<li class="chapter" data-level="7.4" data-path="regex.html"><a href="regex.html#manip_regex_metacaracteres"><i class="fa fa-check"></i><b>7.4</b> Les métacaractères</a></li>
+<li class="chapter" data-level="7.5" data-path="regex.html"><a href="regex.html#manip_regex_stringr"><i class="fa fa-check"></i><b>7.5</b> Quelques fonctions du <em>package</em> {<code>stringr</code>}</a>
+<ul>
+<li class="chapter" data-level="7.5.1" data-path="regex.html"><a href="regex.html#manip_regex_stringr_extract"><i class="fa fa-check"></i><b>7.5.1</b> La fonction <code>str_detect()</code></a></li>
+<li class="chapter" data-level="7.5.2" data-path="regex.html"><a href="regex.html#manip_regex_stringr_extract_all"><i class="fa fa-check"></i><b>7.5.2</b> La fonction <code>str_extract_all()</code></a></li>
+<li class="chapter" data-level="7.5.3" data-path="regex.html"><a href="regex.html#manip_regex_stringr_match"><i class="fa fa-check"></i><b>7.5.3</b> La fonction <code>str_match()</code></a></li>
+<li class="chapter" data-level="7.5.4" data-path="regex.html"><a href="regex.html#manip_regex_stringr_match_all"><i class="fa fa-check"></i><b>7.5.4</b> La fonction <code>str_match_all()</code></a></li>
+<li class="chapter" data-level="7.5.5" data-path="regex.html"><a href="regex.html#manip_regex_stringr_locate"><i class="fa fa-check"></i><b>7.5.5</b> La fonction <code>str_locate()</code></a></li>
+<li class="chapter" data-level="7.5.6" data-path="regex.html"><a href="regex.html#manip_regex_stringr_locate_all"><i class="fa fa-check"></i><b>7.5.6</b> La fonction <code>str_locate_all()</code></a></li>
+<li class="chapter" data-level="7.5.7" data-path="regex.html"><a href="regex.html#manip_regex_stringr_replace"><i class="fa fa-check"></i><b>7.5.7</b> La fonction <code>str_replace()</code></a></li>
+<li class="chapter" data-level="7.5.8" data-path="regex.html"><a href="regex.html#manip_regex_stringr_replace_all"><i class="fa fa-check"></i><b>7.5.8</b> La fonction <code>str_replace_all()</code></a></li>
+<li class="chapter" data-level="7.5.9" data-path="regex.html"><a href="regex.html#manip_regex_stringr_split"><i class="fa fa-check"></i><b>7.5.9</b> La fonction <code>str_split()</code></a></li>
+<li class="chapter" data-level="7.5.10" data-path="regex.html"><a href="regex.html#manip_regex_stringr_split_fixed"><i class="fa fa-check"></i><b>7.5.10</b> La fonction <code>str_string_fixed()</code></a></li>
+</ul></li>
+<li class="chapter" data-level="7.6" data-path="regex.html"><a href="regex.html#manip_regex_base"><i class="fa fa-check"></i><b>7.6</b> Quelques fonctions du <em>package</em> {<code>base</code>}</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="pour-aller-plus-loin.html"><a href="pour-aller-plus-loin.html"><i class="fa fa-check"></i><b>8</b> Pour aller plus loin</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="pour-aller-plus-loin.html"><a href="pour-aller-plus-loin.html#travailler-par-projets-avec-rstudio"><i class="fa fa-check"></i><b>8.1</b> Travailler par projets, avec RStudio</a></li>
+<li class="chapter" data-level="8.2" data-path="pour-aller-plus-loin.html"><a href="pour-aller-plus-loin.html#r-markdown"><i class="fa fa-check"></i><b>8.2</b> R Markdown</a></li>
+<li class="chapter" data-level="8.3" data-path="pour-aller-plus-loin.html"><a href="pour-aller-plus-loin.html#modification-de-plusieurs-colonnes"><i class="fa fa-check"></i><b>8.3</b> Modification de plusieurs colonnes</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="pense-bête.html"><a href="pense-bête.html"><i class="fa fa-check"></i><b>9</b> Pense-bête</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="pense-bête.html"><a href="pense-bête.html#installer-un-package-depuis-sa-source"><i class="fa fa-check"></i><b>9.1</b> Installer un <em>package</em> depuis sa source</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Notes de cours de R - Version 2</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="fonction" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> Fonction</h1>
+<p>Jusqu’ici, nous avons utilisé des fonctions incluses dans les <em>packages</em>, rédigées par d’autres personnes. Dans ce chapitre, nous allons voir comment créer ses propres fonctions.</p>
+<div id="définition" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Définition</h2>
+<p>La définition d’une nouvelle fonction suit la syntaxe suivante :</p>
+<div class="sourceCode" id="cb870"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb870-1"><a href="fonction.html#cb870-1" aria-hidden="true"></a>name &lt;-<span class="st"> </span><span class="cf">function</span>(arguments) expression</span></code></pre></div>
+<p>avec <code>name</code> le nom que l’on décide de donner à la fonction, qui doit respecter les règles de nommage abordés en Section <a href="introduction.html#introduction-espace-nommage">1.2.2.2</a>, <code>arguments</code> les arguments de la fonction, et <code>expression</code> le corps de la fonction. Comme on peut le remarquer, on utilise le symbole d’assignation : les fonctions sont des objets. L’appel de la fonction aura la syntaxe suivante :</p>
+<div class="sourceCode" id="cb871"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb871-1"><a href="fonction.html#cb871-1" aria-hidden="true"></a><span class="kw">name</span>()</span></code></pre></div>
+<p>Il suffit donc de rajouter des parenthèses au nom de la fonction pour l’appeler. En effet, <code>name</code> désigne l’objet <code>R</code>~qui contient la fonction qui est appelée à l’aide de l’expression <code>name()</code>.</p>
+<p>Par exemple, si on souhaite définir la fonction qui calcule le carré d’un nombre, voici ce que l’on peut écrire :</p>
+<div class="sourceCode" id="cb872"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb872-1"><a href="fonction.html#cb872-1" aria-hidden="true"></a>carre &lt;-<span class="st"> </span><span class="cf">function</span>(x) x<span class="op">^</span><span class="dv">2</span></span>
+<span id="cb872-2"><a href="fonction.html#cb872-2" aria-hidden="true"></a><span class="co"># Le carré de 2</span></span>
+<span id="cb872-3"><a href="fonction.html#cb872-3" aria-hidden="true"></a><span class="kw">carre</span>(<span class="dv">2</span>)</span></code></pre></div>
+<pre><code>## [1] 4</code></pre>
+<div class="sourceCode" id="cb874"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb874-1"><a href="fonction.html#cb874-1" aria-hidden="true"></a><span class="co"># Le carré de -3</span></span>
+<span id="cb874-2"><a href="fonction.html#cb874-2" aria-hidden="true"></a><span class="kw">carre</span>(<span class="op">-</span><span class="dv">3</span>)</span></code></pre></div>
+<pre><code>## [1] 9</code></pre>
+</div>
+<div id="fonctions_structure" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> La structure d’une fonction</h2>
+<p>Les fonctions en <code>R</code>, excepté les fonctions primitives du <em>package</em> {<code>base</code>}, sont composées de trois parties :</p>
+<ul>
+<li>une liste d’arguments ;</li>
+<li>un corps, contenant du code exécuté lors de l’appel à la fonction ;</li>
+<li>un environnement, qui définit l’endroit où sont stockées les variables.</li>
+</ul>
+<p>On peut accéder à ces trois parties (et les modifier) avec les fonctions <code>formals()</code> pour les arguments, <code>body()</code> pour le corps et <code>environment()</code> pour l’environnement.</p>
+<div id="fonctions_structure_corps" class="section level3" number="3.2.1">
+<h3><span class="header-section-number">3.2.1</span> Le corps d’une fonction</h3>
+<p>Dans le cas le plus simple, le corps d’une fonction est constitué d’une seule instruction. Si on désire en écrire plusieurs, il est nécessaire de les entourner par des accolades, pour réaliser un regroupement. Le résultat est la valeur de la dernière commande contenue dans le corps de la fonction.</p>
+<div class="sourceCode" id="cb876"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb876-1"><a href="fonction.html#cb876-1" aria-hidden="true"></a>f &lt;-<span class="st"> </span><span class="cf">function</span>(x) {</span>
+<span id="cb876-2"><a href="fonction.html#cb876-2" aria-hidden="true"></a>  x<span class="op">^</span><span class="dv">2</span></span>
+<span id="cb876-3"><a href="fonction.html#cb876-3" aria-hidden="true"></a>  y &lt;-<span class="st"> </span>x</span>
+<span id="cb876-4"><a href="fonction.html#cb876-4" aria-hidden="true"></a>  y</span>
+<span id="cb876-5"><a href="fonction.html#cb876-5" aria-hidden="true"></a>}</span>
+<span id="cb876-6"><a href="fonction.html#cb876-6" aria-hidden="true"></a><span class="kw">f</span>(<span class="dv">2</span>)</span></code></pre></div>
+<pre><code>## [1] 2</code></pre>
+<p>Si on souhaite retourner une valeur autre part qu’à la dernière ligne, il faut utiliser la fonction <code>return()</code> (utile lorsque l’on emploie des conditions, comme nous le verrons par la suite, ou pour prévenir d’une erreur).</p>
+<div class="sourceCode" id="cb878"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb878-1"><a href="fonction.html#cb878-1" aria-hidden="true"></a>f &lt;-<span class="st"> </span><span class="cf">function</span>(x) {</span>
+<span id="cb878-2"><a href="fonction.html#cb878-2" aria-hidden="true"></a>  <span class="kw">return</span>(x<span class="op">^</span><span class="dv">2</span>)</span>
+<span id="cb878-3"><a href="fonction.html#cb878-3" aria-hidden="true"></a>  <span class="co"># Un commentaire de dernière ligne</span></span>
+<span id="cb878-4"><a href="fonction.html#cb878-4" aria-hidden="true"></a>}</span>
+<span id="cb878-5"><a href="fonction.html#cb878-5" aria-hidden="true"></a><span class="kw">f</span>(<span class="dv">2</span>)</span></code></pre></div>
+<pre><code>## [1] 4</code></pre>
+
+<div class="remarque">
+Certains conseillent de ne pas utiliser la fonction <code>return()</code> en dernière ligne, dans la mesure où cela est d’une part inutile, et perturbe la lecture du code d’autre part.
+</div>
+<p>Il est possible de retourner une liste, pouvant contenir autant d’objet que l’on souhaite.</p>
+<div class="sourceCode" id="cb880"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb880-1"><a href="fonction.html#cb880-1" aria-hidden="true"></a><span class="co"># Calculer la moyenne et l&#39;écart-type pour un vecteur</span></span>
+<span id="cb880-2"><a href="fonction.html#cb880-2" aria-hidden="true"></a>stat_des &lt;-<span class="st"> </span><span class="cf">function</span>(x) {</span>
+<span id="cb880-3"><a href="fonction.html#cb880-3" aria-hidden="true"></a>  <span class="kw">list</span>(<span class="dt">moyenne =</span> <span class="kw">mean</span>(x), <span class="dt">ecart_type =</span> <span class="kw">sd</span>(x))</span>
+<span id="cb880-4"><a href="fonction.html#cb880-4" aria-hidden="true"></a>}</span>
+<span id="cb880-5"><a href="fonction.html#cb880-5" aria-hidden="true"></a>x &lt;-<span class="st"> </span><span class="kw">runif</span>(<span class="dv">10</span>)</span>
+<span id="cb880-6"><a href="fonction.html#cb880-6" aria-hidden="true"></a><span class="kw">stat_des</span>(x)</span></code></pre></div>
+<pre><code>## $moyenne
+## [1] 0.5863134
+## 
+## $ecart_type
+## [1] 0.2916762</code></pre>
+<p>Il est également possible de ne pas afficher dans la console le résultat de l’appel à une fonction à l’aide de la fonction <code>invisible()</code>.</p>
+<div class="sourceCode" id="cb882"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb882-1"><a href="fonction.html#cb882-1" aria-hidden="true"></a>stat_des_<span class="dv">2</span> &lt;-<span class="st"> </span><span class="cf">function</span>(x) {</span>
+<span id="cb882-2"><a href="fonction.html#cb882-2" aria-hidden="true"></a>  <span class="kw">invisible</span>(<span class="kw">list</span>(<span class="dt">moyenne =</span> <span class="kw">mean</span>(x), <span class="dt">ecart_type =</span> <span class="kw">sd</span>(x)))</span>
+<span id="cb882-3"><a href="fonction.html#cb882-3" aria-hidden="true"></a>}</span>
+<span id="cb882-4"><a href="fonction.html#cb882-4" aria-hidden="true"></a>x &lt;-<span class="st"> </span><span class="kw">runif</span>(<span class="dv">10</span>)</span>
+<span id="cb882-5"><a href="fonction.html#cb882-5" aria-hidden="true"></a><span class="kw">stat_des_2</span>(x)</span>
+<span id="cb882-6"><a href="fonction.html#cb882-6" aria-hidden="true"></a><span class="kw">str</span>(<span class="kw">stat_des_2</span>(x))</span></code></pre></div>
+<pre><code>## List of 2
+##  $ moyenne   : num 0.578
+##  $ ecart_type: num 0.242</code></pre>
+<div class="sourceCode" id="cb884"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb884-1"><a href="fonction.html#cb884-1" aria-hidden="true"></a><span class="kw">stat_des_2</span>(x)<span class="op">$</span>moyenne</span></code></pre></div>
+<pre><code>## [1] 0.5782581</code></pre>
+<p>On peut afficher malgré tout le résultat d’une fonction retournant un résultat invisible en ayant recours aux parenthèses.</p>
+<div class="sourceCode" id="cb886"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb886-1"><a href="fonction.html#cb886-1" aria-hidden="true"></a>(<span class="kw">stat_des_2</span>(x))</span></code></pre></div>
+<pre><code>## $moyenne
+## [1] 0.5782581
+## 
+## $ecart_type
+## [1] 0.2421681</code></pre>
+<p>Lorsque la dernière instruction est une assignation, nous sommes dans le cas d’un résultat invisible.</p>
+<div class="sourceCode" id="cb888"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb888-1"><a href="fonction.html#cb888-1" aria-hidden="true"></a>f &lt;-<span class="st"> </span><span class="cf">function</span>(x){</span>
+<span id="cb888-2"><a href="fonction.html#cb888-2" aria-hidden="true"></a>  res &lt;-<span class="st"> </span>x<span class="op">^</span><span class="dv">2</span></span>
+<span id="cb888-3"><a href="fonction.html#cb888-3" aria-hidden="true"></a>}</span>
+<span id="cb888-4"><a href="fonction.html#cb888-4" aria-hidden="true"></a><span class="kw">f</span>(<span class="dv">2</span>)</span>
+<span id="cb888-5"><a href="fonction.html#cb888-5" aria-hidden="true"></a>(<span class="kw">f</span>(<span class="dv">2</span>))</span></code></pre></div>
+<pre><code>## [1] 4</code></pre>
+<div class="sourceCode" id="cb890"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb890-1"><a href="fonction.html#cb890-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span><span class="kw">f</span>(<span class="dv">2</span>)</span>
+<span id="cb890-2"><a href="fonction.html#cb890-2" aria-hidden="true"></a>x</span></code></pre></div>
+<pre><code>## [1] 4</code></pre>
+</div>
+<div id="fonctions_structure_parametres" class="section level3" number="3.2.2">
+<h3><span class="header-section-number">3.2.2</span> Les arguments d’une fonction</h3>
+<p>Dans l’exemple de la fonction <code>carre()</code> que nous avons crée, nous avons renseigné un seul argument, appelé <code>x</code>. Si la fonction que l’on souhaite créer nécessite plusieurs arguments, il faut les séparer par une virgule.</p>
+<p>Considérons par exemple le problème suivant. Nous disposons d’une fonction de production <span class="math inline">\(Y(L,K, M)\)</span>, qui dépend du nombre de travailleurs <span class="math inline">\(L\)</span> et de la quantité de capital <span class="math inline">\(K\)</span>, et du matériel <span class="math inline">\(M\)</span>, telle que <span class="math inline">\(Y(L,K, M) = L^{0.3}K^{0.5}M^{2}\)</span>. Cette fonction pourra s’écrire, en <code>R</code> de la manière suivante :</p>
+<div class="sourceCode" id="cb892"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb892-1"><a href="fonction.html#cb892-1" aria-hidden="true"></a>production &lt;-<span class="st"> </span><span class="cf">function</span>(l, k, m) l<span class="op">^</span>(<span class="fl">0.3</span>) <span class="op">*</span><span class="st"> </span>k<span class="op">^</span>(<span class="fl">0.5</span>) <span class="op">*</span><span class="st"> </span>m<span class="op">^</span>(<span class="fl">0.2</span>)</span></code></pre></div>
+<div id="fonctions_structure_parametres_appel_noms" class="section level4" number="3.2.2.1">
+<h4><span class="header-section-number">3.2.2.1</span> Appel sans noms</h4>
+<p>En reprenant l’exemple précédent, si on nous donne <span class="math inline">\(L = 60\)</span> et <span class="math inline">\(K = 42\)</span> et <span class="math inline">\(M = 40\)</span>, on peut en déduire la production :</p>
+<div class="sourceCode" id="cb893"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb893-1"><a href="fonction.html#cb893-1" aria-hidden="true"></a><span class="kw">production</span>(<span class="dv">60</span>, <span class="dv">42</span>, <span class="dv">40</span>)</span></code></pre></div>
+<pre><code>## [1] 46.28945</code></pre>
+<p>On peut noter que le nom des arguments n’a pas été mentionné ici. Lors de l’appel de la fonction, <code>R</code> cherche d’abord s’il y a des arguments nommés afin de leur associer des valeurs. S’il n’y a pas de nom, il se basera sur la position donnée aux arguments.</p>
+<div class="sourceCode" id="cb895"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb895-1"><a href="fonction.html#cb895-1" aria-hidden="true"></a><span class="kw">production</span>(<span class="dt">k =</span> <span class="dv">42</span>, <span class="dt">m =</span> <span class="dv">40</span>, <span class="dt">l =</span> <span class="dv">60</span>)</span></code></pre></div>
+<pre><code>## [1] 46.28945</code></pre>
+<div class="sourceCode" id="cb897"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb897-1"><a href="fonction.html#cb897-1" aria-hidden="true"></a><span class="kw">production</span>(<span class="dt">k =</span> <span class="dv">42</span>, <span class="dv">60</span>, <span class="dv">40</span>)</span></code></pre></div>
+<pre><code>## [1] 46.28945</code></pre>
+</div>
+<div id="fonctions_structure_parametres_defaut" class="section level4" number="3.2.2.2">
+<h4><span class="header-section-number">3.2.2.2</span> Arguments effectifs</h4>
+<p>On peut, lors de la définition de la fonction, choisir de donner une valeur par défaut aux arguments. On parle d’argument <code>formel</code> pour désigner les arguments de la fonction (les variables utilisées dans le corps de la fonction) et d’argument <code>effectif</code> pour désigner la valeur que l’on souhaite donner à l’argument formel. Pour définir la valeur à donner à un argument formel, on utilise le symbol d’égalité. Lors de l’appel de la fonction, si l’utilisateur ne définit pas explicitement une valeur, celle par défaut sera affectée.</p>
+<div class="sourceCode" id="cb899"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb899-1"><a href="fonction.html#cb899-1" aria-hidden="true"></a><span class="co"># On propose de définir la valeur du capital à 42 par défaut</span></span>
+<span id="cb899-2"><a href="fonction.html#cb899-2" aria-hidden="true"></a>production_<span class="dv">2</span> &lt;-<span class="st"> </span><span class="cf">function</span>(l, m, <span class="dt">k =</span> <span class="dv">42</span>) l<span class="op">^</span>(<span class="fl">0.3</span>) <span class="op">*</span><span class="st"> </span>k<span class="op">^</span>(<span class="fl">0.5</span>) <span class="op">*</span><span class="st"> </span>m<span class="op">^</span>(<span class="fl">0.2</span>)</span>
+<span id="cb899-3"><a href="fonction.html#cb899-3" aria-hidden="true"></a><span class="kw">production_2</span>(<span class="dt">l =</span> <span class="dv">42</span>, <span class="dt">m =</span> <span class="dv">40</span>)</span></code></pre></div>
+<pre><code>## [1] 41.59216</code></pre>
+<div class="sourceCode" id="cb901"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb901-1"><a href="fonction.html#cb901-1" aria-hidden="true"></a><span class="kw">production_2</span>(<span class="dt">l =</span> <span class="dv">42</span>, <span class="dt">m =</span> <span class="dv">40</span>, <span class="dt">k =</span> <span class="dv">2</span>)</span></code></pre></div>
+<pre><code>## [1] 9.076152</code></pre>
+<p>Dans l’exemple précédent, l’argument auquel nous avons donné une valeur est placé en dernier. Ce n’est pas obligatoire, mais plus pratique, si le but recherché est de ne pas avoir à saisir l’argument effectif lors de l’appel de la fonction. De plus, si l’utiliateur ne nomme pas les arguments lors de l’appel, des problèmes liés à l’ordre peuvent apparaître…</p>
+<div class="sourceCode" id="cb903"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb903-1"><a href="fonction.html#cb903-1" aria-hidden="true"></a>production_<span class="dv">3</span> &lt;-<span class="st"> </span><span class="cf">function</span>(l, <span class="dt">k =</span> <span class="dv">42</span>, m) l<span class="op">^</span>(<span class="fl">0.3</span>) <span class="op">*</span><span class="st"> </span>k<span class="op">^</span>(<span class="fl">0.5</span>) <span class="op">*</span><span class="st"> </span>m<span class="op">^</span>(<span class="fl">0.2</span>)</span>
+<span id="cb903-2"><a href="fonction.html#cb903-2" aria-hidden="true"></a><span class="kw">production_3</span>(<span class="dt">l =</span> <span class="dv">42</span>, <span class="dt">m =</span> <span class="dv">40</span>)</span></code></pre></div>
+<pre><code>## [1] 41.59216</code></pre>
+<div class="sourceCode" id="cb905"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb905-1"><a href="fonction.html#cb905-1" aria-hidden="true"></a><span class="kw">production_3</span>(<span class="dv">42</span>, <span class="dv">40</span>)</span></code></pre></div>
+<pre><code>## Error in production_3(42, 40): l&#39;argument &quot;m&quot; est manquant, avec aucune valeur par défaut</code></pre>
+</div>
+<div id="fonctions_structure_parametres_appel_noms_partiels" class="section level4" number="3.2.2.3">
+<h4><span class="header-section-number">3.2.2.3</span> Appel avec des noms partiels</h4>
+<p>Par ailleurs, il est possible de ne pas saisir le nom complet des arguments lors de l’appel d’une fonction. En effet, on peut utiliser une abréviation du nom de l’argument. S’il existe une ambiguïté, <code>R</code> retourne un message d’erreur.</p>
+<div class="sourceCode" id="cb907"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb907-1"><a href="fonction.html#cb907-1" aria-hidden="true"></a>f &lt;-<span class="st"> </span><span class="cf">function</span>(premier, second, troisieme) premier <span class="op">+</span><span class="st"> </span>second <span class="op">+</span><span class="st"> </span>troisieme</span>
+<span id="cb907-2"><a href="fonction.html#cb907-2" aria-hidden="true"></a><span class="kw">f</span>(<span class="dt">p =</span> <span class="dv">1</span>, <span class="dt">s =</span> <span class="dv">2</span>, <span class="dt">t =</span> <span class="dv">3</span>)</span></code></pre></div>
+<pre><code>## [1] 6</code></pre>
+<div class="sourceCode" id="cb909"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb909-1"><a href="fonction.html#cb909-1" aria-hidden="true"></a><span class="co"># Problème d&#39;ambiguïté</span></span>
+<span id="cb909-2"><a href="fonction.html#cb909-2" aria-hidden="true"></a>f &lt;-<span class="st"> </span><span class="cf">function</span>(texte, nombre, nom) <span class="kw">print</span>(nom)</span>
+<span id="cb909-3"><a href="fonction.html#cb909-3" aria-hidden="true"></a><span class="kw">f</span>(<span class="st">&quot;hello&quot;</span>, <span class="dv">2</span>, <span class="dt">no =</span> <span class="dv">3</span>)</span></code></pre></div>
+<pre><code>## Error in f(&quot;hello&quot;, 2, no = 3): l&#39;argument 3 correspond à plusieurs arguments formels</code></pre>
+
+<div class="remarque">
+Si parmi les arguments de la fonction, figure l’argument <code>...</code> (plus de détails sont donnés dans la Section @ref(fonctions_structure_parametres_special), il n’est pas possible d’utiliser les abréviations.
+</div>
+</div>
+<div id="fonctions_structure_parametres_sans" class="section level4" number="3.2.2.4">
+<h4><span class="header-section-number">3.2.2.4</span> Fonctions sans arguments</h4>
+<p>On est parfois amené à créer des fonctions qui ne prennent pas d’argument. Il suffit alors de laisser la liste d’arguments formels vide.</p>
+<div class="sourceCode" id="cb911"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb911-1"><a href="fonction.html#cb911-1" aria-hidden="true"></a>f &lt;-<span class="st"> </span><span class="cf">function</span>() <span class="kw">sample</span>(letters, <span class="dt">size =</span> <span class="dv">10</span>, <span class="dt">replace =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb911-2"><a href="fonction.html#cb911-2" aria-hidden="true"></a><span class="kw">f</span>()</span></code></pre></div>
+<pre><code>##  [1] &quot;t&quot; &quot;b&quot; &quot;z&quot; &quot;q&quot; &quot;z&quot; &quot;j&quot; &quot;y&quot; &quot;i&quot; &quot;n&quot; &quot;z&quot;</code></pre>
+</div>
+<div id="fonctions_structure_parametres_special" class="section level4" number="3.2.2.5">
+<h4><span class="header-section-number">3.2.2.5</span> L’argument spécial <code>...</code></h4>
+<p>l’argument <code>...</code> que l’on peut voir dans certaines fonctions (essayez d’évaluer <code>sum</code> par exemple) sert à indiquer que la fonction peut admettre d’autres arguments que ceux qui ont été définis. Cela sert à, dans la plupart des cas, à passer un argument à une autre fonction contenue dans le corps de la fonction que l’on appelle.</p>
+<div class="sourceCode" id="cb913"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb913-1"><a href="fonction.html#cb913-1" aria-hidden="true"></a>f &lt;-<span class="st"> </span><span class="cf">function</span>(...) <span class="kw">names</span>(<span class="kw">list</span>(...))</span>
+<span id="cb913-2"><a href="fonction.html#cb913-2" aria-hidden="true"></a><span class="kw">f</span>(<span class="dt">premier =</span> <span class="dv">1</span>, <span class="dt">second =</span> <span class="dv">2</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;premier&quot; &quot;second&quot;</code></pre>
+<p>Attention toutefois, l’utilisation de <code>...</code> peut induire des soucis. En effet, un argument mal écrit sera passé à <code>...</code> et il n’y aura pas d’erreur de retournée. Par ailleurs, tous les arguments placés après <code>...</code> doivent être complètement nommés, pas abrégés.</p>
+<div class="sourceCode" id="cb915"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb915-1"><a href="fonction.html#cb915-1" aria-hidden="true"></a><span class="kw">sum</span>(<span class="dv">3</span>, <span class="ot">NA</span>, <span class="dv">4</span>, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
+<pre><code>## [1] 7</code></pre>
+<div class="sourceCode" id="cb917"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb917-1"><a href="fonction.html#cb917-1" aria-hidden="true"></a><span class="kw">sum</span>(<span class="dv">3</span>, <span class="ot">NA</span>, <span class="dv">4</span>, <span class="dt">an.rm =</span> <span class="ot">TRUE</span>) <span class="co"># Mauvaise écriture</span></span></code></pre></div>
+<pre><code>## [1] NA</code></pre>
+<div class="sourceCode" id="cb919"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb919-1"><a href="fonction.html#cb919-1" aria-hidden="true"></a><span class="kw">sum</span>(<span class="dv">3</span>, <span class="ot">NA</span>, <span class="dv">4</span>, <span class="dt">na =</span> <span class="ot">TRUE</span>)  <span class="co"># Abréviation</span></span></code></pre></div>
+<pre><code>## [1] NA</code></pre>
+</div>
+</div>
+<div id="fonctions_structure_environnement" class="section level3" number="3.2.3">
+<h3><span class="header-section-number">3.2.3</span> Portée des fonctions</h3>
+<p>Lorsque une fonction est appelée, le corps de cette fonction est interprété. Les variables ayant été définies dans le corps de la fonction ne vivent qu’à l’intérieur de celle-ci à moins d’avoir spécifié le contraire. On parle alors de <code>portée</code> des variables. Ainsi, une variable ayant une portée locale — c’est-à-dire vivant uniquement à l’intérieur du corps de la fonction — peut avoir le même nom qu’une variable globale — c’est à dire définie dans l’espace de travail de la session —, sans pour autant désigner le même objet, ou écraser cet objet.</p>
+<div class="sourceCode" id="cb921"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb921-1"><a href="fonction.html#cb921-1" aria-hidden="true"></a><span class="co"># Définition d&#39;une variable globale</span></span>
+<span id="cb921-2"><a href="fonction.html#cb921-2" aria-hidden="true"></a>valeur &lt;-<span class="st"> </span><span class="dv">1</span></span>
+<span id="cb921-3"><a href="fonction.html#cb921-3" aria-hidden="true"></a></span>
+<span id="cb921-4"><a href="fonction.html#cb921-4" aria-hidden="true"></a><span class="co"># Définition d&#39;une variable locale à la fonction f</span></span>
+<span id="cb921-5"><a href="fonction.html#cb921-5" aria-hidden="true"></a>f &lt;-<span class="st"> </span><span class="cf">function</span>(x){</span>
+<span id="cb921-6"><a href="fonction.html#cb921-6" aria-hidden="true"></a>  valeur &lt;-<span class="st"> </span><span class="dv">2</span></span>
+<span id="cb921-7"><a href="fonction.html#cb921-7" aria-hidden="true"></a>  nouvelle_valeur &lt;-<span class="st"> </span><span class="dv">3</span></span>
+<span id="cb921-8"><a href="fonction.html#cb921-8" aria-hidden="true"></a>  <span class="kw">print</span>(<span class="kw">paste0</span>(<span class="st">&quot;valeur vaut : &quot;</span>,valeur))</span>
+<span id="cb921-9"><a href="fonction.html#cb921-9" aria-hidden="true"></a>  <span class="kw">print</span>(<span class="kw">paste0</span>(<span class="st">&quot;nouvelle_valeur vaut : &quot;</span>,valeur))</span>
+<span id="cb921-10"><a href="fonction.html#cb921-10" aria-hidden="true"></a>  x <span class="op">+</span><span class="st"> </span>valeur</span>
+<span id="cb921-11"><a href="fonction.html#cb921-11" aria-hidden="true"></a>}</span>
+<span id="cb921-12"><a href="fonction.html#cb921-12" aria-hidden="true"></a></span>
+<span id="cb921-13"><a href="fonction.html#cb921-13" aria-hidden="true"></a><span class="kw">f</span>(<span class="dv">3</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;valeur vaut : 2&quot;
+## [1] &quot;nouvelle_valeur vaut : 2&quot;</code></pre>
+<pre><code>## [1] 5</code></pre>
+<div class="sourceCode" id="cb924"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb924-1"><a href="fonction.html#cb924-1" aria-hidden="true"></a><span class="co"># valeur n&#39;a pas été modifiée</span></span>
+<span id="cb924-2"><a href="fonction.html#cb924-2" aria-hidden="true"></a>valeur</span></code></pre></div>
+<pre><code>## [1] 1</code></pre>
+<div class="sourceCode" id="cb926"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb926-1"><a href="fonction.html#cb926-1" aria-hidden="true"></a><span class="co"># nouvelle_valeur n&#39;existe pas en dehors de f()</span></span>
+<span id="cb926-2"><a href="fonction.html#cb926-2" aria-hidden="true"></a>nouvelle_valeur</span></code></pre></div>
+<pre><code>## Error in eval(expr, envir, enclos): objet &#39;nouvelle_valeur&#39; introuvable</code></pre>
+<p>Sans trop rentrer trop dans les détails, il semble important de connaître quelques principes à propos de la portée des variables. Les variables sont définies dans des environnements, qui sont embriqués les uns dans les autres. Si une variable n’est pas définie dans le corps d’une fonction, <code>R</code> ira chercher dans un environnement parent.</p>
+<div class="sourceCode" id="cb928"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb928-1"><a href="fonction.html#cb928-1" aria-hidden="true"></a>valeur &lt;-<span class="st"> </span><span class="dv">1</span></span>
+<span id="cb928-2"><a href="fonction.html#cb928-2" aria-hidden="true"></a>f &lt;-<span class="st"> </span><span class="cf">function</span>(x){</span>
+<span id="cb928-3"><a href="fonction.html#cb928-3" aria-hidden="true"></a>  x <span class="op">+</span><span class="st"> </span>valeur</span>
+<span id="cb928-4"><a href="fonction.html#cb928-4" aria-hidden="true"></a>}</span>
+<span id="cb928-5"><a href="fonction.html#cb928-5" aria-hidden="true"></a><span class="kw">f</span>(<span class="dv">2</span>)</span></code></pre></div>
+<pre><code>## [1] 3</code></pre>
+<p>Si on définit une fonction à l’intérieur d’une autre fonction, et qu’on appelle une variable non définie dans le corps de cette fonction, <code>R</code> ira chercher dans l’environnement directement supérieur. S’il ne trouve pas, il ira chercher dans l’environnement encore supérieur, et ainsi de suite.</p>
+<div class="sourceCode" id="cb930"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb930-1"><a href="fonction.html#cb930-1" aria-hidden="true"></a><span class="co"># La variable valeur n&#39;est pas définie dans g(). R va alors chercher dans f().</span></span>
+<span id="cb930-2"><a href="fonction.html#cb930-2" aria-hidden="true"></a>valeur &lt;-<span class="st"> </span><span class="dv">1</span></span>
+<span id="cb930-3"><a href="fonction.html#cb930-3" aria-hidden="true"></a>f &lt;-<span class="st"> </span><span class="cf">function</span>(){</span>
+<span id="cb930-4"><a href="fonction.html#cb930-4" aria-hidden="true"></a>  valeur &lt;-<span class="st"> </span><span class="dv">2</span></span>
+<span id="cb930-5"><a href="fonction.html#cb930-5" aria-hidden="true"></a>  g &lt;-<span class="st"> </span><span class="cf">function</span>(x){</span>
+<span id="cb930-6"><a href="fonction.html#cb930-6" aria-hidden="true"></a>    x <span class="op">+</span><span class="st"> </span>valeur</span>
+<span id="cb930-7"><a href="fonction.html#cb930-7" aria-hidden="true"></a>  }</span>
+<span id="cb930-8"><a href="fonction.html#cb930-8" aria-hidden="true"></a>  <span class="kw">g</span>(<span class="dv">2</span>)</span>
+<span id="cb930-9"><a href="fonction.html#cb930-9" aria-hidden="true"></a>}</span>
+<span id="cb930-10"><a href="fonction.html#cb930-10" aria-hidden="true"></a><span class="kw">f</span>()</span></code></pre></div>
+<pre><code>## [1] 4</code></pre>
+<div class="sourceCode" id="cb932"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb932-1"><a href="fonction.html#cb932-1" aria-hidden="true"></a><span class="co"># La variable valeur n&#39;est définie ni dans g() ni dans f()</span></span>
+<span id="cb932-2"><a href="fonction.html#cb932-2" aria-hidden="true"></a><span class="co"># mais dans l&#39;environnement supérieur (global, ici)</span></span>
+<span id="cb932-3"><a href="fonction.html#cb932-3" aria-hidden="true"></a>valeur &lt;-<span class="st"> </span><span class="dv">1</span></span>
+<span id="cb932-4"><a href="fonction.html#cb932-4" aria-hidden="true"></a>f &lt;-<span class="st"> </span><span class="cf">function</span>(){</span>
+<span id="cb932-5"><a href="fonction.html#cb932-5" aria-hidden="true"></a>  g &lt;-<span class="st"> </span><span class="cf">function</span>(x){</span>
+<span id="cb932-6"><a href="fonction.html#cb932-6" aria-hidden="true"></a>    x <span class="op">+</span><span class="st"> </span>valeur</span>
+<span id="cb932-7"><a href="fonction.html#cb932-7" aria-hidden="true"></a>  }</span>
+<span id="cb932-8"><a href="fonction.html#cb932-8" aria-hidden="true"></a>  <span class="kw">g</span>(<span class="dv">2</span>)</span>
+<span id="cb932-9"><a href="fonction.html#cb932-9" aria-hidden="true"></a>}</span>
+<span id="cb932-10"><a href="fonction.html#cb932-10" aria-hidden="true"></a><span class="kw">f</span>()</span></code></pre></div>
+<pre><code>## [1] 3</code></pre>
+<p>Si on définit une variable dans le corps d’une fonction et que l’on souhaite qu’elle soit accessible dans l’environnement global, on peut utiliser le symbole <code>&lt;&lt;-</code>, ou bien la fonction <code>assign</code> (pratique peu recommandable).</p>
+<div class="sourceCode" id="cb934"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb934-1"><a href="fonction.html#cb934-1" aria-hidden="true"></a><span class="kw">rm</span>(x)</span>
+<span id="cb934-2"><a href="fonction.html#cb934-2" aria-hidden="true"></a>f &lt;-<span class="st"> </span><span class="cf">function</span>(x){</span>
+<span id="cb934-3"><a href="fonction.html#cb934-3" aria-hidden="true"></a>  x &lt;&lt;-<span class="st"> </span>x <span class="op">+</span><span class="st"> </span><span class="dv">1</span></span>
+<span id="cb934-4"><a href="fonction.html#cb934-4" aria-hidden="true"></a>}</span>
+<span id="cb934-5"><a href="fonction.html#cb934-5" aria-hidden="true"></a><span class="kw">f</span>(<span class="dv">1</span>)</span>
+<span id="cb934-6"><a href="fonction.html#cb934-6" aria-hidden="true"></a>x</span></code></pre></div>
+<pre><code>## [1] 2</code></pre>
+<div class="sourceCode" id="cb936"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb936-1"><a href="fonction.html#cb936-1" aria-hidden="true"></a><span class="co"># En utilisant assign</span></span>
+<span id="cb936-2"><a href="fonction.html#cb936-2" aria-hidden="true"></a><span class="kw">rm</span>(x)</span>
+<span id="cb936-3"><a href="fonction.html#cb936-3" aria-hidden="true"></a>f &lt;-<span class="st"> </span><span class="cf">function</span>(x){</span>
+<span id="cb936-4"><a href="fonction.html#cb936-4" aria-hidden="true"></a>  <span class="co"># envir = .GlobalEnv signifique que l&#39;on veut définir dans l&#39;environnement global</span></span>
+<span id="cb936-5"><a href="fonction.html#cb936-5" aria-hidden="true"></a>  <span class="kw">assign</span>(<span class="dt">x =</span> <span class="st">&quot;x&quot;</span>, <span class="dt">value =</span> x <span class="op">+</span><span class="st"> </span><span class="dv">1</span>, <span class="dt">envir =</span> .GlobalEnv)</span>
+<span id="cb936-6"><a href="fonction.html#cb936-6" aria-hidden="true"></a>}</span>
+<span id="cb936-7"><a href="fonction.html#cb936-7" aria-hidden="true"></a><span class="kw">f</span>(<span class="dv">4</span>)</span>
+<span id="cb936-8"><a href="fonction.html#cb936-8" aria-hidden="true"></a>x</span></code></pre></div>
+<pre><code>## [1] 5</code></pre>
+</div>
+</div>
+<div id="documentation" class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> Documentation</h2>
+<p>Lorsque l’on créé une fonction, il est important de bien la documenter afin de rendre son utilisation facilitée (par les autres mais également par soi-même).</p>
+<p>Il existe un <em>package</em> ({<code>roxygen2</code>}) qui permet de réaliser des fichiers de documentation des fonctions que l’on souhaite exporter au sein d’un <em>package</em>. Ces notes de cours ne visent pas à expliquer comment créer un <em>package</em>. Toutefois, il n’est pas inutile d’emprunter une technique utilisée par de nombreuses personnes qui créent des <em>packages</em> pour am&amp;liorer la documuentation de nos fonctions dans nos codes.</p>
+<p>L’idée est d’ajouter un commentaire <code>roxygen</code> en pré-fixe de la définition de la fonction. Ce commentaire s’écrit à l’aide d’un croisillon suivi d’un guillemet simple : <code>#'</code>. Reprenons la fonction de production, et ajoutons un commentaire <code>roxygen</code> précisant :</p>
+<ul>
+<li>ce que fait la fonction</li>
+<li>quels sont ses arguments (<code>@param</code>)</li>
+<li>ce qu’elle retourne (<code>@return</code>)</li>
+<li>deux exemples d’utilisation</li>
+</ul>
+<div class="sourceCode" id="cb938"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb938-1"><a href="fonction.html#cb938-1" aria-hidden="true"></a><span class="co">#&#39; Calcul le niveau de production</span></span>
+<span id="cb938-2"><a href="fonction.html#cb938-2" aria-hidden="true"></a><span class="co">#&#39; </span></span>
+<span id="cb938-3"><a href="fonction.html#cb938-3" aria-hidden="true"></a><span class="co">#&#39; @param l montant de force de travail</span></span>
+<span id="cb938-4"><a href="fonction.html#cb938-4" aria-hidden="true"></a><span class="co">#&#39; @param k montant de capital</span></span>
+<span id="cb938-5"><a href="fonction.html#cb938-5" aria-hidden="true"></a><span class="co">#&#39; @param m montant de matériel</span></span>
+<span id="cb938-6"><a href="fonction.html#cb938-6" aria-hidden="true"></a><span class="co">#&#39; @return Le niveau de production d&#39;une Cobb-Doublas, fonction de \code{l}, \code{k} et \code{m}</span></span>
+<span id="cb938-7"><a href="fonction.html#cb938-7" aria-hidden="true"></a><span class="co">#&#39; @examples</span></span>
+<span id="cb938-8"><a href="fonction.html#cb938-8" aria-hidden="true"></a><span class="co">#&#39; production(k = 42, l = 60, m = 40)</span></span>
+<span id="cb938-9"><a href="fonction.html#cb938-9" aria-hidden="true"></a><span class="co">#&#39; production(40, 20, 60)</span></span>
+<span id="cb938-10"><a href="fonction.html#cb938-10" aria-hidden="true"></a>production &lt;-<span class="st"> </span><span class="cf">function</span>(l, k, m) {</span>
+<span id="cb938-11"><a href="fonction.html#cb938-11" aria-hidden="true"></a>  l<span class="op">^</span>(<span class="fl">0.3</span>) <span class="op">*</span><span class="st"> </span>k<span class="op">^</span>(<span class="fl">0.5</span>) <span class="op">*</span><span class="st"> </span>m<span class="op">^</span>(<span class="fl">0.2</span>)</span>
+<span id="cb938-12"><a href="fonction.html#cb938-12" aria-hidden="true"></a>}</span></code></pre></div>
+<p>Plus de détails sont disponibles au <a href="(https://r-pkgs.org/man.html)">chapitre 10</a> du livre “R Packages” d’Hadley Wickham et Jennifer Bryan.</p>
+</div>
+<div id="exercices-1" class="section level2" number="3.4">
+<h2><span class="header-section-number">3.4</span> Exercices</h2>
+<!-- % ======== % -->
+<!-- % EXERCICE % -->
+<!-- % ======== % -->
+
+<div class="exframe">
+<p><strong>Exercice 1. Création de fonctions</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>Créer une fonction nommée <code>somme_n_entiers</code> qui retourne la somme des <span class="math inline">\(n\)</span> premiers entiers. Son seul argument sera <code>n</code> ;
+2.Utiliser la fonction <code>somme_n_entiers()</code> pour calculer la somme des 100 premiers entiers ;</p></li>
+<li><p>Terminer la fonction par l’assignation du résultat dans un objet nommé <code>res</code>, puis évaluer l’expression suivante : <code>somme_n_entiers(100)</code>. Que peut-on constater ?</p></li>
+<li><p>Charger les données <code>diamonds</code> du <em>package</em> {<code>ggplot2</code>} dans la session <code>R</code> à l’aide de l’expression suivante : <code>data(diamonds, package = "ggplot2")</code></p>
+<p>Créer une fonction que l’on appellera <code>prix_diamant_coupe()</code>, qui, quand on lui fournit la valeur de la coupe du diamant sous forme de caractères (<code>Fair</code>, <code>Good</code>, <code>Very Good</code>, <code>Premium</code>, ou <code>Ideal</code>), filtre le tableau de données <code>diamonds</code> pour ne conserver que les observations pour lesquelles la coupe du diamant correspond à celle indiquée en argument, et retourne le prix moyen des observations de la base ainsi filtrée ;</p></li>
+<li><p>Reprendre le code de la fonction précédente, et le modifier pour retourner à présent une liste de deux éléments : (i) la moyenne des prix et (ii) l’écart-type ;</p></li>
+<li><p>Créer la fonction <code>resume_diamant_coupe_couleur()</code>, qui pour une coupe et une couleur de diamant données, retourne une liste de deux éléments : (i) la moyenne des prix et (ii) l’écart-type pour les diamants possédant cette coupe et cette couleur (la couleur du diamant est une lettre allant de <code>J</code> pour les pires, à <code>D</code> pour les meilleurs). Tester la fonction pour la coupe <code>Fair</code> et la couleur <code>D</code> ;</p></li>
+<li><p>Reprendre la fonction précédente, et lui attribuer la valeur <code>D</code> (en chaîne de caractères) comme argument effectif pour la couleur. Tester alors l’appel à la fonction en précisant :</p></li>
+</ol>
+<ul>
+<li>la coupe <code>Fair</code> et la couleur <code>D</code>,</li>
+<li>la coupe <code>Fair</code>, mais pas d’argument pour la couleur,</li>
+<li>la coupe <code>Fair</code> et la couleur <code>E</code>,</li>
+<li>la coupe non précisée mais la couleur <code>E</code> ;</li>
+</ul>
+</div>
+<!-- % ======== % -->
+<!-- % EXERCICE % -->
+<!-- % ======== % -->
+
+<div class="exframe">
+<p><strong>Exercice 2. Création de fonctions</strong></p>
+<p>Supposons que les adresses e-mails des étudiant•e•s d’Aix-Marseille Université sont constituées de la manière suivante : le prénom et le nom de famille séparés par un point, le symbole arobase et le enfin le nom de domaine. Supposons de plus que les étudiant•e•s ont un seul prénom, et aucune particule au nom de famille. La syntaxe des adresses e-mail est donc comme suit : .</p>
+<p><code>emails &lt;- c("marie.petit@etu.univ-amu.fr",               "jean.dupont@etu.univ-amu.fr",               "isabelle.martinez@etu.univ-amu.fr",               "pierre.moreau@etu.univ-amu.fr")</code></p>
+<p>Créer une fonction, qui à partir d’<strong>une seule</strong> adresse e-mail d’un•e étudiant•e, retourne un tibble contenant trois variables : le prénom, le nom et l’adresse e-mail de cet•te étudiant•e.</p>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="données.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="boucles.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf"],
+"toc": {
+"collapse": "subsubsection",
+"scroll_highlight": true
+},
+"toc_depth": 5,
+"search": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

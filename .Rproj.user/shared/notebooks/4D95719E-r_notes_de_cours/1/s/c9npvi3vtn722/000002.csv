@@ -1,0 +1,8 @@
+"0","str_c(""Hello"", c(""Julien-Yacine"", ""Sonia"", ""Victor""))
+"
+"1","[1]"
+"1"," ""HelloJulien-Yacine"""
+"1"," ""HelloSonia""        "
+"1"," ""HelloVictor""       "
+"1","
+"

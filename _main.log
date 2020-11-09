@@ -1,0 +1,2738 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.10.18)  19 OCT 2020 23:01
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**_main.tex
+(./_main.tex
+LaTeX2e <2020-10-01> patch level 1
+L3 programming layer <2020-10-05> xparse <2020-03-03> (/Users/ewengallic/Librar
+y/TinyTeX/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2020/04/10 v1.4m Standard LaTeX document class
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/base/bk11.clo
+File: bk11.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+)
+\c@part=\count175
+\c@chapter=\count176
+\c@section=\count177
+\c@subsection=\count178
+\c@subsubsection=\count179
+\c@paragraph=\count180
+\c@subparagraph=\count181
+\c@figure=\count182
+\c@table=\count183
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/lm/lmodern.sty
+Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks15
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2020/09/23 v2.17i AMS math features
+\@mathmargin=\skip49
+For additional information on amsmath, use the `?' option.
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks16
+\ex@=\dimen139
+)) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen140
+) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count184
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count185
+\leftroot@=\count186
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count187
+\DOTSCASE@=\count188
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box47
+\strutbox@=\box48
+\big@size=\dimen141
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count189
+\c@MaxMatrixCols=\count190
+\dotsspace@=\muskip16
+\c@parentequation=\count191
+\dspbrk@lvl=\count192
+\tag@help=\toks17
+\row@=\count193
+\column@=\count194
+\maxfields@=\count195
+\andhelp@=\toks18
+\eqnshift@=\dimen142
+\alignsep@=\dimen143
+\tagshift@=\dimen144
+\tagwidth@=\dimen145
+\totwidth@=\dimen146
+\lineht@=\dimen147
+\@envbody=\toks19
+\multlinegap=\skip50
+\multlinetaggap=\skip51
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2923.
+LaTeX Info: Redefining \] on input line 2924.
+) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/iftex/ifxetex.sty
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+)) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2020/08/10 v2.0s Standard LaTeX package
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
+2.
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmr.fd
+File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2020/08/01 v1.3d Input encoding file
+\inpenc@prehook=\toks21
+\inpenc@posthook=\toks22
+) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/xcolor/svgnam.def
+File: svgnam.def 2016/05/11 v2.12 Predefined colors according to SVG 1.1 (UK)
+) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/xcolor/x11nam.def
+File: x11nam.def 2016/05/11 v2.12 Predefined colors according to Unix/X11 (UK)
+)) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.st
+y
+Package: hyperref 2020-05-15 v7.00e Hypertext links for LaTeX
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pdftexcmds/pdftexcmds
+.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/infwarerr/infwarerr.s
+ty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks23
+)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.s
+ty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/kvdefinekeys/kvdefine
+keys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pdfescape/pdfescape.s
+ty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/letltxmacro/letltxmacro
+.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+)
+\@linkdim=\dimen148
+\Hy@linkcounter=\count196
+\Hy@pagecounter=\count197
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2020-05-15 v7.00e Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count198
+Package hyperref Info: Option `unicode' set `true' on input line 4338.
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2020-05-15 v7.00e Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4464.
+Package hyperref Info: Link nesting OFF on input line 4469.
+Package hyperref Info: Hyper index ON on input line 4472.
+Package hyperref Info: Plain pages OFF on input line 4479.
+Package hyperref Info: Backreferencing OFF on input line 4484.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4717.
+\c@Hy@tempcnt=\count199
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5076.
+\XeTeXLinkMargin=\dimen149
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/bigintcalc/bigintcalc
+.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count266
+\Field@Width=\dimen150
+\Fld@charsize=\dimen151
+Package hyperref Info: Hyper figures OFF on input line 6347.
+Package hyperref Info: Link nesting OFF on input line 6352.
+Package hyperref Info: Hyper index ON on input line 6355.
+Package hyperref Info: backreferencing OFF on input line 6362.
+Package hyperref Info: Link coloring OFF on input line 6367.
+Package hyperref Info: Link coloring with OCG OFF on input line 6372.
+Package hyperref Info: PDF/A mode OFF on input line 6377.
+LaTeX Info: Redefining \ref on input line 6417.
+LaTeX Info: Redefining \pageref on input line 6421.
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi packa
+ge
+with kernel methods
+)
+\Hy@abspage=\count267
+\c@Item=\count268
+\c@Hfootnote=\count269
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2020-05-15 v7.00e Hyperref driver for pdfTeX
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
+e
+with kernel methods
+)
+\Fld@listcount=\count270
+\c@bookmark@seq@number=\count271
+
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rerunfil
+echeck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/uniquecounter/uniquec
+ounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+)
+\Hy@SectionHShift=\skip52
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 49.
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2020/05/03 v3.6 verbatim text (tvz,hv)
+\FV@CodeLineNo=\count272
+\FV@InFile=\read2
+\FV@TabBox=\box49
+\c@FancyVerbLine=\count273
+\FV@StepNumber=\count274
+\FV@OutFile=\write3
+) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip53
+\fb@frw=\dimen152
+\fb@frh=\dimen153
+\FrameRule=\dimen154
+\FrameSep=\dimen155
+) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
+\LTleft=\skip54
+\LTright=\skip55
+\LTpre=\skip56
+\LTpost=\skip57
+\LTchunksize=\count275
+\LTcapwidth=\dimen156
+\LT@head=\box50
+\LT@firsthead=\box51
+\LT@foot=\box52
+\LT@lastfoot=\box53
+\LT@cols=\count276
+\LT@rows=\count277
+\c@LT@tables=\count278
+\c@LT@chunks=\count279
+\LT@p@ftn=\toks24
+) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen157
+\lightrulewidth=\dimen158
+\cmidrulewidth=\dimen159
+\belowrulesep=\dimen160
+\belowbottomsep=\dimen161
+\aboverulesep=\dimen162
+\abovetopsep=\dimen163
+\cmidrulesep=\dimen164
+\cmidrulekern=\dimen165
+\defaultaddspace=\dimen166
+\@cmidla=\count280
+\@cmidlb=\count281
+\@aboverulesep=\dimen167
+\@belowrulesep=\dimen168
+\@thisruleclass=\count282
+\@lastruleclass=\count283
+\@thisrulewidth=\dimen169
+) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count284
+) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/mdwtools/footnote.sty
+Package: footnote 1997/01/28 1.13 Save footnotes around boxes
+\fn@notes=\box54
+\fn@width=\dimen170
+) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/graphics-cfg/graphics.c
+fg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+)
+\Gin@req@height=\dimen171
+\Gin@req@width=\dimen172
+) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/etex-pkg/etex.sty
+Package: etex 2016/08/01 v2.7 eTeX basic definition package (PEB,DPC)
+
+Package etex Warning: Extended allocation already in use.
+(etex)                etex.sty code will not be used.
+(etex)                To force etex package to load, add
+(etex)                \RequirePackage{etex}
+(etex)                at the start of the document.
+
+) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2020/08/10 v2.0s Standard LaTeX package
+) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2020/10/06 3.50 The Babel package
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2020/10/06 3.50 Babel common definitions
+\babel@savecnt=\count285
+\U@D=\dimen173
+\l@babelnohyphens=\language6
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read3
+)
+\bbl@dirlevel=\count286
+
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/babel-english/english
+.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+Package babel Info: \l@british = using hyphenrules for english
+(babel)             (\language0) on input line 82.
+Package babel Info: \l@UKenglish = using hyphenrules for english
+(babel)             (\language0) on input line 83.
+Package babel Info: \l@canadian = using hyphenrules for english
+(babel)             (\language0) on input line 102.
+Package babel Info: \l@australian = using hyphenrules for english
+(babel)             (\language0) on input line 105.
+Package babel Info: \l@newzealand = using hyphenrules for english
+(babel)             (\language0) on input line 108.
+)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/babel-french/french.l
+df
+Language: french 2020/10/10 v3.5l French support from the babel system
+Package babel Info: \l@acadian = using hyphenrules for french
+(babel)             (\language3) on input line 91.
+Package babel Info: \l@canadien = using hyphenrules for french
+(babel)             (\language3) on input line 92.
+\FB@nonchar=\count287
+Package babel Info: Making : an active character on input line 430.
+Package babel Info: Making ; an active character on input line 431.
+Package babel Info: Making ! an active character on input line 432.
+Package babel Info: Making ? an active character on input line 433.
+\FBguill@level=\count288
+\FBold@everypar=\toks25
+\FB@Mht=\dimen174
+\mc@charclass=\count289
+\mc@charfam=\count290
+\mc@charslot=\count291
+\std@mcc=\count292
+\dec@mcc=\count293
+\listindentFB=\dimen175
+\descindentFB=\dimen176
+\labelindentFB=\dimen177
+\labelwidthFB=\dimen178
+\leftmarginFB=\dimen179
+\parindentFFN=\dimen180
+\FBfnindent=\dimen181
+)) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/carlisle/scalefnt.st
+y) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks26
+\thm@bodyfont=\toks27
+\thm@headfont=\toks28
+\thm@notefont=\toks29
+\thm@headpunct=\toks30
+\thm@preskip=\skip58
+\thm@postskip=\skip59
+\thm@headsep=\skip60
+\dth@everypar=\toks31
+) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amscd.sty
+Package: amscd 2017/04/14 v2.1 AMS Commutative Diagrams
+\athelp@=\toks32
+\minaw@=\dimen182
+\bigaw@=\dimen183
+\minCDarrowwidth=\dimen184
+) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup6
+) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count294
+\Gm@cntv=\count295
+\c@Gm@tempcnt=\count296
+\Gm@bindingoffset=\dimen185
+\Gm@wd@mp=\dimen186
+\Gm@odd@mp=\dimen187
+\Gm@even@mp=\dimen188
+\Gm@layoutwidth=\dimen189
+\Gm@layoutheight=\dimen190
+\Gm@layouthoffset=\dimen191
+\Gm@layoutvoffset=\dimen192
+\Gm@dimlist=\toks33
+) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
+s
+\f@nch@headwidth=\skip61
+\f@nch@O@elh=\skip62
+\f@nch@O@erh=\skip63
+\f@nch@O@olh=\skip64
+\f@nch@O@orh=\skip65
+\f@nch@O@elf=\skip66
+\f@nch@O@erf=\skip67
+\f@nch@O@olf=\skip68
+\f@nch@O@orf=\skip69
+) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/lastpage/lastpage.sty
+Package: lastpage 2015/03/29 v1.2m Refers to last page's name (HMM; JPG)
+) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count297
+\float@exts=\toks34
+\float@box=\box55
+\@float@everytoks=\toks35
+\@floatcapt=\box56
+) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/animate/animate.sty
+Package: animate 2020/10/07 PDF & SVG animations from files and inline graphics
+
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/xkeyval/xkeyval.tex (
+/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks36
+\XKV@tempa@toks=\toks37
+)
+\XKV@depth=\count298
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+)) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/oberdiek/ifdraft.sty
+Package: ifdraft 2016/05/16 v1.4 Detect class options draft and final (HO)
+) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count299
+\calc@Bcount=\count300
+\calc@Adimen=\dimen193
+\calc@Bdimen=\dimen194
+\calc@Askip=\skip70
+\calc@Bskip=\skip71
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count301
+\calc@Cskip=\skip72
+) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/zref/zref-abspage.sty
+Package: zref-abspage 2020-07-03 v2.32 Module abspage for zref (HO)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/zref/zref-base.sty
+Package: zref-base 2020-07-03 v2.32 Module base for zref (HO)
+Package zref Info: New property list: main on input line 764.
+Package zref Info: New property: default on input line 765.
+Package zref Info: New property: page on input line 766.
+)
+\c@abspage=\count302
+Package zref Info: New property: abspage on input line 66.
+) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/media9/pdfbase.sty (/
+Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2020-10-05 L3 programming layer (loader) 
+
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdf
+tex.def
+File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
+\l__kernel_color_stack_int=\count303
+\l__pdf_internal_box=\box57
+))
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/l3packages/l3keys2e/l3k
+eys2e.sty
+Package: l3keys2e 2020-10-05 LaTeX2e option processing using LaTeX3 keys
+)
+Package: pdfbase 2020/09/10 v0.44 driver independent access to low-level PDF fe
+atures
+\g_pbs_page_int=\count304
+\g_pbs_oc_int=\count305
+) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/ocgx2/ocgbase.sty
+Package: ocgbase 2019/11/04 v0.17 support package for ocgx2.sty
+\g_ocgbase_nd_int=\count306
+)
+\@anim@box=\box58
+\@anim@measbox=\box59
+\@anim@tmpdima=\dimen195
+\@anim@tmpdimb=\dimen196
+\@anim@num=\count307
+\@anim@curframe=\count308
+\@anim@curframe@zb=\count309
+\@anim@resizeflags=\count310
+\@anim@skipfram=\count311
+\@anim@mulframecnt=\count312
+\@anim@@tmlnfile=\read4
+\@anim@tmpcnt=\count313
+\c@@anim@ltxcnt=\count314
+\@anim@curlayer=\count315
+\@anim@lineno=\count316
+\@anim@curfield=\count317
+\@anim@@resizeflags=\count318
+) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/09/12 v3.5b Customizing captions (AR)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/09/17 v2.1b caption3 kernel (AR)
+\captionmargin=\dimen197
+\captionmargin@=\dimen198
+\captionwidth=\dimen199
+\caption@tempdima=\dimen256
+\caption@indent=\dimen257
+\caption@parindent=\dimen258
+\caption@hangindent=\dimen259
+Package caption Info: Standard document class detected.
+Package caption Info: french babel package is loaded.
+)
+\c@caption@flags=\count319
+\c@continuedfloat=\count320
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: longtable package is loaded.
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2020/05/30 v1.4b longtable captions (AR)
+))
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip73
+\subfigcapskip=\skip74
+\subfigcaptopadj=\dimen260
+\subfigbottomskip=\skip75
+\subfigcapmargin=\dimen261
+\subfiglabelskip=\skip76
+\c@subfigure=\count321
+\c@lofdepth=\count322
+\c@subtable=\count323
+\c@lotdepth=\count324
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/subfigure/subfigure.cfg
+)
+\subfig@top=\skip77
+\subfig@bottom=\skip78
+) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
+\multirow@colwidth=\skip79
+\multirow@cntb=\count325
+\multirow@dima=\skip80
+\bigstrutjot=\dimen262
+)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/pgf/frontendlayer/tikz.
+sty (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/pgf/basiclayer/pgf.
+sty
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/pgf/utilities/pgfrcs.st
+y
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfutil
+-common.tex
+\pgfutil@everybye=\toks38
+\pgfutil@tempdima=\dimen263
+\pgfutil@tempdimb=\dimen264
+
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfutil
+-common-lists.tex))
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfutil
+-latex.def
+\pgfutil@abb=\box60
+)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfrcs.
+code.tex (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/pgf.revi
+sion.tex)
+Package: pgfrcs 2020/10/01 v3.1.6a (3.1.6a)
+))
+Package: pgf 2020/10/01 v3.1.6a (3.1.6a)
+
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.
+sty
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.
+sty
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/pgfsy
+s.code.tex
+Package: pgfsys 2020/10/01 v3.1.6a (3.1.6a)
+
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfkeys
+.code.tex
+\pgfkeys@pathtoks=\toks39
+\pgfkeys@temptoks=\toks40
+
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfkeys
+filtered.code.tex
+\pgfkeys@tmptoks=\toks41
+))
+\pgf@x=\dimen265
+\pgf@y=\dimen266
+\pgf@xa=\dimen267
+\pgf@ya=\dimen268
+\pgf@xb=\dimen269
+\pgf@yb=\dimen270
+\pgf@xc=\dimen271
+\pgf@yc=\dimen272
+\pgf@xd=\dimen273
+\pgf@yd=\dimen274
+\w@pgf@writea=\write4
+\r@pgf@reada=\read5
+\c@pgf@counta=\count326
+\c@pgf@countb=\count327
+\c@pgf@countc=\count328
+\c@pgf@countd=\count329
+\t@pgf@toka=\toks42
+\t@pgf@tokb=\toks43
+\t@pgf@tokc=\toks44
+\pgf@sys@id@count=\count330
+
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/pgf.c
+fg
+File: pgf.cfg 2020/10/01 v3.1.6a (3.1.6a)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/pgfsy
+s-pdftex.def
+File: pgfsys-pdftex.def 2020/10/01 v3.1.6a (3.1.6a)
+
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/pgfsy
+s-common-pdf.def
+File: pgfsys-common-pdf.def 2020/10/01 v3.1.6a (3.1.6a)
+)))
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/pgfsy
+ssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+\pgfsyssoftpath@smallbuffer@items=\count331
+\pgfsyssoftpath@bigbuffer@items=\count332
+)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/pgfsy
+sprotocol.code.tex
+File: pgfsysprotocol.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+))
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcor
+e.code.tex
+Package: pgfcore 2020/10/01 v3.1.6a (3.1.6a)
+
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmath.code
+.tex
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathcalc.
+code.tex
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathutil.
+code.tex)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathparse
+r.code.tex
+\pgfmath@dimen=\dimen275
+\pgfmath@count=\count333
+\pgfmath@box=\box61
+\pgfmath@toks=\toks45
+\pgfmath@stack@operand=\toks46
+\pgfmath@stack@operation=\toks47
+)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunct
+ions.code.tex
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunct
+ions.basic.code.tex)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunct
+ions.trigonometric.code.tex)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunct
+ions.random.code.tex)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunct
+ions.comparison.code.tex)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunct
+ions.base.code.tex)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunct
+ions.round.code.tex)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunct
+ions.misc.code.tex)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunct
+ions.integerarithmetics.code.tex)))
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfloat
+.code.tex
+\c@pgfmathroundto@lastzeros=\count334
+))
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfint.code.
+tex)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcor
+epoints.code.tex
+File: pgfcorepoints.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+\pgf@picminx=\dimen276
+\pgf@picmaxx=\dimen277
+\pgf@picminy=\dimen278
+\pgf@picmaxy=\dimen279
+\pgf@pathminx=\dimen280
+\pgf@pathmaxx=\dimen281
+\pgf@pathminy=\dimen282
+\pgf@pathmaxy=\dimen283
+\pgf@xx=\dimen284
+\pgf@xy=\dimen285
+\pgf@yx=\dimen286
+\pgf@yy=\dimen287
+\pgf@zx=\dimen288
+\pgf@zy=\dimen289
+)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcor
+epathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+\pgf@path@lastx=\dimen290
+\pgf@path@lasty=\dimen291
+)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcor
+epathusage.code.tex
+File: pgfcorepathusage.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+\pgf@shorten@end@additional=\dimen292
+\pgf@shorten@start@additional=\dimen293
+)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcor
+escopes.code.tex
+File: pgfcorescopes.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+\pgfpic=\box62
+\pgf@hbox=\box63
+\pgf@layerbox@main=\box64
+\pgf@picture@serial@count=\count335
+)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcor
+egraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+\pgflinewidth=\dimen294
+)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcor
+etransformations.code.tex
+File: pgfcoretransformations.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+\pgf@pt@x=\dimen295
+\pgf@pt@y=\dimen296
+\pgf@pt@temp=\dimen297
+)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcor
+equick.code.tex
+File: pgfcorequick.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcor
+eobjects.code.tex
+File: pgfcoreobjects.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcor
+epathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcor
+earrows.code.tex
+File: pgfcorearrows.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+\pgfarrowsep=\dimen298
+)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcor
+eshade.code.tex
+File: pgfcoreshade.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+\pgf@max=\dimen299
+\pgf@sys@shading@range@num=\count336
+\pgf@shadingcount=\count337
+)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcor
+eimage.code.tex
+File: pgfcoreimage.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcor
+eexternal.code.tex
+File: pgfcoreexternal.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+\pgfexternal@startupbox=\box65
+))
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcor
+elayers.code.tex
+File: pgfcorelayers.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcor
+etransparency.code.tex
+File: pgfcoretransparency.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcor
+epatterns.code.tex
+File: pgfcorepatterns.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcor
+erdf.code.tex
+File: pgfcorerdf.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+)))
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/modules/pgfmodule
+shapes.code.tex
+File: pgfmoduleshapes.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+\pgfnodeparttextbox=\box66
+)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/modules/pgfmodule
+plot.code.tex
+File: pgfmoduleplot.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/pgf/compatibility/pgfco
+mp-version-0-65.sty
+Package: pgfcomp-version-0-65 2020/10/01 v3.1.6a (3.1.6a)
+\pgf@nodesepstart=\dimen300
+\pgf@nodesepend=\dimen301
+)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/pgf/compatibility/pgfco
+mp-version-1-18.sty
+Package: pgfcomp-version-1-18 2020/10/01 v3.1.6a (3.1.6a)
+))
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/pgf/utilities/pgffor.st
+y
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/pgf/utilities/pgfkeys.s
+ty
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfkeys
+.code.tex)) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/pgf/math/pg
+fmath.sty
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmath.code
+.tex))
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgffor.
+code.tex
+Package: pgffor 2020/10/01 v3.1.6a (3.1.6a)
+
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmath.code
+.tex)
+\pgffor@iter=\dimen302
+\pgffor@skip=\dimen303
+\pgffor@stack=\toks48
+\pgffor@toks=\toks49
+))
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tik
+z/tikz.code.tex
+Package: tikz 2020/10/01 v3.1.6a (3.1.6a)
+
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/libraries/pgflibr
+aryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+\pgf@plot@mark@count=\count338
+\pgfplotmarksize=\dimen304
+)
+\tikz@lastx=\dimen305
+\tikz@lasty=\dimen306
+\tikz@lastxsaved=\dimen307
+\tikz@lastysaved=\dimen308
+\tikz@lastmovetox=\dimen309
+\tikz@lastmovetoy=\dimen310
+\tikzleveldistance=\dimen311
+\tikzsiblingdistance=\dimen312
+\tikz@figbox=\box67
+\tikz@figbox@bg=\box68
+\tikz@tempbox=\box69
+\tikz@tempbox@bg=\box70
+\tikztreelevel=\count339
+\tikznumberofchildren=\count340
+\tikznumberofcurrentchild=\count341
+\tikz@fig@count=\count342
+
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/modules/pgfmodule
+matrix.code.tex
+File: pgfmodulematrix.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+\pgfmatrixcurrentrow=\count343
+\pgfmatrixcurrentcolumn=\count344
+\pgf@matrix@numberofcolumns=\count345
+)
+\tikz@expandcount=\count346
+
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tik
+z/libraries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+)))
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+Package: adjustbox 2020/08/19 v1.3 Adjusting TeX boxes (trim, clip, ...)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/adjustbox/trimclip.st
+y
+Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
+
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/collectbox/collectbox.s
+ty
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box71
+)
+\tc@llx=\dimen313
+\tc@lly=\dimen314
+\tc@urx=\dimen315
+\tc@ury=\dimen316
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
+File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen317
+\adjbox@Height=\dimen318
+\adjbox@Depth=\dimen319
+\adjbox@Totalheight=\dimen320
+\adjbox@pwidth=\dimen321
+\adjbox@pheight=\dimen322
+\adjbox@pdepth=\dimen323
+\adjbox@ptotalheight=\dimen324
+)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tik
+z/libraries/tikzlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/libraries/pgflibr
+aryarrows.code.tex
+File: pgflibraryarrows.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+\arrowsize=\dimen325
+))
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tik
+z/libraries/tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tik
+z/libraries/tikzlibrarymindmap.code.tex
+File: tikzlibrarymindmap.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tik
+z/libraries/tikzlibrarytrees.code.tex
+File: tikzlibrarytrees.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tik
+z/libraries/tikzlibrarydecorations.code.tex
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/modules/pgfmodule
+decorations.code.tex
+\pgfdecoratedcompleteddistance=\dimen326
+\pgfdecoratedremainingdistance=\dimen327
+\pgfdecoratedinputsegmentcompleteddistance=\dimen328
+\pgfdecoratedinputsegmentremainingdistance=\dimen329
+\pgf@decorate@distancetomove=\dimen330
+\pgf@decorate@repeatstate=\count347
+\pgfdecorationsegmentamplitude=\dimen331
+\pgfdecorationsegmentlength=\dimen332
+)
+\tikz@lib@dec@box=\box72
+))
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tik
+z/libraries/tikzlibraryshadows.code.tex
+File: tikzlibraryshadows.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tik
+z/libraries/tikzlibraryfadings.code.tex
+File: tikzlibraryfadings.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/libraries/pgflibr
+aryfadings.code.tex
+File: pgflibraryfadings.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+)))
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tik
+z/libraries/tikzlibrarybackgrounds.code.tex
+File: tikzlibrarybackgrounds.code.tex 2020/10/01 v3.1.6a (3.1.6a)
+\pgf@layerbox@background=\box73
+\pgf@layerboxsaved@background=\box74
+) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/tools/array.sty
+Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
+\col@sep=\dimen333
+\ar@mcellbox=\box75
+\extrarowheight=\dimen334
+\NC@list=\toks50
+\extratabsurround=\skip81
+\backup@length=\skip82
+\ar@cellbox=\box76
+)
+\TX@col@width=\dimen335
+\TX@old@table=\dimen336
+\TX@old@col=\dimen337
+\TX@target=\dimen338
+\TX@delta=\dimen339
+\TX@cols=\count348
+\TX@ftn=\toks51
+) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2020-07-07 v1.5u LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks52
+\verbatim@line=\toks53
+\verbatim@in@stream=\read6
+) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count349
+\lst@gtempboxa=\box77
+\lst@token=\toks54
+\lst@length=\count350
+\lst@currlwidth=\dimen340
+\lst@column=\count351
+\lst@pos=\count352
+\lst@lostspace=\dimen341
+\lst@width=\dimen342
+\lst@newlines=\count353
+\lst@lineno=\count354
+\lst@maxwidth=\dimen343
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count355
+\lst@skipnumbers=\count356
+\lst@framebox=\box78
+) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/doublestroke/dsfont.sty
+Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
+)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/tocbibind/tocbibind.sty
+Package: tocbibind 2010/10/13 v1.5k extra ToC listings
+Package tocbibind Info: The document has chapter divisions on input line 50.
+
+Package tocbibind Note: Using chapter style headings, unless overridden.
+
+) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip83
+\bibsep=\skip84
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count357
+) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/natbib/bibentry.sty
+Package: bibentry 2007/10/30 1.5 (PWD)
+) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
+\everycr=\toks55
+\minrowclearance=\skip85
+) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/ragged2e/ragged2e.sty
+Package: ragged2e 2019/07/28 v2.2 ragged2e Package (MS)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/ms/everysel.sty
+Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
+)
+\CenteringLeftskip=\skip86
+\RaggedLeftLeftskip=\skip87
+\RaggedRightLeftskip=\skip88
+\CenteringRightskip=\skip89
+\RaggedLeftRightskip=\skip90
+\RaggedRightRightskip=\skip91
+\CenteringParfillskip=\skip92
+\RaggedLeftParfillskip=\skip93
+\RaggedRightParfillskip=\skip94
+\JustifyingParfillskip=\skip95
+\CenteringParindent=\skip96
+\RaggedLeftParindent=\skip97
+\RaggedRightParindent=\skip98
+\JustifyingParindent=\skip99
+)
+\c@theorem=\count358
+\c@hypothese=\count359
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/tools/enumerate.sty
+Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
+\@enLab=\toks56
+) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/cases/cases.sty
+Package: cases 2020/03/29 ver 3.2
+\numc@numwid=\dimen344
+)
+\c@rmarque=\count360
+\c@exmp=\count361
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/eurosym/eurosym.sty
+Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
+\@eurobox=\box79
+) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/was/gensymb.sty
+Package: gensymb 2003/07/02 v1.0 (WaS)
+) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/graphics/rotating.sty
+Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
+\c@r@tfl@t=\count362
+\rotFPtop=\skip100
+\rotFPbot=\skip101
+\rot@float@box=\box80
+\rot@mess@toks=\toks57
+) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
+\c@tracingmulticols=\count363
+\mult@box=\box81
+\multicol@leftmargin=\dimen345
+\c@unbalance=\count364
+\c@collectmore=\count365
+\doublecol@number=\count366
+\multicoltolerance=\count367
+\multicolpretolerance=\count368
+\full@width=\dimen346
+\page@free=\dimen347
+\premulticols=\dimen348
+\postmulticols=\dimen349
+\multicolsep=\skip102
+\multicolbaselineskip=\skip103
+\partial@page=\box82
+\last@line=\box83
+\maxbalancingoverflow=\dimen350
+\mult@rightbox=\box84
+\mult@grightbox=\box85
+\mult@gfirstbox=\box86
+\mult@firstbox=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\@tempa=\box98
+\@tempa=\box99
+\@tempa=\box100
+\@tempa=\box101
+\@tempa=\box102
+\@tempa=\box103
+\@tempa=\box104
+\@tempa=\box105
+\@tempa=\box106
+\@tempa=\box107
+\@tempa=\box108
+\@tempa=\box109
+\@tempa=\box110
+\@tempa=\box111
+\@tempa=\box112
+\@tempa=\box113
+\@tempa=\box114
+\@tempa=\box115
+\@tempa=\box116
+\@tempa=\box117
+\@tempa=\box118
+\@tempa=\box119
+\@tempa=\box120
+\@tempa=\box121
+\@tempa=\box122
+\@tempa=\box123
+\@tempa=\box124
+\c@minrows=\count369
+\c@columnbadness=\count370
+\c@finalcolumnbadness=\count371
+\last@try=\dimen351
+\multicolovershoot=\dimen352
+\multicolundershoot=\dimen353
+\mult@nat@firstbox=\box125
+\colbreak@box=\box126
+\mc@col@check@num=\count372
+) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/mathtools/empheq.sty
+Package: empheq 2017/03/31 v2.15 Emphasizing equations
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2017/03/31 v1.3 programming setup (MH)
+)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2020/03/24 v1.24 mathematical typesetting tools
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
+\g_MT_multlinerow_int=\count373
+\l_MT_multwidth_dim=\dimen354
+\origjot=\skip104
+\l_MT_shortvdotswithinadjustabove_dim=\dimen355
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen356
+\l_MT_above_intertext_sep=\dimen357
+\l_MT_below_intertext_sep=\dimen358
+\l_MT_above_shortintertext_sep=\dimen359
+\l_MT_below_shortintertext_sep=\dimen360
+\xmathstrut@box=\box127
+\xmathstrut@dim=\dimen361
+)
+\l_EQ_equationtype_int=\count374
+\l_EQ_alignmentmode_int=\count375
+\l_EQ_totalwidth_dim=\dimen362
+\l_EQ_displaywidth_dim=\dimen363
+\l_EQ_temp_linewidth_dim=\dimen364
+\l_EQ_linewidth_dim=\dimen365
+\EmphEqdelimitershortfall=\dimen366
+\EmphEqdelimiterfactor=\count376
+\g_EQ_toptag_height_dim=\dimen367
+\g_EQ_bottomtag_depth_dim=\dimen368
+\g_EQ_toprow_height_dim=\dimen369
+\g_EQ_bottomrow_depth_dim=\dimen370
+\g_EQ_widesttag_dim=\dimen371
+\EQ_mathdisplay_box=\box128
+\EQ_tag_box=\box129
+\g_EQ_temprow_int=\count377
+) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+) (/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/tools/dcolumn.sty
+Package: dcolumn 2014/10/28 v1.06 decimal alignment package (DPC)
+)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
+Package: tcolorbox 2020/10/09 version 4.42 text color boxes
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/environ/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/trimspaces/trimspaces.s
+ty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+))
+\tcb@titlebox=\box130
+\tcb@upperbox=\box131
+\tcb@lowerbox=\box132
+\tcb@phantombox=\box133
+\c@tcbbreakpart=\count378
+\c@tcblayer=\count379
+\c@tcolorbox@number=\count380
+\tcb@temp=\box134
+\tcb@temp=\box135
+\tcb@temp=\box136
+\tcb@temp=\box137
+\tcb@out=\write5
+\tcb@record@out=\write6
+)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/l3packages/xparse/xpars
+e.sty
+Package: xparse 2020-10-05 L3 Experimental document command parser
+
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/l3packages/xparse/xpars
+e-generic.tex))
+\c@countremarque=\count381
+\c@exercices=\count382
+
+Package hyperref Warning: Option `bookmarks' has already been used,
+(hyperref)                setting the option has no effect on input line 417.
+
+Package hyperref Info: Option `unicode' set `false' on input line 417.
+Package hyperref Info: Option `pdftoolbar' set `true' on input line 417.
+Package hyperref Info: Option `pdfmenubar' set `true' on input line 417.
+
+Package hyperref Warning: Unexpected value `false pdfnewwindow=true'
+(hyperref)                of option `pdffitwindow' instead of
+(hyperref)                `true' or 'false' on input line 417.
+
+Package hyperref Info: Option `colorlinks' set `true' on input line 417.
+\cslhangindent=\skip105
+(./_main.aux)
+\openout1 = `_main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 432.
+LaTeX Font Info:    ... okay on input line 432.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 432.
+LaTeX Font Info:    ... okay on input line 432.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 432.
+LaTeX Font Info:    ... okay on input line 432.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 432.
+LaTeX Font Info:    ... okay on input line 432.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 432.
+LaTeX Font Info:    ... okay on input line 432.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 432.
+LaTeX Font Info:    ... okay on input line 432.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 432.
+LaTeX Font Info:    ... okay on input line 432.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 432.
+LaTeX Font Info:    ... okay on input line 432.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 432.
+LaTeX Font Info:    ... okay on input line 432.
+
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-b
+ase.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/latexconfig/epstopdf-sy
+s.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package hyperref Info: Link coloring ON on input line 432.
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/generic/gettitlestring/gettit
+lestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count383
+)
+LaTeX Info: Redefining \ref on input line 432.
+LaTeX Info: Redefining \pageref on input line 432.
+LaTeX Info: Redefining \nameref on input line 432.
+(./_main.out) (./_main.out)
+\@outlinefile=\write7
+\openout7 = `_main.out'.
+
+LaTeX Info: Redefining \degres on input line 432.
+LaTeX Info: Redefining \dots on input line 432.
+
+Package french.ldf Warning: Please load the "natbib" package
+(french.ldf)                BEFORE babel/french; reported on input line 432.
+
+Package french.ldf Info: Setting StandardEnumerateEnv=true for
+(french.ldf)             compatibility with enumerate package,
+(french.ldf)             reported on input line 432.
+LaTeX Info: Redefining \up on input line 432.
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(73.71613pt, 430.00462pt, 110.57425pt)
+* v-part:(T,H,B)=(95.39737pt, 556.47656pt, 143.09605pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=430.00462pt
+* \textheight=556.47656pt
+* \oddsidemargin=1.44614pt
+* \evensidemargin=38.30426pt
+* \topmargin=-8.74641pt
+* \headheight=12.0pt
+* \headsep=19.8738pt
+* \topskip=11.0pt
+* \footskip=27.46295pt
+* \marginparwidth=116.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package lastpage Info: Please have a look at the pageslts package at
+(lastpage)             https://www.ctan.org/pkg/pageslts
+(lastpage)             ! on input line 432.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: listings package is loaded.
+Package caption Info: rotating package is loaded.
+Package caption Info: subfigure package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\c@lstlisting=\count384
+ABD: EverySelectfont initializing macros
+LaTeX Info: Redefining \selectfont on input line 432.
+\symgns@font=\mathgroup7
+LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
+(Font)                  TS1/lmr/m/n --> TS1/lmr/b/n on input line 432.
+Package gensymb Info: Math companion symbols declared on input line 432.
+LaTeX Info: Redefining \degree on input line 432.
+LaTeX Info: Redefining \celsius on input line 432.
+Package gensymb Info: Using text companion symbols for \degree, \celsius and \p
+erthousand on input line 432.
+LaTeX Info: Redefining \ohm on input line 432.
+Package gensymb Info: Using \textohm for \ohm on input line 432.
+Package gensymb Info: Using \textmu for \micro on input line 432.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 4
+34.
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 4
+34.
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
+434.
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
+434.
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 434.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 434.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 434.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 434
+.
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 434
+.
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 43
+4.
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/jknapltx/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 4
+34.
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) [1
+
+
+{/Users/ewengallic/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+}] [2
+
+] (./_main.toc
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 5.
+[3]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 4
+0.
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) [4] [5] [6] [7] [8] [9])
+\tf@toc=\write8
+\openout8 = `_main.toc'.
+
+[10] (./_main.lot)
+\tf@lot=\write9
+\openout9 = `_main.lot'.
+
+[11
+
+] [12
+
+] (./_main.lof)
+\tf@lof=\write10
+\openout10 = `_main.lof'.
+
+[13] [14
+
+]
+Underfull \vbox (badness 2426) has occurred while \output is active []
+
+[15] [16]
+Chapitre 1.
+[17
+
+]
+<figs/fenetre_script.png, id=1210, 662.475pt x 638.385pt>
+File: figs/fenetre_script.png Graphic file (type png)
+<use figs/fenetre_script.png>
+Package pdftex.def Info: figs/fenetre_script.png  used on input line 489.
+(pdftex.def)             Requested size: 171.99683pt x 165.74239pt.
+<figs/console_mac.png, id=1212, 664.4825pt x 637.38126pt>
+File: figs/console_mac.png Graphic file (type png)
+<use figs/console_mac.png>
+Package pdftex.def Info: figs/console_mac.png  used on input line 498.
+(pdftex.def)             Requested size: 172.00093pt x 164.9858pt.
+[18 <./figs/fenetre_script.png> <./figs/console_mac.png>]
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 509.
+[19]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 580.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 580.
+[20]
+LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
+631.
+(/Users/ewengallic/Library/TinyTeX/texmf-dist/tex/latex/lm/ts1lmtt.fd
+File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) [21]
+<figs/require_vs_library.png, id=1275, 459.7175pt x 218.8175pt>
+File: figs/require_vs_library.png Graphic file (type png)
+<use figs/require_vs_library.png>
+Package pdftex.def Info: figs/require_vs_library.png  used on input line 685.
+(pdftex.def)             Requested size: 172.00081pt x 81.86937pt.
+[22 <./figs/require_vs_library.png>] [23]
+<figs/rstudio.png, id=1307, 1557.82pt x 992.70876pt>
+File: figs/rstudio.png Graphic file (type png)
+<use figs/rstudio.png>
+Package pdftex.def Info: figs/rstudio.png  used on input line 750.
+(pdftex.def)             Requested size: 429.98256pt x 274.00307pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[24] [25 <./figs/rstudio.png>] [26
+
+]
+Chapitre 2.
+[27] [28] [29] [30] [31] [32] [33] [34] [35] [36] [37] [38] [39] [40] [41] [42]
+[43]
+
+LaTeX Warning: Reference `donnees-tibbles' on page 44 undefined on input line 1
+959.
+
+[44]
+Underfull \hbox (badness 1286) in paragraph at lines 1963--1964
+[]\T1/lmr/m/n/10.95 L'exemple ci-après uti-lise les don-nées du \T1/lmr/m/it/10
+.95 da-ta-set \T1/lmtt/m/n/10.95 women\T1/lmr/m/n/10.95 , pré-sent dans le \T1/
+lmr/m/it/10.95 pa-ckage
+ []
+
+[45] [46] [47] [48] [49] [50] [51] [52]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[53] [54] [55]
+Overfull \hbox (7.60815pt too wide) in paragraph at lines 2524--2525
+[]\T1/lmtt/m/n/10.95 perl <- "C:\\Program Files\\FusionInventory-Agent\\perl\\b
+in\\perl.exe" 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2526--2527
+[]\T1/lmtt/m/n/10.95 iris <- read.xls(xlsfile, perl = perl) # Créé un fichier c
+sv
+ []
+
+[56] [57] [58] [59] [60] [61] [62] [63] [64] [65] [66] [67] [68] [69] [70] [71]
+[72] [73] [74] [75] [76] [77] [78] [79] [80] [81] [82] [83] [84] [85] [86] [87]
+[88] [89] [90] [91] [92] [93] [94] [95] [96] [97]
+
+LaTeX Warning: Reference `(' on page 98 undefined on input line 4829.
+
+[98] [99] [100] [101] [102] [103]
+Underfull \hbox (badness 1975) in paragraph at lines 5179--5180
+[]\T1/lmr/m/n/10.95 On peut uti-li-ser les fonc-tions en-sem-blistes sur des in
+-ter-valles (\T1/lmtt/m/n/10.95 union() \T1/lmr/m/n/10.95 (union),
+ []
+
+[104] [105] [106] [107] [108] [109] [110] [111] [112] [113] [114] [115] [116] [
+117] [118] [119] [120] [121] [122] [123] [124] [125] [126] [127] [128] [129] [1
+30] [131] [132] [133] [134] [135] [136] [137] [138] [139] [140] [141] [142] [14
+3] [144] [145] [146] [147] [148] [149] [150] [151]
+<_main_files/figure-latex/unnamed-chunk-73-1.pdf, id=3636, 342.27875pt x 325.21
+5pt>
+File: _main_files/figure-latex/unnamed-chunk-73-1.pdf Graphic file (type pdf)
+<use _main_files/figure-latex/unnamed-chunk-73-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/unnamed-chunk-73-1.pdf  used 
+on input line 7567.
+(pdftex.def)             Requested size: 342.304pt x 325.23901pt.
+[152 <./_main_files/figure-latex/unnamed-chunk-73-1.pdf>] [153] [154] [155] [15
+6] [157] [158] [159] [160] [161]
+Underfull \hbox (badness 1205) in paragraph at lines 8271--8273
+[]\T1/lmr/m/n/10.95 Importer le contenu de la pre-mière feuille du fi-chier Ex-
+cel [][]$http : / / egallic . fr /
+ []
+
+[162] [163] [164]
+Overfull \hbox (132.00266pt too wide) in paragraph at lines 8425--8426
+[]\T1/lmtt/m/n/10.95 x <- c(ymd_hms("2015-08-29 20:30:56", tz = "Europe/Paris")
+,               ymd_hms("2015-09-15
+ []
+
+[165] [166]
+Chapitre 3.
+[167
+
+] [168] [169] [170] [171] [172] [173] [174] [175] [176] [177] [178]
+Overfull \hbox (70.1352pt too wide) in paragraph at lines 9085--9086
+[]\T1/lmtt/m/n/10.95 emails <- c("marie.petit@etu.univ-amu.fr",               "
+jean.dupont@etu.univ-amu.fr",
+ []
+
+
+Overfull \hbox (47.14026pt too wide) in paragraph at lines 9085--9086
+\T1/lmtt/m/n/10.95 "isabelle.martinez@etu.univ-amu.fr",               "pierre.m
+oreau@etu.univ-amu.fr") 
+ []
+
+[179] [180]
+Chapitre 4.
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <12> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 9101.
+[181
+
+] [182] [183] [184] [185] [186] [187] [188]
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 9449.
+
+Underfull \vbox (badness 1983) has occurred while \output is active []
+
+[189] [190] [191] [192] [193] [194] [195]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[196] [197] [198] [199] [200] [201] [202] [203] [204] [205] [206] [207]
+Underfull \hbox (badness 1062) in paragraph at lines 10421--10422
+\T1/lmr/m/n/10.95 dé-fi-nis-sons une liste à l'aide de \T1/lmtt/m/n/10.95 lappl
+y() \T1/lmr/m/n/10.95 : \T1/lmtt/m/n/10.95 l <- lapply(1:3, function(x)
+ []
+
+[208] [209] [210]
+Overfull \hbox (30.98344pt too wide) in paragraph at lines 10516--10521
+[]\T1/lmr/m/n/10.95 La fonc-tion \T1/lmtt/m/n/10.95 apply() \T1/lmr/m/n/10.95 p
+os-sède la syn-taxe sui-vante : <<boucles_vectorisation_apply_apply_syntaxe,
+ []
+
+[211] [212] [213] [214] [215] [216] [217] [218]
+Chapitre 5.
+[219
+
+]
+Underfull \hbox (badness 2913) in paragraph at lines 10935--10937
+[]\T1/lmr/m/n/10.95 une pro-jec-tion gra-phique pour lier ces don-nées aux at-t
+ri-buts es-thé-tiques
+ []
+
+[220] [221]
+<_main_files/figure-latex/graphiques_ggplot_ggplot-1.pdf, id=4821, 493.845pt x 
+170.6375pt>
+File: _main_files/figure-latex/graphiques_ggplot_ggplot-1.pdf Graphic file (typ
+e pdf)
+<use _main_files/figure-latex/graphiques_ggplot_ggplot-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_ggplot-1.pd
+f  used on input line 11022.
+(pdftex.def)             Requested size: 430.00337pt x 148.57838pt.
+[222 <./_main_files/figure-latex/graphiques_ggplot_ggplot-1.pdf>]
+<_main_files/figure-latex/graphiques_ggplot_ggplot_col-1.pdf, id=4835, 493.845p
+t x 170.6375pt>
+File: _main_files/figure-latex/graphiques_ggplot_ggplot_col-1.pdf Graphic file 
+(type pdf)
+<use _main_files/figure-latex/graphiques_ggplot_ggplot_col-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_ggplot_col-
+1.pdf  used on input line 11055.
+(pdftex.def)             Requested size: 430.00337pt x 148.57838pt.
+<_main_files/figure-latex/graphiques_ggplot_ggplot_continue-1.pdf, id=4836, 487
+.8225pt x 170.6375pt>
+File: _main_files/figure-latex/graphiques_ggplot_ggplot_continue-1.pdf Graphic 
+file (type pdf)
+<use _main_files/figure-latex/graphiques_ggplot_ggplot_continue-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_ggplot_cont
+inue-1.pdf  used on input line 11069.
+(pdftex.def)             Requested size: 430.00714pt x 150.414pt.
+[223 <./_main_files/figure-latex/graphiques_ggplot_ggplot_col-1.pdf>]
+<_main_files/figure-latex/graphiques_ggplot_ggplot_continue_2-1.pdf, id=4854, 4
+87.8225pt x 170.6375pt>
+File: _main_files/figure-latex/graphiques_ggplot_ggplot_continue_2-1.pdf Graphi
+c file (type pdf)
+<use _main_files/figure-latex/graphiques_ggplot_ggplot_continue_2-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_ggplot_cont
+inue_2-1.pdf  used on input line 11081.
+(pdftex.def)             Requested size: 430.00714pt x 150.414pt.
+<_main_files/figure-latex/graphiques_ggplot_ggplot_bubble-1.pdf, id=4855, 487.8
+225pt x 170.6375pt>
+File: _main_files/figure-latex/graphiques_ggplot_ggplot_bubble-1.pdf Graphic fi
+le (type pdf)
+<use _main_files/figure-latex/graphiques_ggplot_ggplot_bubble-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_ggplot_bubb
+le-1.pdf  used on input line 11095.
+(pdftex.def)             Requested size: 430.00714pt x 150.414pt.
+[224 <./_main_files/figure-latex/graphiques_ggplot_ggplot_continue-1.pdf> <./_m
+ain_files/figure-latex/graphiques_ggplot_ggplot_continue_2-1.pdf>]
+<_main_files/figure-latex/graphiques_structure_geom_point_red-1.pdf, id=4886, 4
+93.845pt x 170.6375pt>
+File: _main_files/figure-latex/graphiques_structure_geom_point_red-1.pdf Graphi
+c file (type pdf)
+<use _main_files/figure-latex/graphiques_structure_geom_point_red-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_structure_geom_poi
+nt_red-1.pdf  used on input line 11112.
+(pdftex.def)             Requested size: 430.00337pt x 148.57838pt.
+[225 <./_main_files/figure-latex/graphiques_ggplot_ggplot_bubble-1.pdf> <./_mai
+n_files/figure-latex/graphiques_structure_geom_point_red-1.pdf>]
+<_main_files/figure-latex/graphiques_structure_geom_point_red_2-1.pdf, id=4911,
+ 487.8225pt x 170.6375pt>
+File: _main_files/figure-latex/graphiques_structure_geom_point_red_2-1.pdf Grap
+hic file (type pdf)
+<use _main_files/figure-latex/graphiques_structure_geom_point_red_2-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_structure_geom_poi
+nt_red_2-1.pdf  used on input line 11133.
+(pdftex.def)             Requested size: 430.00714pt x 150.414pt.
+[226 <./_main_files/figure-latex/graphiques_structure_geom_point_red_2-1.pdf>]
+<_main_files/figure-latex/graphiques_ggplot_geom_point-1.pdf, id=4926, 487.8225
+pt x 170.6375pt>
+File: _main_files/figure-latex/graphiques_ggplot_geom_point-1.pdf Graphic file 
+(type pdf)
+<use _main_files/figure-latex/graphiques_ggplot_geom_point-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_geom_point-
+1.pdf  used on input line 11184.
+(pdftex.def)             Requested size: 430.00714pt x 150.414pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[227]
+<_main_files/figure-latex/graphiques_ggplot_geom_point_2-1.pdf, id=4933, 487.82
+25pt x 170.6375pt>
+File: _main_files/figure-latex/graphiques_ggplot_geom_point_2-1.pdf Graphic fil
+e (type pdf)
+<use _main_files/figure-latex/graphiques_ggplot_geom_point_2-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_geom_point_
+2-1.pdf  used on input line 11197.
+(pdftex.def)             Requested size: 430.00714pt x 150.414pt.
+<_main_files/figure-latex/graphiques_ggplot_geom_point_3-1.pdf, id=4934, 493.84
+5pt x 170.6375pt>
+File: _main_files/figure-latex/graphiques_ggplot_geom_point_3-1.pdf Graphic fil
+e (type pdf)
+<use _main_files/figure-latex/graphiques_ggplot_geom_point_3-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_geom_point_
+3-1.pdf  used on input line 11209.
+(pdftex.def)             Requested size: 430.00337pt x 148.57838pt.
+[228 <./_main_files/figure-latex/graphiques_ggplot_geom_point-1.pdf> <./_main_f
+iles/figure-latex/graphiques_ggplot_geom_point_2-1.pdf>]
+<_main_files/figure-latex/graphiques_ggplot_geom_line-1.pdf, id=4954, 487.8225p
+t x 170.6375pt>
+File: _main_files/figure-latex/graphiques_ggplot_geom_line-1.pdf Graphic file (
+type pdf)
+<use _main_files/figure-latex/graphiques_ggplot_geom_line-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_geom_line-1
+.pdf  used on input line 11225.
+(pdftex.def)             Requested size: 430.00714pt x 150.414pt.
+[229 <./_main_files/figure-latex/graphiques_ggplot_geom_point_3-1.pdf> <./_main
+_files/figure-latex/graphiques_ggplot_geom_line-1.pdf>]
+<_main_files/figure-latex/graphiques_ggplot_geom_line_2-1.pdf, id=4976, 493.845
+pt x 170.6375pt>
+File: _main_files/figure-latex/graphiques_ggplot_geom_line_2-1.pdf Graphic file
+ (type pdf)
+<use _main_files/figure-latex/graphiques_ggplot_geom_line_2-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_geom_line_2
+-1.pdf  used on input line 11238.
+(pdftex.def)             Requested size: 430.00337pt x 148.57838pt.
+<_main_files/figure-latex/graphiques_ggplot_geom_polygon-1.pdf, id=4977, 493.84
+5pt x 168.63pt>
+File: _main_files/figure-latex/graphiques_ggplot_geom_polygon-1.pdf Graphic fil
+e (type pdf)
+<use _main_files/figure-latex/graphiques_ggplot_geom_polygon-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_geom_polygo
+n-1.pdf  used on input line 11254.
+(pdftex.def)             Requested size: 430.00337pt x 146.83041pt.
+[230 <./_main_files/figure-latex/graphiques_ggplot_geom_line_2-1.pdf> <./_main_
+files/figure-latex/graphiques_ggplot_geom_polygon-1.pdf>]
+<_main_files/figure-latex/graphiques_ggplot_geom_boxplot-1.pdf, id=5000, 489.83
+pt x 170.6375pt>
+File: _main_files/figure-latex/graphiques_ggplot_geom_boxplot-1.pdf Graphic fil
+e (type pdf)
+<use _main_files/figure-latex/graphiques_ggplot_geom_boxplot-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_geom_boxplo
+t-1.pdf  used on input line 11269.
+(pdftex.def)             Requested size: 430.01282pt x 149.79953pt.
+<_main_files/figure-latex/graphiques_ggplot_geom_boxplot_seule-1.pdf, id=5001, 
+495.8525pt x 170.6375pt>
+File: _main_files/figure-latex/graphiques_ggplot_geom_boxplot_seule-1.pdf Graph
+ic file (type pdf)
+<use _main_files/figure-latex/graphiques_ggplot_geom_boxplot_seule-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_geom_boxplo
+t_seule-1.pdf  used on input line 11282.
+(pdftex.def)             Requested size: 430.0036pt x 147.97693pt.
+
+Underfull \vbox (badness 7685) has occurred while \output is active []
+
+[231 <./_main_files/figure-latex/graphiques_ggplot_geom_boxplot-1.pdf>]
+<_main_files/figure-latex/graphiques_ggplot_qplot_geom_jitter-1.pdf, id=5015, 4
+89.83pt x 170.6375pt>
+File: _main_files/figure-latex/graphiques_ggplot_qplot_geom_jitter-1.pdf Graphi
+c file (type pdf)
+<use _main_files/figure-latex/graphiques_ggplot_qplot_geom_jitter-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_qplot_geom_
+jitter-1.pdf  used on input line 11297.
+(pdftex.def)             Requested size: 430.01282pt x 149.79953pt.
+<_main_files/figure-latex/graphiques_ggplot_qplot_geom_jitter-2.pdf, id=5016, 4
+89.83pt x 170.6375pt>
+File: _main_files/figure-latex/graphiques_ggplot_qplot_geom_jitter-2.pdf Graphi
+c file (type pdf)
+<use _main_files/figure-latex/graphiques_ggplot_qplot_geom_jitter-2.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_qplot_geom_
+jitter-2.pdf  used on input line 11307.
+(pdftex.def)             Requested size: 430.01282pt x 149.79953pt.
+[232 <./_main_files/figure-latex/graphiques_ggplot_geom_boxplot_seule-1.pdf> <.
+/_main_files/figure-latex/graphiques_ggplot_qplot_geom_jitter-1.pdf>]
+<_main_files/figure-latex/raphiques_ggplot_ggplot_smooth-1.pdf, id=5037, 209.78
+375pt x 170.6375pt>
+File: _main_files/figure-latex/raphiques_ggplot_ggplot_smooth-1.pdf Graphic fil
+e (type pdf)
+<use _main_files/figure-latex/raphiques_ggplot_ggplot_smooth-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/raphiques_ggplot_ggplot_smoot
+h-1.pdf  used on input line 11323.
+(pdftex.def)             Requested size: 209.78322pt x 170.63707pt.
+[233 <./_main_files/figure-latex/graphiques_ggplot_qplot_geom_jitter-2.pdf> <./
+_main_files/figure-latex/raphiques_ggplot_ggplot_smooth-1.pdf>]
+<_main_files/figure-latex/raphiques_ggplot_ggplot_smooth-2.pdf, id=5061, 209.78
+375pt x 170.6375pt>
+File: _main_files/figure-latex/raphiques_ggplot_ggplot_smooth-2.pdf Graphic fil
+e (type pdf)
+<use _main_files/figure-latex/raphiques_ggplot_ggplot_smooth-2.pdf>
+Package pdftex.def Info: _main_files/figure-latex/raphiques_ggplot_ggplot_smoot
+h-2.pdf  used on input line 11334.
+(pdftex.def)             Requested size: 209.78322pt x 170.63707pt.
+<_main_files/figure-latex/graphiques_ggplot_qplot_smooth_ic-1.pdf, id=5062, 493
+.845pt x 170.6375pt>
+File: _main_files/figure-latex/graphiques_ggplot_qplot_smooth_ic-1.pdf Graphic 
+file (type pdf)
+<use _main_files/figure-latex/graphiques_ggplot_qplot_smooth_ic-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_qplot_smoot
+h_ic-1.pdf  used on input line 11351.
+(pdftex.def)             Requested size: 430.00337pt x 148.57838pt.
+
+Underfull \vbox (badness 4242) has occurred while \output is active []
+
+[234 <./_main_files/figure-latex/raphiques_ggplot_ggplot_smooth-2.pdf>]
+<_main_files/figure-latex/graphiques_ggplot_geom_histogram-1.pdf, id=5075, 495.
+8525pt x 168.63pt>
+File: _main_files/figure-latex/graphiques_ggplot_geom_histogram-1.pdf Graphic f
+ile (type pdf)
+<use _main_files/figure-latex/graphiques_ggplot_geom_histogram-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_geom_histog
+ram-1.pdf  used on input line 11366.
+(pdftex.def)             Requested size: 430.0036pt x 146.23602pt.
+<_main_files/figure-latex/graphiques_ggplot_geom_histogram_fill-1.pdf, id=5076,
+ 489.83pt x 170.6375pt>
+File: _main_files/figure-latex/graphiques_ggplot_geom_histogram_fill-1.pdf Grap
+hic file (type pdf)
+<use _main_files/figure-latex/graphiques_ggplot_geom_histogram_fill-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_geom_histog
+ram_fill-1.pdf  used on input line 11379.
+(pdftex.def)             Requested size: 430.01282pt x 149.79953pt.
+[235 <./_main_files/figure-latex/graphiques_ggplot_qplot_smooth_ic-1.pdf> <./_m
+ain_files/figure-latex/graphiques_ggplot_geom_histogram-1.pdf>]
+<_main_files/figure-latex/graphiques_ggplot_geom_densite-1.pdf, id=5101, 495.85
+25pt x 170.6375pt>
+File: _main_files/figure-latex/graphiques_ggplot_geom_densite-1.pdf Graphic fil
+e (type pdf)
+<use _main_files/figure-latex/graphiques_ggplot_geom_densite-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_geom_densit
+e-1.pdf  used on input line 11394.
+(pdftex.def)             Requested size: 430.0036pt x 147.97693pt.
+[236 <./_main_files/figure-latex/graphiques_ggplot_geom_histogram_fill-1.pdf> <
+./_main_files/figure-latex/graphiques_ggplot_geom_densite-1.pdf>]
+<_main_files/figure-latex/graphiques_ggplot_geom_densite_fill-1.pdf, id=5122, 4
+89.83pt x 173.64874pt>
+File: _main_files/figure-latex/graphiques_ggplot_geom_densite_fill-1.pdf Graphi
+c file (type pdf)
+<use _main_files/figure-latex/graphiques_ggplot_geom_densite_fill-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_geom_densit
+e_fill-1.pdf  used on input line 11407.
+(pdftex.def)             Requested size: 430.01282pt x 152.44305pt.
+[237 <./_main_files/figure-latex/graphiques_ggplot_geom_densite_fill-1.pdf>]
+<_main_files/figure-latex/graphiques_ggplot_geom_ribbon-1.pdf, id=5140, 493.845
+pt x 168.63pt>
+File: _main_files/figure-latex/graphiques_ggplot_geom_ribbon-1.pdf Graphic file
+ (type pdf)
+<use _main_files/figure-latex/graphiques_ggplot_geom_ribbon-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_geom_ribbon
+-1.pdf  used on input line 11459.
+(pdftex.def)             Requested size: 430.00337pt x 146.83041pt.
+[238 <./_main_files/figure-latex/graphiques_ggplot_geom_ribbon-1.pdf>]
+<_main_files/figure-latex/graphiques_ggplot_stat-1.pdf, id=5169, 495.8525pt x 1
+68.63pt>
+File: _main_files/figure-latex/graphiques_ggplot_stat-1.pdf Graphic file (type 
+pdf)
+<use _main_files/figure-latex/graphiques_ggplot_stat-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_stat-1.pdf 
+ used on input line 11475.
+(pdftex.def)             Requested size: 430.0036pt x 146.23602pt.
+<_main_files/figure-latex/graphiques_ggplot_stat-2.pdf, id=5170, 495.8525pt x 1
+68.63pt>
+File: _main_files/figure-latex/graphiques_ggplot_stat-2.pdf Graphic file (type 
+pdf)
+<use _main_files/figure-latex/graphiques_ggplot_stat-2.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_stat-2.pdf 
+ used on input line 11488.
+(pdftex.def)             Requested size: 430.0036pt x 146.23602pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[239 <./_main_files/figure-latex/graphiques_ggplot_stat-1.pdf>]
+<_main_files/figure-latex/graphiques_ggplot_stat_density-1.pdf, id=5183, 495.85
+25pt x 168.63pt>
+File: _main_files/figure-latex/graphiques_ggplot_stat_density-1.pdf Graphic fil
+e (type pdf)
+<use _main_files/figure-latex/graphiques_ggplot_stat_density-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_stat_densit
+y-1.pdf  used on input line 11500.
+(pdftex.def)             Requested size: 430.0036pt x 146.23602pt.
+[240 <./_main_files/figure-latex/graphiques_ggplot_stat-2.pdf> <./_main_files/f
+igure-latex/graphiques_ggplot_stat_density-1.pdf>]
+<_main_files/figure-latex/graphiques_ggplot_stat_2-1.pdf, id=5203, 495.8525pt x
+ 168.63pt>
+File: _main_files/figure-latex/graphiques_ggplot_stat_2-1.pdf Graphic file (typ
+e pdf)
+<use _main_files/figure-latex/graphiques_ggplot_stat_2-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_stat_2-1.pd
+f  used on input line 11512.
+(pdftex.def)             Requested size: 430.0036pt x 146.23602pt.
+<_main_files/figure-latex/graphiques_ggplot_stat_3-1.pdf, id=5204, 493.845pt x 
+168.63pt>
+File: _main_files/figure-latex/graphiques_ggplot_stat_3-1.pdf Graphic file (typ
+e pdf)
+<use _main_files/figure-latex/graphiques_ggplot_stat_3-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_stat_3-1.pd
+f  used on input line 11524.
+(pdftex.def)             Requested size: 430.00337pt x 146.83041pt.
+[241 <./_main_files/figure-latex/graphiques_ggplot_stat_2-1.pdf> <./_main_files
+/figure-latex/graphiques_ggplot_stat_3-1.pdf>]
+<_main_files/figure-latex/graphiques_ggplot_stat_3-2.pdf, id=5225, 487.8225pt x
+ 168.63pt>
+File: _main_files/figure-latex/graphiques_ggplot_stat_3-2.pdf Graphic file (typ
+e pdf)
+<use _main_files/figure-latex/graphiques_ggplot_stat_3-2.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_stat_3-2.pd
+f  used on input line 11533.
+(pdftex.def)             Requested size: 430.00714pt x 148.64444pt.
+[242 <./_main_files/figure-latex/graphiques_ggplot_stat_3-2.pdf>]
+<_main_files/figure-latex/graphiques_ggplot_scale-1.pdf, id=5240, 487.8225pt x 
+170.6375pt>
+File: _main_files/figure-latex/graphiques_ggplot_scale-1.pdf Graphic file (type
+ pdf)
+<use _main_files/figure-latex/graphiques_ggplot_scale-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_scale-1.pdf
+  used on input line 11604.
+(pdftex.def)             Requested size: 430.00714pt x 150.414pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[243]
+<_main_files/figure-latex/graphiques_ggplot_scale-2.pdf, id=5246, 487.8225pt x 
+170.6375pt>
+File: _main_files/figure-latex/graphiques_ggplot_scale-2.pdf Graphic file (type
+ pdf)
+<use _main_files/figure-latex/graphiques_ggplot_scale-2.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_scale-2.pdf
+  used on input line 11616.
+(pdftex.def)             Requested size: 430.00714pt x 150.414pt.
+
+Overfull \hbox (4.71156pt too wide) in paragraph at lines 11741--11742
+[]\T1/lmtt/m/n/10.95 scale_linetype_continuous()|  
+ []
+
+[244 <./_main_files/figure-latex/graphiques_ggplot_scale-1.pdf> <./_main_files/
+figure-latex/graphiques_ggplot_scale-2.pdf>] [245]
+<_main_files/figure-latex/graphiques_ggplot_scale_2-1.pdf, id=5275, 487.8225pt 
+x 206.7725pt>
+File: _main_files/figure-latex/graphiques_ggplot_scale_2-1.pdf Graphic file (ty
+pe pdf)
+<use _main_files/figure-latex/graphiques_ggplot_scale_2-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_scale_2-1.p
+df  used on input line 11902.
+(pdftex.def)             Requested size: 430.00714pt x 182.26639pt.
+<_main_files/figure-latex/graphiques_ggplot_scale_2-2.pdf, id=5276, 487.8225pt 
+x 206.7725pt>
+File: _main_files/figure-latex/graphiques_ggplot_scale_2-2.pdf Graphic file (ty
+pe pdf)
+<use _main_files/figure-latex/graphiques_ggplot_scale_2-2.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_scale_2-2.p
+df  used on input line 11913.
+(pdftex.def)             Requested size: 430.00714pt x 182.26639pt.
+
+Underfull \vbox (badness 8075) has occurred while \output is active []
+
+[246 <./_main_files/figure-latex/graphiques_ggplot_scale_2-1.pdf>]
+<_main_files/figure-latex/graphiques_ggplot_scale_2-3.pdf, id=5289, 487.8225pt 
+x 206.7725pt>
+File: _main_files/figure-latex/graphiques_ggplot_scale_2-3.pdf Graphic file (ty
+pe pdf)
+<use _main_files/figure-latex/graphiques_ggplot_scale_2-3.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_scale_2-3.p
+df  used on input line 11940.
+(pdftex.def)             Requested size: 430.00714pt x 182.26639pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[247 <./_main_files/figure-latex/graphiques_ggplot_scale_2-2.pdf>]
+<_main_files/figure-latex/graphiques_ggplot_scale_2-4.pdf, id=5306, 487.8225pt 
+x 207.77625pt>
+File: _main_files/figure-latex/graphiques_ggplot_scale_2-4.pdf Graphic file (ty
+pe pdf)
+<use _main_files/figure-latex/graphiques_ggplot_scale_2-4.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_scale_2-4.p
+df  used on input line 11973.
+(pdftex.def)             Requested size: 430.00714pt x 183.15117pt.
+[248 <./_main_files/figure-latex/graphiques_ggplot_scale_2-3.pdf>]
+<_main_files/figure-latex/graphiques_ggplot_scale_2-5.pdf, id=5321, 498.86375pt
+ x 206.7725pt>
+File: _main_files/figure-latex/graphiques_ggplot_scale_2-5.pdf Graphic file (ty
+pe pdf)
+<use _main_files/figure-latex/graphiques_ggplot_scale_2-5.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_scale_2-5.p
+df  used on input line 11991.
+(pdftex.def)             Requested size: 430.01926pt x 178.23735pt.
+[249 <./_main_files/figure-latex/graphiques_ggplot_scale_2-4.pdf> <./_main_file
+s/figure-latex/graphiques_ggplot_scale_2-5.pdf>]
+<_main_files/figure-latex/graphiques_ggplot_scale_3-1.pdf, id=5341, 487.8225pt 
+x 211.79124pt>
+File: _main_files/figure-latex/graphiques_ggplot_scale_3-1.pdf Graphic file (ty
+pe pdf)
+<use _main_files/figure-latex/graphiques_ggplot_scale_3-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_scale_3-1.p
+df  used on input line 12006.
+(pdftex.def)             Requested size: 430.00714pt x 186.69034pt.
+<_main_files/figure-latex/graphiques_ggplot_scale_3-2.pdf, id=5342, 487.8225pt 
+x 206.7725pt>
+File: _main_files/figure-latex/graphiques_ggplot_scale_3-2.pdf Graphic file (ty
+pe pdf)
+<use _main_files/figure-latex/graphiques_ggplot_scale_3-2.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_scale_3-2.p
+df  used on input line 12015.
+(pdftex.def)             Requested size: 430.00714pt x 182.26639pt.
+
+Underfull \vbox (badness 1762) has occurred while \output is active []
+
+[250 <./_main_files/figure-latex/graphiques_ggplot_scale_3-1.pdf>] [251 <./_mai
+n_files/figure-latex/graphiques_ggplot_scale_3-2.pdf>]
+<_main_files/figure-latex/graphiques_ggplot_group-1.pdf, id=5376, 209.78375pt x
+ 168.63pt>
+File: _main_files/figure-latex/graphiques_ggplot_group-1.pdf Graphic file (type
+ pdf)
+<use _main_files/figure-latex/graphiques_ggplot_group-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_group-1.pdf
+  used on input line 12054.
+(pdftex.def)             Requested size: 209.78322pt x 168.62958pt.
+<_main_files/figure-latex/graphiques_ggplot_group-2.pdf, id=5377, 209.78375pt x
+ 168.63pt>
+File: _main_files/figure-latex/graphiques_ggplot_group-2.pdf Graphic file (type
+ pdf)
+<use _main_files/figure-latex/graphiques_ggplot_group-2.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_group-2.pdf
+  used on input line 12054.
+(pdftex.def)             Requested size: 209.78322pt x 168.62958pt.
+<_main_files/figure-latex/graphiques_ggplot_group_2-1.pdf, id=5378, 204.765pt x
+ 170.6375pt>
+File: _main_files/figure-latex/graphiques_ggplot_group_2-1.pdf Graphic file (ty
+pe pdf)
+<use _main_files/figure-latex/graphiques_ggplot_group_2-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_group_2-1.p
+df  used on input line 12065.
+(pdftex.def)             Requested size: 204.77698pt x 170.64748pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[252 <./_main_files/figure-latex/graphiques_ggplot_group-1.pdf> <./_main_files/
+figure-latex/graphiques_ggplot_group-2.pdf>]
+<_main_files/figure-latex/graphiques_ggplot_group_2-2.pdf, id=5400, 204.765pt x
+ 170.6375pt>
+File: _main_files/figure-latex/graphiques_ggplot_group_2-2.pdf Graphic file (ty
+pe pdf)
+<use _main_files/figure-latex/graphiques_ggplot_group_2-2.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_group_2-2.p
+df  used on input line 12076.
+(pdftex.def)             Requested size: 204.77698pt x 170.64748pt.
+[253 <./_main_files/figure-latex/graphiques_ggplot_group_2-1.pdf> <./_main_file
+s/figure-latex/graphiques_ggplot_group_2-2.pdf>]
+<_main_files/figure-latex/graphiques_ggplot_annotations_texte-1.pdf, id=5423, 4
+93.845pt x 134.5025pt>
+File: _main_files/figure-latex/graphiques_ggplot_annotations_texte-1.pdf Graphi
+c file (type pdf)
+<use _main_files/figure-latex/graphiques_ggplot_annotations_texte-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_annotations
+_texte-1.pdf  used on input line 12109.
+(pdftex.def)             Requested size: 430.00337pt x 117.11472pt.
+<_main_files/figure-latex/graphiques_ggplot_annotations_texte-2.pdf, id=5424, 4
+93.845pt x 134.5025pt>
+File: _main_files/figure-latex/graphiques_ggplot_annotations_texte-2.pdf Graphi
+c file (type pdf)
+<use _main_files/figure-latex/graphiques_ggplot_annotations_texte-2.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_annotations
+_texte-2.pdf  used on input line 12120.
+(pdftex.def)             Requested size: 430.00337pt x 117.11472pt.
+[254 <./_main_files/figure-latex/graphiques_ggplot_annotations_texte-1.pdf>]
+<_main_files/figure-latex/graphiques_ggplot_annotations_expr-1.pdf, id=5438, 49
+3.845pt x 134.5025pt>
+File: _main_files/figure-latex/graphiques_ggplot_annotations_expr-1.pdf Graphic
+ file (type pdf)
+<use _main_files/figure-latex/graphiques_ggplot_annotations_expr-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_annotations
+_expr-1.pdf  used on input line 12131.
+(pdftex.def)             Requested size: 430.00337pt x 117.11472pt.
+<_main_files/figure-latex/unnamed-chunk-108-1.pdf, id=5439, 457.71pt x 315.1775
+pt>
+File: _main_files/figure-latex/unnamed-chunk-108-1.pdf Graphic file (type pdf)
+<use _main_files/figure-latex/unnamed-chunk-108-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/unnamed-chunk-108-1.pdf  used
+ on input line 12145.
+(pdftex.def)             Requested size: 430.02397pt x 296.11299pt.
+[255 <./_main_files/figure-latex/graphiques_ggplot_annotations_texte-2.pdf> <./
+_main_files/figure-latex/graphiques_ggplot_annotations_expr-1.pdf>]
+<_main_files/figure-latex/graphiques_ggplot_annotations_lignes-1.pdf, id=5460, 
+493.845pt x 134.5025pt>
+File: _main_files/figure-latex/graphiques_ggplot_annotations_lignes-1.pdf Graph
+ic file (type pdf)
+<use _main_files/figure-latex/graphiques_ggplot_annotations_lignes-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_annotations
+_lignes-1.pdf  used on input line 12172.
+(pdftex.def)             Requested size: 430.00337pt x 117.11472pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[256 <./_main_files/figure-latex/unnamed-chunk-108-1.pdf>]
+<_main_files/figure-latex/graphiques_ggplot_annotations_lignes-2.pdf, id=5475, 
+493.845pt x 134.5025pt>
+File: _main_files/figure-latex/graphiques_ggplot_annotations_lignes-2.pdf Graph
+ic file (type pdf)
+<use _main_files/figure-latex/graphiques_ggplot_annotations_lignes-2.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_annotations
+_lignes-2.pdf  used on input line 12182.
+(pdftex.def)             Requested size: 430.00337pt x 117.11472pt.
+<_main_files/figure-latex/graphiques_ggplot_annotations_lignes-3.pdf, id=5476, 
+493.845pt x 134.5025pt>
+File: _main_files/figure-latex/graphiques_ggplot_annotations_lignes-3.pdf Graph
+ic file (type pdf)
+<use _main_files/figure-latex/graphiques_ggplot_annotations_lignes-3.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_annotations
+_lignes-3.pdf  used on input line 12191.
+(pdftex.def)             Requested size: 430.00337pt x 117.11472pt.
+<_main_files/figure-latex/graphiques_ggplot_annotations_lignes-4.pdf, id=5477, 
+493.845pt x 134.5025pt>
+File: _main_files/figure-latex/graphiques_ggplot_annotations_lignes-4.pdf Graph
+ic file (type pdf)
+<use _main_files/figure-latex/graphiques_ggplot_annotations_lignes-4.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_annotations
+_lignes-4.pdf  used on input line 12201.
+(pdftex.def)             Requested size: 430.00337pt x 117.11472pt.
+[257 <./_main_files/figure-latex/graphiques_ggplot_annotations_lignes-1.pdf> <.
+/_main_files/figure-latex/graphiques_ggplot_annotations_lignes-2.pdf> <./_main_
+files/figure-latex/graphiques_ggplot_annotations_lignes-3.pdf>]
+<_main_files/figure-latex/graphiques_ggplot_annotations_lignes_annotate-1.pdf, 
+id=5504, 493.845pt x 134.5025pt>
+File: _main_files/figure-latex/graphiques_ggplot_annotations_lignes_annotate-1.
+pdf Graphic file (type pdf)
+<use _main_files/figure-latex/graphiques_ggplot_annotations_lignes_annotate-1.p
+df>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_annotations
+_lignes_annotate-1.pdf  used on input line 12213.
+(pdftex.def)             Requested size: 430.00337pt x 117.11472pt.
+<_main_files/figure-latex/graphiques_ggplot_annotations_lignes_arrow-1.pdf, id=
+5505, 493.845pt x 134.5025pt>
+File: _main_files/figure-latex/graphiques_ggplot_annotations_lignes_arrow-1.pdf
+ Graphic file (type pdf)
+<use _main_files/figure-latex/graphiques_ggplot_annotations_lignes_arrow-1.pdf>
+
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_annotations
+_lignes_arrow-1.pdf  used on input line 12225.
+(pdftex.def)             Requested size: 430.00337pt x 117.11472pt.
+[258 <./_main_files/figure-latex/graphiques_ggplot_annotations_lignes-4.pdf> <.
+/_main_files/figure-latex/graphiques_ggplot_annotations_lignes_annotate-1.pdf> 
+<./_main_files/figure-latex/graphiques_ggplot_annotations_lignes_arrow-1.pdf>]
+<_main_files/figure-latex/graphiques_ggplot_annotations_rect-1.pdf, id=5533, 49
+3.845pt x 134.5025pt>
+File: _main_files/figure-latex/graphiques_ggplot_annotations_rect-1.pdf Graphic
+ file (type pdf)
+<use _main_files/figure-latex/graphiques_ggplot_annotations_rect-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_annotations
+_rect-1.pdf  used on input line 12243.
+(pdftex.def)             Requested size: 430.00337pt x 117.11472pt.
+[259 <./_main_files/figure-latex/graphiques_ggplot_annotations_rect-1.pdf>]
+<_main_files/figure-latex/graphiques_ggplot_position-1.pdf, id=5553, 489.83pt x
+ 133.49875pt>
+File: _main_files/figure-latex/graphiques_ggplot_position-1.pdf Graphic file (t
+ype pdf)
+<use _main_files/figure-latex/graphiques_ggplot_position-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_position-1.
+pdf  used on input line 12285.
+(pdftex.def)             Requested size: 430.01282pt x 117.19609pt.
+<_main_files/figure-latex/graphiques_ggplot_position-2.pdf, id=5554, 489.83pt x
+ 133.49875pt>
+File: _main_files/figure-latex/graphiques_ggplot_position-2.pdf Graphic file (t
+ype pdf)
+<use _main_files/figure-latex/graphiques_ggplot_position-2.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_position-2.
+pdf  used on input line 12294.
+(pdftex.def)             Requested size: 430.01282pt x 117.19609pt.
+
+Underfull \vbox (badness 4229) has occurred while \output is active []
+
+[260 <./_main_files/figure-latex/graphiques_ggplot_position-1.pdf>]
+<_main_files/figure-latex/graphiques_ggplot_position-3.pdf, id=5567, 489.83pt x
+ 133.49875pt>
+File: _main_files/figure-latex/graphiques_ggplot_position-3.pdf Graphic file (t
+ype pdf)
+<use _main_files/figure-latex/graphiques_ggplot_position-3.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_position-3.
+pdf  used on input line 12303.
+(pdftex.def)             Requested size: 430.01282pt x 117.19609pt.
+<_main_files/figure-latex/graphiques_ggplot_position-4.pdf, id=5568, 489.83pt x
+ 133.49875pt>
+File: _main_files/figure-latex/graphiques_ggplot_position-4.pdf Graphic file (t
+ype pdf)
+<use _main_files/figure-latex/graphiques_ggplot_position-4.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_position-4.
+pdf  used on input line 12312.
+(pdftex.def)             Requested size: 430.01282pt x 117.19609pt.
+[261 <./_main_files/figure-latex/graphiques_ggplot_position-2.pdf> <./_main_fil
+es/figure-latex/graphiques_ggplot_position-3.pdf> <./_main_files/figure-latex/g
+raphiques_ggplot_position-4.pdf>]
+<_main_files/figure-latex/graphiques_ggplot_position-5.pdf, id=5598, 489.83pt x
+ 133.49875pt>
+File: _main_files/figure-latex/graphiques_ggplot_position-5.pdf Graphic file (t
+ype pdf)
+<use _main_files/figure-latex/graphiques_ggplot_position-5.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_position-5.
+pdf  used on input line 12321.
+(pdftex.def)             Requested size: 430.01282pt x 117.19609pt.
+[262 <./_main_files/figure-latex/graphiques_ggplot_position-5.pdf>]
+Overfull \hbox (11.35298pt too wide) in paragraph at lines 12351--12353
+[]\T1/lmtt/m/n/10.95 variable_ligne ~ . \T1/lmr/m/n/10.95 : au-tant de lignes q
+ue de va-leurs pos-sibles pour \T1/lmtt/m/n/10.95 variable_ligne\T1/lmr/m/n/10.
+95 ,
+ []
+
+<_main_files/figure-latex/graphiques_ggplot_facet_grid-1.pdf, id=5613, 487.8225
+pt x 206.7725pt>
+File: _main_files/figure-latex/graphiques_ggplot_facet_grid-1.pdf Graphic file 
+(type pdf)
+<use _main_files/figure-latex/graphiques_ggplot_facet_grid-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_facet_grid-
+1.pdf  used on input line 12370.
+(pdftex.def)             Requested size: 430.00714pt x 182.26639pt.
+<_main_files/figure-latex/graphiques_ggplot_facet_grid-2.pdf, id=5614, 487.8225
+pt x 206.7725pt>
+File: _main_files/figure-latex/graphiques_ggplot_facet_grid-2.pdf Graphic file 
+(type pdf)
+<use _main_files/figure-latex/graphiques_ggplot_facet_grid-2.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_facet_grid-
+2.pdf  used on input line 12379.
+(pdftex.def)             Requested size: 430.00714pt x 182.26639pt.
+[263 <./_main_files/figure-latex/graphiques_ggplot_facet_grid-1.pdf>]
+<_main_files/figure-latex/graphiques_ggplot_facet_grid_margins-1.pdf, id=5627, 
+487.8225pt x 206.7725pt>
+File: _main_files/figure-latex/graphiques_ggplot_facet_grid_margins-1.pdf Graph
+ic file (type pdf)
+<use _main_files/figure-latex/graphiques_ggplot_facet_grid_margins-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_facet_grid_
+margins-1.pdf  used on input line 12389.
+(pdftex.def)             Requested size: 430.00714pt x 182.26639pt.
+[264 <./_main_files/figure-latex/graphiques_ggplot_facet_grid-2.pdf> <./_main_f
+iles/figure-latex/graphiques_ggplot_facet_grid_margins-1.pdf>]
+<_main_files/figure-latex/graphiques_ggplot_facet_grid_margins-2.pdf, id=5647, 
+487.8225pt x 206.7725pt>
+File: _main_files/figure-latex/graphiques_ggplot_facet_grid_margins-2.pdf Graph
+ic file (type pdf)
+<use _main_files/figure-latex/graphiques_ggplot_facet_grid_margins-2.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_facet_grid_
+margins-2.pdf  used on input line 12398.
+(pdftex.def)             Requested size: 430.00714pt x 182.26639pt.
+<_main_files/figure-latex/graphiques_ggplot_facet_wrap-1.pdf, id=5648, 487.8225
+pt x 206.7725pt>
+File: _main_files/figure-latex/graphiques_ggplot_facet_wrap-1.pdf Graphic file 
+(type pdf)
+<use _main_files/figure-latex/graphiques_ggplot_facet_wrap-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_facet_wrap-
+1.pdf  used on input line 12412.
+(pdftex.def)             Requested size: 430.00714pt x 182.26639pt.
+
+Underfull \vbox (badness 4378) has occurred while \output is active []
+
+[265 <./_main_files/figure-latex/graphiques_ggplot_facet_grid_margins-2.pdf>]
+<_main_files/figure-latex/graphiques_ggplot_facet_wrap-2.pdf, id=5663, 487.8225
+pt x 206.7725pt>
+File: _main_files/figure-latex/graphiques_ggplot_facet_wrap-2.pdf Graphic file 
+(type pdf)
+<use _main_files/figure-latex/graphiques_ggplot_facet_wrap-2.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_facet_wrap-
+2.pdf  used on input line 12421.
+(pdftex.def)             Requested size: 430.00714pt x 182.26639pt.
+[266 <./_main_files/figure-latex/graphiques_ggplot_facet_wrap-1.pdf> <./_main_f
+iles/figure-latex/graphiques_ggplot_facet_wrap-2.pdf>]
+<_main_files/figure-latex/graphiques_ggplot_facet_scales-1.pdf, id=5684, 489.83
+pt x 279.0425pt>
+File: _main_files/figure-latex/graphiques_ggplot_facet_scales-1.pdf Graphic fil
+e (type pdf)
+<use _main_files/figure-latex/graphiques_ggplot_facet_scales-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_facet_scale
+s-1.pdf  used on input line 12454.
+(pdftex.def)             Requested size: 430.01282pt x 244.96631pt.
+<_main_files/figure-latex/graphiques_ggplot_facet_scales-2.pdf, id=5685, 489.83
+pt x 279.0425pt>
+File: _main_files/figure-latex/graphiques_ggplot_facet_scales-2.pdf Graphic fil
+e (type pdf)
+<use _main_files/figure-latex/graphiques_ggplot_facet_scales-2.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_facet_scale
+s-2.pdf  used on input line 12463.
+(pdftex.def)             Requested size: 430.01282pt x 244.96631pt.
+[267 <./_main_files/figure-latex/graphiques_ggplot_facet_scales-1.pdf>]
+<_main_files/figure-latex/graphiques_ggplot_coord-1.pdf, id=5699, 137.51375pt x
+ 206.7725pt>
+File: _main_files/figure-latex/graphiques_ggplot_coord-1.pdf Graphic file (type
+ pdf)
+<use _main_files/figure-latex/graphiques_ggplot_coord-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_coord-1.pdf
+  used on input line 12497.
+(pdftex.def)             Requested size: 137.51761pt x 206.77829pt.
+
+Underfull \vbox (badness 1253) has occurred while \output is active []
+
+[268 <./_main_files/figure-latex/graphiques_ggplot_facet_scales-2.pdf>]
+<_main_files/figure-latex/graphiques_ggplot_coord-2.pdf, id=5713, 139.52126pt x
+ 209.78375pt>
+File: _main_files/figure-latex/graphiques_ggplot_coord-2.pdf Graphic file (type
+ pdf)
+<use _main_files/figure-latex/graphiques_ggplot_coord-2.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_coord-2.pdf
+  used on input line 12506.
+(pdftex.def)             Requested size: 139.5209pt x 209.78322pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 12509--12510
+[]\T1/lmr/m/n/10.95 Nous avons vu que la fonc-tion \T1/lmtt/m/n/10.95 scale_x_l
+og10() \T1/lmr/m/n/10.95 (Sec-
+ []
+
+
+Underfull \hbox (badness 1348) in paragraph at lines 12509--12510
+\T1/lmr/m/n/10.95 tion @ref(graphiques_ggplot_scale)) per-met aussi de chan-ger
+ les échelles en
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[269 <./_main_files/figure-latex/graphiques_ggplot_coord-1.pdf> <./_main_files/
+figure-latex/graphiques_ggplot_coord-2.pdf>]
+<_main_files/figure-latex/graphiques_ggplot_coord_remarque-1.pdf, id=5733, 495.
+8525pt x 134.5025pt>
+File: _main_files/figure-latex/graphiques_ggplot_coord_remarque-1.pdf Graphic f
+ile (type pdf)
+<use _main_files/figure-latex/graphiques_ggplot_coord_remarque-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_coord_remar
+que-1.pdf  used on input line 12518.
+(pdftex.def)             Requested size: 430.0036pt x 116.64063pt.
+[270 <./_main_files/figure-latex/graphiques_ggplot_coord_remarque-1.pdf>]
+<_main_files/figure-latex/graphiques_ggplot_axes_limites-1.pdf, id=5748, 136.51
+pt x 132.495pt>
+File: _main_files/figure-latex/graphiques_ggplot_axes_limites-1.pdf Graphic fil
+e (type pdf)
+<use _main_files/figure-latex/graphiques_ggplot_axes_limites-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_axes_limite
+s-1.pdf  used on input line 12574.
+(pdftex.def)             Requested size: 136.51799pt x 132.50273pt.
+[271 <./_main_files/figure-latex/graphiques_ggplot_axes_limites-1.pdf>]
+<_main_files/figure-latex/graphiques_ggplot_axes_limites-2.pdf, id=5762, 132.49
+5pt x 132.495pt>
+File: _main_files/figure-latex/graphiques_ggplot_axes_limites-2.pdf Graphic fil
+e (type pdf)
+<use _main_files/figure-latex/graphiques_ggplot_axes_limites-2.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_axes_limite
+s-2.pdf  used on input line 12583.
+(pdftex.def)             Requested size: 132.50476pt x 132.50476pt.
+<_main_files/figure-latex/graphiques_ggplot_axes_limites-3.pdf, id=5763, 132.49
+5pt x 132.495pt>
+File: _main_files/figure-latex/graphiques_ggplot_axes_limites-3.pdf Graphic fil
+e (type pdf)
+<use _main_files/figure-latex/graphiques_ggplot_axes_limites-3.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_axes_limite
+s-3.pdf  used on input line 12592.
+(pdftex.def)             Requested size: 132.50476pt x 132.50476pt.
+[272 <./_main_files/figure-latex/graphiques_ggplot_axes_limites-2.pdf> <./_main
+_files/figure-latex/graphiques_ggplot_axes_limites-3.pdf>]
+<_main_files/figure-latex/graphiques_ggplot_axes_theme-1.pdf, id=5784, 493.845p
+t x 207.77625pt>
+File: _main_files/figure-latex/graphiques_ggplot_axes_theme-1.pdf Graphic file 
+(type pdf)
+<use _main_files/figure-latex/graphiques_ggplot_axes_theme-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_axes_theme-
+1.pdf  used on input line 12673.
+(pdftex.def)             Requested size: 430.00337pt x 180.91605pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[273]
+<_main_files/figure-latex/graphiques_ggplot_axes_theme-2.pdf, id=5790, 500.8712
+5pt x 207.77625pt>
+File: _main_files/figure-latex/graphiques_ggplot_axes_theme-2.pdf Graphic file 
+(type pdf)
+<use _main_files/figure-latex/graphiques_ggplot_axes_theme-2.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_axes_theme-
+2.pdf  used on input line 12696.
+(pdftex.def)             Requested size: 430.02246pt x 178.38606pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[274 <./_main_files/figure-latex/graphiques_ggplot_axes_theme-1.pdf>]
+<_main_files/figure-latex/graphiques_ggplot_axes_theme_3-1.pdf, id=5803, 493.84
+5pt x 135.50626pt>
+File: _main_files/figure-latex/graphiques_ggplot_axes_theme_3-1.pdf Graphic fil
+e (type pdf)
+<use _main_files/figure-latex/graphiques_ggplot_axes_theme_3-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_axes_theme_
+3-1.pdf  used on input line 12706.
+(pdftex.def)             Requested size: 430.00337pt x 117.98871pt.
+[275 <./_main_files/figure-latex/graphiques_ggplot_axes_theme-2.pdf> <./_main_f
+iles/figure-latex/graphiques_ggplot_axes_theme_3-1.pdf>]
+<_main_files/figure-latex/graphiques_ggplot_axes_theme_title_pos-1.pdf, id=5827
+, 493.845pt x 135.50626pt>
+File: _main_files/figure-latex/graphiques_ggplot_axes_theme_title_pos-1.pdf Gra
+phic file (type pdf)
+<use _main_files/figure-latex/graphiques_ggplot_axes_theme_title_pos-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_ggplot_axes_theme_
+title_pos-1.pdf  used on input line 12718.
+(pdftex.def)             Requested size: 430.00337pt x 117.98871pt.
+[276 <./_main_files/figure-latex/graphiques_ggplot_axes_theme_title_pos-1.pdf>]
+
+Underfull \vbox (badness 3536) has occurred while \output is active []
+
+[277]
+<_main_files/figure-latex/graphiques_maps_recup_rworldmap-1.pdf, id=5859, 405.5
+15pt x 206.7725pt>
+File: _main_files/figure-latex/graphiques_maps_recup_rworldmap-1.pdf Graphic fi
+le (type pdf)
+<use _main_files/figure-latex/graphiques_maps_recup_rworldmap-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_maps_recup_rworldm
+ap-1.pdf  used on input line 12839.
+(pdftex.def)             Requested size: 405.52637pt x 206.77829pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[278]
+<_main_files/figure-latex/graphiques_maps_2-1.pdf, id=5873, 214.8025pt x 206.77
+25pt>
+File: _main_files/figure-latex/graphiques_maps_2-1.pdf Graphic file (type pdf)
+<use _main_files/figure-latex/graphiques_maps_2-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_maps_2-1.pdf  used
+ on input line 12854.
+(pdftex.def)             Requested size: 214.80524pt x 206.77513pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[279 <./_main_files/figure-latex/graphiques_maps_recup_rworldmap-1.pdf>] [280 <
+./_main_files/figure-latex/graphiques_maps_2-1.pdf>]
+<_main_files/figure-latex/graphiques_maps_recup_maps-1.pdf, id=5899, 307.1475pt
+ x 206.7725pt>
+File: _main_files/figure-latex/graphiques_maps_recup_maps-1.pdf Graphic file (t
+ype pdf)
+<use _main_files/figure-latex/graphiques_maps_recup_maps-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_maps_recup_maps-1.
+pdf  used on input line 12909.
+(pdftex.def)             Requested size: 307.15611pt x 206.77829pt.
+[281 <./_main_files/figure-latex/graphiques_maps_recup_maps-1.pdf>]
+<_main_files/figure-latex/graphiques_maps_recup_maps-2.pdf, id=5917, 411.5375pt
+ x 206.7725pt>
+File: _main_files/figure-latex/graphiques_maps_recup_maps-2.pdf Graphic file (t
+ype pdf)
+<use _main_files/figure-latex/graphiques_maps_recup_maps-2.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_maps_recup_maps-2.
+pdf  used on input line 12944.
+(pdftex.def)             Requested size: 411.5365pt x 206.77199pt.
+
+Underfull \hbox (badness 1117) in paragraph at lines 12949--12950
+[]\T1/lmr/m/n/10.95 Il est éga-le-ment pos-sible d'im-por-ter un fi-chier \T1/l
+mtt/m/n/10.95 shp \T1/lmr/m/n/10.95 et de tra-cer une carte ba-sée
+ []
+
+
+Underfull \hbox (badness 1281) in paragraph at lines 12949--12950
+[][]$\T1/lmr/m/n/10.95 http : / / www . data . rennes -[] metropole . fr$[][]. 
+L'im-por-ta-tion dans \T1/lmtt/m/n/10.95 R \T1/lmr/m/n/10.95 se fait comme suit
+, en
+ []
+
+[282 <./_main_files/figure-latex/graphiques_maps_recup_maps-2.pdf>]
+<_main_files/figure-latex/graphiques_maps_recup_shapefile_2-1.pdf, id=5933, 336
+.25626pt x 206.7725pt>
+File: _main_files/figure-latex/graphiques_maps_recup_shapefile_2-1.pdf Graphic 
+file (type pdf)
+<use _main_files/figure-latex/graphiques_maps_recup_shapefile_2-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_maps_recup_shapefi
+le_2-1.pdf  used on input line 12989.
+(pdftex.def)             Requested size: 336.26056pt x 206.77513pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[283] [284 <./_main_files/figure-latex/graphiques_maps_recup_shapefile_2-1.pdf>
+]
+<_main_files/figure-latex/graphiques_maps_choroplethe-1.pdf, id=5953, 330.23375
+pt x 206.7725pt>
+File: _main_files/figure-latex/graphiques_maps_choroplethe-1.pdf Graphic file (
+type pdf)
+<use _main_files/figure-latex/graphiques_maps_choroplethe-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_maps_choroplethe-1
+.pdf  used on input line 13024.
+(pdftex.def)             Requested size: 330.243pt x 206.77829pt.
+[285 <./_main_files/figure-latex/graphiques_maps_choroplethe-1.pdf>]
+<_main_files/figure-latex/graphiques_maps_choroplethe_2-1.pdf, id=5967, 330.233
+75pt x 206.7725pt>
+File: _main_files/figure-latex/graphiques_maps_choroplethe_2-1.pdf Graphic file
+ (type pdf)
+<use _main_files/figure-latex/graphiques_maps_choroplethe_2-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_maps_choroplethe_2
+-1.pdf  used on input line 13050.
+(pdftex.def)             Requested size: 330.243pt x 206.77829pt.
+<_main_files/figure-latex/graphiques_3d_persp-1.pdf, id=5968, 239.89626pt x 221
+.82875pt>
+File: _main_files/figure-latex/graphiques_3d_persp-1.pdf Graphic file (type pdf
+)
+<use _main_files/figure-latex/graphiques_3d_persp-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/graphiques_3d_persp-1.pdf  us
+ed on input line 13072.
+(pdftex.def)             Requested size: 239.89566pt x 221.82819pt.
+[286 <./_main_files/figure-latex/graphiques_maps_choroplethe_2-1.pdf>]
+Underfull \vbox (badness 1975) has occurred while \output is active []
+
+[287 <./_main_files/figure-latex/graphiques_3d_persp-1.pdf>]
+Overfull \hbox (2.21634pt too wide) in paragraph at lines 13136--13138
+[]\T1/lmtt/m/n/10.95 etiq <- c("psavert" = "Pers. Saving Rate", "uempmed" = "Me
+dian Duration
+ []
+
+[288] [289] [290] [291] [292] [293] [294
+
+]
+Chapitre 6.
+[295] [296] [297]
+<_main_files/figure-latex/regressions_estimation_graphiques-1.pdf, id=6134, 196
+.735pt x 173.64874pt>
+File: _main_files/figure-latex/regressions_estimation_graphiques-1.pdf Graphic 
+file (type pdf)
+<use _main_files/figure-latex/regressions_estimation_graphiques-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/regressions_estimation_graphi
+ques-1.pdf  used on input line 13474.
+(pdftex.def)             Requested size: 196.7345pt x 173.64832pt.
+<_main_files/figure-latex/regressions_estimation_graphiques-2.pdf, id=6135, 193
+.72375pt x 170.6375pt>
+File: _main_files/figure-latex/regressions_estimation_graphiques-2.pdf Graphic 
+file (type pdf)
+<use _main_files/figure-latex/regressions_estimation_graphiques-2.pdf>
+Package pdftex.def Info: _main_files/figure-latex/regressions_estimation_graphi
+ques-2.pdf  used on input line 13474.
+(pdftex.def)             Requested size: 193.72621pt x 170.63966pt.
+<_main_files/figure-latex/regressions_estimation_graphiques-3.pdf, id=6136, 193
+.72375pt x 168.63pt>
+File: _main_files/figure-latex/regressions_estimation_graphiques-3.pdf Graphic 
+file (type pdf)
+<use _main_files/figure-latex/regressions_estimation_graphiques-3.pdf>
+Package pdftex.def Info: _main_files/figure-latex/regressions_estimation_graphi
+ques-3.pdf  used on input line 13474.
+(pdftex.def)             Requested size: 193.72621pt x 168.63214pt.
+<_main_files/figure-latex/regressions_estimation_graphiques-4.pdf, id=6137, 193
+.72375pt x 168.63pt>
+File: _main_files/figure-latex/regressions_estimation_graphiques-4.pdf Graphic 
+file (type pdf)
+<use _main_files/figure-latex/regressions_estimation_graphiques-4.pdf>
+Package pdftex.def Info: _main_files/figure-latex/regressions_estimation_graphi
+ques-4.pdf  used on input line 13474.
+(pdftex.def)             Requested size: 193.72621pt x 168.63214pt.
+<_main_files/figure-latex/regressions_estimation_graphiques-5.pdf, id=6138, 193
+.72375pt x 168.63pt>
+File: _main_files/figure-latex/regressions_estimation_graphiques-5.pdf Graphic 
+file (type pdf)
+<use _main_files/figure-latex/regressions_estimation_graphiques-5.pdf>
+Package pdftex.def Info: _main_files/figure-latex/regressions_estimation_graphi
+ques-5.pdf  used on input line 13474.
+(pdftex.def)             Requested size: 193.72621pt x 168.63214pt.
+[298 <./_main_files/figure-latex/regressions_estimation_graphiques-1.pdf> <./_m
+ain_files/figure-latex/regressions_estimation_graphiques-2.pdf>]
+<_main_files/figure-latex/regressions_estimation_graphiques_2-1.pdf, id=6167, 4
+93.845pt x 170.6375pt>
+File: _main_files/figure-latex/regressions_estimation_graphiques_2-1.pdf Graphi
+c file (type pdf)
+<use _main_files/figure-latex/regressions_estimation_graphiques_2-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/regressions_estimation_graphi
+ques_2-1.pdf  used on input line 13490.
+(pdftex.def)             Requested size: 430.00337pt x 148.57838pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[299 <./_main_files/figure-latex/regressions_estimation_graphiques-3.pdf> <./_m
+ain_files/figure-latex/regressions_estimation_graphiques-4.pdf> <./_main_files/
+figure-latex/regressions_estimation_graphiques-5.pdf>]
+<_main_files/figure-latex/regressions_estimation_graphiques_3-1.pdf, id=6194, 4
+95.8525pt x 204.765pt>
+File: _main_files/figure-latex/regressions_estimation_graphiques_3-1.pdf Graphi
+c file (type pdf)
+<use _main_files/figure-latex/regressions_estimation_graphiques_3-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/regressions_estimation_graphi
+ques_3-1.pdf  used on input line 13506.
+(pdftex.def)             Requested size: 430.0036pt x 177.57231pt.
+
+Underfull \vbox (badness 4132) has occurred while \output is active []
+
+[300 <./_main_files/figure-latex/regressions_estimation_graphiques_2-1.pdf> <./
+_main_files/figure-latex/regressions_estimation_graphiques_3-1.pdf>] [301] [302
+]
+<_main_files/figure-latex/regressions_estimation_lm_1_summary_2-1.pdf, id=6267,
+ 206.7725pt x 155.58125pt>
+File: _main_files/figure-latex/regressions_estimation_lm_1_summary_2-1.pdf Grap
+hic file (type pdf)
+<use _main_files/figure-latex/regressions_estimation_lm_1_summary_2-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/regressions_estimation_lm_1_s
+ummary_2-1.pdf  used on input line 13656.
+(pdftex.def)             Requested size: 206.77513pt x 155.58322pt.
+<_main_files/figure-latex/regressions_estimation_lm_1_summary_2-2.pdf, id=6268,
+ 206.7725pt x 155.58125pt>
+File: _main_files/figure-latex/regressions_estimation_lm_1_summary_2-2.pdf Grap
+hic file (type pdf)
+<use _main_files/figure-latex/regressions_estimation_lm_1_summary_2-2.pdf>
+Package pdftex.def Info: _main_files/figure-latex/regressions_estimation_lm_1_s
+ummary_2-2.pdf  used on input line 13656.
+(pdftex.def)             Requested size: 206.77513pt x 155.58322pt.
+[303 <./_main_files/figure-latex/regressions_estimation_lm_1_summary_2-1.pdf> <
+./_main_files/figure-latex/regressions_estimation_lm_1_summary_2-2.pdf>]
+<_main_files/figure-latex/regressions_estimation_lm_1_qqplot-1.pdf, id=6295, 49
+9.8675pt x 171.64125pt>
+File: _main_files/figure-latex/regressions_estimation_lm_1_qqplot-1.pdf Graphic
+ file (type pdf)
+<use _main_files/figure-latex/regressions_estimation_lm_1_qqplot-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/regressions_estimation_lm_1_q
+qplot-1.pdf  used on input line 13684.
+(pdftex.def)             Requested size: 430.02258pt x 147.65834pt.
+
+Underfull \vbox (badness 5091) has occurred while \output is active []
+
+[304 <./_main_files/figure-latex/regressions_estimation_lm_1_qqplot-1.pdf>] [30
+5] [306] [307] [308]
+Overfull \hbox (9.51053pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/10.95 6.7.  TESTS DE NULLITÉ DES COEFFICIENTS ET INTERVALLES DE CO
+NFIANCE \T1/lmr/m/n/10.95 309
+ []
+
+[309]
+<_main_files/figure-latex/regressions_tests_coef_bar_plot-1.pdf, id=6421, 495.8
+525pt x 190.7125pt>
+File: _main_files/figure-latex/regressions_tests_coef_bar_plot-1.pdf Graphic fi
+le (type pdf)
+<use _main_files/figure-latex/regressions_tests_coef_bar_plot-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/regressions_tests_coef_bar_pl
+ot-1.pdf  used on input line 13939.
+(pdftex.def)             Requested size: 430.0036pt x 165.38599pt.
+[310 <./_main_files/figure-latex/regressions_tests_coef_bar_plot-1.pdf>] [311] 
+[312] [313] [314]
+Chapitre 7.
+
+Underfull \hbox (badness 10000) in paragraph at lines 14144--14144
+[][][]\T1/lmr/m/n/9 .[][][][]$http : / / fr . openclassrooms . com / informatiq
+ue / cours / concevez -[] votre -[] site -[] web -[] avec -[] php -[] et -[] my
+sql / les -[]
+ []
+
+[315
+
+] [316] [317] [318] [319] [320] [321]
+Overfull \hbox (168.38916pt too wide) in paragraph at lines 14613--14614
+ []\T1/lmtt/m/n/10.95 []!\"#$\\%&\\TS1/lmtt/m/n/10.95 '\T1/lmtt/m/n/10.95 \\(\\
+)*+,-\\./:;<=>\\?@^^B_\TS1/lmtt/m/n/10.95 `\T1/lmtt/m/n/10.95 {|}~[]| 
+ []
+
+[322] [323] [324] [325] [326] [327] [328] [329] [330] [331] [332] [333] [334] [
+335] [336] [337] [338]
+Chapitre 8.
+[339
+
+] [340]
+Chapitre 9.
+[341
+
+] [342
+
+] [343] 
+AED: lastpage setting LastPage
+[344] (./_main.aux)
+Package rerunfilecheck Info: File `_main.out' has not changed.
+(rerunfilecheck)             Checksum: 56185C46510B0C65CE39FDEEEFF4490E;15880.
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 38454 strings out of 481783
+ 727369 string characters out of 5927834
+ 1277295 words of memory out of 5000000
+ 50296 multiletter control sequences out of 15000+600000
+ 651355 words of font info for 124 fonts, out of 8000000 for 9000
+ 59 hyphenation exceptions out of 8191
+ 85i,20n,115p,1072b,1929s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exi
+st, replaced by a fixed one
+
+{/Users/ewengallic/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/Us
+ers/ewengallic/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/Users/
+ewengallic/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/Users/
+ewengallic/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/Users/
+ewengallic/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/Users/
+ewengallic/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}</Users/ewe
+ngallic/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></Users/ewe
+ngallic/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></Users/ewe
+ngallic/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></Users/ew
+engallic/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmex10.pfb></Users/ew
+engallic/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></Users/ew
+engallic/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></Users/ewe
+ngallic/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></Users/ewen
+gallic/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></Users/eweng
+allic/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi9.pfb></Users/ewenga
+llic/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmib10.pfb></Users/eweng
+allic/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmib7.pfb></Users/eweng
+allic/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb></Users/ewenga
+llic/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb></Users/ewengal
+lic/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb></Users/ewengall
+ic/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb></Users/ewengallic
+/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb></Users/ewengallic/L
+ibrary/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb></Users/ewengallic/Lib
+rary/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb></Users/ewengallic/Lib
+rary/TinyTeX/texmf-dist/fonts/type1/public/lm/lmro10.pfb></Users/ewengallic/Lib
+rary/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></Users/ewengallic/Lib
+rary/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></Users/ewengallic/Libr
+ary/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></Users/ewengallic/Libr
+ary/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></Users/ewengallic/Libr
+ary/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt9.pfb></Users/ewengallic/Libra
+ry/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtti10.pfb></Users/ewengallic/Libr
+ary/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtto10.pfb></Users/ewengallic/Lib
+rary/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on _main.pdf (344 pages, 4078612 bytes).
+PDF statistics:
+ 7865 PDF objects out of 8907 (max. 8388607)
+ 7099 compressed objects within 71 object streams
+ 3664 named destinations out of 4296 (max. 500000)
+ 2283 words of extra memory for PDF output out of 10000 (max. 10000000)
+

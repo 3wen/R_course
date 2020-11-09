@@ -1,0 +1,20 @@
+"0","debut_2 <- ymd_hms(""2014-10-01 08:00:00"", tz = ""Australia/Perth"")
+fin_2 <- ymd_hms(""2014-10-01 10:00:00"", tz = ""Australia/Perth"")
+
+debut_3 <- ymd_hms(""2014-10-02 09:00:00"", tz = ""Australia/Perth"")
+fin_3 <- ymd_hms(""2014-10-02 10:00:00"", tz = ""Australia/Perth"")
+
+(intervalle_2 <- interval(debut_2, fin_2))
+"
+"1","[1]"
+"1"," 2014-10-01 08:00:00 AWST--2014-10-01 10:00:00 AWST"
+"1","
+"
+"0","(intervalle_3 <- interval(debut_3, fin_3))"
+"1","[1]"
+"1"," 2014-10-02 09:00:00 AWST--2014-10-02 10:00:00 AWST"
+"1","
+"
+"0","int_overlaps(intervalle_1, intervalle_2)"
+"2","Error in is(x, c(""Interval"")) : objet 'intervalle_1' introuvable
+"

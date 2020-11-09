@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>7 Expressions régulières | Notes de cours de R - Version 2</title>
+  <meta name="description" content="7 Expressions régulières | Notes de cours de R - Version 2" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="7 Expressions régulières | Notes de cours de R - Version 2" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="7 Expressions régulières | Notes de cours de R - Version 2" />
+  
+  
+  
+
+<meta name="author" content="Ewen Gallic" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="régressions-linéaires.html"/>
+<link rel="next" href="pour-aller-plus-loin.html"/>
+<script src="libs/header-attrs-2.3/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="styles/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="avant-propos.html"><a href="avant-propos.html"><i class="fa fa-check"></i>Avant Propos</a>
+<ul>
+<li class="chapter" data-level="0.1" data-path="avant-propos.html"><a href="avant-propos.html#objectifs"><i class="fa fa-check"></i><b>0.1</b> Objectifs</a></li>
+<li class="chapter" data-level="0.2" data-path="avant-propos.html"><a href="avant-propos.html#à-qui-sadressent-ces-notes"><i class="fa fa-check"></i><b>0.2</b> À qui s’adressent ces notes ?</a></li>
+<li class="chapter" data-level="0.3" data-path="avant-propos.html"><a href="avant-propos.html#remerciements"><i class="fa fa-check"></i><b>0.3</b> Remerciements</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#historique"><i class="fa fa-check"></i><b>1.1</b> Historique</a></li>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#présentation-de-lespace-de-travail"><i class="fa fa-check"></i><b>1.2</b> Présentation de l’espace de travail</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="introduction.html"><a href="introduction.html#la-console-et-les-fenêtres-de-script"><i class="fa fa-check"></i><b>1.2.1</b> La console et les fenêtres de script</a></li>
+<li class="chapter" data-level="1.2.2" data-path="introduction.html"><a href="introduction.html#les-variables"><i class="fa fa-check"></i><b>1.2.2</b> Les variables</a></li>
+<li class="chapter" data-level="1.2.3" data-path="introduction.html"><a href="introduction.html#les-packages"><i class="fa fa-check"></i><b>1.2.3</b> Les <em>packages</em></a></li>
+<li class="chapter" data-level="1.2.4" data-path="introduction.html"><a href="introduction.html#laide"><i class="fa fa-check"></i><b>1.2.4</b> L’aide</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#un-environnement-de-développement-rstudio"><i class="fa fa-check"></i><b>1.3</b> Un environnement de développement : RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="données.html"><a href="données.html"><i class="fa fa-check"></i><b>2</b> Données</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="données.html"><a href="données.html#types-de-données"><i class="fa fa-check"></i><b>2.1</b> Types de données</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="données.html"><a href="données.html#donnees-mode"><i class="fa fa-check"></i><b>2.1.1</b> Mode</a></li>
+<li class="chapter" data-level="2.1.2" data-path="données.html"><a href="données.html#longueur"><i class="fa fa-check"></i><b>2.1.2</b> Longueur</a></li>
+<li class="chapter" data-level="2.1.3" data-path="données.html"><a href="données.html#lobjet-vide"><i class="fa fa-check"></i><b>2.1.3</b> L’objet vide</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="données.html"><a href="données.html#structures"><i class="fa fa-check"></i><b>2.2</b> Structure des données</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="données.html"><a href="données.html#structures-de-base"><i class="fa fa-check"></i><b>2.2.1</b> Structures de base</a></li>
+<li class="chapter" data-level="2.2.2" data-path="données.html"><a href="données.html#tableaux-de-données"><i class="fa fa-check"></i><b>2.2.2</b> Tableaux de données</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="données.html"><a href="données.html#importation-exportation-et-création-de-données"><i class="fa fa-check"></i><b>2.3</b> Importation, exportation et création de données</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="données.html"><a href="données.html#importation"><i class="fa fa-check"></i><b>2.3.1</b> Importation</a></li>
+<li class="chapter" data-level="2.3.2" data-path="données.html"><a href="données.html#exportation"><i class="fa fa-check"></i><b>2.3.2</b> Exportation</a></li>
+<li class="chapter" data-level="2.3.3" data-path="données.html"><a href="données.html#génération"><i class="fa fa-check"></i><b>2.3.3</b> Génération</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="données.html"><a href="données.html#manipulation-des-données"><i class="fa fa-check"></i><b>2.4</b> Manipulation des données</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="données.html"><a href="données.html#opérateurs"><i class="fa fa-check"></i><b>2.4.1</b> Opérateurs</a></li>
+<li class="chapter" data-level="2.4.2" data-path="données.html"><a href="données.html#manip-acces"><i class="fa fa-check"></i><b>2.4.2</b> Accès aux valeurs, modifications</a></li>
+<li class="chapter" data-level="2.4.3" data-path="données.html"><a href="données.html#chaînes-de-caractères"><i class="fa fa-check"></i><b>2.4.3</b> Chaînes de caractères</a></li>
+<li class="chapter" data-level="2.4.4" data-path="données.html"><a href="données.html#dates-1"><i class="fa fa-check"></i><b>2.4.4</b> Dates</a></li>
+<li class="chapter" data-level="2.4.5" data-path="données.html"><a href="données.html#calculs-matriciels"><i class="fa fa-check"></i><b>2.4.5</b> Calculs matriciels</a></li>
+<li class="chapter" data-level="2.4.6" data-path="données.html"><a href="données.html#tableaux_de_donnees"><i class="fa fa-check"></i><b>2.4.6</b> Tableaux de données</a></li>
+<li class="chapter" data-level="2.4.7" data-path="données.html"><a href="données.html#data-tables"><i class="fa fa-check"></i><b>2.4.7</b> Data tables</a></li>
+<li class="chapter" data-level="2.4.8" data-path="données.html"><a href="données.html#quelques-fonctions-utiles"><i class="fa fa-check"></i><b>2.4.8</b> Quelques fonctions utiles</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="données.html"><a href="données.html#exercices"><i class="fa fa-check"></i><b>2.5</b> Exercices</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="fonction.html"><a href="fonction.html"><i class="fa fa-check"></i><b>3</b> Fonction</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="fonction.html"><a href="fonction.html#définition"><i class="fa fa-check"></i><b>3.1</b> Définition</a></li>
+<li class="chapter" data-level="3.2" data-path="fonction.html"><a href="fonction.html#fonctions_structure"><i class="fa fa-check"></i><b>3.2</b> La structure d’une fonction</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="fonction.html"><a href="fonction.html#fonctions_structure_corps"><i class="fa fa-check"></i><b>3.2.1</b> Le corps d’une fonction</a></li>
+<li class="chapter" data-level="3.2.2" data-path="fonction.html"><a href="fonction.html#fonctions_structure_parametres"><i class="fa fa-check"></i><b>3.2.2</b> Les arguments d’une fonction</a></li>
+<li class="chapter" data-level="3.2.3" data-path="fonction.html"><a href="fonction.html#fonctions_structure_environnement"><i class="fa fa-check"></i><b>3.2.3</b> Portée des fonctions</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="fonction.html"><a href="fonction.html#documentation"><i class="fa fa-check"></i><b>3.3</b> Documentation</a></li>
+<li class="chapter" data-level="3.4" data-path="fonction.html"><a href="fonction.html#exercices-1"><i class="fa fa-check"></i><b>3.4</b> Exercices</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="boucles.html"><a href="boucles.html"><i class="fa fa-check"></i><b>4</b> Boucles et calculs vectoriels</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="boucles.html"><a href="boucles.html#boucles_boucles"><i class="fa fa-check"></i><b>4.1</b> Les boucles</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="boucles.html"><a href="boucles.html#boucles_boucles_while"><i class="fa fa-check"></i><b>4.1.1</b> Les boucles avec <code>while()</code></a></li>
+<li class="chapter" data-level="4.1.2" data-path="boucles.html"><a href="boucles.html#boucles_boucles_for"><i class="fa fa-check"></i><b>4.1.2</b> Les boucles avec <code>for()</code></a></li>
+<li class="chapter" data-level="4.1.3" data-path="boucles.html"><a href="boucles.html#boucles_boucles_conditions"><i class="fa fa-check"></i><b>4.1.3</b> Les conditions</a></li>
+<li class="chapter" data-level="4.1.4" data-path="boucles.html"><a href="boucles.html#boucles_boucles_repeat"><i class="fa fa-check"></i><b>4.1.4</b> L’instruction <code>repeat</code> … <code>break</code></a></li>
+<li class="chapter" data-level="4.1.5" data-path="boucles.html"><a href="boucles.html#boucles_boucles_next"><i class="fa fa-check"></i><b>4.1.5</b> L’instruction <code>next</code> … <code>break</code></a></li>
+<li class="chapter" data-level="4.1.6" data-path="boucles.html"><a href="boucles.html#boucles_boucles_progressbar"><i class="fa fa-check"></i><b>4.1.6</b> Barre de progression</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation"><i class="fa fa-check"></i><b>4.2</b> La vectorisation</a></li>
+<li class="chapter" data-level="4.3" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_purrr"><i class="fa fa-check"></i><b>4.3</b> Avec {<code>purrr</code>}</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="boucles.html"><a href="boucles.html#listes-ou-vecteurs-en-input"><i class="fa fa-check"></i><b>4.3.1</b> Listes ou vecteurs en <em>input</em></a></li>
+<li class="chapter" data-level="4.3.2" data-path="boucles.html"><a href="boucles.html#tibbles-en-input"><i class="fa fa-check"></i><b>4.3.2</b> Tibbles en <em>input</em></a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_plyr"><i class="fa fa-check"></i><b>4.4</b> Avec {<code>plyr</code>}</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_plyr_a_ply"><i class="fa fa-check"></i><b>4.4.1</b> Array en <em>input</em></a></li>
+<li class="chapter" data-level="4.4.2" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_plyr_d_ply"><i class="fa fa-check"></i><b>4.4.2</b> <em>Data frame</em> en <em>input</em></a></li>
+<li class="chapter" data-level="4.4.3" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_plyr_l_ply"><i class="fa fa-check"></i><b>4.4.3</b> <em>List</em> en <em>input</em></a></li>
+<li class="chapter" data-level="4.4.4" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_plyr_parallel"><i class="fa fa-check"></i><b>4.4.4</b> Calcul parallèle</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_apply"><i class="fa fa-check"></i><b>4.5</b> Avec {<code>base</code>}</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_apply_lapply"><i class="fa fa-check"></i><b>4.5.1</b> La fonction <code>lapply</code></a></li>
+<li class="chapter" data-level="4.5.2" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_apply_sapply"><i class="fa fa-check"></i><b>4.5.2</b> La fonction <code>sapply()</code></a></li>
+<li class="chapter" data-level="4.5.3" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_apply_vapply"><i class="fa fa-check"></i><b>4.5.3</b> La fonction <code>vapply</code></a></li>
+<li class="chapter" data-level="4.5.4" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_apply_apply"><i class="fa fa-check"></i><b>4.5.4</b> La fonction <code>apply()</code></a></li>
+<li class="chapter" data-level="4.5.5" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_apply_tapply"><i class="fa fa-check"></i><b>4.5.5</b> La fonction <code>tapply()</code></a></li>
+<li class="chapter" data-level="4.5.6" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_apply_mapply"><i class="fa fa-check"></i><b>4.5.6</b> La fonction <code>mapply()</code></a></li>
+<li class="chapter" data-level="4.5.7" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_Vectorize"><i class="fa fa-check"></i><b>4.5.7</b> La fonction <code>Vectorize()</code></a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="boucles.html"><a href="boucles.html#boucles_exercices"><i class="fa fa-check"></i><b>4.6</b> Exercices</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="graphiques.html"><a href="graphiques.html"><i class="fa fa-check"></i><b>5</b> Graphiques</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="graphiques.html"><a href="graphiques.html#graphiques_structure"><i class="fa fa-check"></i><b>5.1</b> Structure</a></li>
+<li class="chapter" data-level="5.2" data-path="graphiques.html"><a href="graphiques.html#graphiques_ggplot"><i class="fa fa-check"></i><b>5.2</b> Des graphiques élaborés avec <code>ggplot()</code></a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="graphiques.html"><a href="graphiques.html#graphiques_ggplot_aes"><i class="fa fa-check"></i><b>5.2.1</b> Arguments esthétiques</a></li>
+<li class="chapter" data-level="5.2.2" data-path="graphiques.html"><a href="graphiques.html#graphiques_ggplot_geom"><i class="fa fa-check"></i><b>5.2.2</b> Arguments géométriques (fonctions <code>geom_*</code>)</a></li>
+<li class="chapter" data-level="5.2.3" data-path="graphiques.html"><a href="graphiques.html#graphiques_ggplot_stat"><i class="fa fa-check"></i><b>5.2.3</b> Arguments statistiques</a></li>
+<li class="chapter" data-level="5.2.4" data-path="graphiques.html"><a href="graphiques.html#graphiques_ggplot_scale"><i class="fa fa-check"></i><b>5.2.4</b> Échelles (fonction <code>scale_*()</code>)</a></li>
+<li class="chapter" data-level="5.2.5" data-path="graphiques.html"><a href="graphiques.html#graphiques_ggplot_group"><i class="fa fa-check"></i><b>5.2.5</b> Groupes</a></li>
+<li class="chapter" data-level="5.2.6" data-path="graphiques.html"><a href="graphiques.html#graphiques_ggplot_annotations"><i class="fa fa-check"></i><b>5.2.6</b> Annotations</a></li>
+<li class="chapter" data-level="5.2.7" data-path="graphiques.html"><a href="graphiques.html#graphiques_ggplot_position"><i class="fa fa-check"></i><b>5.2.7</b> Positions</a></li>
+<li class="chapter" data-level="5.2.8" data-path="graphiques.html"><a href="graphiques.html#graphiques_ggplot_facet"><i class="fa fa-check"></i><b>5.2.8</b> Facettes</a></li>
+<li class="chapter" data-level="5.2.9" data-path="graphiques.html"><a href="graphiques.html#graphiques_ggplot_coord"><i class="fa fa-check"></i><b>5.2.9</b> Coordonnées</a></li>
+<li class="chapter" data-level="5.2.10" data-path="graphiques.html"><a href="graphiques.html#graphiques_ggplot_axes"><i class="fa fa-check"></i><b>5.2.10</b> Titres, axes, légendes</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="graphiques.html"><a href="graphiques.html#graphiques_enregistrement"><i class="fa fa-check"></i><b>5.3</b> Enregistrement des graphiques</a></li>
+<li class="chapter" data-level="5.4" data-path="graphiques.html"><a href="graphiques.html#graphiques_maps"><i class="fa fa-check"></i><b>5.4</b> Cartes</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="graphiques.html"><a href="graphiques.html#graphiques_maps_recup"><i class="fa fa-check"></i><b>5.4.1</b> Récupérer des cartes toutes faites</a></li>
+<li class="chapter" data-level="5.4.2" data-path="graphiques.html"><a href="graphiques.html#graphiques_maps_choroplethe"><i class="fa fa-check"></i><b>5.4.2</b> Carte choroplèthe</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="graphiques.html"><a href="graphiques.html#graphiques_3d"><i class="fa fa-check"></i><b>5.5</b> Graphiques en 3D</a></li>
+<li class="chapter" data-level="5.6" data-path="graphiques.html"><a href="graphiques.html#graphiques_exercices"><i class="fa fa-check"></i><b>5.6</b> Exercices</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="régressions-linéaires.html"><a href="régressions-linéaires.html"><i class="fa fa-check"></i><b>6</b> Régressions linéaires</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="régressions-linéaires.html"><a href="régressions-linéaires.html#rappels"><i class="fa fa-check"></i><b>6.1</b> Rappels</a></li>
+<li class="chapter" data-level="6.2" data-path="régressions-linéaires.html"><a href="régressions-linéaires.html#sec:regressions_donnees"><i class="fa fa-check"></i><b>6.2</b> Données de l’exemple</a></li>
+<li class="chapter" data-level="6.3" data-path="régressions-linéaires.html"><a href="régressions-linéaires.html#estimation-des-paramètres"><i class="fa fa-check"></i><b>6.3</b> Estimation des paramètres {#}</a></li>
+<li class="chapter" data-level="6.4" data-path="régressions-linéaires.html"><a href="régressions-linéaires.html#sec:regressions_lecture"><i class="fa fa-check"></i><b>6.4</b> Lecture des sorties</a></li>
+<li class="chapter" data-level="6.5" data-path="régressions-linéaires.html"><a href="régressions-linéaires.html#sec:regressions_extractions"><i class="fa fa-check"></i><b>6.5</b> Extractions</a></li>
+<li class="chapter" data-level="6.6" data-path="régressions-linéaires.html"><a href="régressions-linéaires.html#sec:regressions_facteurs"><i class="fa fa-check"></i><b>6.6</b> Variables catégorielles</a></li>
+<li class="chapter" data-level="6.7" data-path="régressions-linéaires.html"><a href="régressions-linéaires.html#sec:regressions_tests"><i class="fa fa-check"></i><b>6.7</b> Tests de nullité des coefficients et intervalles de confiance</a></li>
+<li class="chapter" data-level="6.8" data-path="régressions-linéaires.html"><a href="régressions-linéaires.html#sec:regressions_previsions"><i class="fa fa-check"></i><b>6.8</b> Prévisions</a></li>
+<li class="chapter" data-level="6.9" data-path="régressions-linéaires.html"><a href="régressions-linéaires.html#exercices-sur-la-régression"><i class="fa fa-check"></i><b>6.9</b> Exercices sur la régression</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="sec-regex.html"><a href="sec-regex.html"><i class="fa fa-check"></i><b>7</b> Expressions régulières</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="sec-regex.html"><a href="sec-regex.html#sec:manip_regex_structure"><i class="fa fa-check"></i><b>7.1</b> Les recherches basiques</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="sec-regex.html"><a href="sec-regex.html#sec:manip_regex_stringr_detect"><i class="fa fa-check"></i><b>7.1.1</b> Détection d’un motif avec <code>str_detect()</code></a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="sec-regex.html"><a href="sec-regex.html#sec:manip_regex_classes"><i class="fa fa-check"></i><b>7.2</b> Les classes de caractères</a></li>
+<li class="chapter" data-level="7.3" data-path="sec-regex.html"><a href="sec-regex.html#sec:manip_regex_quantificateurs"><i class="fa fa-check"></i><b>7.3</b> Les quantificateurs</a></li>
+<li class="chapter" data-level="7.4" data-path="sec-regex.html"><a href="sec-regex.html#sec:manip_regex_metacaracteres"><i class="fa fa-check"></i><b>7.4</b> Les métacaractères</a></li>
+<li class="chapter" data-level="7.5" data-path="sec-regex.html"><a href="sec-regex.html#sec:manip_regex_stringr"><i class="fa fa-check"></i><b>7.5</b> Quelques fonctions du <em>package</em> {<code>stringr</code>}</a>
+<ul>
+<li class="chapter" data-level="7.5.1" data-path="sec-regex.html"><a href="sec-regex.html#sec:manip_regex_stringr_extract"><i class="fa fa-check"></i><b>7.5.1</b> La fonction <code>str_detect()</code></a></li>
+<li class="chapter" data-level="7.5.2" data-path="sec-regex.html"><a href="sec-regex.html#sec:manip_regex_stringr_extract_all"><i class="fa fa-check"></i><b>7.5.2</b> La fonction <code>str_extract_all()</code></a></li>
+<li class="chapter" data-level="7.5.3" data-path="sec-regex.html"><a href="sec-regex.html#sec:manip_regex_stringr_match"><i class="fa fa-check"></i><b>7.5.3</b> La fonction <code>str_match()</code></a></li>
+<li class="chapter" data-level="7.5.4" data-path="sec-regex.html"><a href="sec-regex.html#sec:manip_regex_stringr_match_all"><i class="fa fa-check"></i><b>7.5.4</b> La fonction <code>str_match_all()</code></a></li>
+<li class="chapter" data-level="7.5.5" data-path="sec-regex.html"><a href="sec-regex.html#sec:manip_regex_stringr_locate"><i class="fa fa-check"></i><b>7.5.5</b> La fonction <code>str_locate()</code></a></li>
+<li class="chapter" data-level="7.5.6" data-path="sec-regex.html"><a href="sec-regex.html#sec:manip_regex_stringr_locate_all"><i class="fa fa-check"></i><b>7.5.6</b> La fonction <code>str_locate_all()</code></a></li>
+<li class="chapter" data-level="7.5.7" data-path="sec-regex.html"><a href="sec-regex.html#sec:manip_regex_stringr_replace"><i class="fa fa-check"></i><b>7.5.7</b> La fonction <code>str_replace()</code></a></li>
+<li class="chapter" data-level="7.5.8" data-path="sec-regex.html"><a href="sec-regex.html#sec:manip_regex_stringr_replace_all"><i class="fa fa-check"></i><b>7.5.8</b> La fonction <code>str_replace_all()</code></a></li>
+<li class="chapter" data-level="7.5.9" data-path="sec-regex.html"><a href="sec-regex.html#sec:manip_regex_stringr_split"><i class="fa fa-check"></i><b>7.5.9</b> La fonction <code>str_split()</code></a></li>
+<li class="chapter" data-level="7.5.10" data-path="sec-regex.html"><a href="sec-regex.html#sec:manip_regex_stringr_split_fixed"><i class="fa fa-check"></i><b>7.5.10</b> La fonction <code>str_string_fixed()</code></a></li>
+</ul></li>
+<li class="chapter" data-level="7.6" data-path="sec-regex.html"><a href="sec-regex.html#sec:manip_regex_base"><i class="fa fa-check"></i><b>7.6</b> Quelques fonctions du <em>package</em> {<code>base</code>}</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="pour-aller-plus-loin.html"><a href="pour-aller-plus-loin.html"><i class="fa fa-check"></i><b>8</b> Pour aller plus loin</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="pour-aller-plus-loin.html"><a href="pour-aller-plus-loin.html#travailler-par-projets-avec-rstudio"><i class="fa fa-check"></i><b>8.1</b> Travailler par projets, avec RStudio</a></li>
+<li class="chapter" data-level="8.2" data-path="pour-aller-plus-loin.html"><a href="pour-aller-plus-loin.html#r-markdown"><i class="fa fa-check"></i><b>8.2</b> R Markdown</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="pense-bête.html"><a href="pense-bête.html"><i class="fa fa-check"></i><b>9</b> Pense-bête</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="pense-bête.html"><a href="pense-bête.html#installer-un-package-depuis-sa-source"><i class="fa fa-check"></i><b>9.1</b> Installer un <em>package</em> depuis sa source</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Notes de cours de R - Version 2</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="sec:regex" class="section level1" number="7">
+<h1><span class="header-section-number">7</span> Expressions régulières</h1>
+<p>La Section @ref(sec:manip_strings_regex) montre des exemples simples de recherches de chaînes de caractères. Celle-ci s’attarde à présenter un moyen de faire des recherches plus avancées, à l’aide de ce que l’on appelle les <em>expressions régulières</em> (ou <em>regular expressions</em>, abrégé par <em>regex</em>), qui sont des séquences de caractères formant un motif de recherche (ou <em>search pattern</em>).</p>
+<p>Avant d’aller plus loin, il convient de rappeler au lecteur ou à la lectrice l’existence de l’aide sous <code>R</code>. La page réservée aux <code>regex</code>, accessible en évaluant la commande <code>?regex</code> (<em>package</em> <code>base</code>), est un bon aide mémoire. Par ailleurs, le cours intitulé “<em>Les expressions régulières</em>” sur <em>OpenClassrooms</em> est un bon support<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a>. Cependant, <code>R</code> possède quelques terminologiques qui lui sont propres, et qui diffèrent légèrement du cours proposé sur <em>OpenClassrooms</em>.</p>
+<div id="sec:manip_regex_structure" class="section level2" number="7.1">
+<h2><span class="header-section-number">7.1</span> Les recherches basiques</h2>
+<p>Les fonctions qui emploient les <em>regex</em> en R attendent au minimum deux arguments :</p>
+<ul>
+<li>un premier pour indiquer la chaîne de caractères (ou le vecteur de chaînes de caractères) sur lequel (lesquels) les recherches vont être effectuées ;</li>
+<li>un deuxième pour préciser le motif (<em>pattern</em>) à rechercher. C’est l’argument qui contient l’expression régulière</li>
+</ul>
+<p>Lorsque l’expression est trouvée dans une chaîne de caractère, on dit qu’il y a <em>match</em> (ou appariement).</p>
+<p>Le <em>package</em> <code>{base}</code> offre de nombreuses fonctions pour effectuer des manipulations de chaînes de caractères à l’aide des expressions régulières. Elles souffrent toutefois quelques légers problèmes : il y a peu d’unité dans la syntaxe de ces fonctions et le nom de certaines d’entre-elles n’est pas immédiatement compréhensible. Aussi, nous ne nous attarderont pas à vous faire part du panorama des fonctions du <em>package</em> <code>{base}</code> ici. Nous passerons davantage de temps sur les fonctions du <em>package</em> <code>{stringr}</code>, qui s’appuient, pour la plupart d’entre-elles, sur des fonctions du <em>package</em> {<code>base</code>}.</p>
+<p>Le nom des fonction du <em>package</em> {<code>stringr</code>} possède le préfixe <code>_</code>. Les deux arguments principaux indiquant le texte et le vecteur de chaînes de caractères et le motif sont appelés <code>string</code> et <code>pattern</code>. La syntaxe des fonctions de {<code>stringr</code>} est donc comme suit :</p>
+<div class="sourceCode" id="cb1272"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1272-1"><a href="sec-regex.html#cb1272-1" aria-hidden="true"></a><span class="kw">str_function</span>(string, pattern)</span></code></pre></div>
+<div id="sec:manip_regex_stringr_detect" class="section level3" number="7.1.1">
+<h3><span class="header-section-number">7.1.1</span> Détection d’un motif avec <code>str_detect()</code></h3>
+<p>Pour détecter la présence ou l’absence d’un motif dans une chaîne, on peut utiliser la fonction <code>str_detect()</code>.</p>
+<div class="sourceCode" id="cb1273"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1273-1"><a href="sec-regex.html#cb1273-1" aria-hidden="true"></a><span class="kw">library</span>(stringr)</span>
+<span id="cb1273-2"><a href="sec-regex.html#cb1273-2" aria-hidden="true"></a>textes &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;J&#39;ai pas le temps, j&#39;ai matériellement pas le temps de faire ça&quot;</span>,</span>
+<span id="cb1273-3"><a href="sec-regex.html#cb1273-3" aria-hidden="true"></a>           <span class="st">&quot;Y a pas assez d&#39;chaises ici ?&quot;</span>,</span>
+<span id="cb1273-4"><a href="sec-regex.html#cb1273-4" aria-hidden="true"></a>           <span class="st">&quot;J&#39;ai&quot;</span>)</span>
+<span id="cb1273-5"><a href="sec-regex.html#cb1273-5" aria-hidden="true"></a></span>
+<span id="cb1273-6"><a href="sec-regex.html#cb1273-6" aria-hidden="true"></a><span class="kw">str_detect</span>(textes, <span class="st">&quot;j&#39;ai&quot;</span>)</span></code></pre></div>
+<pre><code>## [1]  TRUE FALSE FALSE</code></pre>
+<div class="sourceCode" id="cb1275"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1275-1"><a href="sec-regex.html#cb1275-1" aria-hidden="true"></a><span class="co"># En ignorant la casse</span></span>
+<span id="cb1275-2"><a href="sec-regex.html#cb1275-2" aria-hidden="true"></a><span class="kw">str_detect</span>(<span class="dt">string =</span> textes,</span>
+<span id="cb1275-3"><a href="sec-regex.html#cb1275-3" aria-hidden="true"></a>           <span class="dt">pattern =</span> <span class="kw">regex</span>(<span class="st">&quot;j&#39;ai&quot;</span>, <span class="dt">ignore_case =</span> <span class="ot">TRUE</span>))</span></code></pre></div>
+<pre><code>## [1]  TRUE FALSE  TRUE</code></pre>
+<p>Si on désire rechercher la présence d’un motif ou d’un autre dans un texte, on peut effectuer à la main des appels multiples à une fonction de recherche, un appel par texte à chercher, ou on peut plus simplement utiliser l’opérateur logique “Ou”, qui s’écrit <code>|</code> en <code>R</code>.</p>
+<div class="sourceCode" id="cb1277"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1277-1"><a href="sec-regex.html#cb1277-1" aria-hidden="true"></a>textes  &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;J’accepte votre bonjour, Ashley.&quot;</span>,</span>
+<span id="cb1277-2"><a href="sec-regex.html#cb1277-2" aria-hidden="true"></a>            <span class="st">&quot;Et je vous l’échange contre un coucou.&quot;</span>, </span>
+<span id="cb1277-3"><a href="sec-regex.html#cb1277-3" aria-hidden="true"></a>            <span class="st">&quot;Coucou !&quot;</span>)</span>
+<span id="cb1277-4"><a href="sec-regex.html#cb1277-4" aria-hidden="true"></a>motif &lt;-<span class="st"> &quot;coucou|Ashley&quot;</span></span>
+<span id="cb1277-5"><a href="sec-regex.html#cb1277-5" aria-hidden="true"></a><span class="kw">str_detect</span>(<span class="dt">string =</span> textes, <span class="dt">pattern =</span> motif)</span></code></pre></div>
+<pre><code>## [1]  TRUE  TRUE FALSE</code></pre>
+<p>Le premier élément du vecteur <code>textes</code> contient le mot <code>"Ashley"</code> mais pas <code>"coucou"</code>. Il y a bien au moins une des deux sous-chaînes qui a été trouvée. Le troisième élément, en revanche, ne contient ni <code>"coucou"</code>, ni <code>"Ashley"</code> (il ne faut pas oublier que les fonctions traitant les expressions régulières sont par défaut sensibles à la casse en <code>R</code>).</p>
+<p>Pour chercher si un motif est présent en début de texte, on fait débuter la sous-chaîne à <em>matcher</em> par un accent circonflexe. Pour chercher si un motif est en fin de texte, on termine la sous-chaîne à <em>matcher</em> par un symbole dollar.</p>
+<div class="sourceCode" id="cb1279"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1279-1"><a href="sec-regex.html#cb1279-1" aria-hidden="true"></a>textes &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Mais je ne mange pas, voyons !&quot;</span>,</span>
+<span id="cb1279-2"><a href="sec-regex.html#cb1279-2" aria-hidden="true"></a>          <span class="st">&quot;Mais je ne mange pas&quot;</span>, <span class="st">&quot;voyons ! Mais&quot;</span>)</span>
+<span id="cb1279-3"><a href="sec-regex.html#cb1279-3" aria-hidden="true"></a><span class="kw">str_detect</span>(<span class="dt">string =</span> textes, <span class="dt">pattern =</span> <span class="st">&quot;^Mais&quot;</span>)</span></code></pre></div>
+<pre><code>## [1]  TRUE  TRUE FALSE</code></pre>
+<div class="sourceCode" id="cb1281"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1281-1"><a href="sec-regex.html#cb1281-1" aria-hidden="true"></a><span class="kw">str_detect</span>(<span class="dt">string =</span> textes, <span class="dt">pattern =</span> <span class="st">&quot;je ne mange pas$&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] FALSE  TRUE FALSE</code></pre>
+</div>
+</div>
+<div id="sec:manip_regex_classes" class="section level2" number="7.2">
+<h2><span class="header-section-number">7.2</span> Les classes de caractères</h2>
+<p>Les classes de caractères sont des listes de caractères appartenant à un ensemble, comme par exemple les caractètres alphabétiques, numériques, alphanumériques, etc. Il est possible de les construire soi-même, ou bien d’utiliser des classes prédéfinies. Elles sont écrites en les plaçant entre des crochets <code>[classe]</code>.</p>
+<p>Par exemple, si on désire chercher s’il y a des occurrences du caractère <code>o</code> ou <code>i</code> entre les sous-chaînes <code>Cr</code> et <code>q</code>, on définit la classe de caractères <code>[oi]</code> :</p>
+<div class="sourceCode" id="cb1283"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1283-1"><a href="sec-regex.html#cb1283-1" aria-hidden="true"></a><span class="kw">str_detect</span>(<span class="dt">string =</span> <span class="kw">c</span>(<span class="st">&quot;Criquette&quot;</span>, <span class="st">&quot;Craquer&quot;</span>, <span class="st">&quot;Croquette&quot;</span>),</span>
+<span id="cb1283-2"><a href="sec-regex.html#cb1283-2" aria-hidden="true"></a>           <span class="dt">pattern =</span> <span class="st">&quot;Cr[oi]q&quot;</span>, )</span></code></pre></div>
+<pre><code>## [1]  TRUE FALSE  TRUE</code></pre>
+<p>On a cherché dans chaque élément de <code>string</code>, s’il y avait la chaîne <code>Croq</code> ou <code>Criq</code>.</p>
+<p>La construction d’une classe de caractère comme <code>[oi]</code> ne représente peut-être pas un attrait énorme, mais il est possible d’en créer d’autres plus alléchantes. En effet, en utilisant le tiret (<code>-</code>), on peut définir une séquence de caractère. Ainsi, la classe de caractères <code>[A-Z]</code> permet de <em>matcher</em> les lettres de l’ensemble <code>ABCDEFGHIJKLMNOPQRSTUVWXYZ</code>, tandis que <code>[0-9]</code> permet de <code>matcher</code> les caractères de l’ensemble <code>0123456789</code>.</p>
+<div class="sourceCode" id="cb1285"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1285-1"><a href="sec-regex.html#cb1285-1" aria-hidden="true"></a><span class="co"># Recherche une voyelle minuscule</span></span>
+<span id="cb1285-2"><a href="sec-regex.html#cb1285-2" aria-hidden="true"></a><span class="kw">str_detect</span>(<span class="kw">c</span>(<span class="st">&quot;_!&quot;</span>, <span class="st">&quot;ALLO&quot;</span>, <span class="st">&quot;Allo 9-1-1&quot;</span>, <span class="st">&quot;9-1-1&quot;</span>), <span class="st">&quot;[aeiou]&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] FALSE FALSE  TRUE FALSE</code></pre>
+<div class="sourceCode" id="cb1287"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1287-1"><a href="sec-regex.html#cb1287-1" aria-hidden="true"></a><span class="co"># Recherche une voyelle majuscule</span></span>
+<span id="cb1287-2"><a href="sec-regex.html#cb1287-2" aria-hidden="true"></a><span class="kw">str_detect</span>(<span class="kw">c</span>(<span class="st">&quot;_!&quot;</span>, <span class="st">&quot;ALLO&quot;</span>, <span class="st">&quot;Allo 9-1-1&quot;</span>, <span class="st">&quot;9-1-1&quot;</span>), <span class="st">&quot;[AEIOU]&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] FALSE  TRUE  TRUE FALSE</code></pre>
+<div class="sourceCode" id="cb1289"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1289-1"><a href="sec-regex.html#cb1289-1" aria-hidden="true"></a><span class="co"># Recherche un cacractère numérique</span></span>
+<span id="cb1289-2"><a href="sec-regex.html#cb1289-2" aria-hidden="true"></a><span class="kw">str_detect</span>(<span class="kw">c</span>(<span class="st">&quot;_!&quot;</span>, <span class="st">&quot;Allo&quot;</span>, <span class="st">&quot;Allo 9-1-1&quot;</span>, <span class="st">&quot;9-1-1&quot;</span>), <span class="st">&quot;[0-9]&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] FALSE FALSE  TRUE  TRUE</code></pre>
+<div class="sourceCode" id="cb1291"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1291-1"><a href="sec-regex.html#cb1291-1" aria-hidden="true"></a><span class="co"># Recherche un cacractère alphabétique ASCII majuscule</span></span>
+<span id="cb1291-2"><a href="sec-regex.html#cb1291-2" aria-hidden="true"></a><span class="kw">str_detect</span>(<span class="kw">c</span>(<span class="st">&quot;_!&quot;</span>, <span class="st">&quot;Allo&quot;</span>, <span class="st">&quot;allo&quot;</span>, <span class="st">&quot;ALLO&quot;</span>, <span class="st">&quot;9-1-1&quot;</span>), <span class="st">&quot;[A-Z]&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] FALSE  TRUE FALSE  TRUE FALSE</code></pre>
+<div class="sourceCode" id="cb1293"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1293-1"><a href="sec-regex.html#cb1293-1" aria-hidden="true"></a><span class="co"># Recherche un cacractère alphabétique ASCII minuscule</span></span>
+<span id="cb1293-2"><a href="sec-regex.html#cb1293-2" aria-hidden="true"></a><span class="kw">str_detect</span>(<span class="kw">c</span>(<span class="st">&quot;_!&quot;</span>, <span class="st">&quot;Allo&quot;</span>, <span class="st">&quot;allo&quot;</span>, <span class="st">&quot;ALLO&quot;</span>, <span class="st">&quot;9-1-1&quot;</span>), <span class="st">&quot;[a-z]&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] FALSE  TRUE  TRUE FALSE FALSE</code></pre>
+<div class="sourceCode" id="cb1295"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1295-1"><a href="sec-regex.html#cb1295-1" aria-hidden="true"></a><span class="co"># Recherche un cacractère alphabétique (majuscule ou minuscule)</span></span>
+<span id="cb1295-2"><a href="sec-regex.html#cb1295-2" aria-hidden="true"></a><span class="kw">str_detect</span>(<span class="kw">c</span>(<span class="st">&quot;_!&quot;</span>, <span class="st">&quot;Allo&quot;</span>, <span class="st">&quot;allo&quot;</span>, <span class="st">&quot;ALLO&quot;</span>, <span class="st">&quot;9-1-1&quot;</span>), <span class="st">&quot;[A-Za-z]&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] FALSE  TRUE  TRUE  TRUE FALSE</code></pre>
+<div class="sourceCode" id="cb1297"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1297-1"><a href="sec-regex.html#cb1297-1" aria-hidden="true"></a><span class="co"># Recherche un cacractère alphanumérique</span></span>
+<span id="cb1297-2"><a href="sec-regex.html#cb1297-2" aria-hidden="true"></a><span class="kw">str_detect</span>(<span class="kw">c</span>(<span class="st">&quot;_!&quot;</span>, <span class="st">&quot;Allo&quot;</span>, <span class="st">&quot;allo&quot;</span>, <span class="st">&quot;ALLO&quot;</span>, <span class="st">&quot;9-1-1&quot;</span>), <span class="st">&quot;[A-Za-z0-9]&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] FALSE  TRUE  TRUE  TRUE  TRUE</code></pre>
+<p>Si l’utilisateur désire rechercher un caractère qui n’appartient pas à une classe de caractères, il suffit de rajouter un accent circonflèxe (<code>^</code>) juste après le crochet ouvrant. Si on désire rechercher la présence de l’accent circonflèxe dans un texte, en utilisant une classe de caractère, il faut placer le symbole autre part que juste après le crochet. Pour chercher un crochet fermant (ouvrant) il faut le faire précéder des doubles barres obliques inverses. Enfin, pour chercher un tiret, il suffit de la placer en premier ou en dernier de la définition de la classe.</p>
+<div class="sourceCode" id="cb1299"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1299-1"><a href="sec-regex.html#cb1299-1" aria-hidden="true"></a><span class="co"># Y a-t-t-il autre chose que des chiffres ?</span></span>
+<span id="cb1299-2"><a href="sec-regex.html#cb1299-2" aria-hidden="true"></a><span class="kw">str_detect</span>(<span class="kw">c</span>(<span class="st">&quot;_!&quot;</span>, <span class="st">&quot;Allo&quot;</span>, <span class="st">&quot;Allo 9-1-1&quot;</span>, <span class="st">&quot;911&quot;</span>), <span class="st">&quot;[^0-9]&quot;</span>)</span></code></pre></div>
+<pre><code>## [1]  TRUE  TRUE  TRUE FALSE</code></pre>
+<div class="sourceCode" id="cb1301"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1301-1"><a href="sec-regex.html#cb1301-1" aria-hidden="true"></a><span class="co"># Recherche de l&#39;accent circonflèxe ou d&#39;un chiffre</span></span>
+<span id="cb1301-2"><a href="sec-regex.html#cb1301-2" aria-hidden="true"></a><span class="kw">str_detect</span>(<span class="kw">c</span>(<span class="st">&quot;_!&quot;</span>, <span class="st">&quot;Allo&quot;</span>, <span class="st">&quot;Allo ^ accent&quot;</span>, <span class="st">&quot;Allo 9-1-1&quot;</span>, <span class="st">&quot;911&quot;</span>), <span class="st">&quot;[0-9^]&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] FALSE FALSE  TRUE  TRUE  TRUE</code></pre>
+<div class="sourceCode" id="cb1303"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1303-1"><a href="sec-regex.html#cb1303-1" aria-hidden="true"></a><span class="co"># Rechercher un crochet</span></span>
+<span id="cb1303-2"><a href="sec-regex.html#cb1303-2" aria-hidden="true"></a><span class="kw">str_detect</span>(<span class="kw">c</span>(<span class="st">&quot;_!&quot;</span>, <span class="st">&quot;All[o&quot;</span>, <span class="st">&quot;All]o ^ accent&quot;</span>, <span class="st">&quot;Allo 9-1-1&quot;</span>, <span class="st">&quot;911&quot;</span>), <span class="st">&quot;[</span><span class="ch">\\</span><span class="st">[</span><span class="ch">\\</span><span class="st">]]&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] FALSE  TRUE  TRUE FALSE FALSE</code></pre>
+<div class="sourceCode" id="cb1305"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1305-1"><a href="sec-regex.html#cb1305-1" aria-hidden="true"></a><span class="co"># Rechercher un tiret ou un i</span></span>
+<span id="cb1305-2"><a href="sec-regex.html#cb1305-2" aria-hidden="true"></a><span class="kw">str_detect</span>(<span class="kw">c</span>(<span class="st">&quot;_!&quot;</span>, <span class="st">&quot;All[o&quot;</span>, <span class="st">&quot;All-] ^ accent&quot;</span>, <span class="st">&quot;Allo 9-1-1&quot;</span>, <span class="st">&quot;9i11&quot;</span>), <span class="st">&quot;[-i]&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] FALSE FALSE  TRUE  TRUE  TRUE</code></pre>
+
+<div class="remarque">
+<p>Il ne faut pas confondre l’accent circonflèxe inséré entre les crochets et celui placé au début d’une chaîne pour indiquer que le motif doit commencer par cette chaîne.</p>
+</div>
+<div class="sourceCode" id="cb1307"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1307-1"><a href="sec-regex.html#cb1307-1" aria-hidden="true"></a><span class="co"># Le texte commence-t-il par autre chose qu&#39;un chiffre ?</span></span>
+<span id="cb1307-2"><a href="sec-regex.html#cb1307-2" aria-hidden="true"></a><span class="kw">str_detect</span>(<span class="kw">c</span>(<span class="st">&quot;_!&quot;</span>, <span class="st">&quot;Allo&quot;</span>, <span class="st">&quot;9-1-1&quot;</span>, <span class="st">&quot;911&quot;</span>), <span class="st">&quot;^[^0-9]&quot;</span>)</span></code></pre></div>
+<pre><code>## [1]  TRUE  TRUE FALSE FALSE</code></pre>
+<p><code>R</code> propose la bibliothèque de classes appelée <code>POSIX</code>. Ces classes s’utilisent en faisant appel à leur nom, de la même manière que les classes définies par l’utilisateur, ou les séquences : <code>[classe]</code>. Il faut toutefois noter que les noms des classes de caractères <code>POSIX</code> sont légèrement différentes en <code>R</code> que dans d’autres langages, comme <code>PHP</code> par exemple. En effet, il faut les entourer de crochets et de deux-points. Ainsi, la classe des alphanumériques sera accessible par son nom <code>[:alnum:]</code> et utilisée de la sorte : <code>[[:alnum:]]</code>. Le fichier d’aide des <em>regex</em> de <code>R</code> met en garde l’utilisateur que ces classes de caractères prédéfinies peuvent varier selon les configurations des machines, notamment les configurations linguisitiques. Voici quelques exemples.</p>
+<div class="sourceCode" id="cb1309"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1309-1"><a href="sec-regex.html#cb1309-1" aria-hidden="true"></a><span class="co"># Recherche un cacractère numérique</span></span>
+<span id="cb1309-2"><a href="sec-regex.html#cb1309-2" aria-hidden="true"></a><span class="kw">str_detect</span>(<span class="kw">c</span>(<span class="st">&quot;_!&quot;</span>, <span class="st">&quot;Allo&quot;</span>, <span class="st">&quot;Allo 9-1-1&quot;</span>, <span class="st">&quot;9-1-1&quot;</span>), <span class="st">&quot;[[:digit:]]&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] FALSE FALSE  TRUE  TRUE</code></pre>
+<div class="sourceCode" id="cb1311"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1311-1"><a href="sec-regex.html#cb1311-1" aria-hidden="true"></a><span class="co"># Rechercher un caractère non-numérique</span></span>
+<span id="cb1311-2"><a href="sec-regex.html#cb1311-2" aria-hidden="true"></a><span class="kw">str_detect</span>(<span class="kw">c</span>(<span class="st">&quot;_!&quot;</span>, <span class="st">&quot;Allo&quot;</span>, <span class="st">&quot;Allo 9-1-1&quot;</span>, <span class="st">&quot;911&quot;</span>), <span class="st">&quot;[^[:digit:]]&quot;</span>)</span></code></pre></div>
+<pre><code>## [1]  TRUE  TRUE  TRUE FALSE</code></pre>
+<div class="sourceCode" id="cb1313"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1313-1"><a href="sec-regex.html#cb1313-1" aria-hidden="true"></a><span class="co"># Recherche un cacractère alphabétique majuscule</span></span>
+<span id="cb1313-2"><a href="sec-regex.html#cb1313-2" aria-hidden="true"></a><span class="kw">str_detect</span>(<span class="kw">c</span>(<span class="st">&quot;_!&quot;</span>, <span class="st">&quot;Allo&quot;</span>, <span class="st">&quot;allo&quot;</span>, <span class="st">&quot;ALLO&quot;</span>, <span class="st">&quot;9-1-1&quot;</span>), <span class="st">&quot;[[:upper:]]&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] FALSE  TRUE FALSE  TRUE FALSE</code></pre>
+<div class="sourceCode" id="cb1315"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1315-1"><a href="sec-regex.html#cb1315-1" aria-hidden="true"></a><span class="co"># Recherche un cacractère alphabétique minuscule</span></span>
+<span id="cb1315-2"><a href="sec-regex.html#cb1315-2" aria-hidden="true"></a><span class="kw">str_detect</span>(<span class="kw">c</span>(<span class="st">&quot;_!&quot;</span>, <span class="st">&quot;Allo&quot;</span>, <span class="st">&quot;allo&quot;</span>, <span class="st">&quot;ALLO&quot;</span>, <span class="st">&quot;9-1-1&quot;</span>), <span class="st">&quot;[[:lower:]]&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] FALSE  TRUE  TRUE FALSE FALSE</code></pre>
+<div class="sourceCode" id="cb1317"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1317-1"><a href="sec-regex.html#cb1317-1" aria-hidden="true"></a><span class="co"># Recherche un cacractère alphabétique (majuscule ou minuscule)</span></span>
+<span id="cb1317-2"><a href="sec-regex.html#cb1317-2" aria-hidden="true"></a><span class="kw">str_detect</span>(<span class="kw">c</span>(<span class="st">&quot;_!&quot;</span>, <span class="st">&quot;Allo&quot;</span>, <span class="st">&quot;allo&quot;</span>, <span class="st">&quot;ALLO&quot;</span>, <span class="st">&quot;9-1-1&quot;</span>), <span class="st">&quot;[[:alpha:]]&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] FALSE  TRUE  TRUE  TRUE FALSE</code></pre>
+<div class="sourceCode" id="cb1319"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1319-1"><a href="sec-regex.html#cb1319-1" aria-hidden="true"></a><span class="co"># Recherche un cacractère alphanumérique</span></span>
+<span id="cb1319-2"><a href="sec-regex.html#cb1319-2" aria-hidden="true"></a><span class="kw">str_detect</span>(<span class="kw">c</span>(<span class="st">&quot;_!&quot;</span>, <span class="st">&quot;Allo&quot;</span>, <span class="st">&quot;allo&quot;</span>, <span class="st">&quot;ALLO&quot;</span>, <span class="st">&quot;9-1-1&quot;</span>), <span class="st">&quot;[[:alnum:]]&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] FALSE  TRUE  TRUE  TRUE  TRUE</code></pre>
+<div class="sourceCode" id="cb1321"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1321-1"><a href="sec-regex.html#cb1321-1" aria-hidden="true"></a><span class="co"># Recherche une espace ou une tabulation</span></span>
+<span id="cb1321-2"><a href="sec-regex.html#cb1321-2" aria-hidden="true"></a><span class="kw">str_detect</span>(<span class="kw">c</span>(<span class="st">&quot;_!&quot;</span>, <span class="st">&quot;Allo</span><span class="ch">\t</span><span class="st">&quot;</span>, <span class="st">&quot;Allo 9-1-1&quot;</span>), <span class="st">&quot;[[:blank:]]&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] FALSE  TRUE  TRUE</code></pre>
+<div class="sourceCode" id="cb1323"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1323-1"><a href="sec-regex.html#cb1323-1" aria-hidden="true"></a><span class="co"># Recherche d&#39;un caractère de ponctuation</span></span>
+<span id="cb1323-2"><a href="sec-regex.html#cb1323-2" aria-hidden="true"></a><span class="co"># (! &quot; # $ % &amp; &#39; ( ) * + , - . / : ; &lt; = &gt; ? @ [ \ ] ^ _ ` { | } ~)</span></span>
+<span id="cb1323-3"><a href="sec-regex.html#cb1323-3" aria-hidden="true"></a><span class="kw">str_detect</span>(<span class="kw">c</span>(<span class="st">&quot;_!&quot;</span>, <span class="st">&quot;Allo&quot;</span>, <span class="st">&quot;Allo 9-1-1&quot;</span>, <span class="st">&quot;9-1-1&quot;</span>), <span class="st">&quot;[[:punct:]]&quot;</span>)</span></code></pre></div>
+<pre><code>## [1]  TRUE FALSE  TRUE  TRUE</code></pre>
+<p><code>R</code> propose également quelques abréviations pour accéder à certaines classes. On y accède en écrivant une lettre minuscule précédée de deux barre obliques inversées. Si la lettre est en majuscule, il s’agit de la recherche de non appartenance à la classe. Par exemple, <code>\\d</code> recherche un caractère numérique (<em>digital</em>), et <code>\\D</code> recherche un caractère n’étant pas numérique. Voici quelques exemples.</p>
+<div class="sourceCode" id="cb1325"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1325-1"><a href="sec-regex.html#cb1325-1" aria-hidden="true"></a><span class="co"># Recherche un cacractère numérique</span></span>
+<span id="cb1325-2"><a href="sec-regex.html#cb1325-2" aria-hidden="true"></a><span class="kw">str_detect</span>(<span class="kw">c</span>(<span class="st">&quot;_!&quot;</span>, <span class="st">&quot;Allo&quot;</span>, <span class="st">&quot;Allo 9-1-1&quot;</span>, <span class="st">&quot;911&quot;</span>), <span class="st">&quot;</span><span class="ch">\\</span><span class="st">d&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] FALSE FALSE  TRUE  TRUE</code></pre>
+<div class="sourceCode" id="cb1327"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1327-1"><a href="sec-regex.html#cb1327-1" aria-hidden="true"></a><span class="co"># Recherche un caractère non-numérique</span></span>
+<span id="cb1327-2"><a href="sec-regex.html#cb1327-2" aria-hidden="true"></a><span class="kw">str_detect</span>(<span class="kw">c</span>(<span class="st">&quot;_!&quot;</span>, <span class="st">&quot;Allo&quot;</span>, <span class="st">&quot;Allo 9-1-1&quot;</span>, <span class="st">&quot;911&quot;</span>), <span class="st">&quot;</span><span class="ch">\\</span><span class="st">D&quot;</span>)</span></code></pre></div>
+<pre><code>## [1]  TRUE  TRUE  TRUE FALSE</code></pre>
+<div class="sourceCode" id="cb1329"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1329-1"><a href="sec-regex.html#cb1329-1" aria-hidden="true"></a><span class="co"># Recherche un cacractère alphanumérique</span></span>
+<span id="cb1329-2"><a href="sec-regex.html#cb1329-2" aria-hidden="true"></a><span class="co"># Attention à cette abréviation qui match le trait de soulignement...</span></span>
+<span id="cb1329-3"><a href="sec-regex.html#cb1329-3" aria-hidden="true"></a><span class="kw">str_detect</span>(<span class="kw">c</span>(<span class="st">&quot;_!&quot;</span>, <span class="st">&quot;Allo&quot;</span>, <span class="st">&quot;allo&quot;</span>, <span class="st">&quot;ALLO&quot;</span>, <span class="st">&quot;9-1-1&quot;</span>), <span class="st">&quot;</span><span class="ch">\\</span><span class="st">w&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] TRUE TRUE TRUE TRUE TRUE</code></pre>
+<p>Le tableau ci-dessous donne un récapitulatif des classes de caractères prédéfinies.</p>
+<div class="line-block">ASCII | POSIX | Raccourcis | Description |<br />
+:——-: | :———: | :———: | : ————– |<br />
+<code>[[:lower:]]</code> | <code>[a-z]</code> | | Lettre minuscule |<br />
+<code>[[:upper:]]</code> | <code>[A-Z]</code> | | Lettre majuscule |<br />
+<code>[[:alpha:]]</code> | <code>[a-zA-Z]</code> | | Lettre minuscule et majuscule |<br />
+<code>[[:digit:]]</code> | <code>[0-9]</code> | <code>\\d</code> | Chiffres de 0 à 9 |<br />
+<code>[[:alnum:]]</code> | <code>[a-zA-Z0-9]</code> | | Caractère alphanumérique |<br />
+<code>[[:blank:]]</code> | <code>[\t]</code> | | Espace et tabulation |<br />
+<code>[[:cntrl:]]</code> | `` | | Caractère de contrôle |</div>
+</div>
+<div id="sec:manip_regex_quantificateurs" class="section level2" number="7.3">
+<h2><span class="header-section-number">7.3</span> Les quantificateurs</h2>
+<p>Afin de pouvoir chercher des motifs qui se répètent, dans un nombre défini <em>a priori</em> ou non, on peut utiliser ce que l’on appelle des quantificateurs.</p>
+<p>Les principaux quantificateurs sont les suivants :</p>
+<ul>
+<li><code>?</code> : le précédent item est factultatif, et sera donc <em>matché</em> <span class="math inline">\(0\)</span> ou <span class="math inline">\(1\)</span> fois ;</li>
+<li><code>*</code> : le précédent item sera <em>matché</em> <span class="math inline">\(0\)</span> fois ou plus ;</li>
+<li><code>+</code> : le précédent item sera <code>matché</code> <span class="math inline">\(1\)</span> fois ou plus ;</li>
+<li><code>n</code> : le précédent item sera <code>matché</code> exactement n fois ;</li>
+<li><code>n,</code> : le précédent item sera <code>matché</code> <span class="math inline">\(n\)</span> fois ou plus ;</li>
+<li><code>n,m</code> : le précédent item sera <code>matché</code> au mois <span class="math inline">\(n\)</span> fois, mais pas plus de <span class="math inline">\(m\)</span> fois.</li>
+</ul>
+<p>Quelques exemple pour se fixer les idées.</p>
+<div class="sourceCode" id="cb1331"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1331-1"><a href="sec-regex.html#cb1331-1" aria-hidden="true"></a><span class="co"># La chaîne &quot;travaille &quot; peut être présente 0 ou 1 fois</span></span>
+<span id="cb1331-2"><a href="sec-regex.html#cb1331-2" aria-hidden="true"></a>textes &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Lolo travaille au skateshop&quot;</span>, <span class="st">&quot;Lolo au skateshop&quot;</span>)</span>
+<span id="cb1331-3"><a href="sec-regex.html#cb1331-3" aria-hidden="true"></a><span class="kw">str_detect</span>(textes, <span class="st">&quot;Lolo (travaille )?au skateshop&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] TRUE TRUE</code></pre>
+<div class="sourceCode" id="cb1333"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1333-1"><a href="sec-regex.html#cb1333-1" aria-hidden="true"></a><span class="co"># Cherche &quot;ah Sonia&quot;, ou &quot;ahah Sonia&quot;, ou &quot;ahahah Sonia&quot;, etc.</span></span>
+<span id="cb1333-2"><a href="sec-regex.html#cb1333-2" aria-hidden="true"></a>textes &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;ahahah Sonia&quot;</span>, <span class="st">&quot;ahah Sonia&quot;</span>, <span class="st">&quot;Sonia&quot;</span>, <span class="st">&quot;Amandine&quot;</span>)</span>
+<span id="cb1333-3"><a href="sec-regex.html#cb1333-3" aria-hidden="true"></a><span class="kw">str_detect</span>(textes, <span class="st">&quot;(ah)* Sonia&quot;</span>)</span></code></pre></div>
+<pre><code>## [1]  TRUE  TRUE FALSE FALSE</code></pre>
+<div class="sourceCode" id="cb1335"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1335-1"><a href="sec-regex.html#cb1335-1" aria-hidden="true"></a><span class="co"># On souhaite s&#39;assurer qu&#39;il y a au moins un &quot;ah&quot; suivi de &quot; Stéphanie&quot;</span></span>
+<span id="cb1335-2"><a href="sec-regex.html#cb1335-2" aria-hidden="true"></a><span class="co"># Mais on peut aussi avoir &quot;ahah Stéphanie&quot; ou &quot;ahahah Stéphanie&quot;</span></span>
+<span id="cb1335-3"><a href="sec-regex.html#cb1335-3" aria-hidden="true"></a>textes &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Bonjour Stéphanie&quot;</span>, <span class="st">&quot;ah Stéphanie&quot;</span>, <span class="st">&quot;ahah Stéphanie&quot;</span>)</span>
+<span id="cb1335-4"><a href="sec-regex.html#cb1335-4" aria-hidden="true"></a><span class="kw">str_detect</span>(textes, <span class="st">&quot;(ah)+&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] FALSE  TRUE  TRUE</code></pre>
+<div class="sourceCode" id="cb1337"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1337-1"><a href="sec-regex.html#cb1337-1" aria-hidden="true"></a>textes &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;a#maisoui#maisoui !&quot;</span>, <span class="st">&quot;a#maisoui !&quot;</span>, <span class="st">&quot;a#maisoui#maisoui#maisoui !&quot;</span>,</span>
+<span id="cb1337-2"><a href="sec-regex.html#cb1337-2" aria-hidden="true"></a>           <span class="st">&quot;a#maisoui#maisoui#maisoui#maisoui !&quot;</span>)</span>
+<span id="cb1337-3"><a href="sec-regex.html#cb1337-3" aria-hidden="true"></a></span>
+<span id="cb1337-4"><a href="sec-regex.html#cb1337-4" aria-hidden="true"></a><span class="co"># Y a-t-il une sous chaîne &quot;a#maisoui#maisoui !&quot; dans le texte ?</span></span>
+<span id="cb1337-5"><a href="sec-regex.html#cb1337-5" aria-hidden="true"></a><span class="kw">str_detect</span>(textes, <span class="st">&quot;a(#maisoui){2} !&quot;</span>)</span></code></pre></div>
+<pre><code>## [1]  TRUE FALSE FALSE FALSE</code></pre>
+<div class="sourceCode" id="cb1339"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1339-1"><a href="sec-regex.html#cb1339-1" aria-hidden="true"></a><span class="co"># Y a-t-il une sous chaîne &quot;a#maisoui#maisoui !&quot;, ou</span></span>
+<span id="cb1339-2"><a href="sec-regex.html#cb1339-2" aria-hidden="true"></a><span class="co"># &quot;a#maisoui#maisoui#maisoui !&quot;, etc. dans le texte ?</span></span>
+<span id="cb1339-3"><a href="sec-regex.html#cb1339-3" aria-hidden="true"></a><span class="kw">str_detect</span>(textes, <span class="st">&quot;a(#maisoui){2,} !&quot;</span>)</span></code></pre></div>
+<pre><code>## [1]  TRUE FALSE  TRUE  TRUE</code></pre>
+<div class="sourceCode" id="cb1341"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1341-1"><a href="sec-regex.html#cb1341-1" aria-hidden="true"></a><span class="co"># La chaîne &quot;skate&quot; sera présente entre deux et trois fois</span></span>
+<span id="cb1341-2"><a href="sec-regex.html#cb1341-2" aria-hidden="true"></a><span class="kw">str_detect</span>(textes, <span class="st">&quot;a(#maisoui){2,3} !&quot;</span>)</span></code></pre></div>
+<pre><code>## [1]  TRUE FALSE  TRUE FALSE</code></pre>
+</div>
+<div id="sec:manip_regex_metacaracteres" class="section level2" number="7.4">
+<h2><span class="header-section-number">7.4</span> Les métacaractères</h2>
+<p>Les <em>regex</em> possèdent quelques caractères spéciaux, qui ont un statut réservé, et qui sont appelés des <em>métacaractères</em>. L’accent circonflèxe en fait partie. En effet, l’expression régulière <code>^Bonjour</code> ne recherchera pas la chaîne <code>"^Bonjour"</code>, comme vu plus haut.</p>
+<p>La liste des métacaractères est la suivante : <code>. \| ( ) [ { $ * + ?</code></p>
+<p>En <code>R</code> pour pouvoir rechercher ces caractères dans des chaînes, il faut les échapper, à l’aide de deux barres obliques inversées <code>\\</code>.</p>
+<div class="sourceCode" id="cb1343"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1343-1"><a href="sec-regex.html#cb1343-1" aria-hidden="true"></a>textes &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Clément et Marianne vont chez Thibault.&quot;</span>,</span>
+<span id="cb1343-2"><a href="sec-regex.html#cb1343-2" aria-hidden="true"></a>           <span class="st">&quot;Clément (et Marianne) vont chez Thibault !&quot;</span>)</span>
+<span id="cb1343-3"><a href="sec-regex.html#cb1343-3" aria-hidden="true"></a></span>
+<span id="cb1343-4"><a href="sec-regex.html#cb1343-4" aria-hidden="true"></a><span class="co"># Recherche la présence de &quot;et Marianne&quot;</span></span>
+<span id="cb1343-5"><a href="sec-regex.html#cb1343-5" aria-hidden="true"></a><span class="kw">str_detect</span>(textes, <span class="st">&quot;(et Marianne)&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] TRUE TRUE</code></pre>
+<div class="sourceCode" id="cb1345"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1345-1"><a href="sec-regex.html#cb1345-1" aria-hidden="true"></a><span class="co"># Recherche la présence de &quot;(et Marianne)&quot;</span></span>
+<span id="cb1345-2"><a href="sec-regex.html#cb1345-2" aria-hidden="true"></a><span class="kw">str_detect</span>(textes, <span class="st">&quot;</span><span class="ch">\\</span><span class="st">(et Marianne</span><span class="ch">\\</span><span class="st">)&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] FALSE  TRUE</code></pre>
+<div class="sourceCode" id="cb1347"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1347-1"><a href="sec-regex.html#cb1347-1" aria-hidden="true"></a><span class="co"># Le dernier caractère est-il n&#39;importe quel caractère ?</span></span>
+<span id="cb1347-2"><a href="sec-regex.html#cb1347-2" aria-hidden="true"></a><span class="kw">str_detect</span>(textes, <span class="st">&quot;.$&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] TRUE TRUE</code></pre>
+<div class="sourceCode" id="cb1349"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1349-1"><a href="sec-regex.html#cb1349-1" aria-hidden="true"></a><span class="co"># Le texte se termine-t-il par un point ?</span></span>
+<span id="cb1349-2"><a href="sec-regex.html#cb1349-2" aria-hidden="true"></a><span class="kw">str_detect</span>(textes, <span class="st">&quot;</span><span class="ch">\\</span><span class="st">.$&quot;</span>)</span></code></pre></div>
+<pre><code>## [1]  TRUE FALSE</code></pre>
+</div>
+<div id="sec:manip_regex_stringr" class="section level2" number="7.5">
+<h2><span class="header-section-number">7.5</span> Quelques fonctions du <em>package</em> {<code>stringr</code>}</h2>
+<p>Regardons à présent quelques fonctions de {<code>stringr</code>} qui permettent de manipuler des chaînes de caractères à l’aide d’expressions régulières.</p>
+<div id="sec:manip_regex_stringr_extract" class="section level3" number="7.5.1">
+<h3><span class="header-section-number">7.5.1</span> La fonction <code>str_detect()</code></h3>
+<p>Pour extraire une chaîne qui contient un motif, on peut utiliser la fonction <code>str_extract()</code>. Le résultat est un vecteur de caractères de la même longueur que celui fourni à l’argument <code>string</code>. Pour les éméments pour lesquels il n’y a pas eu de <em>match</em>, la valeur <code>NA</code> est retournée.</p>
+<div class="sourceCode" id="cb1351"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1351-1"><a href="sec-regex.html#cb1351-1" aria-hidden="true"></a>adresses &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;criquette.rockwell@gmail.com&quot;</span>,</span>
+<span id="cb1351-2"><a href="sec-regex.html#cb1351-2" aria-hidden="true"></a>              <span class="st">&quot;brett.montgomery@yahoo.fr&quot;</span>,</span>
+<span id="cb1351-3"><a href="sec-regex.html#cb1351-3" aria-hidden="true"></a>              <span class="st">&quot;madge_laposte.net&quot;</span>)</span>
+<span id="cb1351-4"><a href="sec-regex.html#cb1351-4" aria-hidden="true"></a>motif &lt;-<span class="st"> &quot;^[[:alnum:].-]+@[[:alnum:].-]+$&quot;</span></span>
+<span id="cb1351-5"><a href="sec-regex.html#cb1351-5" aria-hidden="true"></a></span>
+<span id="cb1351-6"><a href="sec-regex.html#cb1351-6" aria-hidden="true"></a><span class="co"># Extraire les adresses e-mail valides</span></span>
+<span id="cb1351-7"><a href="sec-regex.html#cb1351-7" aria-hidden="true"></a><span class="kw">str_extract</span>(<span class="dt">string =</span> adresses, <span class="dt">pattern =</span> motif)</span></code></pre></div>
+<pre><code>## [1] &quot;criquette.rockwell@gmail.com&quot; &quot;brett.montgomery@yahoo.fr&quot;   
+## [3] NA</code></pre>
+</div>
+<div id="sec:manip_regex_stringr_extract_all" class="section level3" number="7.5.2">
+<h3><span class="header-section-number">7.5.2</span> La fonction <code>str_extract_all()</code></h3>
+<p>Alors que la fonction <code>str_extract()</code> ne permet d’extraire que la première chaîne qui <em>match</em> le motif, <code>str_extract_all()</code> retourne toutes les occurrences trouvées. Le résultat est une liste de la même longueur que celle du vecteur fourni à l’argument <code>string</code>. Les éléments de cette liste sont des vecteurs de la taille du nombre d’occurrences du motif trouvé. En cas d’absence de <code>match</code>, la valeur <code>character(0)</code> est retournée.</p>
+<div class="sourceCode" id="cb1353"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1353-1"><a href="sec-regex.html#cb1353-1" aria-hidden="true"></a>tweets &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;@kevin_ushey yes sure, it was just an example&quot;</span>,</span>
+<span id="cb1353-2"><a href="sec-regex.html#cb1353-2" aria-hidden="true"></a>            <span class="st">&quot;@hspter @kwbroman next is to get into #github streak art.&quot;</span>)</span>
+<span id="cb1353-3"><a href="sec-regex.html#cb1353-3" aria-hidden="true"></a>motif &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;@[[:alpha:]]{1,}&quot;</span>)</span>
+<span id="cb1353-4"><a href="sec-regex.html#cb1353-4" aria-hidden="true"></a></span>
+<span id="cb1353-5"><a href="sec-regex.html#cb1353-5" aria-hidden="true"></a><span class="co"># Extraire la première mention trouvée</span></span>
+<span id="cb1353-6"><a href="sec-regex.html#cb1353-6" aria-hidden="true"></a><span class="kw">str_extract</span>(tweets, motif)</span></code></pre></div>
+<pre><code>## [1] &quot;@kevin&quot;  &quot;@hspter&quot;</code></pre>
+<div class="sourceCode" id="cb1355"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1355-1"><a href="sec-regex.html#cb1355-1" aria-hidden="true"></a><span class="co"># Extraire toutes les mentions trouvées</span></span>
+<span id="cb1355-2"><a href="sec-regex.html#cb1355-2" aria-hidden="true"></a><span class="kw">str_extract_all</span>(tweets, motif)</span></code></pre></div>
+<pre><code>## [[1]]
+## [1] &quot;@kevin&quot;
+## 
+## [[2]]
+## [1] &quot;@hspter&quot;   &quot;@kwbroman&quot;</code></pre>
+</div>
+<div id="sec:manip_regex_stringr_match" class="section level3" number="7.5.3">
+<h3><span class="header-section-number">7.5.3</span> La fonction <code>str_match()</code></h3>
+<p>La fonction <code>str_match()</code> extrait le premier <em>groupe</em> trouvé dans une chaîne. Il est donc nécessaire que l’argument <code>pattern</code> contienne un ou des groupes (définis par les parenthèses <code>()</code>). Le résultat est une matrice dont la première colonne contient le <code>match</code> complet, les suivantes sont les <em>matches</em> pour chaque groupe.</p>
+<div class="sourceCode" id="cb1357"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1357-1"><a href="sec-regex.html#cb1357-1" aria-hidden="true"></a>telephones &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;02 23 23 35 45&quot;</span>, <span class="st">&quot;02-23-23-35-45&quot;</span>, <span class="st">&quot;Madrid&quot;</span>,</span>
+<span id="cb1357-2"><a href="sec-regex.html#cb1357-2" aria-hidden="true"></a>                <span class="st">&quot;02.23.23.35.45&quot;</span>, <span class="st">&quot;0223233545&quot;</span>, <span class="st">&quot;Milan&quot;</span>,</span>
+<span id="cb1357-3"><a href="sec-regex.html#cb1357-3" aria-hidden="true"></a>                <span class="st">&quot;02 23 23 35 45  &quot;</span>, <span class="st">&quot; 02 23 23 35 45&quot;</span>,</span>
+<span id="cb1357-4"><a href="sec-regex.html#cb1357-4" aria-hidden="true"></a>                <span class="st">&quot;Maison : 02 23 23 35 45&quot;</span>)</span>
+<span id="cb1357-5"><a href="sec-regex.html#cb1357-5" aria-hidden="true"></a></span>
+<span id="cb1357-6"><a href="sec-regex.html#cb1357-6" aria-hidden="true"></a>motif_tel &lt;-<span class="st"> </span><span class="kw">str_c</span>(<span class="kw">str_dup</span>(<span class="st">&quot;([0-9]{2})[- </span><span class="ch">\\</span><span class="st">.]&quot;</span>, <span class="dv">4</span>),  <span class="st">&quot;([0-9]{2})&quot;</span>)</span>
+<span id="cb1357-7"><a href="sec-regex.html#cb1357-7" aria-hidden="true"></a></span>
+<span id="cb1357-8"><a href="sec-regex.html#cb1357-8" aria-hidden="true"></a><span class="co"># Extrait les numéros de téléphone</span></span>
+<span id="cb1357-9"><a href="sec-regex.html#cb1357-9" aria-hidden="true"></a><span class="kw">str_extract</span>(telephones, motif_tel)</span></code></pre></div>
+<pre><code>## [1] &quot;02 23 23 35 45&quot; &quot;02-23-23-35-45&quot; NA               &quot;02.23.23.35.45&quot;
+## [5] NA               NA               &quot;02 23 23 35 45&quot; &quot;02 23 23 35 45&quot;
+## [9] &quot;02 23 23 35 45&quot;</code></pre>
+<div class="sourceCode" id="cb1359"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1359-1"><a href="sec-regex.html#cb1359-1" aria-hidden="true"></a><span class="kw">str_match</span>(telephones, motif_tel)</span></code></pre></div>
+<pre><code>##       [,1]             [,2] [,3] [,4] [,5] [,6]
+##  [1,] &quot;02 23 23 35 45&quot; &quot;02&quot; &quot;23&quot; &quot;23&quot; &quot;35&quot; &quot;45&quot;
+##  [2,] &quot;02-23-23-35-45&quot; &quot;02&quot; &quot;23&quot; &quot;23&quot; &quot;35&quot; &quot;45&quot;
+##  [3,] NA               NA   NA   NA   NA   NA  
+##  [4,] &quot;02.23.23.35.45&quot; &quot;02&quot; &quot;23&quot; &quot;23&quot; &quot;35&quot; &quot;45&quot;
+##  [5,] NA               NA   NA   NA   NA   NA  
+##  [6,] NA               NA   NA   NA   NA   NA  
+##  [7,] &quot;02 23 23 35 45&quot; &quot;02&quot; &quot;23&quot; &quot;23&quot; &quot;35&quot; &quot;45&quot;
+##  [8,] &quot;02 23 23 35 45&quot; &quot;02&quot; &quot;23&quot; &quot;23&quot; &quot;35&quot; &quot;45&quot;
+##  [9,] &quot;02 23 23 35 45&quot; &quot;02&quot; &quot;23&quot; &quot;23&quot; &quot;35&quot; &quot;45&quot;</code></pre>
+</div>
+<div id="sec:manip_regex_stringr_match_all" class="section level3" number="7.5.4">
+<h3><span class="header-section-number">7.5.4</span> La fonction <code>str_match_all()</code></h3>
+<p>Si la chaîne de caractère contient plusieurs <em>matches</em>, la fonction <code>str_match()</code> ne retournera que le premier. Pour les avoir tous, il faut utiliser la fonction <code>str_match_all()</code>. Le résultat est une liste de la même longueur que le vecteur fourni à <code>string</code>. Chaque élément de la liste, lorsqu’il y a eu <em>match</em> est une matrice comme celle retournée par <code>str_match()</code>. S’il n’y a pas eu <em>match</em>, l’élément de la liste retournée est <code>character(0)</code>.</p>
+<div class="sourceCode" id="cb1361"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1361-1"><a href="sec-regex.html#cb1361-1" aria-hidden="true"></a>telephones &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;02 23 23 35 45&quot;</span>, <span class="st">&quot;02-23-23-35-45 / 02 23 23 35 35&quot;</span>,</span>
+<span id="cb1361-2"><a href="sec-regex.html#cb1361-2" aria-hidden="true"></a>                <span class="st">&quot;Madrid&quot;</span>, <span class="st">&quot;Maison : 02.23.23.35.45, Travail : 02 23 23 35 35&quot;</span>)</span>
+<span id="cb1361-3"><a href="sec-regex.html#cb1361-3" aria-hidden="true"></a></span>
+<span id="cb1361-4"><a href="sec-regex.html#cb1361-4" aria-hidden="true"></a></span>
+<span id="cb1361-5"><a href="sec-regex.html#cb1361-5" aria-hidden="true"></a>motif_tel &lt;-<span class="st"> </span><span class="kw">str_c</span>(<span class="kw">str_dup</span>(<span class="st">&quot;([0-9]{2})[- </span><span class="ch">\\</span><span class="st">.]&quot;</span>, <span class="dv">4</span>),  <span class="st">&quot;([0-9]{2})&quot;</span>)</span>
+<span id="cb1361-6"><a href="sec-regex.html#cb1361-6" aria-hidden="true"></a></span>
+<span id="cb1361-7"><a href="sec-regex.html#cb1361-7" aria-hidden="true"></a><span class="co"># Extrait les numéros de téléphone</span></span>
+<span id="cb1361-8"><a href="sec-regex.html#cb1361-8" aria-hidden="true"></a><span class="kw">str_extract_all</span>(telephones, motif_tel)</span></code></pre></div>
+<pre><code>## [[1]]
+## [1] &quot;02 23 23 35 45&quot;
+## 
+## [[2]]
+## [1] &quot;02-23-23-35-45&quot; &quot;02 23 23 35 35&quot;
+## 
+## [[3]]
+## character(0)
+## 
+## [[4]]
+## [1] &quot;02.23.23.35.45&quot; &quot;02 23 23 35 35&quot;</code></pre>
+<div class="sourceCode" id="cb1363"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1363-1"><a href="sec-regex.html#cb1363-1" aria-hidden="true"></a><span class="kw">str_match_all</span>(telephones, motif_tel)[[<span class="dv">3</span>]]</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3] [,4] [,5] [,6]</code></pre>
+</div>
+<div id="sec:manip_regex_stringr_locate" class="section level3" number="7.5.5">
+<h3><span class="header-section-number">7.5.5</span> La fonction <code>str_locate()</code></h3>
+<p>Pour localiser la position de la première occurrence d’un motif dans une chaîne, on peut utiliser la fonction <code>str_locate()</code>. Le résultat est une matrice d’entiers dont la première colonne indique la position de départ du <em>match</em> et la seconde indique la position de fin du <em>match</em>. En cas d’absence de <em>match</em>, les deux valeurs valent <code>NA</code>.</p>
+<div class="sourceCode" id="cb1365"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1365-1"><a href="sec-regex.html#cb1365-1" aria-hidden="true"></a>fruits &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;pomme&quot;</span>, <span class="st">&quot;banane&quot;</span>, <span class="st">&quot;poire&quot;</span>, <span class="st">&quot;ananas&quot;</span>)</span>
+<span id="cb1365-2"><a href="sec-regex.html#cb1365-2" aria-hidden="true"></a><span class="kw">str_locate</span>(fruits, <span class="st">&quot;a&quot;</span>)</span></code></pre></div>
+<pre><code>##      start end
+## [1,]    NA  NA
+## [2,]     2   2
+## [3,]    NA  NA
+## [4,]     1   1</code></pre>
+<div class="sourceCode" id="cb1367"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1367-1"><a href="sec-regex.html#cb1367-1" aria-hidden="true"></a><span class="co"># On peut définir le motif pour chaque élément du texte</span></span>
+<span id="cb1367-2"><a href="sec-regex.html#cb1367-2" aria-hidden="true"></a><span class="kw">str_locate</span>(fruits, <span class="kw">c</span>(<span class="st">&quot;p&quot;</span>, <span class="st">&quot;o&quot;</span>, <span class="st">&quot;p&quot;</span>, <span class="st">&quot;a&quot;</span>))</span></code></pre></div>
+<pre><code>##      start end
+## [1,]     1   1
+## [2,]    NA  NA
+## [3,]     1   1
+## [4,]     1   1</code></pre>
+</div>
+<div id="sec:manip_regex_stringr_locate_all" class="section level3" number="7.5.6">
+<h3><span class="header-section-number">7.5.6</span> La fonction <code>str_locate_all()</code></h3>
+<p>Si on désire obtenir la position de toutes les occurrences d’un motif dans une chaîne, on peut utiliser la fonction <code>str_locate_all()</code>. Le résultat est une liste de la même longueur que le vecteur fourni à l’argument <code>string</code>. Chaque élément de la liste contient une matrice d’entiers dont la première colonne contient les positions de départ des <em>matches</em> et la seconde les positions de fin. Chaque ligne de la matrice correspond à un <em>match</em>. En cas d’absence de <em>match</em> dans la chaîne, la matrice retournée est <code>matrix(0, nrow = 0, ncol = 2)</code>.</p>
+<div class="sourceCode" id="cb1369"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1369-1"><a href="sec-regex.html#cb1369-1" aria-hidden="true"></a>fruits &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;pomme&quot;</span>, <span class="st">&quot;banane&quot;</span>, <span class="st">&quot;poire&quot;</span>, <span class="st">&quot;ananas&quot;</span>)</span>
+<span id="cb1369-2"><a href="sec-regex.html#cb1369-2" aria-hidden="true"></a><span class="kw">str_locate_all</span>(fruits, <span class="st">&quot;a&quot;</span>)</span></code></pre></div>
+<pre><code>## [[1]]
+##      start end
+## 
+## [[2]]
+##      start end
+## [1,]     2   2
+## [2,]     4   4
+## 
+## [[3]]
+##      start end
+## 
+## [[4]]
+##      start end
+## [1,]     1   1
+## [2,]     3   3
+## [3,]     5   5</code></pre>
+<div class="sourceCode" id="cb1371"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1371-1"><a href="sec-regex.html#cb1371-1" aria-hidden="true"></a><span class="co"># On peut définir le motif pour chaque élément du texte</span></span>
+<span id="cb1371-2"><a href="sec-regex.html#cb1371-2" aria-hidden="true"></a><span class="kw">str_locate_all</span>(fruits, <span class="kw">c</span>(<span class="st">&quot;p&quot;</span>, <span class="st">&quot;o&quot;</span>, <span class="st">&quot;p&quot;</span>, <span class="st">&quot;a&quot;</span>))</span></code></pre></div>
+<pre><code>## [[1]]
+##      start end
+## [1,]     1   1
+## 
+## [[2]]
+##      start end
+## 
+## [[3]]
+##      start end
+## [1,]     1   1
+## 
+## [[4]]
+##      start end
+## [1,]     1   1
+## [2,]     3   3
+## [3,]     5   5</code></pre>
+</div>
+<div id="sec:manip_regex_stringr_replace" class="section level3" number="7.5.7">
+<h3><span class="header-section-number">7.5.7</span> La fonction <code>str_replace()</code></h3>
+<p>La fonction <code>str_replace()</code> remplace la première occurrence d’un motif <em>matché</em> par la chaîne indiquée à l’argument <code>replacement</code>.</p>
+<div class="sourceCode" id="cb1373"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1373-1"><a href="sec-regex.html#cb1373-1" aria-hidden="true"></a>telephones &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;02/23/23/35/45&quot;</span>, <span class="st">&quot;02.23.23.35.45&quot;</span>, <span class="st">&quot;02 23 23 35 45&quot;</span>)</span>
+<span id="cb1373-2"><a href="sec-regex.html#cb1373-2" aria-hidden="true"></a></span>
+<span id="cb1373-3"><a href="sec-regex.html#cb1373-3" aria-hidden="true"></a><span class="co"># Remplacer la première occurrence du motif trouvée par un tiret</span></span>
+<span id="cb1373-4"><a href="sec-regex.html#cb1373-4" aria-hidden="true"></a><span class="kw">str_replace</span>(telephones, <span class="st">&quot;[/ </span><span class="ch">\\</span><span class="st">.]&quot;</span>, <span class="st">&quot;-&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;02-23/23/35/45&quot; &quot;02-23.23.35.45&quot; &quot;02-23 23 35 45&quot;</code></pre>
+<p>Lorsqu’il y a des groupes (définis par des parenthèses), on peut faire référence aux groupes <em>matchés</em> à l’aide de deux barres obliques inversées suivies du rang du groupe. Ainsi <code>\\1</code> fera référence au premier groupe matché.</p>
+<div class="sourceCode" id="cb1375"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1375-1"><a href="sec-regex.html#cb1375-1" aria-hidden="true"></a>fruits &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;01. pomme&quot;</span>, <span class="st">&quot;02. pêches&quot;</span>, <span class="st">&quot;Maison&quot;</span>, <span class="st">&quot;03. bananes&quot;</span>)</span>
+<span id="cb1375-2"><a href="sec-regex.html#cb1375-2" aria-hidden="true"></a><span class="kw">str_replace</span>(fruits, <span class="st">&quot;([0-9]{2}</span><span class="ch">\\</span><span class="st">. )([a-z])&quot;</span>, <span class="st">&quot;Debut</span><span class="ch">\\</span><span class="st">1Bonjour</span><span class="ch">\\</span><span class="st">2Fin&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;Debut01. BonjourpFinomme&quot;   &quot;Debut02. BonjourpFinêches&quot; 
+## [3] &quot;Maison&quot;                     &quot;Debut03. BonjourbFinananes&quot;</code></pre>
+</div>
+<div id="sec:manip_regex_stringr_replace_all" class="section level3" number="7.5.8">
+<h3><span class="header-section-number">7.5.8</span> La fonction <code>str_replace_all()</code></h3>
+<p>La fonction <code>str_replace_all()</code> permet de remplacer toutes les occurrences du motif trouvé par une chaîne de remplacement.</p>
+<div class="sourceCode" id="cb1377"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1377-1"><a href="sec-regex.html#cb1377-1" aria-hidden="true"></a>telephones &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;02/23/23/35/45&quot;</span>, <span class="st">&quot;02.23.23.35.45&quot;</span>, <span class="st">&quot;02 23 23 35 45&quot;</span>)</span>
+<span id="cb1377-2"><a href="sec-regex.html#cb1377-2" aria-hidden="true"></a></span>
+<span id="cb1377-3"><a href="sec-regex.html#cb1377-3" aria-hidden="true"></a><span class="co"># Remplacer toute les occurrences du motif trouvées par un tiret</span></span>
+<span id="cb1377-4"><a href="sec-regex.html#cb1377-4" aria-hidden="true"></a><span class="kw">str_replace_all</span>(telephones, <span class="st">&quot;[/ </span><span class="ch">\\</span><span class="st">.]&quot;</span>, <span class="st">&quot;-&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;02-23-23-35-45&quot; &quot;02-23-23-35-45&quot; &quot;02-23-23-35-45&quot;</code></pre>
+</div>
+<div id="sec:manip_regex_stringr_split" class="section level3" number="7.5.9">
+<h3><span class="header-section-number">7.5.9</span> La fonction <code>str_split()</code></h3>
+<p>La fonction <code>str_split()</code> permet de séparer une chaîne de caractères en plusieurs morceaux, suivant un motif donné. On peut préciser le nombre maximum de morceaux à retourner à l’aide de l’argument <code>n</code>. Cet argument vaut <code>Inf</code> par défaut, et retourne donc tous les morceaux qu"il est possible de trouver. Si la valeur donnée à <code>n</code> est plus petite que lon nombre de morceaux qu’il est possible de faire, le dernier élément du vecteur de caractères retourné contient encore des occurrences du motif. Si par contre la valeur fournie à <code>n</code> est plus grande, il n’y a pas de rajouts effectués par <code>R</code>.</p>
+<p>Le résultat est une liste de la même longueur que le vecteur passé à l’argument <code>string</code>. Chaque élément de la liste contient les morceaux. Si l’argument <code>pattern</code> vaut <code>NA</code>, le résultat est le texte original, si <code>pattern</code> vaut <code>""</code>, le texte original est séparé par caractères.</p>
+<div class="sourceCode" id="cb1379"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1379-1"><a href="sec-regex.html#cb1379-1" aria-hidden="true"></a>textes &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;manger des chips&quot;</span>, <span class="st">&quot;José&quot;</span>,</span>
+<span id="cb1379-2"><a href="sec-regex.html#cb1379-2" aria-hidden="true"></a>            <span class="st">&quot;Considère qu&#39;on n&#39;est plus amis, Abitbol !&quot;</span>)</span>
+<span id="cb1379-3"><a href="sec-regex.html#cb1379-3" aria-hidden="true"></a></span>
+<span id="cb1379-4"><a href="sec-regex.html#cb1379-4" aria-hidden="true"></a><span class="kw">str_split</span>(textes, <span class="st">&quot; &quot;</span>)</span></code></pre></div>
+<pre><code>## [[1]]
+## [1] &quot;manger&quot; &quot;des&quot;    &quot;chips&quot; 
+## 
+## [[2]]
+## [1] &quot;José&quot;
+## 
+## [[3]]
+## [1] &quot;Considère&quot; &quot;qu&#39;on&quot;     &quot;n&#39;est&quot;     &quot;plus&quot;      &quot;amis,&quot;     &quot;Abitbol&quot;  
+## [7] &quot;!&quot;</code></pre>
+<div class="sourceCode" id="cb1381"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1381-1"><a href="sec-regex.html#cb1381-1" aria-hidden="true"></a><span class="co"># Avec n plus grand</span></span>
+<span id="cb1381-2"><a href="sec-regex.html#cb1381-2" aria-hidden="true"></a><span class="kw">str_split</span>(textes, <span class="st">&quot; &quot;</span>, <span class="dt">n =</span> <span class="dv">4</span>)</span></code></pre></div>
+<pre><code>## [[1]]
+## [1] &quot;manger&quot; &quot;des&quot;    &quot;chips&quot; 
+## 
+## [[2]]
+## [1] &quot;José&quot;
+## 
+## [[3]]
+## [1] &quot;Considère&quot;            &quot;qu&#39;on&quot;                &quot;n&#39;est&quot;               
+## [4] &quot;plus amis, Abitbol !&quot;</code></pre>
+</div>
+<div id="sec:manip_regex_stringr_split_fixed" class="section level3" number="7.5.10">
+<h3><span class="header-section-number">7.5.10</span> La fonction <code>str_string_fixed()</code></h3>
+<p>Pour briser une chaîne de caractères en un nombre <code>n</code> de morceaux fixe en fonction d’un motif <code>pattern</code>, on peut utiliser la fonction <code>str_string_fixed()</code>. Le résultat est une matrice à <code>n</code>, colonnes. Chaque colonne de la matrice retournée correspond à un morceau. Si <code>n</code> est supérieur au nombre de morceaux qu’il est possible de créer, les colonnes de la matrice retournée sont complétées par la chaine vide <code>""</code>. En revanche, si <code>n</code> est inférieur au nombre de morceaux que l’on peut créer, la dernière colonne contiendra le reste de la chaîne n’ayant pas encore été découpée.</p>
+<div class="sourceCode" id="cb1383"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1383-1"><a href="sec-regex.html#cb1383-1" aria-hidden="true"></a>textes &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;manger des chips&quot;</span>, <span class="st">&quot;José&quot;</span>,</span>
+<span id="cb1383-2"><a href="sec-regex.html#cb1383-2" aria-hidden="true"></a>            <span class="st">&quot;Considère qu&#39;on n&#39;est plus amis, Abitbol !&quot;</span>)</span>
+<span id="cb1383-3"><a href="sec-regex.html#cb1383-3" aria-hidden="true"></a></span>
+<span id="cb1383-4"><a href="sec-regex.html#cb1383-4" aria-hidden="true"></a><span class="co"># Avec 4 morceaux</span></span>
+<span id="cb1383-5"><a href="sec-regex.html#cb1383-5" aria-hidden="true"></a><span class="kw">str_split_fixed</span>(textes, <span class="st">&quot; &quot;</span>, <span class="dt">n =</span> <span class="dv">4</span>)</span></code></pre></div>
+<pre><code>##      [,1]        [,2]    [,3]    [,4]                  
+## [1,] &quot;manger&quot;    &quot;des&quot;   &quot;chips&quot; &quot;&quot;                    
+## [2,] &quot;José&quot;      &quot;&quot;      &quot;&quot;      &quot;&quot;                    
+## [3,] &quot;Considère&quot; &quot;qu&#39;on&quot; &quot;n&#39;est&quot; &quot;plus amis, Abitbol !&quot;</code></pre>
+</div>
+</div>
+<div id="sec:manip_regex_base" class="section level2" number="7.6">
+<h2><span class="header-section-number">7.6</span> Quelques fonctions du <em>package</em> {<code>base</code>}</h2>
+<p>À titre informatif, le tableau ci-dessous présente les fonctions du <em>package</em> <code>{base}</code> les plus importantes lorsque l’on manipule des expressions régulières. Les deux arguments principaux de texte et de motif sont nommés <code>text</code> et <code>pattern</code>, respectivement. Lorsqu’elle existe, la fonction équivalente dans {<code>stringr</code>} est donnée.</p>
+<table>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Fonction dans {<code>string</code>}</th>
+<th align="left">Fonction dans {<code>base</code>}</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><code>str_which()</code></td>
+<td align="left"><code>grep()</code></td>
+<td align="left">Retourne les indices des éléments du vecteur de texte pour lequel il y a un <em>match</em></td>
+</tr>
+<tr class="even">
+<td align="left"><code>str_detect()</code></td>
+<td align="left"><code>grepl()</code></td>
+<td align="left">Retourne un vecteur de valeurs logiques de la même longueur que le vecteur <code>text</code>, qui indique, pour chaque élément, s’il y a eu <em>match</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Proche de <code>str_locate()</code></td>
+<td align="left"><code>regexpr()</code></td>
+<td align="left">Retourne un vecteur d’entiers de la même taille que <code>text</code> donnant la position du premier <em>match</em> (ou <code>-1</code> s’il n’y a pas eu de <em>match</em>), avec l’attribut <code>match.length</code>, un vecteur d’entiers donnant la longueur du text <em>match</em> (ou <code>-1</code> si pas de <em>match</em>).</td>
+</tr>
+<tr class="even">
+<td align="left">Proche de <code>str_locate_all</code></td>
+<td align="left"><code>gregexpr()</code></td>
+<td align="left">Même chose que <code>regexpr()</code>, mais le résultat est sous forme de liste, dont chaque élément correspond à la recherche du motif dans l’élément de <code>text</code> correspondant. Par ailleurs, les positions de départ de chaque <em>match</em> sont données, et non pas seulement le premier rencontré. Il en est de même pour l’attribut <code>match.length</code>.</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"><code>regexec()</code></td>
+<td align="left">Retourne une liste de la même taille que <code>text</code> dont chaque élément est soit <code>-1</code> s’il n’y a pas eu de <code>match</code>, ou une séquence d’entiers avec les positions de début de <code>match</code> de toutes les sous-chaînes correspondant aux sous-expressions parenthésées de l’argument <code>pattern</code>, avec l’attribut <code>match.length</code>, qui est un vecteur donnant la longueu de chaque <em>match</em>, ou <code>-1</code> s’il n’y en a pas eu.</td>
+</tr>
+</tbody>
+</table>
+<p>Pour se fixer les idées, voici quelques exemples. La fonction <code>str_which()</code>, qui permet d’indiquer les positions des éléments du vecteur donné en argument à <code>string</code> dans lesquels le motif est repéré :</p>
+<div class="sourceCode" id="cb1385"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1385-1"><a href="sec-regex.html#cb1385-1" aria-hidden="true"></a>textes &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Je m’évanouis avant d’avoir pu vous révéler&quot;</span>,</span>
+<span id="cb1385-2"><a href="sec-regex.html#cb1385-2" aria-hidden="true"></a>          <span class="st">&quot;le nom du kidnappeur&quot;</span>, <span class="st">&quot;et/ou de la kidnappeuse&quot;</span>,</span>
+<span id="cb1385-3"><a href="sec-regex.html#cb1385-3" aria-hidden="true"></a>          <span class="st">&quot;du petit Doug Doug !&quot;</span>)</span>
+<span id="cb1385-4"><a href="sec-regex.html#cb1385-4" aria-hidden="true"></a>motif &lt;-<span class="st"> &quot;ou&quot;</span></span>
+<span id="cb1385-5"><a href="sec-regex.html#cb1385-5" aria-hidden="true"></a></span>
+<span id="cb1385-6"><a href="sec-regex.html#cb1385-6" aria-hidden="true"></a><span class="kw">str_which</span>(<span class="dt">string =</span> textes, <span class="dt">pattern =</span> motif)</span></code></pre></div>
+<pre><code>## [1] 1 3 4</code></pre>
+<p>La fonction <code>str_detect()</code> qui retourne un vecteur de logique indiquant pour chaque élément du vecteur donné en argument à <code>string</code> si le motif a été trouvé :</p>
+<div class="sourceCode" id="cb1387"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1387-1"><a href="sec-regex.html#cb1387-1" aria-hidden="true"></a><span class="kw">str_detect</span>(<span class="dt">string =</span> textes, <span class="dt">pattern =</span> motif)</span></code></pre></div>
+<pre><code>## [1]  TRUE FALSE  TRUE  TRUE</code></pre>
+<p>La fonction <code>regexpr()</code> (dans {<code>base</code>}, donne un résultat relativement proche de celui de <code>str_locate()</code> de {<code>stringr</code>}) :</p>
+<div class="sourceCode" id="cb1389"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1389-1"><a href="sec-regex.html#cb1389-1" aria-hidden="true"></a><span class="kw">regexpr</span>(<span class="dt">pattern =</span> textes, <span class="dt">text =</span> motif)</span></code></pre></div>
+<pre><code>## [1] -1
+## attr(,&quot;match.length&quot;)
+## [1] -1</code></pre>
+<div class="sourceCode" id="cb1391"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1391-1"><a href="sec-regex.html#cb1391-1" aria-hidden="true"></a><span class="kw">str_locate</span>(<span class="dt">string =</span> textes, <span class="dt">pattern =</span> motif)</span></code></pre></div>
+<pre><code>##      start end
+## [1,]    10  11
+## [2,]    NA  NA
+## [3,]     4   5
+## [4,]    11  12</code></pre>
+<p>La fonction <code>gregexpr()</code></p>
+<div class="sourceCode" id="cb1393"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1393-1"><a href="sec-regex.html#cb1393-1" aria-hidden="true"></a><span class="kw">gregexpr</span>(<span class="dt">pattern =</span> motif, <span class="dt">text =</span> textes)</span></code></pre></div>
+<pre><code>## [[1]]
+## [1] 10 33
+## attr(,&quot;match.length&quot;)
+## [1] 2 2
+## 
+## [[2]]
+## [1] -1
+## attr(,&quot;match.length&quot;)
+## [1] -1
+## 
+## [[3]]
+## [1] 4
+## attr(,&quot;match.length&quot;)
+## [1] 2
+## 
+## [[4]]
+## [1] 11 16
+## attr(,&quot;match.length&quot;)
+## [1] 2 2</code></pre>
+<div class="sourceCode" id="cb1395"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1395-1"><a href="sec-regex.html#cb1395-1" aria-hidden="true"></a><span class="kw">str_locate_all</span>(<span class="dt">string =</span> textes, <span class="dt">pattern =</span> motif)</span></code></pre></div>
+<pre><code>## [[1]]
+##      start end
+## [1,]    10  11
+## [2,]    33  34
+## 
+## [[2]]
+##      start end
+## 
+## [[3]]
+##      start end
+## [1,]     4   5
+## 
+## [[4]]
+##      start end
+## [1,]    11  12
+## [2,]    16  17</code></pre>
+<p>Et enfin, la fonction <code>regexec()</code></p>
+<div class="sourceCode" id="cb1397"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1397-1"><a href="sec-regex.html#cb1397-1" aria-hidden="true"></a><span class="kw">regexec</span>(<span class="dt">pattern =</span> motif, <span class="dt">text =</span> textes)</span></code></pre></div>
+<pre><code>## [[1]]
+## [1] 10
+## attr(,&quot;match.length&quot;)
+## [1] 2
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+## 
+## [[2]]
+## [1] -1
+## attr(,&quot;match.length&quot;)
+## [1] -1
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+## 
+## [[3]]
+## [1] 4
+## attr(,&quot;match.length&quot;)
+## [1] 2
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+## 
+## [[4]]
+## [1] 11
+## attr(,&quot;match.length&quot;)
+## [1] 2
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE</code></pre>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="6">
+<li id="fn6"><p><a href="http://fr.openclassrooms.com/informatique/cours/concevez-votre-site-web-avec-php-et-mysql/les-expressions-regulieres-partie-1-2" class="uri">http://fr.openclassrooms.com/informatique/cours/concevez-votre-site-web-avec-php-et-mysql/les-expressions-regulieres-partie-1-2</a><a href="sec-regex.html#fnref6" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="régressions-linéaires.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="pour-aller-plus-loin.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf"],
+"toc": {
+"collapse": "subsubsection",
+"scroll_highlight": true
+},
+"toc_depth": 5,
+"search": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,3426 @@
+{
+"result": [
+{
+"id": "/en/galaxy_quest", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 102.0
+}
+], 
+"gross_revenue": {
+"amount": 90683916.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Galaxy Quest", 
+"initial_release_date": {
+"value": "1999-12-23"
+}, 
+"estimated_budget": {
+"amount": 45000000.0
+}
+}, 
+{
+"id": "/en/star_trek_first_contact", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 111.0
+}, 
+{
+"runtime": 110.0
+}
+], 
+"gross_revenue": {
+"amount": 92001027.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Star Trek: First Contact", 
+"initial_release_date": {
+"value": "1996-11-18"
+}, 
+"estimated_budget": {
+"amount": 45000000.0
+}
+}, 
+{
+"id": "/en/forrest_gump", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 142.0
+}, 
+{
+"runtime": 136.0
+}, 
+{
+"runtime": 141.0
+}
+], 
+"gross_revenue": {
+"amount": 677387716.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Forrest Gump", 
+"initial_release_date": {
+"value": "1994-06-23"
+}, 
+"estimated_budget": {
+"amount": 55000000.0
+}
+}, 
+{
+"id": "/en/star_wars_episode_i_the_phantom_menace", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 133.0
+}, 
+{
+"runtime": 136.0
+}
+], 
+"gross_revenue": {
+"amount": 1027044330.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Star Wars Episode I: The Phantom Menace", 
+"initial_release_date": {
+"value": "1999-05-19"
+}, 
+"estimated_budget": {
+"amount": 115000000.0
+}
+}, 
+{
+"id": "/en/titanic", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 194.0
+}
+], 
+"gross_revenue": {
+"amount": 2185240703.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Titanic", 
+"initial_release_date": {
+"value": "1997-11-01"
+}, 
+"estimated_budget": {
+"amount": 200000000.0
+}
+}, 
+{
+"id": "/en/independence_day_1996", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 145.0
+}, 
+{
+"runtime": 153.0
+}
+], 
+"gross_revenue": {
+"amount": 817400891.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Independence Day", 
+"initial_release_date": {
+"value": "1996-06-25"
+}, 
+"estimated_budget": {
+"amount": 75000000.0
+}
+}, 
+{
+"id": "/en/star_wars_episode_iv_a_new_hope", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 121.0
+}, 
+{
+"runtime": 125.0
+}
+], 
+"gross_revenue": {
+"amount": 775398007.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Star Wars", 
+"initial_release_date": {
+"value": "1977-05-25"
+}, 
+"estimated_budget": {
+"amount": 13000000.0
+}
+}, 
+{
+"id": "/en/star_wars_episode_iii_revenge_of_the_sith", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 140.0
+}
+], 
+"gross_revenue": {
+"amount": 848754768.0
+}, 
+"country": [
+"United States of America", 
+"United Kingdom"
+], 
+"name": "Star Wars Episode III: Revenge of the Sith", 
+"initial_release_date": {
+"value": "2005-05-15"
+}, 
+"estimated_budget": {
+"amount": 113000000.0
+}
+}, 
+{
+"id": "/en/jurassic_park_1993", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 127.0
+}, 
+{
+"runtime": 126.0
+}
+], 
+"gross_revenue": {
+"amount": 914691118.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Jurassic Park", 
+"initial_release_date": {
+"value": "1993-06-09"
+}, 
+"estimated_budget": {
+"amount": 63000000.0
+}
+}, 
+{
+"id": "/en/e_t_the_extra_terrestrial", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 115.0
+}, 
+{
+"runtime": 121.0
+}, 
+{
+"runtime": 117.0
+}, 
+{
+"runtime": 120.0
+}, 
+{
+"runtime": 114.0
+}
+], 
+"gross_revenue": {
+"amount": 792910554.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "E.T. the Extra-Terrestrial", 
+"initial_release_date": {
+"value": "1982-05-26"
+}, 
+"estimated_budget": {
+"amount": 10500000.0
+}
+}, 
+{
+"id": "/en/frankenstein_1931", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 71.0
+}, 
+{
+"runtime": 70.0
+}, 
+{
+"runtime": 65.0
+}, 
+{
+"runtime": 120.0
+}
+], 
+"gross_revenue": {
+"amount": 12000000.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Frankenstein", 
+"initial_release_date": {
+"value": "1931-11-21"
+}, 
+"estimated_budget": {
+"amount": 291000.0
+}
+}, 
+{
+"id": "/en/the_lion_king", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 89.0
+}, 
+{
+"runtime": 88.0
+}
+], 
+"gross_revenue": {
+"amount": 951583777.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "The Lion King", 
+"initial_release_date": {
+"value": "1994-06-15"
+}, 
+"estimated_budget": {
+"amount": 79300000.0
+}
+}, 
+{
+"id": "/en/the_matrix_reloaded", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 138.0
+}
+], 
+"gross_revenue": {
+"amount": 742128461.0
+}, 
+"country": [
+"United States of America", 
+"Australia"
+], 
+"name": "The Matrix Reloaded", 
+"initial_release_date": {
+"value": "2003-05-07"
+}, 
+"estimated_budget": {
+"amount": 150000000.0
+}
+}, 
+{
+"id": "/en/driving_miss_daisy", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 99.0
+}
+], 
+"gross_revenue": {
+"amount": 145793296.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Driving Miss Daisy", 
+"initial_release_date": {
+"value": "1989-12-13"
+}, 
+"estimated_budget": {
+"amount": 7500000.0
+}
+}, 
+{
+"id": "/en/spider_man_2002", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 121.0
+}
+], 
+"gross_revenue": {
+"amount": 821708551.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Spider-Man", 
+"initial_release_date": {
+"value": "2002-04-30"
+}, 
+"estimated_budget": {
+"amount": 139000000.0
+}
+}, 
+{
+"id": "/en/pretty_woman", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 119.0
+}, 
+{
+"runtime": 125.0
+}
+], 
+"gross_revenue": {
+"amount": 463407268.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Pretty Woman", 
+"initial_release_date": {
+"value": "1990-03-23"
+}, 
+"estimated_budget": {
+"amount": 14000000.0
+}
+}, 
+{
+"id": "/en/porco_rosso", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 94.0
+}, 
+{
+"runtime": 93.0
+}
+], 
+"gross_revenue": {
+"amount": 34100000.0
+}, 
+"country": [
+"Japan"
+], 
+"name": "Porco Rosso", 
+"initial_release_date": {
+"value": "1992-07-18"
+}, 
+"estimated_budget": {
+"amount": 9200000.0
+}
+}, 
+{
+"id": "/en/the_lord_of_the_rings_the_fellowship_of_the_ring", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 178.0
+}, 
+{
+"runtime": 208.0
+}, 
+{
+"runtime": 179.0
+}, 
+{
+"runtime": 228.0
+}
+], 
+"gross_revenue": {
+"amount": 871530324.0
+}, 
+"country": [
+"New Zealand", 
+"United States of America"
+], 
+"name": "The Lord of the Rings: The Fellowship of the Ring", 
+"initial_release_date": {
+"value": "2001-12-10"
+}, 
+"estimated_budget": {
+"amount": 93000000.0
+}
+}, 
+{
+"id": "/en/the_lord_of_the_rings_the_two_towers", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 179.0
+}, 
+{
+"runtime": 235.0
+}, 
+{
+"runtime": 223.0
+}
+], 
+"gross_revenue": {
+"amount": 926047111.0
+}, 
+"country": [
+"United States of America", 
+"New Zealand"
+], 
+"name": "The Lord of the Rings: The Two Towers", 
+"initial_release_date": {
+"value": "2002-12-05"
+}, 
+"estimated_budget": {
+"amount": 94000000.0
+}
+}, 
+{
+"id": "/en/the_lord_of_the_rings_the_return_of_the_king", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 201.0
+}, 
+{
+"runtime": 200.0
+}, 
+{
+"runtime": 375.0
+}, 
+{
+"runtime": 210.0
+}, 
+{
+"runtime": 250.0
+}, 
+{
+"runtime": 251.0
+}, 
+{
+"runtime": 263.0
+}
+], 
+"gross_revenue": {
+"amount": 1119929521.0
+}, 
+"country": [
+"United States of America", 
+"New Zealand"
+], 
+"name": "The Lord of the Rings: The Return of the King", 
+"initial_release_date": {
+"value": "2003-12-01"
+}, 
+"estimated_budget": {
+"amount": 94000000.0
+}
+}, 
+{
+"id": "/en/labyrinth_1986", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 101.0
+}
+], 
+"gross_revenue": {
+"amount": 12729917.0
+}, 
+"country": [
+"United Kingdom", 
+"United States of America"
+], 
+"name": "Labyrinth", 
+"initial_release_date": {
+"value": "1986-06-27"
+}, 
+"estimated_budget": {
+"amount": 25000000.0
+}
+}, 
+{
+"id": "/en/finding_nemo", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 100.0
+}
+], 
+"gross_revenue": {
+"amount": 867893978.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Finding Nemo", 
+"initial_release_date": {
+"value": "2003-05-30"
+}, 
+"estimated_budget": {
+"amount": 94000000.0
+}
+}, 
+{
+"id": "/en/wild_wild_west", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 107.0
+}, 
+{
+"runtime": 105.0
+}, 
+{
+"runtime": 106.0
+}
+], 
+"gross_revenue": {
+"amount": 113000000.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Wild Wild West", 
+"initial_release_date": {
+"value": "1999-06-30"
+}, 
+"estimated_budget": {
+"amount": 170000000.0
+}
+}, 
+{
+"id": "/en/robin_hood_prince_of_thieves", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 144.0
+}, 
+{
+"runtime": 143.0
+}, 
+{
+"runtime": 155.0
+}
+], 
+"gross_revenue": {
+"amount": 165000000.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Robin Hood: Prince of Thieves", 
+"initial_release_date": {
+"value": "1991-03"
+}, 
+"estimated_budget": {
+"amount": 48000000.0
+}
+}, 
+{
+"id": "/en/the_firm", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 154.0
+}
+], 
+"gross_revenue": {
+"amount": 6393211.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "The Firm", 
+"initial_release_date": {
+"value": "1993-06-30"
+}, 
+"estimated_budget": {
+"amount": 42000000.0
+}
+}, 
+{
+"id": "/en/gigli", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 121.0
+}
+], 
+"gross_revenue": {
+"amount": 6087542.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Gigli", 
+"initial_release_date": {
+"value": "2003-07-27"
+}, 
+"estimated_budget": {
+"amount": 54000000.0
+}
+}, 
+{
+"id": "/en/the_cotton_club_1984", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 128.0
+}, 
+{
+"runtime": 127.0
+}
+], 
+"gross_revenue": {
+"amount": 25800000.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "The Cotton Club", 
+"initial_release_date": {
+"value": "1984-12-10"
+}, 
+"estimated_budget": {
+"amount": 47000000.0
+}
+}, 
+{
+"id": "/en/troy_2004", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 163.0
+}, 
+{
+"runtime": 145.0
+}, 
+{
+"runtime": 196.0
+}, 
+{
+"runtime": 189.0
+}, 
+{
+"runtime": 146.0
+}, 
+{
+"runtime": 165.0
+}, 
+{
+"runtime": 86.0
+}, 
+{
+"runtime": 162.0
+}
+], 
+"gross_revenue": {
+"amount": 497409852.0
+}, 
+"country": [
+"United States of America", 
+"United Kingdom", 
+"Malta"
+], 
+"name": "Troy", 
+"initial_release_date": {
+"value": "2004-05-09"
+}, 
+"estimated_budget": {
+"amount": 185000000.0
+}
+}, 
+{
+"id": "/en/cube", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 90.0
+}
+], 
+"gross_revenue": {
+"amount": 489220.0
+}, 
+"country": [
+"Canada"
+], 
+"name": "Cube", 
+"initial_release_date": {
+"value": "1997-09-09"
+}, 
+"estimated_budget": {
+"amount": 365000.0
+}
+}, 
+{
+"id": "/en/a_cinderella_story", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 95.0
+}
+], 
+"gross_revenue": {
+"amount": 70067909.0
+}, 
+"country": [
+"United States of America", 
+"Canada"
+], 
+"name": "A Cinderella Story", 
+"initial_release_date": {
+"value": "2004-07-10"
+}, 
+"estimated_budget": {
+"amount": 19000000.0
+}
+}, 
+{
+"id": "/en/shrek_2", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 93.0
+}, 
+{
+"runtime": 92.0
+}
+], 
+"gross_revenue": {
+"amount": 919838758.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Shrek 2", 
+"initial_release_date": {
+"value": "2004-05-15"
+}, 
+"estimated_budget": {
+"amount": 125000000.0
+}
+}, 
+{
+"id": "/en/spider-man_2", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 127.0
+}, 
+{
+"runtime": 135.0
+}
+], 
+"gross_revenue": {
+"amount": 783766341.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Spider-Man 2", 
+"initial_release_date": {
+"value": "2004-06-25"
+}, 
+"estimated_budget": {
+"amount": 200000000.0
+}
+}, 
+{
+"id": "/en/inglorious_bastards", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 153.0
+}
+], 
+"gross_revenue": {
+"amount": 120300000.0
+}, 
+"country": [
+"United States of America", 
+"Germany"
+], 
+"name": "Inglourious Basterds", 
+"initial_release_date": {
+"value": "2009-05-20"
+}, 
+"estimated_budget": {
+"amount": 70000000.0
+}
+}, 
+{
+"id": "/en/beyond_borders", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 127.0
+}, 
+{
+"runtime": 121.0
+}
+], 
+"gross_revenue": {
+"amount": 4600000.0
+}, 
+"country": [
+"United States of America", 
+"Germany"
+], 
+"name": "Beyond Borders", 
+"initial_release_date": {
+"value": "2003-10-24"
+}, 
+"estimated_budget": {
+"amount": 35000000.0
+}
+}, 
+{
+"id": "/en/treasure_planet", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 95.0
+}
+], 
+"gross_revenue": {
+"amount": 38120554.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Treasure Planet", 
+"initial_release_date": {
+"value": "2002-11-05"
+}, 
+"estimated_budget": {
+"amount": 140000000.0
+}
+}, 
+{
+"id": "/en/harry_potter_and_the_philosophers_stone", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 152.0
+}, 
+{
+"runtime": 146.0
+}, 
+{
+"runtime": 147.0
+}, 
+{
+"runtime": 153.0
+}, 
+{
+"runtime": 159.0
+}
+], 
+"gross_revenue": {
+"amount": 974755371.0
+}, 
+"country": [
+"United Kingdom", 
+"United States of America"
+], 
+"name": "Harry Potter and the Philosopher's Stone", 
+"initial_release_date": {
+"value": "2001-11-04"
+}, 
+"estimated_budget": {
+"amount": 130000000.0
+}
+}, 
+{
+"id": "/en/harry_potter_and_the_chamber_of_secrets_2002", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 161.0
+}, 
+{
+"runtime": 174.0
+}
+], 
+"gross_revenue": {
+"amount": 878979634.0
+}, 
+"country": [
+"United Kingdom", 
+"United States of America", 
+"Germany"
+], 
+"name": "Harry Potter and the Chamber of Secrets", 
+"initial_release_date": {
+"value": "2002-11-03"
+}, 
+"estimated_budget": {
+"amount": 100000000.0
+}
+}, 
+{
+"id": "/en/harry_potter_and_the_prisoner_of_azkaban_2004", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 141.0
+}, 
+{
+"runtime": 142.0
+}
+], 
+"gross_revenue": {
+"amount": 796688549.0
+}, 
+"country": [
+"United Kingdom", 
+"United States of America"
+], 
+"name": "Harry Potter and the Prisoner of Azkaban", 
+"initial_release_date": {
+"value": "2004-05-31"
+}, 
+"estimated_budget": {
+"amount": 130000000.0
+}
+}, 
+{
+"id": "/en/harry_potter_and_the_goblet_of_fire_2005", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 157.0
+}, 
+{
+"runtime": 151.0
+}, 
+{
+"runtime": 150.0
+}, 
+{
+"runtime": 156.0
+}
+], 
+"gross_revenue": {
+"amount": 896911078.0
+}, 
+"country": [
+"United States of America", 
+"United Kingdom"
+], 
+"name": "Harry Potter and the Goblet of Fire", 
+"initial_release_date": {
+"value": "2005-11-06"
+}, 
+"estimated_budget": {
+"amount": 150000000.0
+}
+}, 
+{
+"id": "/en/harry_potter_and_the_order_of_the_phoenix_2007", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 142.0
+}, 
+{
+"runtime": 138.0
+}, 
+{
+"runtime": 134.0
+}, 
+{
+"runtime": 132.0
+}, 
+{
+"runtime": 137.0
+}, 
+{
+"runtime": 139.0
+}
+], 
+"gross_revenue": {
+"amount": 939885929.0
+}, 
+"country": [
+"United States of America", 
+"United Kingdom"
+], 
+"name": "Harry Potter and the Order of the Phoenix", 
+"initial_release_date": {
+"value": "2007-06-28"
+}, 
+"estimated_budget": {
+"amount": 150000000.0
+}
+}, 
+{
+"id": "/en/dirty_dancing", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 100.0
+}
+], 
+"gross_revenue": {
+"amount": 213954274.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Dirty Dancing", 
+"initial_release_date": {
+"value": "1987-05-12"
+}, 
+"estimated_budget": {
+"amount": 6000000.0
+}
+}, 
+{
+"id": "/en/spider-man_3", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 139.0
+}
+], 
+"gross_revenue": {
+"amount": 890871626.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Spider-Man 3", 
+"initial_release_date": {
+"value": "2007-04-16"
+}, 
+"estimated_budget": {
+"amount": 250000000.0
+}
+}, 
+{
+"id": "/en/meet_joe_black", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 181.0
+}
+], 
+"gross_revenue": {
+"amount": 44600000.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Meet Joe Black", 
+"initial_release_date": {
+"value": "1998-11-13"
+}, 
+"estimated_budget": {
+"amount": 90000000.0
+}
+}, 
+{
+"id": "/en/new_york_minute", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 91.0
+}
+], 
+"gross_revenue": {
+"amount": 21289826.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "New York Minute", 
+"initial_release_date": {
+"value": "2004-05-01"
+}, 
+"estimated_budget": {
+"amount": 30000000.0
+}
+}, 
+{
+"id": "/en/harry_potter_and_the_half_blood_prince_2008", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 153.0
+}
+], 
+"gross_revenue": {
+"amount": 934416487.0
+}, 
+"country": [
+"United States of America", 
+"United Kingdom"
+], 
+"name": "Harry Potter and the Half-Blood Prince", 
+"initial_release_date": {
+"value": "2009-07-06"
+}, 
+"estimated_budget": {
+"amount": 250000000.0
+}
+}, 
+{
+"id": "/en/streets_of_fire", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 93.0
+}
+], 
+"gross_revenue": {
+"amount": 8300000.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Streets of Fire", 
+"initial_release_date": {
+"value": "1984-06-01"
+}, 
+"estimated_budget": {
+"amount": 14500000.0
+}
+}, 
+{
+"id": "/en/shrek_the_third", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 92.0
+}, 
+{
+"runtime": 93.0
+}
+], 
+"gross_revenue": {
+"amount": 798958162.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Shrek the Third", 
+"initial_release_date": {
+"value": "2007-05-06"
+}, 
+"estimated_budget": {
+"amount": 160000000.0
+}
+}, 
+{
+"id": "/en/north_1995", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 87.0
+}
+], 
+"gross_revenue": {
+"amount": 7182747.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "North", 
+"initial_release_date": {
+"value": "1994-07-22"
+}, 
+"estimated_budget": {
+"amount": 40000000.0
+}
+}, 
+{
+"id": "/en/pirates_of_the_caribbean_dead_mans_chest", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 151.0
+}
+], 
+"gross_revenue": {
+"amount": 1066179725.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Pirates of the Caribbean: Dead Man's Chest", 
+"initial_release_date": {
+"value": "2006-06-24"
+}, 
+"estimated_budget": {
+"amount": 225000000.0
+}
+}, 
+{
+"id": "/en/robot_monster", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 66.0
+}, 
+{
+"runtime": 62.0
+}
+], 
+"gross_revenue": {
+"amount": 1000000.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Robot Monster", 
+"initial_release_date": {
+"value": "1953-06-10"
+}, 
+"estimated_budget": {
+"amount": 16000.0
+}
+}, 
+{
+"id": "/en/soul_food_1997", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 114.0
+}, 
+{
+"runtime": 115.0
+}
+], 
+"gross_revenue": {
+"amount": 43700855.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Soul Food", 
+"initial_release_date": {
+"value": "1997-08-24"
+}, 
+"estimated_budget": {
+"amount": 7500000.0
+}
+}, 
+{
+"id": "/en/alexander_2004", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 175.0
+}, 
+{
+"runtime": 167.0
+}, 
+{
+"runtime": 170.0
+}, 
+{
+"runtime": 214.0
+}, 
+{
+"runtime": 206.0
+}, 
+{
+"runtime": 58.0
+}, 
+{
+"runtime": 213.0
+}
+], 
+"gross_revenue": {
+"amount": 34700000.0
+}, 
+"country": [
+"United States of America", 
+"United Kingdom", 
+"Germany", 
+"France", 
+"Netherlands", 
+"Italy", 
+"Poland"
+], 
+"name": "Alexander", 
+"initial_release_date": {
+"value": "2004-11-16"
+}, 
+"estimated_budget": {
+"amount": 155000000.0
+}
+}, 
+{
+"id": "/en/raise_your_voice", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 103.0
+}, 
+{
+"runtime": 107.0
+}, 
+{
+"runtime": 105.0
+}
+], 
+"gross_revenue": {
+"amount": 15000000.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Raise Your Voice", 
+"initial_release_date": {
+"value": "2004-10-03"
+}, 
+"estimated_budget": {
+"amount": 14867514.0
+}
+}, 
+{
+"id": "/en/toy_story_3", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 103.0
+}, 
+{
+"runtime": 102.0
+}
+], 
+"gross_revenue": {
+"amount": 1063171911.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Toy Story 3", 
+"initial_release_date": {
+"value": "2010-06-12"
+}, 
+"estimated_budget": {
+"amount": 200000000.0
+}
+}, 
+{
+"id": "/en/indiana_jones_4", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 124.0
+}, 
+{
+"runtime": 123.0
+}, 
+{
+"runtime": 120.0
+}, 
+{
+"runtime": 122.0
+}, 
+{
+"runtime": 121.0
+}
+], 
+"gross_revenue": {
+"amount": 786636033.0
+}, 
+"country": [
+"United States of America", 
+"Brazil"
+], 
+"name": "Indiana Jones and the Kingdom of the Crystal Skull", 
+"initial_release_date": {
+"value": "2008-05-18"
+}, 
+"estimated_budget": {
+"amount": 185000000.0
+}
+}, 
+{
+"id": "/en/the_others_2001", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 104.0
+}, 
+{
+"runtime": 101.0
+}, 
+{
+"runtime": 104.0
+}
+], 
+"gross_revenue": {
+"amount": 14089952.0
+}, 
+"country": [
+"Spain", 
+"United States of America", 
+"France", 
+"Italy"
+], 
+"name": "The Others", 
+"initial_release_date": {
+"value": "2001-08-02"
+}, 
+"estimated_budget": {
+"amount": 17000000.0
+}
+}, 
+{
+"id": "/en/dude_wheres_my_car", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 83.0
+}, 
+{
+"runtime": 82.0
+}, 
+{
+"runtime": 64.0
+}
+], 
+"gross_revenue": {
+"amount": 73180723.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Dude, Where's My Car?", 
+"initial_release_date": {
+"value": "2000-12-10"
+}, 
+"estimated_budget": {
+"amount": 13000000.0
+}
+}, 
+{
+"id": "/en/babys_day_out", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 99.0
+}
+], 
+"gross_revenue": {
+"amount": 16671505.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Baby's Day Out", 
+"initial_release_date": {
+"value": "1994-07-01"
+}, 
+"estimated_budget": {
+"amount": 50000000.0
+}
+}, 
+{
+"id": "/en/lean_on_me_1989", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 108.0
+}
+], 
+"gross_revenue": {
+"amount": 31906454.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Lean on Me", 
+"initial_release_date": {
+"value": "1989-03-03"
+}, 
+"estimated_budget": {
+"amount": 10000000.0
+}
+}, 
+{
+"id": "/en/the_rugrats_movie", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 83.0
+}, 
+{
+"runtime": 79.0
+}
+], 
+"gross_revenue": {
+"amount": 100491683.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "The Rugrats Movie", 
+"initial_release_date": {
+"value": "1998-11-08"
+}, 
+"estimated_budget": {
+"amount": 28000000.0
+}
+}, 
+{
+"id": "/en/staying_alive", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 93.0
+}, 
+{
+"runtime": 96.0
+}
+], 
+"gross_revenue": {
+"amount": 65000000.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Staying Alive", 
+"initial_release_date": {
+"value": "1983-07-11"
+}, 
+"estimated_budget": {
+"amount": 18000000.0
+}
+}, 
+{
+"id": "/en/pirates_of_the_caribbean_3", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 169.0
+}, 
+{
+"runtime": 168.0
+}
+], 
+"gross_revenue": {
+"amount": 963420425.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Pirates of the Caribbean: At World's End", 
+"initial_release_date": {
+"value": "2007-05-19"
+}, 
+"estimated_budget": {
+"amount": 300000000.0
+}
+}, 
+{
+"id": "/wikipedia/bg_id/236183", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 143.0
+}, 
+{
+"runtime": 150.0
+}, 
+{
+"runtime": 145.0
+}
+], 
+"gross_revenue": {
+"amount": 745011272.0
+}, 
+"country": [
+"New Zealand", 
+"United States of America", 
+"United Kingdom"
+], 
+"name": "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe", 
+"initial_release_date": {
+"value": "2005-12-07"
+}, 
+"estimated_budget": {
+"amount": 180000000.0
+}
+}, 
+{
+"id": "/en/the_da_vinci_code_2006", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 149.0
+}, 
+{
+"runtime": 174.0
+}
+], 
+"gross_revenue": {
+"amount": 758239851.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "The Da Vinci Code", 
+"initial_release_date": {
+"value": "2006-05-17"
+}, 
+"estimated_budget": {
+"amount": 125000000.0
+}
+}, 
+{
+"id": "/en/last_holiday", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 112.0
+}, 
+{
+"runtime": 111.0
+}
+], 
+"gross_revenue": {
+"amount": 43343248.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Last Holiday", 
+"initial_release_date": {
+"value": "2006-01-13"
+}, 
+"estimated_budget": {
+"amount": 45000000.0
+}
+}, 
+{
+"id": "/en/grind_house", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 160.0
+}, 
+{
+"runtime": 193.0
+}, 
+{
+"runtime": 191.0
+}, 
+{
+"runtime": 189.0
+}
+], 
+"gross_revenue": {
+"amount": 53000000.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Grindhouse", 
+"initial_release_date": {
+"value": "2007-04-06"
+}, 
+"estimated_budget": {
+"amount": 67000000.0
+}
+}, 
+{
+"id": "/en/the_scarlet_letter_1995", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 135.0
+}
+], 
+"gross_revenue": {
+"amount": 10300000.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "The Scarlet Letter", 
+"initial_release_date": {
+"value": "1995-10-13"
+}, 
+"estimated_budget": {
+"amount": 50000000.0
+}
+}, 
+{
+"id": "/en/star_trek_xi", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 127.0
+}, 
+{
+"runtime": 126.0
+}, 
+{
+"runtime": 128.0
+}
+], 
+"gross_revenue": {
+"amount": 385680446.0
+}, 
+"country": [
+"United States of America", 
+"Germany"
+], 
+"name": "Star Trek", 
+"initial_release_date": {
+"value": "2009-04-06"
+}, 
+"estimated_budget": {
+"amount": 150000000.0
+}
+}, 
+{
+"id": "/en/yes_giorgio", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 110.0
+}
+], 
+"gross_revenue": {
+"amount": 1100000.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Yes, Giorgio", 
+"initial_release_date": {
+"value": "1982"
+}, 
+"estimated_budget": {
+"amount": 19000000.0
+}
+}, 
+{
+"id": "/en/the_mod_squad_1999", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 92.0
+}, 
+{
+"runtime": 94.0
+}
+], 
+"gross_revenue": {
+"amount": 13200000.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "The Mod Squad", 
+"initial_release_date": {
+"value": "1999-03-17"
+}, 
+"estimated_budget": {
+"amount": 50000000.0
+}
+}, 
+{
+"id": "/en/transamerica_2005", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 103.0
+}
+], 
+"gross_revenue": {
+"amount": 15151744.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Transamerica", 
+"initial_release_date": {
+"value": "2005-02-14"
+}, 
+"estimated_budget": {
+"amount": 1000000.0
+}
+}, 
+{
+"id": "/en/avatar_2009", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 162.0
+}, 
+{
+"runtime": 171.0
+}, 
+{
+"runtime": 178.0
+}
+], 
+"gross_revenue": {
+"amount": 2782275172.0
+}, 
+"country": [
+"United States of America", 
+"United Kingdom"
+], 
+"name": "Avatar", 
+"initial_release_date": {
+"value": "2009-12-10"
+}, 
+"estimated_budget": {
+"amount": 237000000.0
+}
+}, 
+{
+"id": "/en/the_dark_knight", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 152.0
+}, 
+{
+"runtime": 153.0
+}
+], 
+"gross_revenue": {
+"amount": 1001921825.0
+}, 
+"country": [
+"United States of America", 
+"United Kingdom"
+], 
+"name": "The Dark Knight", 
+"initial_release_date": {
+"value": "2008-07-14"
+}, 
+"estimated_budget": {
+"amount": 180000000.0
+}
+}, 
+{
+"id": "/en/bicentennial_man", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 132.0
+}
+], 
+"gross_revenue": {
+"amount": 58600000.0
+}, 
+"country": [
+"Germany", 
+"United States of America"
+], 
+"name": "Bicentennial Man", 
+"initial_release_date": {
+"value": "1999-12-13"
+}, 
+"estimated_budget": {
+"amount": 100000000.0
+}
+}, 
+{
+"id": "/en/final_analysis", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 124.0
+}
+], 
+"gross_revenue": {
+"amount": 28700000.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Final Analysis", 
+"initial_release_date": {
+"value": "1992-02-07"
+}, 
+"estimated_budget": {
+"amount": 43000000.0
+}
+}, 
+{
+"id": "/en/i_spy_2002", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 97.0
+}, 
+{
+"runtime": 96.0
+}
+], 
+"gross_revenue": {
+"amount": 33200000.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "I Spy", 
+"initial_release_date": {
+"value": "2002-11-01"
+}, 
+"estimated_budget": {
+"amount": 70000000.0
+}
+}, 
+{
+"id": "/en/enchanted_2007", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 107.0
+}, 
+{
+"runtime": 106.0
+}, 
+{
+"runtime": 103.0
+}, 
+{
+"runtime": 109.0
+}
+], 
+"gross_revenue": {
+"amount": 340487652.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Enchanted", 
+"initial_release_date": {
+"value": "2007-10-20"
+}, 
+"estimated_budget": {
+"amount": 85000000.0
+}
+}, 
+{
+"id": "/en/christopher_columbus_the_discovery", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 120.0
+}, 
+{
+"runtime": 121.0
+}
+], 
+"gross_revenue": {
+"amount": 8251071.0
+}, 
+"country": [
+"Spain", 
+"United States of America", 
+"United Kingdom"
+], 
+"name": "Christopher Columbus: The Discovery", 
+"initial_release_date": {
+"value": "1992-08-20"
+}, 
+"estimated_budget": {
+"amount": 40000000.0
+}
+}, 
+{
+"id": "/en/enter_the_void", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 161.0
+}, 
+{
+"runtime": 142.0
+}, 
+{
+"runtime": 154.0
+}
+], 
+"gross_revenue": {
+"amount": 336467.0
+}, 
+"country": [
+"France", 
+"Germany", 
+"Italy", 
+"Canada"
+], 
+"name": "Enter the Void", 
+"initial_release_date": {
+"value": "2009-05-22"
+}, 
+"estimated_budget": {
+"amount": 13000000.0
+}
+}, 
+{
+"id": "/en/police_academy_1984", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 96.0
+}, 
+{
+"runtime": 97.0
+}, 
+{
+"runtime": 95.0
+}
+], 
+"gross_revenue": {
+"amount": 81198894.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Police Academy", 
+"initial_release_date": {
+"value": "1984-03-23"
+}, 
+"estimated_budget": {
+"amount": 4500000.0
+}
+}, 
+{
+"id": "/en/go_fish_1994", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 84.0
+}, 
+{
+"runtime": 94.0
+}, 
+{
+"runtime": 90.0
+}, 
+{
+"runtime": 87.0
+}, 
+{
+"runtime": 83.0
+}
+], 
+"gross_revenue": {
+"amount": 2408311.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Go Fish", 
+"initial_release_date": {
+"value": "1994-02"
+}, 
+"estimated_budget": {
+"amount": 15000.0
+}
+}, 
+{
+"id": "/en/love_affair_1994", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 108.0
+}
+], 
+"gross_revenue": {
+"amount": 18272894.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Love Affair", 
+"initial_release_date": {
+"value": "1994-10-21"
+}, 
+"estimated_budget": {
+"amount": 60000000.0
+}
+}, 
+{
+"id": "/en/ella_enchanted_2004", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 96.0
+}
+], 
+"gross_revenue": {
+"amount": 27388767.0
+}, 
+"country": [
+"United States of America", 
+"United Kingdom", 
+"Republic of Ireland"
+], 
+"name": "Ella Enchanted", 
+"initial_release_date": {
+"value": "2004-04-09"
+}, 
+"estimated_budget": {
+"amount": 31000000.0
+}
+}, 
+{
+"id": "/en/the_running_man_1987", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 101.0
+}
+], 
+"gross_revenue": {
+"amount": 38122105.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "The Running Man", 
+"initial_release_date": {
+"value": "1987-11-13"
+}, 
+"estimated_budget": {
+"amount": 27000000.0
+}
+}, 
+{
+"id": "/en/goldfinger_1964", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 110.0
+}
+], 
+"gross_revenue": {
+"amount": 51100000.0
+}, 
+"country": [
+"United Kingdom"
+], 
+"name": "Goldfinger", 
+"initial_release_date": {
+"value": "1964-09-17"
+}, 
+"estimated_budget": {
+"amount": 3000000.0
+}
+}, 
+{
+"id": "/en/starship_dave", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 90.0
+}
+], 
+"gross_revenue": {
+"amount": 11300000.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Meet Dave", 
+"initial_release_date": {
+"value": "2008-07-09"
+}, 
+"estimated_budget": {
+"amount": 60000000.0
+}
+}, 
+{
+"id": "/en/ice_age_3", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 94.0
+}
+], 
+"gross_revenue": {
+"amount": 886686817.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Ice Age: Dawn of the Dinosaurs", 
+"initial_release_date": {
+"value": "2009-07-01"
+}, 
+"estimated_budget": {
+"amount": 90000000.0
+}
+}, 
+{
+"id": "/en/harry_potter_and_the_deathly_hallows_part_i", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 146.0
+}
+], 
+"gross_revenue": {
+"amount": 956399711.0
+}, 
+"country": [
+"United Kingdom", 
+"United States of America"
+], 
+"name": "Harry Potter and the Deathly Hallows - Part I", 
+"initial_release_date": {
+"value": "2010-11-11"
+}, 
+"estimated_budget": {
+"amount": 250000000.0
+}
+}, 
+{
+"id": "/en/ps_i_love_you_2007", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 126.0
+}, 
+{
+"runtime": 125.0
+}
+], 
+"gross_revenue": {
+"amount": 156835339.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "P.S. I Love You", 
+"initial_release_date": {
+"value": "2007-12-20"
+}, 
+"estimated_budget": {
+"amount": 30000000.0
+}
+}, 
+{
+"id": "/en/no_reservations_2007", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 104.0
+}
+], 
+"gross_revenue": {
+"amount": 92601050.0
+}, 
+"country": [
+"United States of America", 
+"Australia"
+], 
+"name": "No Reservations", 
+"initial_release_date": {
+"value": "2007-07-25"
+}, 
+"estimated_budget": {
+"amount": 28000000.0
+}
+}, 
+{
+"id": "/en/shrek_ever_after", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 93.0
+}
+], 
+"gross_revenue": {
+"amount": 752600867.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Shrek Forever After", 
+"initial_release_date": {
+"value": "2010-04-21"
+}, 
+"estimated_budget": {
+"amount": 135000000.0
+}
+}, 
+{
+"id": "/en/up_2009", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 96.0
+}
+], 
+"gross_revenue": {
+"amount": 731342744.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Up", 
+"initial_release_date": {
+"value": "2009-05-13"
+}, 
+"estimated_budget": {
+"amount": 175000000.0
+}
+}, 
+{
+"id": "/en/shining_through", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 132.0
+}
+], 
+"gross_revenue": {
+"amount": 21400000.0
+}, 
+"country": [
+"United States of America", 
+"United Kingdom"
+], 
+"name": "Shining Through", 
+"initial_release_date": {
+"value": "1992-01-31"
+}, 
+"estimated_budget": {
+"amount": 30000000.0
+}
+}, 
+{
+"id": "/en/tropic_thunder", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 121.0
+}, 
+{
+"runtime": 107.0
+}
+], 
+"gross_revenue": {
+"amount": 110416702.0
+}, 
+"country": [
+"United States of America", 
+"Germany", 
+"United Kingdom"
+], 
+"name": "Tropic Thunder", 
+"initial_release_date": {
+"value": "2008-08-13"
+}, 
+"estimated_budget": {
+"amount": 92000000.0
+}
+}, 
+{
+"id": "/en/hannah_montana_the_movie", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 102.0
+}
+], 
+"gross_revenue": {
+"amount": 155545279.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Hannah Montana: The Movie", 
+"initial_release_date": {
+"value": "2009-04-08"
+}, 
+"estimated_budget": {
+"amount": 45000000.0
+}
+}, 
+{
+"id": "/en/sex_and_the_city_the_movie", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 151.0
+}, 
+{
+"runtime": 145.0
+}
+], 
+"gross_revenue": {
+"amount": 415253641.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Sex and the City", 
+"initial_release_date": {
+"value": "2008-05-12"
+}, 
+"estimated_budget": {
+"amount": 65000000.0
+}
+}, 
+{
+"id": "/wikipedia/ja/$30CF$30F3$30CA$30FB$30E2$30F3$30BF$30CA_$30B6$30FB$30B3$30F3$30B5$30FC$30C8_3D", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 74.0
+}, 
+{
+"runtime": 82.0
+}
+], 
+"gross_revenue": {
+"amount": 70642036.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Hannah Montana and Miley Cyrus: Best of Both Worlds Concert", 
+"initial_release_date": {
+"value": "2008-02-01"
+}, 
+"estimated_budget": {
+"amount": 7000000.0
+}
+}, 
+{
+"id": "/wikipedia/bg_id/227957", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 121.0
+}, 
+{
+"runtime": 122.0
+}
+], 
+"gross_revenue": {
+"amount": 191465414.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Twilight", 
+"initial_release_date": {
+"value": "2008-11-17"
+}, 
+"estimated_budget": {
+"amount": 37000000.0
+}
+}, 
+{
+"id": "/en/transformers_2_revenge_of_the_fallen", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 150.0
+}
+], 
+"gross_revenue": {
+"amount": 836303693.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Transformers: Revenge of the Fallen", 
+"initial_release_date": {
+"value": "2009-06-19"
+}, 
+"estimated_budget": {
+"amount": 200000000.0
+}
+}, 
+{
+"id": "/wikipedia/pt_id/2392115", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 96.0
+}
+], 
+"gross_revenue": {
+"amount": 88900000.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "The Ugly Truth", 
+"initial_release_date": {
+"value": "2009-07-16"
+}, 
+"estimated_budget": {
+"amount": 38000000.0
+}
+}, 
+{
+"id": "/wikipedia/ja/2012_$0028$6620$753B$0029", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 158.0
+}, 
+{
+"runtime": 157.0
+}
+], 
+"gross_revenue": {
+"amount": 769304749.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "2012", 
+"initial_release_date": {
+"value": "2009-11-11"
+}, 
+"estimated_budget": {
+"amount": 200000000.0
+}
+}, 
+{
+"id": "/wikipedia/ru_id/1022182", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 108.0
+}
+], 
+"gross_revenue": {
+"amount": 1024299904.0
+}, 
+"country": [
+"United States of America", 
+"United Kingdom"
+], 
+"name": "Alice in Wonderland", 
+"initial_release_date": {
+"value": "2010-02-25"
+}, 
+"estimated_budget": {
+"amount": 200000000.0
+}
+}, 
+{
+"id": "/wikipedia/ru_id/1717630", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 117.0
+}
+], 
+"gross_revenue": {
+"amount": 67312333.0
+}, 
+"country": [
+"United States of America", 
+"United Kingdom"
+], 
+"name": "Kick-Ass", 
+"initial_release_date": {
+"value": "2010-03-12"
+}, 
+"estimated_budget": {
+"amount": 30000000.0
+}
+}, 
+{
+"id": "/wikipedia/pt/New_Moon_$0028filme$0029", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 130.0
+}
+], 
+"gross_revenue": {
+"amount": 709827462.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "The Twilight Saga: New Moon", 
+"initial_release_date": {
+"value": "2009-11-16"
+}, 
+"estimated_budget": {
+"amount": 50000000.0
+}
+}, 
+{
+"id": "/en/nowhereland", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 107.0
+}
+], 
+"gross_revenue": {
+"amount": 16100000.0
+}, 
+"country": [
+"United States of America", 
+"Germany"
+], 
+"name": "Imagine That", 
+"initial_release_date": {
+"value": "2009-06-12"
+}, 
+"estimated_budget": {
+"amount": 55000000.0
+}
+}, 
+{
+"id": "/wikipedia/fr_id/4036638", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 81.0
+}
+], 
+"gross_revenue": {
+"amount": 10500000.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Jonah Hex", 
+"initial_release_date": {
+"value": "2010-06-17"
+}, 
+"estimated_budget": {
+"amount": 47000000.0
+}
+}, 
+{
+"id": "/en/transformers", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 144.0
+}
+], 
+"gross_revenue": {
+"amount": 709709780.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Transformers", 
+"initial_release_date": {
+"value": "2007-06-12"
+}, 
+"estimated_budget": {
+"amount": 147000000.0
+}
+}, 
+{
+"id": "/en/holy_matrimony_1994", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 93.0
+}, 
+{
+"runtime": 98.0
+}, 
+{
+"runtime": 90.0
+}
+], 
+"gross_revenue": {
+"amount": 767000.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Holy Matrimony", 
+"initial_release_date": {
+"value": "1994-04-08"
+}, 
+"estimated_budget": {
+"amount": 20000000.0
+}
+}, 
+{
+"id": "/wikipedia/fi_id/965243", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 143.0
+}, 
+{
+"runtime": 142.0
+}
+], 
+"gross_revenue": {
+"amount": 1399633764.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "The Avengers", 
+"initial_release_date": {
+"value": "2012-04-11"
+}, 
+"estimated_budget": {
+"amount": 220000000.0
+}
+}, 
+{
+"id": "/wikipedia/it_id/2539984", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 142.0
+}, 
+{
+"runtime": 148.0
+}
+], 
+"gross_revenue": {
+"amount": 823576195.0
+}, 
+"country": [
+"United Kingdom", 
+"United States of America"
+], 
+"name": "Inception", 
+"initial_release_date": {
+"value": "2010-07-08"
+}, 
+"estimated_budget": {
+"amount": 160000000.0
+}
+}, 
+{
+"id": "/wikipedia/bg_id/297173", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 110.0
+}, 
+{
+"runtime": 111.0
+}
+], 
+"gross_revenue": {
+"amount": 67000000.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "The Bounty Hunter", 
+"initial_release_date": {
+"value": "2010-03-17"
+}, 
+"estimated_budget": {
+"amount": 40000000.0
+}
+}, 
+{
+"id": "/wikipedia/es_id/2889293", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 123.0
+}, 
+{
+"runtime": 125.0
+}, 
+{
+"runtime": 124.0
+}
+], 
+"gross_revenue": {
+"amount": 110400000.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Valentine's Day", 
+"initial_release_date": {
+"value": "2010-02-08"
+}, 
+"estimated_budget": {
+"amount": 52000000.0
+}
+}, 
+{
+"id": "/wikipedia/fr_id/4635613", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 124.0
+}
+], 
+"gross_revenue": {
+"amount": 698491347.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Eclipse", 
+"initial_release_date": {
+"value": "2010-06-24"
+}, 
+"estimated_budget": {
+"amount": 68000000.0
+}
+}, 
+{
+"id": "/wikipedia/no_id/1045118", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 117.0
+}
+], 
+"gross_revenue": {
+"amount": 705058657.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "The Twilight Saga: Breaking Dawn - Part 1", 
+"initial_release_date": {
+"value": "2011-10-30"
+}, 
+"estimated_budget": {
+"amount": 110000000.0
+}
+}, 
+{
+"id": "/wikipedia/es/Buried_$0028pel$00EDcula$0029", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 95.0
+}, 
+{
+"runtime": 94.0
+}
+], 
+"gross_revenue": {
+"amount": 1028658.0
+}, 
+"country": [
+"Spain", 
+"United States of America", 
+"France"
+], 
+"name": "Buried", 
+"initial_release_date": {
+"value": "2010-01-23"
+}, 
+"estimated_budget": {
+"amount": 3000000.0
+}
+}, 
+{
+"id": "/wikipedia/ro/Evadare_din_realitate", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 110.0
+}, 
+{
+"runtime": 127.0
+}
+], 
+"gross_revenue": {
+"amount": 89792502.0
+}, 
+"country": [
+"United States of America", 
+"Canada"
+], 
+"name": "Sucker Punch", 
+"initial_release_date": {
+"value": "2011-03-21"
+}, 
+"estimated_budget": {
+"amount": 82000000.0
+}
+}, 
+{
+"id": "/wikipedia/fr/Transformers_3", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 157.0
+}, 
+{
+"runtime": 154.0
+}
+], 
+"gross_revenue": {
+"amount": 1123746996.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Transformers: Dark of the Moon", 
+"initial_release_date": {
+"value": "2011-06-23"
+}, 
+"estimated_budget": {
+"amount": 195000000.0
+}
+}, 
+{
+"id": "/en/127_hours", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 94.0
+}, 
+{
+"runtime": 90.0
+}
+], 
+"gross_revenue": {
+"amount": 57547568.0
+}, 
+"country": [
+"United States of America", 
+"United Kingdom"
+], 
+"name": "127 Hours", 
+"initial_release_date": {
+"value": "2010-09-04"
+}, 
+"estimated_budget": {
+"amount": 18000000.0
+}
+}, 
+{
+"id": "/wikipedia/es/Pirates_of_the_Caribbean$003A_On_Stranger_Tides", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 136.0
+}
+], 
+"gross_revenue": {
+"amount": 1043871802.0
+}, 
+"country": [
+"United States of America", 
+"United Kingdom"
+], 
+"name": "Pirates of the Caribbean: On Stranger Tides", 
+"initial_release_date": {
+"value": "2011-05-07"
+}, 
+"estimated_budget": {
+"amount": 250000000.0
+}
+}, 
+{
+"id": "/wikipedia/en_title/The_Whoopee_Boys", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 88.0
+}
+], 
+"gross_revenue": {
+"amount": 279000.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "The Whoopee Boys", 
+"initial_release_date": {
+"value": "1986-08-22"
+}, 
+"estimated_budget": {
+"amount": 5000000.0
+}
+}, 
+{
+"id": "/wikipedia/en_title/Rise_of_the_Planet_of_the_Apes", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 105.0
+}
+], 
+"gross_revenue": {
+"amount": 481800873.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Rise of the Planet of the Apes", 
+"initial_release_date": {
+"value": "2011-08-03"
+}, 
+"estimated_budget": {
+"amount": 90000000.0
+}
+}, 
+{
+"id": "/wikipedia/en_title/Fright_Night_$00282011_film$0029", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 106.0
+}
+], 
+"gross_revenue": {
+"amount": 18298649.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Fright Night", 
+"initial_release_date": {
+"value": "2011-08-14"
+}, 
+"estimated_budget": {
+"amount": 30000000.0
+}
+}, 
+{
+"id": "/en/mission_impossible_iv", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 130.0
+}, 
+{
+"runtime": 132.0
+}, 
+{
+"runtime": 133.0
+}
+], 
+"gross_revenue": {
+"amount": 693054071.0
+}, 
+"country": [
+"United States of America", 
+"United Arab Emirates", 
+"Czech Republic"
+], 
+"name": "Mission: Impossible \u2013 Ghost Protocol", 
+"initial_release_date": {
+"value": "2011-12-07"
+}, 
+"estimated_budget": {
+"amount": 140000000.0
+}
+}, 
+{
+"id": "/wikipedia/pl_id/2311188", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 123.0
+}
+], 
+"gross_revenue": {
+"amount": 7098492.0
+}, 
+"country": [
+"Iran"
+], 
+"name": "A Separation", 
+"initial_release_date": {
+"value": "2011-02-15"
+}, 
+"estimated_budget": {
+"amount": 500000.0
+}
+}, 
+{
+"id": "/wikipedia/en_title/The_Artist_$0028film$0029", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 100.0
+}, 
+{
+"runtime": 114.0
+}, 
+{
+"runtime": 101.0
+}
+], 
+"gross_revenue": {
+"amount": 72742717.0
+}, 
+"country": [
+"France", 
+"Belgium", 
+"United States of America"
+], 
+"name": "The Artist", 
+"initial_release_date": {
+"value": "2011-05-15"
+}, 
+"estimated_budget": {
+"amount": 13470000.0
+}
+}, 
+{
+"id": "/en/harry_potter_and_the_deathly_hallows_part_ii", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 130.0
+}
+], 
+"gross_revenue": {
+"amount": 1328111219.0
+}, 
+"country": [
+"United States of America", 
+"United Kingdom"
+], 
+"name": "Harry Potter and the Deathly Hallows \u2013 Part 2", 
+"initial_release_date": {
+"value": "2011-07-07"
+}, 
+"estimated_budget": {
+"amount": 250000000.0
+}
+}, 
+{
+"id": "/wikipedia/en_title/The_Flowers_of_War", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 146.0
+}
+], 
+"gross_revenue": {
+"amount": 8941.0
+}, 
+"country": [
+"Hong Kong", 
+"China"
+], 
+"name": "The Flowers of War", 
+"initial_release_date": {
+"value": "2011-12-16"
+}, 
+"estimated_budget": {
+"amount": 94000000.0
+}
+}, 
+{
+"id": "/wikipedia/en_title/Price_Check", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 92.0
+}
+], 
+"gross_revenue": {
+"amount": 6240.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Price Check", 
+"initial_release_date": {
+"value": "2012-01-25"
+}, 
+"estimated_budget": {
+"amount": 2000000.0
+}
+}, 
+{
+"id": "/wikipedia/en_title/300$003A_Rise_of_an_Empire", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 102.0
+}
+], 
+"gross_revenue": {
+"amount": 56217440.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "300: Rise of an Empire", 
+"initial_release_date": {
+"value": "2014-03-04"
+}, 
+"estimated_budget": {
+"amount": 100000000.0
+}
+}, 
+{
+"id": "/wikipedia/es/Capit$00E1n_Am$00E9rica_2", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 136.0
+}
+], 
+"gross_revenue": {
+"amount": 244997000.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Captain America: The Winter Soldier", 
+"initial_release_date": {
+"value": "2014-03-13"
+}, 
+"estimated_budget": {
+"amount": 170000000.0
+}
+}, 
+{
+"id": "/wikipedia/en_title/The_Hobbit$003A_An_Unexpected_Journey", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 169.0
+}, 
+{
+"runtime": 182.0
+}
+], 
+"gross_revenue": {
+"amount": 244736000.0
+}, 
+"country": [
+"New Zealand", 
+"United States of America"
+], 
+"name": "The Hobbit: An Unexpected Journey", 
+"initial_release_date": {
+"value": "2012-11-28"
+}, 
+"estimated_budget": {
+"amount": 180000000.0
+}
+}, 
+{
+"id": "/dataworld/freeq/job_cc701f19-ce25-453f-8d70-25f3cf82ed9d_var_en_wikipedia_org_wiki_Townies_$0028film$0029", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 96.0
+}, 
+{
+"runtime": 97.0
+}
+], 
+"gross_revenue": {
+"amount": 61969095.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Neighbors", 
+"initial_release_date": {
+"value": "2014-03-08"
+}, 
+"estimated_budget": {
+"amount": 18000000.0
+}
+}, 
+{
+"id": "/wikipedia/en_title/Ride_Along_$0028film$0029", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 100.0
+}, 
+{
+"runtime": 99.0
+}
+], 
+"gross_revenue": {
+"amount": 41237000.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Ride Along", 
+"initial_release_date": {
+"value": "2014-01-17"
+}, 
+"estimated_budget": {
+"amount": 25000000.0
+}
+}, 
+{
+"id": "/wikipedia/en_title/Divergent_$0028film$0029", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 139.0
+}
+], 
+"gross_revenue": {
+"amount": 54607747.0
+}, 
+"country": [
+"United States of America"
+], 
+"name": "Divergent", 
+"initial_release_date": {
+"value": "2014-03-18"
+}, 
+"estimated_budget": {
+"amount": 85000000.0
+}
+}, 
+{
+"id": "/dataworld/freeq/job_91c5f39d-30ad-46ba-bb20-a3e294e29df8_var_en_wikipedia_org_wiki_Main_Tera_Hero", 
+"type": "/film/film", 
+"runtime": [
+{
+"runtime": 128.0
+}
+], 
+"gross_revenue": {
+"amount": 162404.0
+}, 
+"country": [
+"India"
+], 
+"name": "Main Tera Hero", 
+"initial_release_date": {
+"value": "2014-04-03"
+}, 
+"estimated_budget": {
+"amount": 6400000.0
+}
+}
+]
+}

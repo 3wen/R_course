@@ -1,0 +1,214 @@
+\babel@toc {french}{}
+\contentsline {chapter}{Liste des tableaux}{11}{chapter*.2}%
+\contentsline {chapter}{Table des figures}{13}{chapter*.3}%
+\contentsline {chapter}{Avant Propos}{15}{chapter*.4}%
+\contentsline {section}{\numberline {0.1}Objectifs}{15}{section.0.1}%
+\contentsline {section}{\numberline {0.2}À qui s'adressent ces notes ?}{15}{section.0.2}%
+\contentsline {section}{\numberline {0.3}Remerciements}{16}{section.0.3}%
+\contentsline {chapter}{\numberline {1}Introduction}{17}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Historique}{17}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Présentation de l'espace de travail}{17}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}La console et les fenêtres de script}{17}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Les variables}{19}{subsection.1.2.2}%
+\contentsline {subsubsection}{\numberline {1.2.2.1}Assignation}{19}{subsubsection.1.2.2.1}%
+\contentsline {subsubsection}{\numberline {1.2.2.2}Conventions de nommage}{20}{subsubsection.1.2.2.2}%
+\contentsline {subsubsection}{\numberline {1.2.2.3}Les objets en mémoire}{20}{subsubsection.1.2.2.3}%
+\contentsline {subsubsection}{\numberline {1.2.2.4}Modidification, suppression}{21}{subsubsection.1.2.2.4}%
+\contentsline {subsection}{\numberline {1.2.3}Les \emph {packages}}{22}{subsection.1.2.3}%
+\contentsline {subsection}{\numberline {1.2.4}L'aide}{23}{subsection.1.2.4}%
+\contentsline {section}{\numberline {1.3}Un environnement de développement : RStudio}{24}{section.1.3}%
+\contentsline {chapter}{\numberline {2}Données}{27}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Types de données}{27}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Mode}{27}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Longueur}{30}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}L'objet vide}{31}{subsection.2.1.3}%
+\contentsline {section}{\numberline {2.2}Structure des données}{31}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Structures de base}{32}{subsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.1.1}Vecteurs}{32}{subsubsection.2.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.2.1.2}Facteurs}{33}{subsubsection.2.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.2.1.3}Dates}{34}{subsubsection.2.2.1.3}%
+\contentsline {paragraph}{\numberline {2.2.1.3.1}Dates}{35}{paragraph.2.2.1.3.1}%
+\contentsline {paragraph}{\numberline {2.2.1.3.2}POSIXct et POSIXlt}{38}{paragraph.2.2.1.3.2}%
+\contentsline {subsubsection}{\numberline {2.2.1.4}Matrices}{41}{subsubsection.2.2.1.4}%
+\contentsline {subsubsection}{\numberline {2.2.1.5}Listes}{43}{subsubsection.2.2.1.5}%
+\contentsline {subsection}{\numberline {2.2.2}Tableaux de données}{45}{subsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.2.1}Data Frames}{45}{subsubsection.2.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2.2}Tibbles}{46}{subsubsection.2.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.2.3}Data table}{50}{subsubsection.2.2.2.3}%
+\contentsline {section}{\numberline {2.3}Importation, exportation et création de données}{51}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Importation}{52}{subsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.1.1}La fonction \texttt {read.table}}{52}{subsubsection.2.3.1.1}%
+\contentsline {subsubsection}{\numberline {2.3.1.2}La fonction \texttt {scan}}{54}{subsubsection.2.3.1.2}%
+\contentsline {subsubsection}{\numberline {2.3.1.3}La fonction \emph {read.fwf}}{55}{subsubsection.2.3.1.3}%
+\contentsline {subsubsection}{\numberline {2.3.1.4}Importation depuis Excel©}{56}{subsubsection.2.3.1.4}%
+\contentsline {subsubsection}{\numberline {2.3.1.5}Importation depuis d'autres formats}{57}{subsubsection.2.3.1.5}%
+\contentsline {subsection}{\numberline {2.3.2}Exportation}{57}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Génération}{58}{subsection.2.3.3}%
+\contentsline {subsubsection}{\numberline {2.3.3.1}Séquences régulières}{58}{subsubsection.2.3.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.3.2}Séquences pseudo-aléatoires}{63}{subsubsection.2.3.3.2}%
+\contentsline {section}{\numberline {2.4}Manipulation des données}{64}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Opérateurs}{64}{subsection.2.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.1.1}Opérateurs arithmétiques}{64}{subsubsection.2.4.1.1}%
+\contentsline {subsubsection}{\numberline {2.4.1.2}Opérateurs de comparaison}{66}{subsubsection.2.4.1.2}%
+\contentsline {subsubsection}{\numberline {2.4.1.3}Opérateurs logiques}{68}{subsubsection.2.4.1.3}%
+\contentsline {subsubsection}{\numberline {2.4.1.4}Attention au recyclage}{70}{subsubsection.2.4.1.4}%
+\contentsline {subsection}{\numberline {2.4.2}Accès aux valeurs, modifications}{70}{subsection.2.4.2}%
+\contentsline {subsubsection}{\numberline {2.4.2.1}Accès par indices}{70}{subsubsection.2.4.2.1}%
+\contentsline {subsubsection}{\numberline {2.4.2.2}Accès par noms}{79}{subsubsection.2.4.2.2}%
+\contentsline {subsection}{\numberline {2.4.3}Chaînes de caractères}{83}{subsection.2.4.3}%
+\contentsline {subsubsection}{\numberline {2.4.3.1}Concaténation}{83}{subsubsection.2.4.3.1}%
+\contentsline {subsubsection}{\numberline {2.4.3.2}Conversion en majuscules ou minuscules}{87}{subsubsection.2.4.3.2}%
+\contentsline {subsubsection}{\numberline {2.4.3.3}Compter le nombre de caractères d'une chaîne}{87}{subsubsection.2.4.3.3}%
+\contentsline {subsubsection}{\numberline {2.4.3.4}Extraction de sous-chaînes}{88}{subsubsection.2.4.3.4}%
+\contentsline {subsubsection}{\numberline {2.4.3.5}Recherche de chaînes de caractères}{91}{subsubsection.2.4.3.5}%
+\contentsline {subsubsection}{\numberline {2.4.3.6}Nettoyage, complétion}{94}{subsubsection.2.4.3.6}%
+\contentsline {paragraph}{\numberline {2.4.3.6.1}La fonction \texttt {str\_dup()}}{94}{paragraph.2.4.3.6.1}%
+\contentsline {paragraph}{\numberline {2.4.3.6.2}La fonction \texttt {str\_pad()}}{94}{paragraph.2.4.3.6.2}%
+\contentsline {paragraph}{\numberline {2.4.3.6.3}La fonction \texttt {str\_trim()}}{95}{paragraph.2.4.3.6.3}%
+\contentsline {subsection}{\numberline {2.4.4}Dates}{95}{subsection.2.4.4}%
+\contentsline {subsubsection}{\numberline {2.4.4.1}Extraction}{95}{subsubsection.2.4.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.4.2}Opérations}{99}{subsubsection.2.4.4.2}%
+\contentsline {subsubsection}{\numberline {2.4.4.3}Intervalles de dates}{101}{subsubsection.2.4.4.3}%
+\contentsline {subsubsection}{\numberline {2.4.4.4}Séquence de dates}{107}{subsubsection.2.4.4.4}%
+\contentsline {subsubsection}{\numberline {2.4.4.5}Fuseaux horaires}{108}{subsubsection.2.4.4.5}%
+\contentsline {subsection}{\numberline {2.4.5}Calculs matriciels}{108}{subsection.2.4.5}%
+\contentsline {subsubsection}{\numberline {2.4.5.1}Addition, soustraction}{108}{subsubsection.2.4.5.1}%
+\contentsline {subsubsection}{\numberline {2.4.5.2}Multiplication, division}{110}{subsubsection.2.4.5.2}%
+\contentsline {subsubsection}{\numberline {2.4.5.3}Déterminant, trace}{113}{subsubsection.2.4.5.3}%
+\contentsline {subsection}{\numberline {2.4.6}Tableaux de données}{113}{subsection.2.4.6}%
+\contentsline {subsubsection}{\numberline {2.4.6.1}L'opérateur Pipe}{113}{subsubsection.2.4.6.1}%
+\contentsline {subsubsection}{\numberline {2.4.6.2}Sélection}{116}{subsubsection.2.4.6.2}%
+\contentsline {subsubsection}{\numberline {2.4.6.3}Filtrage}{120}{subsubsection.2.4.6.3}%
+\contentsline {subsubsection}{\numberline {2.4.6.4}Retirer les valeurs dupliquées}{122}{subsubsection.2.4.6.4}%
+\contentsline {subsubsection}{\numberline {2.4.6.5}Modification des colonnes}{122}{subsubsection.2.4.6.5}%
+\contentsline {subsubsection}{\numberline {2.4.6.6}Tri}{127}{subsubsection.2.4.6.6}%
+\contentsline {subsubsection}{\numberline {2.4.6.7}Jointures}{129}{subsubsection.2.4.6.7}%
+\contentsline {subsubsection}{\numberline {2.4.6.8}Agrégation}{134}{subsubsection.2.4.6.8}%
+\contentsline {subsubsection}{\numberline {2.4.6.9}Faire pivoter un tableau}{137}{subsubsection.2.4.6.9}%
+\contentsline {subsubsection}{\numberline {2.4.6.10}Stacking et unstacking}{139}{subsubsection.2.4.6.10}%
+\contentsline {subsection}{\numberline {2.4.7}Data tables}{140}{subsection.2.4.7}%
+\contentsline {subsubsection}{\numberline {2.4.7.1}Création, conversion}{140}{subsubsection.2.4.7.1}%
+\contentsline {subsubsection}{\numberline {2.4.7.2}Sélection}{142}{subsubsection.2.4.7.2}%
+\contentsline {subsubsection}{\numberline {2.4.7.3}Filtrage}{143}{subsubsection.2.4.7.3}%
+\contentsline {subsubsection}{\numberline {2.4.7.4}Retirer les valeurs dupliquées}{144}{subsubsection.2.4.7.4}%
+\contentsline {subsubsection}{\numberline {2.4.7.5}Clés}{144}{subsubsection.2.4.7.5}%
+\contentsline {subsubsection}{\numberline {2.4.7.6}Modification des colonne}{148}{subsubsection.2.4.7.6}%
+\contentsline {subsubsection}{\numberline {2.4.7.7}Tri}{149}{subsubsection.2.4.7.7}%
+\contentsline {subsubsection}{\numberline {2.4.7.8}Copie de \emph {data.tables}}{149}{subsubsection.2.4.7.8}%
+\contentsline {subsubsection}{\numberline {2.4.7.9}Jointures}{151}{subsubsection.2.4.7.9}%
+\contentsline {subsubsection}{\numberline {2.4.7.10}Agrégation}{154}{subsubsection.2.4.7.10}%
+\contentsline {subsection}{\numberline {2.4.8}Quelques fonctions utiles}{156}{subsection.2.4.8}%
+\contentsline {section}{\numberline {2.5}Exercices}{160}{section.2.5}%
+\contentsline {chapter}{\numberline {3}Fonction}{167}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Définition}{167}{section.3.1}%
+\contentsline {section}{\numberline {3.2}La structure d'une fonction}{168}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Le corps d'une fonction}{168}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Les arguments d'une fonction}{171}{subsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.2.1}Appel sans noms}{171}{subsubsection.3.2.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2.2}Arguments effectifs}{172}{subsubsection.3.2.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.2.3}Appel avec des noms partiels}{173}{subsubsection.3.2.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.2.4}Fonctions sans arguments}{174}{subsubsection.3.2.2.4}%
+\contentsline {subsubsection}{\numberline {3.2.2.5}L'argument spécial \texttt {...}}{174}{subsubsection.3.2.2.5}%
+\contentsline {subsection}{\numberline {3.2.3}Portée des fonctions}{175}{subsection.3.2.3}%
+\contentsline {section}{\numberline {3.3}Documentation}{178}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Exercices}{179}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Boucles et calculs vectoriels}{181}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Les boucles}{181}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Les boucles avec \texttt {while()}}{181}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Les boucles avec \texttt {for()}}{182}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Les conditions}{183}{subsection.4.1.3}%
+\contentsline {subsubsection}{\numberline {4.1.3.1}Les instructions \texttt {if} \ldots {} \texttt {else}}{183}{subsubsection.4.1.3.1}%
+\contentsline {subsubsection}{\numberline {4.1.3.2}La fonction \texttt {switch()}}{184}{subsubsection.4.1.3.2}%
+\contentsline {subsection}{\numberline {4.1.4}L'instruction \texttt {repeat} \ldots {} \texttt {break}}{186}{subsection.4.1.4}%
+\contentsline {subsection}{\numberline {4.1.5}L'instruction \texttt {next} \ldots {} \texttt {break}}{186}{subsection.4.1.5}%
+\contentsline {subsection}{\numberline {4.1.6}Barre de progression}{187}{subsection.4.1.6}%
+\contentsline {section}{\numberline {4.2}La vectorisation}{187}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Avec \{\texttt {purrr}\}}{189}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Listes ou vecteurs en \emph {input}}{190}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Tibbles en \emph {input}}{194}{subsection.4.3.2}%
+\contentsline {section}{\numberline {4.4}Avec \{\texttt {plyr}\}}{196}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Array en \emph {input}}{197}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}\emph {Data frame} en \emph {input}}{200}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}\emph {List} en \emph {input}}{203}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}Calcul parallèle}{205}{subsection.4.4.4}%
+\contentsline {section}{\numberline {4.5}Avec \{\texttt {base}\}}{206}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}La fonction \texttt {lapply}}{206}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}La fonction \texttt {sapply()}}{209}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.3}La fonction \texttt {vapply}}{210}{subsection.4.5.3}%
+\contentsline {subsection}{\numberline {4.5.4}La fonction \texttt {apply()}}{211}{subsection.4.5.4}%
+\contentsline {subsection}{\numberline {4.5.5}La fonction \texttt {tapply()}}{212}{subsection.4.5.5}%
+\contentsline {subsection}{\numberline {4.5.6}La fonction \texttt {mapply()}}{213}{subsection.4.5.6}%
+\contentsline {subsection}{\numberline {4.5.7}La fonction \texttt {Vectorize()}}{214}{subsection.4.5.7}%
+\contentsline {section}{\numberline {4.6}Exercices}{216}{section.4.6}%
+\contentsline {chapter}{\numberline {5}Graphiques}{219}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Structure}{220}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Des graphiques élaborés avec \texttt {ggplot()}}{221}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Arguments esthétiques}{222}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Arguments géométriques (fonctions \texttt {geom\_*})}{226}{subsection.5.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.2.1}Points}{227}{subsubsection.5.2.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2.2}Lignes}{229}{subsubsection.5.2.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.2.3}Polygones}{230}{subsubsection.5.2.2.3}%
+\contentsline {subsubsection}{\numberline {5.2.2.4}Boxplot}{231}{subsubsection.5.2.2.4}%
+\contentsline {subsubsection}{\numberline {5.2.2.5}Gigue}{232}{subsubsection.5.2.2.5}%
+\contentsline {subsubsection}{\numberline {5.2.2.6}Courbe de tendance}{233}{subsubsection.5.2.2.6}%
+\contentsline {subsubsection}{\numberline {5.2.2.7}Histogramme}{235}{subsubsection.5.2.2.7}%
+\contentsline {subsubsection}{\numberline {5.2.2.8}Densité}{236}{subsubsection.5.2.2.8}%
+\contentsline {subsubsection}{\numberline {5.2.2.9}Rubans}{237}{subsubsection.5.2.2.9}%
+\contentsline {subsection}{\numberline {5.2.3}Arguments statistiques}{238}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}Échelles (fonction \texttt {scale\_*()})}{242}{subsection.5.2.4}%
+\contentsline {subsection}{\numberline {5.2.5}Groupes}{251}{subsection.5.2.5}%
+\contentsline {subsection}{\numberline {5.2.6}Annotations}{253}{subsection.5.2.6}%
+\contentsline {subsubsection}{\numberline {5.2.6.1}Texte}{254}{subsubsection.5.2.6.1}%
+\contentsline {subsubsection}{\numberline {5.2.6.2}Lignes}{256}{subsubsection.5.2.6.2}%
+\contentsline {subsubsection}{\numberline {5.2.6.3}Rectangles}{259}{subsubsection.5.2.6.3}%
+\contentsline {subsection}{\numberline {5.2.7}Positions}{259}{subsection.5.2.7}%
+\contentsline {subsection}{\numberline {5.2.8}Facettes}{262}{subsection.5.2.8}%
+\contentsline {subsubsection}{\numberline {5.2.8.1}La fonction \texttt {facet\_grid()}}{262}{subsubsection.5.2.8.1}%
+\contentsline {subsubsection}{\numberline {5.2.8.2}La fonction \texttt {facet\_wrap()}}{265}{subsubsection.5.2.8.2}%
+\contentsline {subsubsection}{\numberline {5.2.8.3}Échelles et facettes}{266}{subsubsection.5.2.8.3}%
+\contentsline {subsection}{\numberline {5.2.9}Coordonnées}{268}{subsection.5.2.9}%
+\contentsline {subsection}{\numberline {5.2.10}Titres, axes, légendes}{270}{subsection.5.2.10}%
+\contentsline {section}{\numberline {5.3}Enregistrement des graphiques}{276}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Cartes}{277}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Récupérer des cartes toutes faites}{277}{subsection.5.4.1}%
+\contentsline {subsubsection}{\numberline {5.4.1.1}\emph {Package} \texttt {rworldmap}}{278}{subsubsection.5.4.1.1}%
+\contentsline {subsubsection}{\numberline {5.4.1.2}\emph {Package} \texttt {maps}}{280}{subsubsection.5.4.1.2}%
+\contentsline {subsubsection}{\numberline {5.4.1.3}Fichier \emph {shapefile}}{282}{subsubsection.5.4.1.3}%
+\contentsline {subsection}{\numberline {5.4.2}Carte choroplèthe}{284}{subsection.5.4.2}%
+\contentsline {section}{\numberline {5.5}Graphiques en 3D}{286}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Exercices}{288}{section.5.6}%
+\contentsline {chapter}{\numberline {6}Régressions linéaires}{295}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Rappels}{295}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Données de l'exemple}{296}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Estimation des paramètres \{\#\}}{301}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Lecture des sorties}{301}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Extractions}{302}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Variables catégorielles}{305}{section.6.6}%
+\contentsline {section}{\numberline {6.7}Tests de nullité des coefficients et intervalles de confiance}{308}{section.6.7}%
+\contentsline {section}{\numberline {6.8}Prévisions}{310}{section.6.8}%
+\contentsline {section}{\numberline {6.9}Exercices sur la régression}{313}{section.6.9}%
+\contentsline {chapter}{\numberline {7}Expressions régulières}{315}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Les recherches basiques}{315}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Détection d'un motif avec \texttt {str\_detect()}}{316}{subsection.7.1.1}%
+\contentsline {section}{\numberline {7.2}Les classes de caractères}{317}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Les quantificateurs}{323}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Les métacaractères}{325}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Quelques fonctions du \emph {package} \{\texttt {stringr}\}}{326}{section.7.5}%
+\contentsline {subsection}{\numberline {7.5.1}La fonction \texttt {str\_detect()}}{326}{subsection.7.5.1}%
+\contentsline {subsection}{\numberline {7.5.2}La fonction \texttt {str\_extract\_all()}}{326}{subsection.7.5.2}%
+\contentsline {subsection}{\numberline {7.5.3}La fonction \texttt {str\_match()}}{327}{subsection.7.5.3}%
+\contentsline {subsection}{\numberline {7.5.4}La fonction \texttt {str\_match\_all()}}{328}{subsection.7.5.4}%
+\contentsline {subsection}{\numberline {7.5.5}La fonction \texttt {str\_locate()}}{329}{subsection.7.5.5}%
+\contentsline {subsection}{\numberline {7.5.6}La fonction \texttt {str\_locate\_all()}}{330}{subsection.7.5.6}%
+\contentsline {subsection}{\numberline {7.5.7}La fonction \texttt {str\_replace()}}{331}{subsection.7.5.7}%
+\contentsline {subsection}{\numberline {7.5.8}La fonction \texttt {str\_replace\_all()}}{332}{subsection.7.5.8}%
+\contentsline {subsection}{\numberline {7.5.9}La fonction \texttt {str\_split()}}{332}{subsection.7.5.9}%
+\contentsline {subsection}{\numberline {7.5.10}La fonction \texttt {str\_string\_fixed()}}{333}{subsection.7.5.10}%
+\contentsline {section}{\numberline {7.6}Quelques fonctions du \emph {package} \{\texttt {base}\}}{334}{section.7.6}%
+\contentsline {chapter}{\numberline {8}Pour aller plus loin}{339}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Travailler par projets, avec RStudio}{339}{section.8.1}%
+\contentsline {section}{\numberline {8.2}R Markdown}{339}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Modification de plusieurs colonnes}{340}{section.8.3}%
+\contentsline {chapter}{\numberline {9}Pense-bête}{341}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Installer un \emph {package} depuis sa source}{341}{section.9.1}%
+\contentsline {chapter}{References}{343}{chapter*.10}%

@@ -1,0 +1,52 @@
+
+================================================
+      IDENTIFICATION
+================================================
+
+Quartiers de Rennes
+
+================================================
+      DESCRIPTION
+================================================
+
+Découpage de la Ville de Rennes en 12 quartiers. Les quartiers portent un nom et un numéro
+
+================================================
+      INFORMATIONS TECHNIQUES
+================================================
+
+Date de validité :              01/10/2010
+Date de dernière mise à jour :  01/10/2010
+
+Précision géométrique          :   1 mètre
+Système de référence original  :   RGF93 CC48 (IGNF : LAMBCC48 - EPSG : 3948)
+
+Modification de la structure du fichier depuis la dernière publication : non
+
+================================================
+      ATTRIBUTS
+================================================
+
+ID_QUART : code du quartier
+NOM_QUART : nom du quartier
+
+================================================
+      CONTACTS
+================================================
+
+Point de contact :
+Service SIG de Rennes Métropole
+Unité GéoCarto
+sig@agglo-rennesmetropole.fr
+
+Propriétaire :
+Ville de Rennes
+
+================================================
+      SIGNATURES DES FICHIERS
+================================================
+
+quartiers.shp (md5) : 74f4ca31f606f58c7829e8a96d16fc1d
+quartiers.dbf (md5) : 06ff140fababcde9702d451f42f86a8a
+quartiers.shx (md5) : 8132443e6e56b4dcb58d78ef400ffca2
+quartiers.prj (md5) : 8832b33b5a0e6e4c94cfa1025d0724af

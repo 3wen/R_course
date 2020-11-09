@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>7 Expressions régulières | Notes de cours de R - Version 2</title>
+  <meta name="description" content="7 Expressions régulières | Notes de cours de R - Version 2" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="7 Expressions régulières | Notes de cours de R - Version 2" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="7 Expressions régulières | Notes de cours de R - Version 2" />
+  
+  
+  
+
+<meta name="author" content="Ewen Gallic" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="régressions-linéaires.html"/>
+<link rel="next" href="pense-bête.html"/>
+<script src="libs/header-attrs-2.3/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="styles/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="avant-propos.html"><a href="avant-propos.html"><i class="fa fa-check"></i>Avant Propos</a>
+<ul>
+<li class="chapter" data-level="0.1" data-path="avant-propos.html"><a href="avant-propos.html#objectifs"><i class="fa fa-check"></i><b>0.1</b> Objectifs</a></li>
+<li class="chapter" data-level="0.2" data-path="avant-propos.html"><a href="avant-propos.html#à-qui-sadressent-ces-notes"><i class="fa fa-check"></i><b>0.2</b> À qui s’adressent ces notes ?</a></li>
+<li class="chapter" data-level="0.3" data-path="avant-propos.html"><a href="avant-propos.html#remerciements"><i class="fa fa-check"></i><b>0.3</b> Remerciements</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#historique"><i class="fa fa-check"></i><b>1.1</b> Historique</a></li>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#présentation-de-lespace-de-travail"><i class="fa fa-check"></i><b>1.2</b> Présentation de l’espace de travail</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="introduction.html"><a href="introduction.html#la-console-et-les-fenêtres-de-script"><i class="fa fa-check"></i><b>1.2.1</b> La console et les fenêtres de script</a></li>
+<li class="chapter" data-level="1.2.2" data-path="introduction.html"><a href="introduction.html#les-variables"><i class="fa fa-check"></i><b>1.2.2</b> Les variables</a></li>
+<li class="chapter" data-level="1.2.3" data-path="introduction.html"><a href="introduction.html#les-packages"><i class="fa fa-check"></i><b>1.2.3</b> Les <em>packages</em></a></li>
+<li class="chapter" data-level="1.2.4" data-path="introduction.html"><a href="introduction.html#laide"><i class="fa fa-check"></i><b>1.2.4</b> L’aide</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#un-environnement-de-développement-rstudio"><i class="fa fa-check"></i><b>1.3</b> Un environnement de développement : RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="données.html"><a href="données.html"><i class="fa fa-check"></i><b>2</b> Données</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="données.html"><a href="données.html#types-de-données"><i class="fa fa-check"></i><b>2.1</b> Types de données</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="données.html"><a href="données.html#donnees-mode"><i class="fa fa-check"></i><b>2.1.1</b> Mode</a></li>
+<li class="chapter" data-level="2.1.2" data-path="données.html"><a href="données.html#longueur"><i class="fa fa-check"></i><b>2.1.2</b> Longueur</a></li>
+<li class="chapter" data-level="2.1.3" data-path="données.html"><a href="données.html#lobjet-vide"><i class="fa fa-check"></i><b>2.1.3</b> L’objet vide</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="données.html"><a href="données.html#structures"><i class="fa fa-check"></i><b>2.2</b> Structure des données</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="données.html"><a href="données.html#structures-de-base"><i class="fa fa-check"></i><b>2.2.1</b> Structures de base</a></li>
+<li class="chapter" data-level="2.2.2" data-path="données.html"><a href="données.html#tableaux-de-données"><i class="fa fa-check"></i><b>2.2.2</b> Tableaux de données</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="données.html"><a href="données.html#importation-exportation-et-création-de-données"><i class="fa fa-check"></i><b>2.3</b> Importation, exportation et création de données</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="données.html"><a href="données.html#importation"><i class="fa fa-check"></i><b>2.3.1</b> Importation</a></li>
+<li class="chapter" data-level="2.3.2" data-path="données.html"><a href="données.html#exportation"><i class="fa fa-check"></i><b>2.3.2</b> Exportation</a></li>
+<li class="chapter" data-level="2.3.3" data-path="données.html"><a href="données.html#génération"><i class="fa fa-check"></i><b>2.3.3</b> Génération</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="données.html"><a href="données.html#manipulation-des-données"><i class="fa fa-check"></i><b>2.4</b> Manipulation des données</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="données.html"><a href="données.html#opérateurs"><i class="fa fa-check"></i><b>2.4.1</b> Opérateurs</a></li>
+<li class="chapter" data-level="2.4.2" data-path="données.html"><a href="données.html#manip-acces"><i class="fa fa-check"></i><b>2.4.2</b> Accès aux valeurs, modifications</a></li>
+<li class="chapter" data-level="2.4.3" data-path="données.html"><a href="données.html#chaînes-de-caractères"><i class="fa fa-check"></i><b>2.4.3</b> Chaînes de caractères</a></li>
+<li class="chapter" data-level="2.4.4" data-path="données.html"><a href="données.html#dates-1"><i class="fa fa-check"></i><b>2.4.4</b> Dates</a></li>
+<li class="chapter" data-level="2.4.5" data-path="données.html"><a href="données.html#calculs-matriciels"><i class="fa fa-check"></i><b>2.4.5</b> Calculs matriciels</a></li>
+<li class="chapter" data-level="2.4.6" data-path="données.html"><a href="données.html#tableaux_de_donnees"><i class="fa fa-check"></i><b>2.4.6</b> Tableaux de données</a></li>
+<li class="chapter" data-level="2.4.7" data-path="données.html"><a href="données.html#data-tables"><i class="fa fa-check"></i><b>2.4.7</b> Data tables</a></li>
+<li class="chapter" data-level="2.4.8" data-path="données.html"><a href="données.html#quelques-fonctions-utiles"><i class="fa fa-check"></i><b>2.4.8</b> Quelques fonctions utiles</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="données.html"><a href="données.html#exercices"><i class="fa fa-check"></i><b>2.5</b> Exercices</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="fonction.html"><a href="fonction.html"><i class="fa fa-check"></i><b>3</b> Fonction</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="fonction.html"><a href="fonction.html#définition"><i class="fa fa-check"></i><b>3.1</b> Définition</a></li>
+<li class="chapter" data-level="3.2" data-path="fonction.html"><a href="fonction.html#fonctions_structure"><i class="fa fa-check"></i><b>3.2</b> La structure d’une fonction</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="fonction.html"><a href="fonction.html#fonctions_structure_corps"><i class="fa fa-check"></i><b>3.2.1</b> Le corps d’une fonction</a></li>
+<li class="chapter" data-level="3.2.2" data-path="fonction.html"><a href="fonction.html#fonctions_structure_parametres"><i class="fa fa-check"></i><b>3.2.2</b> Les arguments d’une fonction</a></li>
+<li class="chapter" data-level="3.2.3" data-path="fonction.html"><a href="fonction.html#fonctions_structure_environnement"><i class="fa fa-check"></i><b>3.2.3</b> Portée des fonctions</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="fonction.html"><a href="fonction.html#documentation"><i class="fa fa-check"></i><b>3.3</b> Documentation</a></li>
+<li class="chapter" data-level="3.4" data-path="fonction.html"><a href="fonction.html#exercices-1"><i class="fa fa-check"></i><b>3.4</b> Exercices</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="boucles.html"><a href="boucles.html"><i class="fa fa-check"></i><b>4</b> Boucles et calculs vectoriels</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="boucles.html"><a href="boucles.html#boucles_boucles"><i class="fa fa-check"></i><b>4.1</b> Les boucles</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="boucles.html"><a href="boucles.html#boucles_boucles_while"><i class="fa fa-check"></i><b>4.1.1</b> Les boucles avec <code>while()</code></a></li>
+<li class="chapter" data-level="4.1.2" data-path="boucles.html"><a href="boucles.html#boucles_boucles_for"><i class="fa fa-check"></i><b>4.1.2</b> Les boucles avec <code>for()</code></a></li>
+<li class="chapter" data-level="4.1.3" data-path="boucles.html"><a href="boucles.html#boucles_boucles_conditions"><i class="fa fa-check"></i><b>4.1.3</b> Les conditions</a></li>
+<li class="chapter" data-level="4.1.4" data-path="boucles.html"><a href="boucles.html#boucles_boucles_repeat"><i class="fa fa-check"></i><b>4.1.4</b> L’instruction <code>repeat</code> … <code>break</code></a></li>
+<li class="chapter" data-level="4.1.5" data-path="boucles.html"><a href="boucles.html#boucles_boucles_next"><i class="fa fa-check"></i><b>4.1.5</b> L’instruction <code>next</code> … <code>break</code></a></li>
+<li class="chapter" data-level="4.1.6" data-path="boucles.html"><a href="boucles.html#boucles_boucles_progressbar"><i class="fa fa-check"></i><b>4.1.6</b> Barre de progression</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation"><i class="fa fa-check"></i><b>4.2</b> La vectorisation</a></li>
+<li class="chapter" data-level="4.3" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_purrr"><i class="fa fa-check"></i><b>4.3</b> Avec {<code>purrr</code>}</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="boucles.html"><a href="boucles.html#listes-ou-vecteurs-en-input"><i class="fa fa-check"></i><b>4.3.1</b> Listes ou vecteurs en <em>input</em></a></li>
+<li class="chapter" data-level="4.3.2" data-path="boucles.html"><a href="boucles.html#tibbles-en-input"><i class="fa fa-check"></i><b>4.3.2</b> Tibbles en <em>input</em></a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_plyr"><i class="fa fa-check"></i><b>4.4</b> Avec {<code>plyr</code>}</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_plyr_a_ply"><i class="fa fa-check"></i><b>4.4.1</b> Array en <em>input</em></a></li>
+<li class="chapter" data-level="4.4.2" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_plyr_d_ply"><i class="fa fa-check"></i><b>4.4.2</b> <em>Data frame</em> en <em>input</em></a></li>
+<li class="chapter" data-level="4.4.3" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_plyr_l_ply"><i class="fa fa-check"></i><b>4.4.3</b> <em>List</em> en <em>input</em></a></li>
+<li class="chapter" data-level="4.4.4" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_plyr_parallel"><i class="fa fa-check"></i><b>4.4.4</b> Calcul parallèle</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_apply"><i class="fa fa-check"></i><b>4.5</b> Avec {<code>base</code>}</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_apply_lapply"><i class="fa fa-check"></i><b>4.5.1</b> La fonction <code>lapply</code></a></li>
+<li class="chapter" data-level="4.5.2" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_apply_sapply"><i class="fa fa-check"></i><b>4.5.2</b> La fonction <code>sapply()</code></a></li>
+<li class="chapter" data-level="4.5.3" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_apply_vapply"><i class="fa fa-check"></i><b>4.5.3</b> La fonction <code>vapply</code></a></li>
+<li class="chapter" data-level="4.5.4" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_apply_apply"><i class="fa fa-check"></i><b>4.5.4</b> La fonction <code>apply()</code></a></li>
+<li class="chapter" data-level="4.5.5" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_apply_tapply"><i class="fa fa-check"></i><b>4.5.5</b> La fonction <code>tapply()</code></a></li>
+<li class="chapter" data-level="4.5.6" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_apply_mapply"><i class="fa fa-check"></i><b>4.5.6</b> La fonction <code>mapply()</code></a></li>
+<li class="chapter" data-level="4.5.7" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_Vectorize"><i class="fa fa-check"></i><b>4.5.7</b> La fonction <code>Vectorize()</code></a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="boucles.html"><a href="boucles.html#boucles_exercices"><i class="fa fa-check"></i><b>4.6</b> Exercices</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="graphiques.html"><a href="graphiques.html"><i class="fa fa-check"></i><b>5</b> Graphiques</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="graphiques.html"><a href="graphiques.html#graphiques_structure"><i class="fa fa-check"></i><b>5.1</b> Structure</a></li>
+<li class="chapter" data-level="5.2" data-path="graphiques.html"><a href="graphiques.html#graphiques_ggplot"><i class="fa fa-check"></i><b>5.2</b> Des graphiques élaborés avec <code>ggplot()</code></a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="graphiques.html"><a href="graphiques.html#graphiques_ggplot_aes"><i class="fa fa-check"></i><b>5.2.1</b> Arguments esthétiques</a></li>
+<li class="chapter" data-level="5.2.2" data-path="graphiques.html"><a href="graphiques.html#graphiques_ggplot_geom"><i class="fa fa-check"></i><b>5.2.2</b> Arguments géométriques (fonctions <code>geom_*</code>)</a></li>
+<li class="chapter" data-level="5.2.3" data-path="graphiques.html"><a href="graphiques.html#graphiques_ggplot_stat"><i class="fa fa-check"></i><b>5.2.3</b> Arguments statistiques</a></li>
+<li class="chapter" data-level="5.2.4" data-path="graphiques.html"><a href="graphiques.html#graphiques_ggplot_scale"><i class="fa fa-check"></i><b>5.2.4</b> Échelles (fonction <code>scale_*()</code>)</a></li>
+<li class="chapter" data-level="5.2.5" data-path="graphiques.html"><a href="graphiques.html#graphiques_ggplot_group"><i class="fa fa-check"></i><b>5.2.5</b> Groupes</a></li>
+<li class="chapter" data-level="5.2.6" data-path="graphiques.html"><a href="graphiques.html#graphiques_ggplot_annotations"><i class="fa fa-check"></i><b>5.2.6</b> Annotations</a></li>
+<li class="chapter" data-level="5.2.7" data-path="graphiques.html"><a href="graphiques.html#graphiques_ggplot_position"><i class="fa fa-check"></i><b>5.2.7</b> Positions</a></li>
+<li class="chapter" data-level="5.2.8" data-path="graphiques.html"><a href="graphiques.html#graphiques_ggplot_facet"><i class="fa fa-check"></i><b>5.2.8</b> Facettes</a></li>
+<li class="chapter" data-level="5.2.9" data-path="graphiques.html"><a href="graphiques.html#graphiques_ggplot_coord"><i class="fa fa-check"></i><b>5.2.9</b> Coordonnées</a></li>
+<li class="chapter" data-level="5.2.10" data-path="graphiques.html"><a href="graphiques.html#graphiques_ggplot_axes"><i class="fa fa-check"></i><b>5.2.10</b> Titres, axes, légendes</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="graphiques.html"><a href="graphiques.html#graphiques_enregistrement"><i class="fa fa-check"></i><b>5.3</b> Enregistrement des graphiques</a></li>
+<li class="chapter" data-level="5.4" data-path="graphiques.html"><a href="graphiques.html#graphiques_maps"><i class="fa fa-check"></i><b>5.4</b> Cartes</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="graphiques.html"><a href="graphiques.html#graphiques_maps_recup"><i class="fa fa-check"></i><b>5.4.1</b> Récupérer des cartes toutes faites</a></li>
+<li class="chapter" data-level="5.4.2" data-path="graphiques.html"><a href="graphiques.html#graphiques_maps_choroplethe"><i class="fa fa-check"></i><b>5.4.2</b> Carte choroplèthe</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="graphiques.html"><a href="graphiques.html#graphiques_3d"><i class="fa fa-check"></i><b>5.5</b> Graphiques en 3D</a></li>
+<li class="chapter" data-level="5.6" data-path="graphiques.html"><a href="graphiques.html#graphiques_exercices"><i class="fa fa-check"></i><b>5.6</b> Exercices</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="régressions-linéaires.html"><a href="régressions-linéaires.html"><i class="fa fa-check"></i><b>6</b> Régressions linéaires</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="régressions-linéaires.html"><a href="régressions-linéaires.html#rappels"><i class="fa fa-check"></i><b>6.1</b> Rappels</a></li>
+<li class="chapter" data-level="6.2" data-path="régressions-linéaires.html"><a href="régressions-linéaires.html#sec:regressions_donnees"><i class="fa fa-check"></i><b>6.2</b> Données de l’exemple</a></li>
+<li class="chapter" data-level="6.3" data-path="régressions-linéaires.html"><a href="régressions-linéaires.html#estimation-des-paramètres"><i class="fa fa-check"></i><b>6.3</b> Estimation des paramètres {#}</a></li>
+<li class="chapter" data-level="6.4" data-path="régressions-linéaires.html"><a href="régressions-linéaires.html#sec:regressions_lecture"><i class="fa fa-check"></i><b>6.4</b> Lecture des sorties</a></li>
+<li class="chapter" data-level="6.5" data-path="régressions-linéaires.html"><a href="régressions-linéaires.html#sec:regressions_extractions"><i class="fa fa-check"></i><b>6.5</b> Extractions</a></li>
+<li class="chapter" data-level="6.6" data-path="régressions-linéaires.html"><a href="régressions-linéaires.html#sec:regressions_facteurs"><i class="fa fa-check"></i><b>6.6</b> Variables catégorielles</a></li>
+<li class="chapter" data-level="6.7" data-path="régressions-linéaires.html"><a href="régressions-linéaires.html#sec:regressions_tests"><i class="fa fa-check"></i><b>6.7</b> Tests de nullité des coefficients et intervalles de confiance</a></li>
+<li class="chapter" data-level="6.8" data-path="régressions-linéaires.html"><a href="régressions-linéaires.html#sec:regressions_previsions"><i class="fa fa-check"></i><b>6.8</b> Prévisions</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="expressions-régulières.html"><a href="expressions-régulières.html"><i class="fa fa-check"></i><b>7</b> Expressions régulières</a></li>
+<li class="chapter" data-level="8" data-path="pense-bête.html"><a href="pense-bête.html"><i class="fa fa-check"></i><b>8</b> Pense-bête</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="pense-bête.html"><a href="pense-bête.html#installer-un-package-depuis-sa-source"><i class="fa fa-check"></i><b>8.1</b> Installer un <em>package</em> depuis sa source</a></li>
+<li class="chapter" data-level="8.2" data-path="pense-bête.html"><a href="pense-bête.html#exercices-sur-la-régression"><i class="fa fa-check"></i><b>8.2</b> Exercices sur la régression</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Notes de cours de R - Version 2</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="expressions-régulières" class="section level1" number="7">
+<h1><span class="header-section-number">7</span> Expressions régulières</h1>
+<p>TBD</p>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="régressions-linéaires.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="pense-bête.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf"],
+"toc": {
+"collapse": "subsubsection",
+"scroll_highlight": true
+},
+"toc_depth": 5,
+"search": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

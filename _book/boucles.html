@@ -1,0 +1,1464 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>4 Boucles et calculs vectoriels | Notes de cours de R - Version 2</title>
+  <meta name="description" content="4 Boucles et calculs vectoriels | Notes de cours de R - Version 2" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="4 Boucles et calculs vectoriels | Notes de cours de R - Version 2" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="4 Boucles et calculs vectoriels | Notes de cours de R - Version 2" />
+  
+  
+  
+
+<meta name="author" content="Ewen Gallic" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="fonction.html"/>
+<link rel="next" href="graphiques.html"/>
+<script src="libs/header-attrs-2.3/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="styles/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="avant-propos.html"><a href="avant-propos.html"><i class="fa fa-check"></i>Avant Propos</a>
+<ul>
+<li class="chapter" data-level="0.1" data-path="avant-propos.html"><a href="avant-propos.html#objectifs"><i class="fa fa-check"></i><b>0.1</b> Objectifs</a></li>
+<li class="chapter" data-level="0.2" data-path="avant-propos.html"><a href="avant-propos.html#à-qui-sadressent-ces-notes"><i class="fa fa-check"></i><b>0.2</b> À qui s’adressent ces notes ?</a></li>
+<li class="chapter" data-level="0.3" data-path="avant-propos.html"><a href="avant-propos.html#remerciements"><i class="fa fa-check"></i><b>0.3</b> Remerciements</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#historique"><i class="fa fa-check"></i><b>1.1</b> Historique</a></li>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#présentation-de-lespace-de-travail"><i class="fa fa-check"></i><b>1.2</b> Présentation de l’espace de travail</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="introduction.html"><a href="introduction.html#la-console-et-les-fenêtres-de-script"><i class="fa fa-check"></i><b>1.2.1</b> La console et les fenêtres de script</a></li>
+<li class="chapter" data-level="1.2.2" data-path="introduction.html"><a href="introduction.html#les-variables"><i class="fa fa-check"></i><b>1.2.2</b> Les variables</a></li>
+<li class="chapter" data-level="1.2.3" data-path="introduction.html"><a href="introduction.html#les-packages"><i class="fa fa-check"></i><b>1.2.3</b> Les <em>packages</em></a></li>
+<li class="chapter" data-level="1.2.4" data-path="introduction.html"><a href="introduction.html#laide"><i class="fa fa-check"></i><b>1.2.4</b> L’aide</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#un-environnement-de-développement-rstudio"><i class="fa fa-check"></i><b>1.3</b> Un environnement de développement : RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="données.html"><a href="données.html"><i class="fa fa-check"></i><b>2</b> Données</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="données.html"><a href="données.html#types-de-données"><i class="fa fa-check"></i><b>2.1</b> Types de données</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="données.html"><a href="données.html#donnees-mode"><i class="fa fa-check"></i><b>2.1.1</b> Mode</a></li>
+<li class="chapter" data-level="2.1.2" data-path="données.html"><a href="données.html#longueur"><i class="fa fa-check"></i><b>2.1.2</b> Longueur</a></li>
+<li class="chapter" data-level="2.1.3" data-path="données.html"><a href="données.html#lobjet-vide"><i class="fa fa-check"></i><b>2.1.3</b> L’objet vide</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="données.html"><a href="données.html#structures"><i class="fa fa-check"></i><b>2.2</b> Structure des données</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="données.html"><a href="données.html#structures-de-base"><i class="fa fa-check"></i><b>2.2.1</b> Structures de base</a></li>
+<li class="chapter" data-level="2.2.2" data-path="données.html"><a href="données.html#tableaux-de-données"><i class="fa fa-check"></i><b>2.2.2</b> Tableaux de données</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="données.html"><a href="données.html#importation-exportation-et-création-de-données"><i class="fa fa-check"></i><b>2.3</b> Importation, exportation et création de données</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="données.html"><a href="données.html#importation"><i class="fa fa-check"></i><b>2.3.1</b> Importation</a></li>
+<li class="chapter" data-level="2.3.2" data-path="données.html"><a href="données.html#exportation"><i class="fa fa-check"></i><b>2.3.2</b> Exportation</a></li>
+<li class="chapter" data-level="2.3.3" data-path="données.html"><a href="données.html#génération"><i class="fa fa-check"></i><b>2.3.3</b> Génération</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="données.html"><a href="données.html#manipulation-des-données"><i class="fa fa-check"></i><b>2.4</b> Manipulation des données</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="données.html"><a href="données.html#opérateurs"><i class="fa fa-check"></i><b>2.4.1</b> Opérateurs</a></li>
+<li class="chapter" data-level="2.4.2" data-path="données.html"><a href="données.html#manip-acces"><i class="fa fa-check"></i><b>2.4.2</b> Accès aux valeurs, modifications</a></li>
+<li class="chapter" data-level="2.4.3" data-path="données.html"><a href="données.html#chaînes-de-caractères"><i class="fa fa-check"></i><b>2.4.3</b> Chaînes de caractères</a></li>
+<li class="chapter" data-level="2.4.4" data-path="données.html"><a href="données.html#dates-1"><i class="fa fa-check"></i><b>2.4.4</b> Dates</a></li>
+<li class="chapter" data-level="2.4.5" data-path="données.html"><a href="données.html#calculs-matriciels"><i class="fa fa-check"></i><b>2.4.5</b> Calculs matriciels</a></li>
+<li class="chapter" data-level="2.4.6" data-path="données.html"><a href="données.html#tableaux_de_donnees"><i class="fa fa-check"></i><b>2.4.6</b> Tableaux de données</a></li>
+<li class="chapter" data-level="2.4.7" data-path="données.html"><a href="données.html#data-tables"><i class="fa fa-check"></i><b>2.4.7</b> Data tables</a></li>
+<li class="chapter" data-level="2.4.8" data-path="données.html"><a href="données.html#quelques-fonctions-utiles"><i class="fa fa-check"></i><b>2.4.8</b> Quelques fonctions utiles</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="données.html"><a href="données.html#exercices"><i class="fa fa-check"></i><b>2.5</b> Exercices</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="fonction.html"><a href="fonction.html"><i class="fa fa-check"></i><b>3</b> Fonction</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="fonction.html"><a href="fonction.html#définition"><i class="fa fa-check"></i><b>3.1</b> Définition</a></li>
+<li class="chapter" data-level="3.2" data-path="fonction.html"><a href="fonction.html#fonctions_structure"><i class="fa fa-check"></i><b>3.2</b> La structure d’une fonction</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="fonction.html"><a href="fonction.html#fonctions_structure_corps"><i class="fa fa-check"></i><b>3.2.1</b> Le corps d’une fonction</a></li>
+<li class="chapter" data-level="3.2.2" data-path="fonction.html"><a href="fonction.html#fonctions_structure_parametres"><i class="fa fa-check"></i><b>3.2.2</b> Les arguments d’une fonction</a></li>
+<li class="chapter" data-level="3.2.3" data-path="fonction.html"><a href="fonction.html#fonctions_structure_environnement"><i class="fa fa-check"></i><b>3.2.3</b> Portée des fonctions</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="fonction.html"><a href="fonction.html#documentation"><i class="fa fa-check"></i><b>3.3</b> Documentation</a></li>
+<li class="chapter" data-level="3.4" data-path="fonction.html"><a href="fonction.html#exercices-1"><i class="fa fa-check"></i><b>3.4</b> Exercices</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="boucles.html"><a href="boucles.html"><i class="fa fa-check"></i><b>4</b> Boucles et calculs vectoriels</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="boucles.html"><a href="boucles.html#boucles_boucles"><i class="fa fa-check"></i><b>4.1</b> Les boucles</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="boucles.html"><a href="boucles.html#boucles_boucles_while"><i class="fa fa-check"></i><b>4.1.1</b> Les boucles avec <code>while()</code></a></li>
+<li class="chapter" data-level="4.1.2" data-path="boucles.html"><a href="boucles.html#boucles_boucles_for"><i class="fa fa-check"></i><b>4.1.2</b> Les boucles avec <code>for()</code></a></li>
+<li class="chapter" data-level="4.1.3" data-path="boucles.html"><a href="boucles.html#boucles_boucles_conditions"><i class="fa fa-check"></i><b>4.1.3</b> Les conditions</a></li>
+<li class="chapter" data-level="4.1.4" data-path="boucles.html"><a href="boucles.html#boucles_boucles_repeat"><i class="fa fa-check"></i><b>4.1.4</b> L’instruction <code>repeat</code> … <code>break</code></a></li>
+<li class="chapter" data-level="4.1.5" data-path="boucles.html"><a href="boucles.html#boucles_boucles_next"><i class="fa fa-check"></i><b>4.1.5</b> L’instruction <code>next</code> … <code>break</code></a></li>
+<li class="chapter" data-level="4.1.6" data-path="boucles.html"><a href="boucles.html#boucles_boucles_progressbar"><i class="fa fa-check"></i><b>4.1.6</b> Barre de progression</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation"><i class="fa fa-check"></i><b>4.2</b> La vectorisation</a></li>
+<li class="chapter" data-level="4.3" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_purrr"><i class="fa fa-check"></i><b>4.3</b> Avec {<code>purrr</code>}</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="boucles.html"><a href="boucles.html#listes-ou-vecteurs-en-input"><i class="fa fa-check"></i><b>4.3.1</b> Listes ou vecteurs en <em>input</em></a></li>
+<li class="chapter" data-level="4.3.2" data-path="boucles.html"><a href="boucles.html#tibbles-en-input"><i class="fa fa-check"></i><b>4.3.2</b> Tibbles en <em>input</em></a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_plyr"><i class="fa fa-check"></i><b>4.4</b> Avec {<code>plyr</code>}</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_plyr_a_ply"><i class="fa fa-check"></i><b>4.4.1</b> Array en <em>input</em></a></li>
+<li class="chapter" data-level="4.4.2" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_plyr_d_ply"><i class="fa fa-check"></i><b>4.4.2</b> <em>Data frame</em> en <em>input</em></a></li>
+<li class="chapter" data-level="4.4.3" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_plyr_l_ply"><i class="fa fa-check"></i><b>4.4.3</b> <em>List</em> en <em>input</em></a></li>
+<li class="chapter" data-level="4.4.4" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_plyr_parallel"><i class="fa fa-check"></i><b>4.4.4</b> Calcul parallèle</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_apply"><i class="fa fa-check"></i><b>4.5</b> Avec {<code>base</code>}</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_apply_lapply"><i class="fa fa-check"></i><b>4.5.1</b> La fonction <code>lapply</code></a></li>
+<li class="chapter" data-level="4.5.2" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_apply_sapply"><i class="fa fa-check"></i><b>4.5.2</b> La fonction <code>sapply()</code></a></li>
+<li class="chapter" data-level="4.5.3" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_apply_vapply"><i class="fa fa-check"></i><b>4.5.3</b> La fonction <code>vapply</code></a></li>
+<li class="chapter" data-level="4.5.4" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_apply_apply"><i class="fa fa-check"></i><b>4.5.4</b> La fonction <code>apply()</code></a></li>
+<li class="chapter" data-level="4.5.5" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_apply_tapply"><i class="fa fa-check"></i><b>4.5.5</b> La fonction <code>tapply()</code></a></li>
+<li class="chapter" data-level="4.5.6" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_apply_mapply"><i class="fa fa-check"></i><b>4.5.6</b> La fonction <code>mapply()</code></a></li>
+<li class="chapter" data-level="4.5.7" data-path="boucles.html"><a href="boucles.html#boucles_vectorisation_Vectorize"><i class="fa fa-check"></i><b>4.5.7</b> La fonction <code>Vectorize()</code></a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="boucles.html"><a href="boucles.html#boucles_exercices"><i class="fa fa-check"></i><b>4.6</b> Exercices</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="graphiques.html"><a href="graphiques.html"><i class="fa fa-check"></i><b>5</b> Graphiques</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="graphiques.html"><a href="graphiques.html#graphiques_structure"><i class="fa fa-check"></i><b>5.1</b> Structure</a></li>
+<li class="chapter" data-level="5.2" data-path="graphiques.html"><a href="graphiques.html#graphiques_ggplot"><i class="fa fa-check"></i><b>5.2</b> Des graphiques élaborés avec <code>ggplot()</code></a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="graphiques.html"><a href="graphiques.html#graphiques_ggplot_aes"><i class="fa fa-check"></i><b>5.2.1</b> Arguments esthétiques</a></li>
+<li class="chapter" data-level="5.2.2" data-path="graphiques.html"><a href="graphiques.html#graphiques_ggplot_geom"><i class="fa fa-check"></i><b>5.2.2</b> Arguments géométriques (fonctions <code>geom_*</code>)</a></li>
+<li class="chapter" data-level="5.2.3" data-path="graphiques.html"><a href="graphiques.html#graphiques_ggplot_stat"><i class="fa fa-check"></i><b>5.2.3</b> Arguments statistiques</a></li>
+<li class="chapter" data-level="5.2.4" data-path="graphiques.html"><a href="graphiques.html#graphiques_ggplot_scale"><i class="fa fa-check"></i><b>5.2.4</b> Échelles (fonction <code>scale_*()</code>)</a></li>
+<li class="chapter" data-level="5.2.5" data-path="graphiques.html"><a href="graphiques.html#graphiques_ggplot_group"><i class="fa fa-check"></i><b>5.2.5</b> Groupes</a></li>
+<li class="chapter" data-level="5.2.6" data-path="graphiques.html"><a href="graphiques.html#graphiques_ggplot_annotations"><i class="fa fa-check"></i><b>5.2.6</b> Annotations</a></li>
+<li class="chapter" data-level="5.2.7" data-path="graphiques.html"><a href="graphiques.html#graphiques_ggplot_position"><i class="fa fa-check"></i><b>5.2.7</b> Positions</a></li>
+<li class="chapter" data-level="5.2.8" data-path="graphiques.html"><a href="graphiques.html#graphiques_ggplot_facet"><i class="fa fa-check"></i><b>5.2.8</b> Facettes</a></li>
+<li class="chapter" data-level="5.2.9" data-path="graphiques.html"><a href="graphiques.html#graphiques_ggplot_coord"><i class="fa fa-check"></i><b>5.2.9</b> Coordonnées</a></li>
+<li class="chapter" data-level="5.2.10" data-path="graphiques.html"><a href="graphiques.html#graphiques_ggplot_axes"><i class="fa fa-check"></i><b>5.2.10</b> Titres, axes, légendes</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="graphiques.html"><a href="graphiques.html#graphiques_enregistrement"><i class="fa fa-check"></i><b>5.3</b> Enregistrement des graphiques</a></li>
+<li class="chapter" data-level="5.4" data-path="graphiques.html"><a href="graphiques.html#graphiques_maps"><i class="fa fa-check"></i><b>5.4</b> Cartes</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="graphiques.html"><a href="graphiques.html#graphiques_maps_recup"><i class="fa fa-check"></i><b>5.4.1</b> Récupérer des cartes toutes faites</a></li>
+<li class="chapter" data-level="5.4.2" data-path="graphiques.html"><a href="graphiques.html#graphiques_maps_choroplethe"><i class="fa fa-check"></i><b>5.4.2</b> Carte choroplèthe</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="graphiques.html"><a href="graphiques.html#graphiques_3d"><i class="fa fa-check"></i><b>5.5</b> Graphiques en 3D</a></li>
+<li class="chapter" data-level="5.6" data-path="graphiques.html"><a href="graphiques.html#graphiques_exercices"><i class="fa fa-check"></i><b>5.6</b> Exercices</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="régressions-linéaires.html"><a href="régressions-linéaires.html"><i class="fa fa-check"></i><b>6</b> Régressions linéaires</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="régressions-linéaires.html"><a href="régressions-linéaires.html#rappels"><i class="fa fa-check"></i><b>6.1</b> Rappels</a></li>
+<li class="chapter" data-level="6.2" data-path="régressions-linéaires.html"><a href="régressions-linéaires.html#regressions_donnees"><i class="fa fa-check"></i><b>6.2</b> Données de l’exemple</a></li>
+<li class="chapter" data-level="6.3" data-path="régressions-linéaires.html"><a href="régressions-linéaires.html#estimation-des-paramètres"><i class="fa fa-check"></i><b>6.3</b> Estimation des paramètres {#}</a></li>
+<li class="chapter" data-level="6.4" data-path="régressions-linéaires.html"><a href="régressions-linéaires.html#regressions_lecture"><i class="fa fa-check"></i><b>6.4</b> Lecture des sorties</a></li>
+<li class="chapter" data-level="6.5" data-path="régressions-linéaires.html"><a href="régressions-linéaires.html#regressions_extractions"><i class="fa fa-check"></i><b>6.5</b> Extractions</a></li>
+<li class="chapter" data-level="6.6" data-path="régressions-linéaires.html"><a href="régressions-linéaires.html#regressions_facteurs"><i class="fa fa-check"></i><b>6.6</b> Variables catégorielles</a></li>
+<li class="chapter" data-level="6.7" data-path="régressions-linéaires.html"><a href="régressions-linéaires.html#regressions_tests"><i class="fa fa-check"></i><b>6.7</b> Tests de nullité des coefficients et intervalles de confiance</a></li>
+<li class="chapter" data-level="6.8" data-path="régressions-linéaires.html"><a href="régressions-linéaires.html#regressions_previsions"><i class="fa fa-check"></i><b>6.8</b> Prévisions</a></li>
+<li class="chapter" data-level="6.9" data-path="régressions-linéaires.html"><a href="régressions-linéaires.html#exercices-sur-la-régression"><i class="fa fa-check"></i><b>6.9</b> Exercices sur la régression</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="regex.html"><a href="regex.html"><i class="fa fa-check"></i><b>7</b> Expressions régulières</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="regex.html"><a href="regex.html#manip_regex_structure"><i class="fa fa-check"></i><b>7.1</b> Les recherches basiques</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="regex.html"><a href="regex.html#manip_regex_stringr_detect"><i class="fa fa-check"></i><b>7.1.1</b> Détection d’un motif avec <code>str_detect()</code></a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="regex.html"><a href="regex.html#manip_regex_classes"><i class="fa fa-check"></i><b>7.2</b> Les classes de caractères</a></li>
+<li class="chapter" data-level="7.3" data-path="regex.html"><a href="regex.html#manip_regex_quantificateurs"><i class="fa fa-check"></i><b>7.3</b> Les quantificateurs</a></li>
+<li class="chapter" data-level="7.4" data-path="regex.html"><a href="regex.html#manip_regex_metacaracteres"><i class="fa fa-check"></i><b>7.4</b> Les métacaractères</a></li>
+<li class="chapter" data-level="7.5" data-path="regex.html"><a href="regex.html#manip_regex_stringr"><i class="fa fa-check"></i><b>7.5</b> Quelques fonctions du <em>package</em> {<code>stringr</code>}</a>
+<ul>
+<li class="chapter" data-level="7.5.1" data-path="regex.html"><a href="regex.html#manip_regex_stringr_extract"><i class="fa fa-check"></i><b>7.5.1</b> La fonction <code>str_detect()</code></a></li>
+<li class="chapter" data-level="7.5.2" data-path="regex.html"><a href="regex.html#manip_regex_stringr_extract_all"><i class="fa fa-check"></i><b>7.5.2</b> La fonction <code>str_extract_all()</code></a></li>
+<li class="chapter" data-level="7.5.3" data-path="regex.html"><a href="regex.html#manip_regex_stringr_match"><i class="fa fa-check"></i><b>7.5.3</b> La fonction <code>str_match()</code></a></li>
+<li class="chapter" data-level="7.5.4" data-path="regex.html"><a href="regex.html#manip_regex_stringr_match_all"><i class="fa fa-check"></i><b>7.5.4</b> La fonction <code>str_match_all()</code></a></li>
+<li class="chapter" data-level="7.5.5" data-path="regex.html"><a href="regex.html#manip_regex_stringr_locate"><i class="fa fa-check"></i><b>7.5.5</b> La fonction <code>str_locate()</code></a></li>
+<li class="chapter" data-level="7.5.6" data-path="regex.html"><a href="regex.html#manip_regex_stringr_locate_all"><i class="fa fa-check"></i><b>7.5.6</b> La fonction <code>str_locate_all()</code></a></li>
+<li class="chapter" data-level="7.5.7" data-path="regex.html"><a href="regex.html#manip_regex_stringr_replace"><i class="fa fa-check"></i><b>7.5.7</b> La fonction <code>str_replace()</code></a></li>
+<li class="chapter" data-level="7.5.8" data-path="regex.html"><a href="regex.html#manip_regex_stringr_replace_all"><i class="fa fa-check"></i><b>7.5.8</b> La fonction <code>str_replace_all()</code></a></li>
+<li class="chapter" data-level="7.5.9" data-path="regex.html"><a href="regex.html#manip_regex_stringr_split"><i class="fa fa-check"></i><b>7.5.9</b> La fonction <code>str_split()</code></a></li>
+<li class="chapter" data-level="7.5.10" data-path="regex.html"><a href="regex.html#manip_regex_stringr_split_fixed"><i class="fa fa-check"></i><b>7.5.10</b> La fonction <code>str_string_fixed()</code></a></li>
+</ul></li>
+<li class="chapter" data-level="7.6" data-path="regex.html"><a href="regex.html#manip_regex_base"><i class="fa fa-check"></i><b>7.6</b> Quelques fonctions du <em>package</em> {<code>base</code>}</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="pour-aller-plus-loin.html"><a href="pour-aller-plus-loin.html"><i class="fa fa-check"></i><b>8</b> Pour aller plus loin</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="pour-aller-plus-loin.html"><a href="pour-aller-plus-loin.html#travailler-par-projets-avec-rstudio"><i class="fa fa-check"></i><b>8.1</b> Travailler par projets, avec RStudio</a></li>
+<li class="chapter" data-level="8.2" data-path="pour-aller-plus-loin.html"><a href="pour-aller-plus-loin.html#r-markdown"><i class="fa fa-check"></i><b>8.2</b> R Markdown</a></li>
+<li class="chapter" data-level="8.3" data-path="pour-aller-plus-loin.html"><a href="pour-aller-plus-loin.html#modification-de-plusieurs-colonnes"><i class="fa fa-check"></i><b>8.3</b> Modification de plusieurs colonnes</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="pense-bête.html"><a href="pense-bête.html"><i class="fa fa-check"></i><b>9</b> Pense-bête</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="pense-bête.html"><a href="pense-bête.html#installer-un-package-depuis-sa-source"><i class="fa fa-check"></i><b>9.1</b> Installer un <em>package</em> depuis sa source</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Notes de cours de R - Version 2</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="boucles" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> Boucles et calculs vectoriels</h1>
+<p>Il existe deux sortes de boucles dans <code>R</code>. Celles pour lesquelles les itérations continuent tant qu’une condition n’est pas invalidée (<code>while()</code>), et celles pour lesquelles le nombre d’itérations est défini au moment de lancer la boucle (<code>for()</code>).</p>
+<p>Avant de présenter chacune de ces fonctions, il est nécessaire de préciser que les boucles ne sont pas le point fort de <code>R</code>. Dès que l’on souhaite appliquer une fonction à chaque élément d’un vecteur, et/ou que le résultat de chaque itération ne dépend pas de l’itération précédente, il est préférable de vectoriser les calculs (voir Section @ref(boucles_vectorisation)).</p>
+<div id="boucles_boucles" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> Les boucles</h2>
+<div id="boucles_boucles_while" class="section level3" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> Les boucles avec <code>while()</code></h3>
+<p>Quand on souhaite répéter un calcul tant qu’une condition est satisfaite, on utilise la fonction <code>while()</code>, avec la syntaxte suivante :</p>
+<div class="sourceCode" id="cb939"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb939-1"><a href="boucles.html#cb939-1" aria-hidden="true"></a><span class="cf">while</span>(condition) instruction</span></code></pre></div>
+<p>avec <code>condition</code> un logique, comme vu dans la Section @ref(manip_operateurs_logiques), et <code>instruction</code> du code, qui peut être entouré d’accolades si on souhaite évaluer plusieurs instructions.</p>
+<div class="sourceCode" id="cb940"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb940-1"><a href="boucles.html#cb940-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span><span class="dv">100</span></span>
+<span id="cb940-2"><a href="boucles.html#cb940-2" aria-hidden="true"></a><span class="cf">while</span>(x<span class="op">/</span><span class="dv">3</span> <span class="op">&gt;</span><span class="st"> </span><span class="dv">1</span>){</span>
+<span id="cb940-3"><a href="boucles.html#cb940-3" aria-hidden="true"></a>  x &lt;-<span class="st"> </span>x<span class="op">/</span><span class="dv">3</span></span>
+<span id="cb940-4"><a href="boucles.html#cb940-4" aria-hidden="true"></a>}</span>
+<span id="cb940-5"><a href="boucles.html#cb940-5" aria-hidden="true"></a>x<span class="op">/</span><span class="dv">3</span> <span class="op">&gt;</span><span class="st"> </span><span class="dv">1</span></span></code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
+<div class="sourceCode" id="cb942"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb942-1"><a href="boucles.html#cb942-1" aria-hidden="true"></a>x</span></code></pre></div>
+<pre><code>## [1] 1.234568</code></pre>
+</div>
+<div id="boucles_boucles_for" class="section level3" number="4.1.2">
+<h3><span class="header-section-number">4.1.2</span> Les boucles avec <code>for()</code></h3>
+<p>Quand on connaît le nombre d’itérations à l’avance, on peut utiliser la fonction <code>for()</code>. La syntaxe est la suivante :</p>
+<div class="sourceCode" id="cb944"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb944-1"><a href="boucles.html#cb944-1" aria-hidden="true"></a><span class="cf">for</span>(variable <span class="cf">in</span> vector) instruction</span></code></pre></div>
+<p>avec <code>variable</code> le nom d’une variable locale à la fonction <code>for()</code>, <code>vector</code> un vecteur à <code>n</code> éléments définissant les valeurs que prendra <code>variable</code> pour chacun des <code>n</code> tours, et <code>instruction</code> le code à exécuter à chaque itération.</p>
+<div class="sourceCode" id="cb945"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb945-1"><a href="boucles.html#cb945-1" aria-hidden="true"></a><span class="cf">for</span>(nom <span class="cf">in</span>  <span class="kw">c</span>(<span class="st">&quot;Sonia&quot;</span>, <span class="st">&quot;Anne-Hélène&quot;</span>, <span class="st">&quot;Julien-Yacine&quot;</span>)) <span class="kw">print</span>(nom)</span></code></pre></div>
+<pre><code>## [1] &quot;Sonia&quot;
+## [1] &quot;Anne-Hélène&quot;
+## [1] &quot;Julien-Yacine&quot;</code></pre>
+<p>On peut utiliser la fonction <code>for()</code> pour remplir les éléments d’une liste, ou d’un vecteur. à chaque itération, <code>R</code> doit trouver le vecteur de destination en mémoire, créer un nouveau vecteur qui permettra de contenir plus de données, copier données depuis l’ancien vecteur pour les insérer dans le nouveau, et enfin supprimer l’ancien vecteur <span class="citation">(Ross <a href="#ref-Ross_2014_Vectorization" role="doc-biblioref">2014</a>)</span>. C’est une opération coûteuse en temps. Un moyen de rendre cette allocation plus efficace est de créer <em>a priori</em> le vecteur ou la liste en le remplissant avec des données manquantes. Ainsi, <code>R</code> n’aura pas besoin de ré-allouer la mémoire à chaque itération.</p>
+<div class="sourceCode" id="cb947"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb947-1"><a href="boucles.html#cb947-1" aria-hidden="true"></a><span class="co"># Mauvaise manière</span></span>
+<span id="cb947-2"><a href="boucles.html#cb947-2" aria-hidden="true"></a>resultat &lt;-<span class="st"> </span><span class="ot">NULL</span></span>
+<span id="cb947-3"><a href="boucles.html#cb947-3" aria-hidden="true"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="kw">seq_len</span>(<span class="dv">3</span>)) {</span>
+<span id="cb947-4"><a href="boucles.html#cb947-4" aria-hidden="true"></a>  resultat[i] &lt;-<span class="st"> </span>i</span>
+<span id="cb947-5"><a href="boucles.html#cb947-5" aria-hidden="true"></a>}</span>
+<span id="cb947-6"><a href="boucles.html#cb947-6" aria-hidden="true"></a>resultat</span></code></pre></div>
+<pre><code>## [1] 1 2 3</code></pre>
+<div class="sourceCode" id="cb949"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb949-1"><a href="boucles.html#cb949-1" aria-hidden="true"></a><span class="co"># Manière plus économique</span></span>
+<span id="cb949-2"><a href="boucles.html#cb949-2" aria-hidden="true"></a>resultat &lt;-<span class="st"> </span><span class="kw">rep</span>(<span class="ot">NA</span>, <span class="dv">3</span>)</span>
+<span id="cb949-3"><a href="boucles.html#cb949-3" aria-hidden="true"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="kw">seq_len</span>(<span class="dv">3</span>)) {</span>
+<span id="cb949-4"><a href="boucles.html#cb949-4" aria-hidden="true"></a>  resultat[i] &lt;-<span class="st"> </span>i</span>
+<span id="cb949-5"><a href="boucles.html#cb949-5" aria-hidden="true"></a>}</span>
+<span id="cb949-6"><a href="boucles.html#cb949-6" aria-hidden="true"></a>resultat</span></code></pre></div>
+<pre><code>## [1] 1 2 3</code></pre>
+</div>
+<div id="boucles_boucles_conditions" class="section level3" number="4.1.3">
+<h3><span class="header-section-number">4.1.3</span> Les conditions</h3>
+<p>On peut soumettre l’exécution de codes en <code>R</code> à conditions que certaines conditions soient honorées.</p>
+<div id="boucles_boucles_conditions_if" class="section level4" number="4.1.3.1">
+<h4><span class="header-section-number">4.1.3.1</span> Les instructions <code>if</code> … <code>else</code></h4>
+<p>Les instructions <code>if</code> et <code>else</code> fournissent un moyen d’exécuter du code si une condition est respectée ou non. La syntaxe prend deux formes :</p>
+<div class="sourceCode" id="cb951"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb951-1"><a href="boucles.html#cb951-1" aria-hidden="true"></a><span class="co"># Première forme (pas de code si condition == FALSE)</span></span>
+<span id="cb951-2"><a href="boucles.html#cb951-2" aria-hidden="true"></a><span class="cf">if</span> (condition) instruction</span>
+<span id="cb951-3"><a href="boucles.html#cb951-3" aria-hidden="true"></a></span>
+<span id="cb951-4"><a href="boucles.html#cb951-4" aria-hidden="true"></a><span class="co"># Seconde forme</span></span>
+<span id="cb951-5"><a href="boucles.html#cb951-5" aria-hidden="true"></a><span class="cf">if</span> (condition) instruction si vrai <span class="cf">else</span> instruction si faux</span></code></pre></div>
+<p>avec <code>condition</code> un logique et <code>instruction</code> du code à évaluer si la condition est satisfaite. à nouveau, on peut avoir recours aux accolades pour créer des regroupements.</p>
+<div class="sourceCode" id="cb952"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb952-1"><a href="boucles.html#cb952-1" aria-hidden="true"></a><span class="co"># Simple condition</span></span>
+<span id="cb952-2"><a href="boucles.html#cb952-2" aria-hidden="true"></a>x &lt;-<span class="st"> </span><span class="dv">2</span></span>
+<span id="cb952-3"><a href="boucles.html#cb952-3" aria-hidden="true"></a><span class="cf">if</span>(x <span class="op">==</span><span class="st"> </span><span class="dv">2</span>) <span class="kw">print</span>(<span class="st">&quot;Hello&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;Hello&quot;</code></pre>
+<div class="sourceCode" id="cb954"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb954-1"><a href="boucles.html#cb954-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span><span class="dv">3</span></span>
+<span id="cb954-2"><a href="boucles.html#cb954-2" aria-hidden="true"></a><span class="cf">if</span>(x <span class="op">==</span><span class="st"> </span><span class="dv">2</span>) <span class="kw">print</span>(<span class="st">&quot;Hello&quot;</span>)</span>
+<span id="cb954-3"><a href="boucles.html#cb954-3" aria-hidden="true"></a></span>
+<span id="cb954-4"><a href="boucles.html#cb954-4" aria-hidden="true"></a><span class="co"># Avec des instructions dans le cas contraire</span></span>
+<span id="cb954-5"><a href="boucles.html#cb954-5" aria-hidden="true"></a><span class="cf">if</span>(x <span class="op">==</span><span class="st"> </span><span class="dv">2</span>) <span class="kw">print</span>(<span class="st">&quot;Hello&quot;</span>) <span class="cf">else</span> <span class="kw">print</span>(<span class="st">&quot;x est différent de 2&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;x est différent de 2&quot;</code></pre>
+<div class="sourceCode" id="cb956"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb956-1"><a href="boucles.html#cb956-1" aria-hidden="true"></a><span class="cf">if</span>(x <span class="op">==</span><span class="st"> </span><span class="dv">2</span>){</span>
+<span id="cb956-2"><a href="boucles.html#cb956-2" aria-hidden="true"></a>  <span class="kw">print</span>(<span class="st">&quot;Hello&quot;</span>)</span>
+<span id="cb956-3"><a href="boucles.html#cb956-3" aria-hidden="true"></a>} <span class="cf">else</span> {<span class="co"># x != 2</span></span>
+<span id="cb956-4"><a href="boucles.html#cb956-4" aria-hidden="true"></a>  x &lt;-<span class="st"> </span>x<span class="dv">-1</span></span>
+<span id="cb956-5"><a href="boucles.html#cb956-5" aria-hidden="true"></a>  <span class="kw">print</span>(<span class="kw">paste0</span>(<span class="st">&quot;La nouvelle valeur de x : &quot;</span>, x))</span>
+<span id="cb956-6"><a href="boucles.html#cb956-6" aria-hidden="true"></a>}</span></code></pre></div>
+<pre><code>## [1] &quot;La nouvelle valeur de x : 2&quot;</code></pre>
+
+<div class="remarque">
+Attention, lorsque l’on fait des regroupements et qu’on utilise la structure <code>if</code> et <code>else</code>, il est nécessaire d’écrire le mot <code>else</code> sur la même ligne que la parenthèse fermante du groupe d’instructions à réaliser dans le de la condition du <code>if</code> vérifiée.
+</div>
+</div>
+<div id="boucles_boucles_conditions_switch" class="section level4" number="4.1.3.2">
+<h4><span class="header-section-number">4.1.3.2</span> La fonction <code>switch()</code></h4>
+<p>Avec la fonction <code>switch()</code>, on peut indiquer à <code>R</code> d’exécuter un code en fonction du résultat obtenu lors d’un test. La syntaxe est la suivante :</p>
+<div class="sourceCode" id="cb958"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb958-1"><a href="boucles.html#cb958-1" aria-hidden="true"></a><span class="cf">switch</span>(valeur_test,</span>
+<span id="cb958-2"><a href="boucles.html#cb958-2" aria-hidden="true"></a>       <span class="dt">cas_1 =</span> {</span>
+<span id="cb958-3"><a href="boucles.html#cb958-3" aria-hidden="true"></a>         instruction_cas_<span class="dv">1</span></span>
+<span id="cb958-4"><a href="boucles.html#cb958-4" aria-hidden="true"></a>       },</span>
+<span id="cb958-5"><a href="boucles.html#cb958-5" aria-hidden="true"></a>       <span class="dt">cas_2 =</span> {</span>
+<span id="cb958-6"><a href="boucles.html#cb958-6" aria-hidden="true"></a>         instruction_cas_<span class="dv">2</span></span>
+<span id="cb958-7"><a href="boucles.html#cb958-7" aria-hidden="true"></a>       },</span>
+<span id="cb958-8"><a href="boucles.html#cb958-8" aria-hidden="true"></a>       ...</span>
+<span id="cb958-9"><a href="boucles.html#cb958-9" aria-hidden="true"></a>  )</span></code></pre></div>
+<p>avec <code>valeur_test</code> un nombre ou une chaîne de caractères. Si <code>valeur_test</code> vaut <code>cas_1</code>, alors uniquement <code>instruction_cas_1</code> sera évaluée, si <code>valeur_test</code> vaut <code>cas_2</code>, alors ce sera <code>instruction_cas_2</code> qui le sera, et ainsi de suite. On peut rajouter une valeur par défaut en utilisant la syntaxte suivante :</p>
+<div class="sourceCode" id="cb959"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb959-1"><a href="boucles.html#cb959-1" aria-hidden="true"></a><span class="cf">switch</span>(valeur_test,</span>
+<span id="cb959-2"><a href="boucles.html#cb959-2" aria-hidden="true"></a>       <span class="dt">cas_1 =</span> {</span>
+<span id="cb959-3"><a href="boucles.html#cb959-3" aria-hidden="true"></a>         instruction_cas_<span class="dv">1</span></span>
+<span id="cb959-4"><a href="boucles.html#cb959-4" aria-hidden="true"></a>       },</span>
+<span id="cb959-5"><a href="boucles.html#cb959-5" aria-hidden="true"></a>       <span class="dt">cas_2 =</span> {</span>
+<span id="cb959-6"><a href="boucles.html#cb959-6" aria-hidden="true"></a>         instruction_cas_<span class="dv">2</span></span>
+<span id="cb959-7"><a href="boucles.html#cb959-7" aria-hidden="true"></a>       },</span>
+<span id="cb959-8"><a href="boucles.html#cb959-8" aria-hidden="true"></a>       {</span>
+<span id="cb959-9"><a href="boucles.html#cb959-9" aria-hidden="true"></a>        instruction_defaut </span>
+<span id="cb959-10"><a href="boucles.html#cb959-10" aria-hidden="true"></a>       }</span>
+<span id="cb959-11"><a href="boucles.html#cb959-11" aria-hidden="true"></a>  )</span></code></pre></div>
+<p>Voici un exemple d’utilisation, issu de la page d’aide de la fonction.</p>
+<div class="sourceCode" id="cb960"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb960-1"><a href="boucles.html#cb960-1" aria-hidden="true"></a>centre &lt;-<span class="st"> </span><span class="cf">function</span>(x, type) {</span>
+<span id="cb960-2"><a href="boucles.html#cb960-2" aria-hidden="true"></a>  <span class="cf">switch</span>(type,</span>
+<span id="cb960-3"><a href="boucles.html#cb960-3" aria-hidden="true"></a>         <span class="dt">mean =</span> <span class="kw">mean</span>(x),</span>
+<span id="cb960-4"><a href="boucles.html#cb960-4" aria-hidden="true"></a>         <span class="dt">median =</span> <span class="kw">median</span>(x))</span>
+<span id="cb960-5"><a href="boucles.html#cb960-5" aria-hidden="true"></a>}</span>
+<span id="cb960-6"><a href="boucles.html#cb960-6" aria-hidden="true"></a>x &lt;-<span class="st"> </span><span class="kw">rcauchy</span>(<span class="dv">10</span>)</span>
+<span id="cb960-7"><a href="boucles.html#cb960-7" aria-hidden="true"></a><span class="kw">centre</span>(x, <span class="st">&quot;mean&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] -2.036918</code></pre>
+<div class="sourceCode" id="cb962"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb962-1"><a href="boucles.html#cb962-1" aria-hidden="true"></a><span class="kw">centre</span>(x, <span class="st">&quot;median&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] 0.4256207</code></pre>
+</div>
+</div>
+<div id="boucles_boucles_repeat" class="section level3" number="4.1.4">
+<h3><span class="header-section-number">4.1.4</span> L’instruction <code>repeat</code> … <code>break</code></h3>
+<p>L’instruction <code>repeat</code>, … <code>break</code> permet de répéter une expression. Il est nécessaire d’ajouter un test d’arrêt, à l’aide de l’instruction <code>break</code>.</p>
+<div class="sourceCode" id="cb964"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb964-1"><a href="boucles.html#cb964-1" aria-hidden="true"></a>i &lt;-<span class="st"> </span><span class="dv">1</span></span>
+<span id="cb964-2"><a href="boucles.html#cb964-2" aria-hidden="true"></a><span class="cf">repeat</span> {</span>
+<span id="cb964-3"><a href="boucles.html#cb964-3" aria-hidden="true"></a>  i &lt;-<span class="st"> </span>i <span class="op">+</span><span class="st"> </span><span class="dv">1</span></span>
+<span id="cb964-4"><a href="boucles.html#cb964-4" aria-hidden="true"></a>  <span class="cf">if</span>(i <span class="op">==</span><span class="st"> </span><span class="dv">3</span>) <span class="cf">break</span></span>
+<span id="cb964-5"><a href="boucles.html#cb964-5" aria-hidden="true"></a>}</span>
+<span id="cb964-6"><a href="boucles.html#cb964-6" aria-hidden="true"></a>i</span></code></pre></div>
+<pre><code>## [1] 3</code></pre>
+</div>
+<div id="boucles_boucles_next" class="section level3" number="4.1.5">
+<h3><span class="header-section-number">4.1.5</span> L’instruction <code>next</code> … <code>break</code></h3>
+<p>L’instruction <code>next</code> … <code>break</code> autorise de passer immédiatement à l’itération suivante d’une boucle <code>for</code>, <code>while</code> ou <code>repeat</code></p>
+<div class="sourceCode" id="cb966"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb966-1"><a href="boucles.html#cb966-1" aria-hidden="true"></a>resul &lt;-<span class="st"> </span><span class="kw">rep</span>(<span class="ot">NA</span>, <span class="dv">10</span>)</span>
+<span id="cb966-2"><a href="boucles.html#cb966-2" aria-hidden="true"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>) {</span>
+<span id="cb966-3"><a href="boucles.html#cb966-3" aria-hidden="true"></a>  <span class="cf">if</span>(i <span class="op">==</span><span class="st"> </span><span class="dv">5</span>) <span class="cf">next</span></span>
+<span id="cb966-4"><a href="boucles.html#cb966-4" aria-hidden="true"></a>  resul[i] &lt;-<span class="st"> </span>i</span>
+<span id="cb966-5"><a href="boucles.html#cb966-5" aria-hidden="true"></a>}</span>
+<span id="cb966-6"><a href="boucles.html#cb966-6" aria-hidden="true"></a><span class="co"># Le 5e élément de resul est resté non-disponible</span></span>
+<span id="cb966-7"><a href="boucles.html#cb966-7" aria-hidden="true"></a>resul</span></code></pre></div>
+<pre><code>##  [1]  1  2  3  4 NA  6  7  8  9 10</code></pre>
+</div>
+<div id="boucles_boucles_progressbar" class="section level3" number="4.1.6">
+<h3><span class="header-section-number">4.1.6</span> Barre de progression</h3>
+<p>Lorsque l’exécution d’une boucle prend du temps, il peut être intéressant d’avoir une idée de l’état d’avancement des itérations. Pour cela, il est bien sûr possible d’afficher une valeur dans la console à chaque tour, chaque 10 tours, etc.</p>
+<p>La fonction <code>txtProgressBar()</code> du <em>package</em> {<code>utils</code>} permet un affichage d’une barre de progression dans la console. Il suffit de lui fournir une valeur minimale et maximale, et de la mettre à jour à chaque itération. l’argument <code>style</code> autorise de surcroît à choisir un “style” pour la barre. Le style numéro 3 affiche un pourcentage de progression, et est utile lorsque d’autres résultats sont affichés dans la console lors de l’exécution de la boucle, dans la mesure où la barre est de nouveau affichée au complet dans la console si nécessaire.</p>
+<p>Dans l’exemple qui suit, à chacun des dix tours, une pause <span class="math inline">\(0.1\)</span> seconde est effectuée, puis la barre de progression est mise à jour.</p>
+<div class="sourceCode" id="cb968"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb968-1"><a href="boucles.html#cb968-1" aria-hidden="true"></a>nb_tours &lt;-<span class="st"> </span><span class="dv">10</span></span>
+<span id="cb968-2"><a href="boucles.html#cb968-2" aria-hidden="true"></a>p_b &lt;-<span class="st"> </span><span class="kw">txtProgressBar</span>(<span class="dt">min =</span> <span class="dv">1</span>, <span class="dt">max =</span> nb_tours, <span class="dt">style =</span> <span class="dv">3</span>)</span>
+<span id="cb968-3"><a href="boucles.html#cb968-3" aria-hidden="true"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>nb_tours){</span>
+<span id="cb968-4"><a href="boucles.html#cb968-4" aria-hidden="true"></a>  <span class="kw">Sys.sleep</span>(<span class="fl">0.1</span>)</span>
+<span id="cb968-5"><a href="boucles.html#cb968-5" aria-hidden="true"></a>  <span class="kw">setTxtProgressBar</span>(p_b, i)</span>
+<span id="cb968-6"><a href="boucles.html#cb968-6" aria-hidden="true"></a>}</span></code></pre></div>
+<p>Si l’exécution est vraiment longue, et qu’on est impatient de connaître les résultats, il existe de plus une fonction amusante dans le <em>package</em> <code>beepr</code>, qui porte le nom de <code>beep()</code>. Plusieurs sons peuvent être utilisés (voir la page d’aide de la fonction).</p>
+<div class="sourceCode" id="cb969"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb969-1"><a href="boucles.html#cb969-1" aria-hidden="true"></a><span class="kw">library</span>(beepr)</span>
+<span id="cb969-2"><a href="boucles.html#cb969-2" aria-hidden="true"></a><span class="kw">beep</span>(<span class="st">&quot;mario&quot;</span>)</span></code></pre></div>
+</div>
+</div>
+<div id="boucles_vectorisation" class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> La vectorisation</h2>
+<p>Comme indiqué plus haut, les boucles sont des opérations lentes en <code>R</code>. Il est cependant possible, dans de nombreux cas, d’éviter de les employer, en ayant recours à la vectorisation : au lieu d’appliquer une fonction à un scalaire, on l’applique à un vecteur. En fait, nous avons déjà eu recours à maintes reprises aux calculs vectoriels. En effet, lorsque nous avons procédé à des additions, des multiplications, etc. sur des vecteurs, nous avons effectué des calculs vectoriels.</p>
+<p>Empruntons un exemple à <span class="citation">Burns (<a href="#ref-Burns_2011_R" role="doc-biblioref">2011</a>)</span> : dans des langages comme le <code>C</code>, pour effectuer la somme des logarithmes naturels des <span class="math inline">\(n\)</span> premiers entiers, voici une manière de faire :</p>
+<div class="sourceCode" id="cb970"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb970-1"><a href="boucles.html#cb970-1" aria-hidden="true"></a><span class="co"># Somme des logarithmes des 10 premiers entiers</span></span>
+<span id="cb970-2"><a href="boucles.html#cb970-2" aria-hidden="true"></a>somme_log &lt;-<span class="st"> </span><span class="dv">0</span></span>
+<span id="cb970-3"><a href="boucles.html#cb970-3" aria-hidden="true"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="kw">seq_len</span>(<span class="dv">10</span>)){</span>
+<span id="cb970-4"><a href="boucles.html#cb970-4" aria-hidden="true"></a>  somme_log &lt;-<span class="st"> </span>somme_log <span class="op">+</span><span class="st"> </span><span class="kw">log</span>(i)</span>
+<span id="cb970-5"><a href="boucles.html#cb970-5" aria-hidden="true"></a>}</span>
+<span id="cb970-6"><a href="boucles.html#cb970-6" aria-hidden="true"></a>somme_log</span></code></pre></div>
+<pre><code>## [1] 15.10441</code></pre>
+<p>Il est possible d’obtenir le même résultat, à la fois d’une manière plus élégante, mais surtout plus efficace en vectorisant le calcul :</p>
+<div class="sourceCode" id="cb972"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb972-1"><a href="boucles.html#cb972-1" aria-hidden="true"></a><span class="kw">sum</span>(<span class="kw">log</span>(<span class="kw">seq_len</span>(<span class="dv">10</span>)))</span></code></pre></div>
+<pre><code>## [1] 15.10441</code></pre>
+<p>Ou bien, en utilisant l’opérateur Pipe, afin d’éviter la lecture pénible de cette composée de fonctions :</p>
+<div class="sourceCode" id="cb974"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb974-1"><a href="boucles.html#cb974-1" aria-hidden="true"></a><span class="kw">seq_len</span>(<span class="dv">10</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">log</span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">sum</span>()</span></code></pre></div>
+<pre><code>## [1] 15.10441</code></pre>
+<p>Derrière ce code, la fonction <code>log()</code> applique la fonction logarithme sur toutes les valeurs du vecteur donné en argument. La fonction <code>sum()</code>, quant à elle, se charge d’additionner tous les éléments du vecteur qui lui est donné en argument. Ces deux fonctions utilisent la vectorisation, mais d’une manière différente : la fonction <code>log()</code> applique une opération à chaque élément d’un vecteur, tandis que la fonction <code>sum()</code> produit un résultat basé sur la totalité du vecteur. L’avantage d’utiliser des fonctions vectorielles plutôt que d’écrire une boucle pour effectuer le calcul, est que ces premières font appel à des fonctions rédigées en <code>C</code> ou <code>FORTRAN</code>, qui utilisent aussi des boucles, mais comme ce sont des langages compilés et non pas interprétés, les itérations sont réalisées dans un temps réduit.</p>
+<p>Il existe des fonctions, rédigées en <code>C</code> qui effectuent des boucles <code>for</code>. On leur donne souvent le nom de "<em>fonctions de la famille apply</em>’‘. Il ne s’agit pas de la vectorisation, mais ces fonctions sont souvent mentionnées dès que l’on parle de ce sujet. Ce sont des fonctionnelles qui prennent une fonction en <em>input</em> et retournent un vecteur en <em>output</em> <span class="citation">(Wickham <a href="#ref-Wickham_2014_Advanced_R_Functionals" role="doc-biblioref">2014</a>)</span>. Ces fonctions sont très utilisées, mais elles souffrent d’un manque d’uniformité. En effet, elles ont été rédigées par des personnes différentes, ayant chacune leur convention. Le <em>package</em> {<code>plyr</code>} remédie à ce problème, et ajoute par la même occasion des fonctions supplémentaires, pour couvrir plus de cas que les "<em>fonctions de la famille apply</em>’’. Plus récemment, le <em>package</em> {<code>purrr</code>} a également introduit des fonctions de ce type qui seront présentées ici.</p>
+<p>Nous allons donc nous attarder dans un premier temps les fonctions du <em>package</em> {<code>purr</code>}. Puis, afin d’en conserver une trace, sur les fonctions du <em>package</em> {<code>purrr</code>} ainsi que celles du <em>package</em> {<code>base</code>}.</p>
+</div>
+<div id="boucles_vectorisation_purrr" class="section level2" number="4.3">
+<h2><span class="header-section-number">4.3</span> Avec {<code>purrr</code>}</h2>
+<p>Le <em>package</em> {<code>purrr</code>} propose de nombreuses fonctions permettant de manipuler les listes et les tableaux de données. Dans cette partie, nous allons nous concentrer sur les fonctions de ce <em>package</em> qui permettent d’appliquer des opérations sur chaque élément d’une liste ou sur chaque colonne d’un tableau de données. Le nom de ces fonctions commence par le préfixe <code>map</code>. Si la structure du résultat voulu est différente d’une liste, le nom de la fonction à utiliser se poursuit par un suffixe désignant la structure désirée.</p>
+<table>
+<colgroup>
+<col width="27%" />
+<col width="72%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Fonction</th>
+<th align="right">Résultat</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><code>map()</code></td>
+<td align="right">Liste</td>
+</tr>
+<tr class="even">
+<td align="left"><code>map_chr()</code></td>
+<td align="right">Vecteur de caractères</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>map_dbl()</code></td>
+<td align="right">Vecteur de <em>doubles</em></td>
+</tr>
+<tr class="even">
+<td align="left"><code>map_int()</code></td>
+<td align="right">Vecteur d’entiers</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>map_lgl()</code></td>
+<td align="right">Vecteur de booléens</td>
+</tr>
+<tr class="even">
+<td align="left"><code>map_dfr()</code></td>
+<td align="right"><em>data frame</em> créé en concaténant par les lignes (<code>rows</code>) à chaque itération</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>map_dfc()</code></td>
+<td align="right"><em>data frame</em> créé en concaténant par les colonnes (<code>columns</code>) à chaque itération</td>
+</tr>
+</tbody>
+</table>
+<p>Ces fonctions prennent les arguments suivants :</p>
+<ul>
+<li><code>.x</code> : une liste ou un vecteur ;</li>
+<li><code>.f</code> : une fonction, une formule (qui sera transformée automatiquement en fonction) ou un vecteur / une liste ;</li>
+<li><code>...</code> : des arguments additionnels passés à la fonction appliquée à chaque élément.</li>
+</ul>
+<div id="listes-ou-vecteurs-en-input" class="section level3" number="4.3.1">
+<h3><span class="header-section-number">4.3.1</span> Listes ou vecteurs en <em>input</em></h3>
+<p>Lorsque l’on donne une liste ou un vecteur à l’argument <code>.x</code> des fonctions de type <code>map</code>, la fonction (ou la formule) donnée en argument <code>.f</code> est appliquée à chaque élément de la liste ou du vecteur d’entrée. La structure du résultat dépend de la fonction <code>map</code> utilisée, qui est précisée à l’aide du suffixe du nom de la fonction.</p>
+<p>Prenons un exemple. Admettons que l’on dispose d’une liste de longueur 100, dont chaque élément contient 50 valeurs numériques. On peut faire face à ce type de données lorsqu’on souhaite réaliser des simulations par ré-échantillonnage, par exemple. Dans cet exemple, nous aurions au préalable réalisé 100 rééchantillonnage différents. Admettons que l’on souhaite connaître la moyenne de chaque ré-échantillon.</p>
+<p>Dans un premier temps, générons une liste contenant 50 valeurs dans un 100 éléments. Les 50 valeurs seront tirées ici selon une loi Normale dont les arguments sont aléatoirement tirées.</p>
+<div class="sourceCode" id="cb976"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb976-1"><a href="boucles.html#cb976-1" aria-hidden="true"></a><span class="kw">set.seed</span>(<span class="dv">263</span>)</span>
+<span id="cb976-2"><a href="boucles.html#cb976-2" aria-hidden="true"></a>simulations &lt;-<span class="st"> </span><span class="kw">vector</span>(<span class="dt">mode =</span> <span class="st">&quot;list&quot;</span>, <span class="dt">length =</span> <span class="dv">100</span>)</span>
+<span id="cb976-3"><a href="boucles.html#cb976-3" aria-hidden="true"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="kw">length</span>(simulations)){</span>
+<span id="cb976-4"><a href="boucles.html#cb976-4" aria-hidden="true"></a>  simulations[[i]] &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span class="dt">n =</span> <span class="dv">50</span>,</span>
+<span id="cb976-5"><a href="boucles.html#cb976-5" aria-hidden="true"></a>                            <span class="dt">mean =</span> <span class="kw">sample</span>(<span class="op">-</span><span class="dv">10</span><span class="op">:</span><span class="dv">10</span>, <span class="dv">1</span>),</span>
+<span id="cb976-6"><a href="boucles.html#cb976-6" aria-hidden="true"></a>                            <span class="dt">sd =</span> <span class="kw">runif</span>(<span class="dv">1</span>, <span class="dt">min=</span><span class="dv">1</span>, <span class="dt">max =</span> <span class="dv">5</span>))</span>
+<span id="cb976-7"><a href="boucles.html#cb976-7" aria-hidden="true"></a>}</span>
+<span id="cb976-8"><a href="boucles.html#cb976-8" aria-hidden="true"></a><span class="kw">length</span>(simulations)</span></code></pre></div>
+<pre><code>## [1] 100</code></pre>
+<div class="sourceCode" id="cb978"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb978-1"><a href="boucles.html#cb978-1" aria-hidden="true"></a><span class="kw">head</span>(simulations[[<span class="dv">1</span>]])</span></code></pre></div>
+<pre><code>## [1] -10.233237  -8.904499 -10.737834  -7.454745  -9.909407  -8.800618</code></pre>
+<p>Nous souhaitons donc calculer la moyenne de chacun des 100 éléments de cette liste. Avec une boucle <code>for</code>, on pourrait faire comme suit :</p>
+<div class="sourceCode" id="cb980"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb980-1"><a href="boucles.html#cb980-1" aria-hidden="true"></a>mean_samples &lt;-<span class="st"> </span><span class="kw">vector</span>(<span class="dt">mode=</span><span class="st">&quot;numeric&quot;</span>, <span class="dt">length =</span> <span class="dv">100</span>)</span>
+<span id="cb980-2"><a href="boucles.html#cb980-2" aria-hidden="true"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="kw">length</span>(simulations)) </span>
+<span id="cb980-3"><a href="boucles.html#cb980-3" aria-hidden="true"></a>  mean_samples[[i]] &lt;-<span class="st"> </span><span class="kw">mean</span>(simulations[[i]])</span>
+<span id="cb980-4"><a href="boucles.html#cb980-4" aria-hidden="true"></a></span>
+<span id="cb980-5"><a href="boucles.html#cb980-5" aria-hidden="true"></a><span class="kw">head</span>(mean_samples)</span></code></pre></div>
+<pre><code>## [1] -10.220707   9.918496  -8.248388  -6.879007  -7.120338  -7.047220</code></pre>
+<p>De manière équivalente, et avec un temps d’exécution comparable, on peut utiliser une des fonctions du <em>package</em> {<code>purrr</code>}. Ici, nous voulons appliquer à une liste en entrée, une fonction (<code>mean()</code>) sur chacun des éléments, puis obtenir le résultat final sous la forme d’un vecteur de numériques. Nous pouvons de fait utiliser la fonction <code>map_dbl()</code> comme suit :</p>
+<div class="sourceCode" id="cb982"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb982-1"><a href="boucles.html#cb982-1" aria-hidden="true"></a>mean_samples_<span class="dv">2</span> &lt;-<span class="st"> </span><span class="kw">map_dbl</span>(simulations, mean)</span>
+<span id="cb982-2"><a href="boucles.html#cb982-2" aria-hidden="true"></a><span class="kw">head</span>(mean_samples_<span class="dv">2</span>)</span></code></pre></div>
+<pre><code>## [1] -10.220707   9.918496  -8.248388  -6.879007  -7.120338  -7.047220</code></pre>
+<p>Cette méthode a l’avantage de produire un code plus élégant et plus rapide à lire.</p>
+<p>On peut également faire appel à l’opérateur Pipe pour rendre la lecture encore plus aisée :</p>
+<div class="sourceCode" id="cb984"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb984-1"><a href="boucles.html#cb984-1" aria-hidden="true"></a>mean_samples_<span class="dv">2</span> &lt;-<span class="st"> </span></span>
+<span id="cb984-2"><a href="boucles.html#cb984-2" aria-hidden="true"></a><span class="st">  </span>simulations <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb984-3"><a href="boucles.html#cb984-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">map_dbl</span>(mean)</span></code></pre></div>
+<p>Admettons maintenant que nous voulons calculer le premier quartile empirique de chaque élément de <code>simulations</code>. Pour ce faire, il faut appliquer la fonction <code>quantile()</code>, en précisant à l’aide de l’argument <code>probs</code> que nous voulons le quantile d’ordre 0.25. Si on désire utiliser la fonction <code>map_dbl()</code>, il faut ajouter un argument à cette dernière pour que celui-ci soit transmis à la fonction <code>quantile()</code> (il s’agit de fait d’appeler l’argument <code>...</code> de la fonction <code>map_dbl()</code>).</p>
+<div class="sourceCode" id="cb985"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb985-1"><a href="boucles.html#cb985-1" aria-hidden="true"></a>simulations <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb985-2"><a href="boucles.html#cb985-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">map_dbl</span>(quantile, <span class="dt">probs =</span> <span class="fl">.25</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb985-3"><a href="boucles.html#cb985-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">head</span>()</span></code></pre></div>
+<pre><code>## [1] -11.110399   8.129051 -11.295354  -8.150094  -9.325573  -8.541390</code></pre>
+<p>Si à présent, nous souhaitons appliquer plusieurs fonctions à chaque élément de notre liste et récupérer le résultat sous la forme d’un tableau de données, on peut utiliser la fonction <code>map_df()</code>. Admettons que l’on souhaite obtenir, pour chaque élément, la moyenne des valeurs, le premier et le troisième quartiles. On peut procéder comme suit :</p>
+<div class="sourceCode" id="cb987"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb987-1"><a href="boucles.html#cb987-1" aria-hidden="true"></a>simulations <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb987-2"><a href="boucles.html#cb987-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">map_df</span>(<span class="cf">function</span>(x){</span>
+<span id="cb987-3"><a href="boucles.html#cb987-3" aria-hidden="true"></a>    <span class="kw">tibble</span>(<span class="dt">mean =</span> <span class="kw">mean</span>(x),</span>
+<span id="cb987-4"><a href="boucles.html#cb987-4" aria-hidden="true"></a>           <span class="dt">q1 =</span> <span class="kw">quantile</span>(x, <span class="dt">probs =</span> <span class="fl">.25</span>),</span>
+<span id="cb987-5"><a href="boucles.html#cb987-5" aria-hidden="true"></a>           <span class="dt">q3 =</span> <span class="kw">quantile</span>(x, <span class="dt">probs =</span> <span class="fl">.75</span>))</span>
+<span id="cb987-6"><a href="boucles.html#cb987-6" aria-hidden="true"></a>  })</span></code></pre></div>
+<pre><code>## # A tibble: 100 x 3
+##      mean      q1    q3
+##     &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;
+##  1 -10.2  -11.1   -9.37
+##  2   9.92   8.13  12.0 
+##  3  -8.25 -11.3   -5.24
+##  4  -6.88  -8.15  -5.33
+##  5  -7.12  -9.33  -5.17
+##  6  -7.05  -8.54  -5.38
+##  7   4.93   3.44   6.22
+##  8   1.74   0.946  2.52
+##  9  -4.57  -6.14  -2.94
+## 10   9.12   5.77  12.1 
+## # … with 90 more rows</code></pre>
+<p>Dans l’exemple précédent, à chaque itération, les fonctions <code>mean()</code> et <code>quantile()</code> ont été évaluées sur l’élément courant que nous avons décidé d’appeler <code>x</code>. Le résultat de l’évaluation de ces fonctions a été, à chaque itération, consigné dans un tableau, à l’aide de la fonction <code>tibble()</code>.</p>
+<p>Afin d’éviter de devoir écrire <code>function(x)</code>, il est possible d’utiliser un raccourci : <code>~</code>. L’élément courant auquel on applique une fonction est alors désigné par le symbole <code>.</code> :</p>
+<div class="sourceCode" id="cb989"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb989-1"><a href="boucles.html#cb989-1" aria-hidden="true"></a>simulations <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb989-2"><a href="boucles.html#cb989-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">map_df</span>(<span class="op">~</span><span class="kw">tibble</span>(</span>
+<span id="cb989-3"><a href="boucles.html#cb989-3" aria-hidden="true"></a>    <span class="dt">mean =</span> <span class="kw">mean</span>(.),</span>
+<span id="cb989-4"><a href="boucles.html#cb989-4" aria-hidden="true"></a>           <span class="dt">q1 =</span> <span class="kw">quantile</span>(., <span class="dt">probs =</span> <span class="fl">.25</span>),</span>
+<span id="cb989-5"><a href="boucles.html#cb989-5" aria-hidden="true"></a>           <span class="dt">q3 =</span> <span class="kw">quantile</span>(., <span class="dt">probs =</span> <span class="fl">.75</span>)</span>
+<span id="cb989-6"><a href="boucles.html#cb989-6" aria-hidden="true"></a>  ))</span></code></pre></div>
+<pre><code>## # A tibble: 100 x 3
+##      mean      q1    q3
+##     &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;
+##  1 -10.2  -11.1   -9.37
+##  2   9.92   8.13  12.0 
+##  3  -8.25 -11.3   -5.24
+##  4  -6.88  -8.15  -5.33
+##  5  -7.12  -9.33  -5.17
+##  6  -7.05  -8.54  -5.38
+##  7   4.93   3.44   6.22
+##  8   1.74   0.946  2.52
+##  9  -4.57  -6.14  -2.94
+## 10   9.12   5.77  12.1 
+## # … with 90 more rows</code></pre>
+<p>On peut noter que dans le résultat final, les tableaux créés à chaque itération ont été collés par lignes. C’est le cas puisque nous avons fait appel à la fonction <code>map_df()</code>. Si en revanche on supprime le suffixe <code>_df()</code> de cette fonction, et que nous utilions uniquement <code>map()</code>, alors le résultat final sera rétribué dans une liste de la même longueur que celle donnée en <em>input</em> à l’argument <code>.x</code> (c’est-à-dire <code>simulations</code> dans notre exemple) :</p>
+<div class="sourceCode" id="cb991"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb991-1"><a href="boucles.html#cb991-1" aria-hidden="true"></a>tmp &lt;-<span class="st"> </span></span>
+<span id="cb991-2"><a href="boucles.html#cb991-2" aria-hidden="true"></a><span class="st">  </span>simulations <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb991-3"><a href="boucles.html#cb991-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">map</span>(<span class="op">~</span><span class="kw">tibble</span>(</span>
+<span id="cb991-4"><a href="boucles.html#cb991-4" aria-hidden="true"></a>    <span class="dt">mean =</span> <span class="kw">mean</span>(.),</span>
+<span id="cb991-5"><a href="boucles.html#cb991-5" aria-hidden="true"></a>    <span class="dt">q1 =</span> <span class="kw">quantile</span>(., <span class="dt">probs =</span> <span class="fl">.25</span>),</span>
+<span id="cb991-6"><a href="boucles.html#cb991-6" aria-hidden="true"></a>    <span class="dt">q3 =</span> <span class="kw">quantile</span>(., <span class="dt">probs =</span> <span class="fl">.75</span>))</span>
+<span id="cb991-7"><a href="boucles.html#cb991-7" aria-hidden="true"></a>  )</span>
+<span id="cb991-8"><a href="boucles.html#cb991-8" aria-hidden="true"></a><span class="kw">length</span>(tmp)</span></code></pre></div>
+<pre><code>## [1] 100</code></pre>
+<div class="sourceCode" id="cb993"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb993-1"><a href="boucles.html#cb993-1" aria-hidden="true"></a>tmp[[<span class="dv">1</span>]]</span></code></pre></div>
+<pre><code>## # A tibble: 1 x 3
+##    mean    q1    q3
+##   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+## 1 -10.2 -11.1 -9.37</code></pre>
+</div>
+<div id="tibbles-en-input" class="section level3" number="4.3.2">
+<h3><span class="header-section-number">4.3.2</span> Tibbles en <em>input</em></h3>
+<p>À présent, considérons le cas où l’objet donné en entrée aux fonctions de type <code>map</code> est un tableau de données. Dans ce cas, la fonction (ou la formule) donnée à l’argument <code>.f</code> de la fonction de type <code>map</code> sera appliquée à chacune des colonnes du tableau de données.</p>
+<p>Par exemple, pour connaître la moyenne des colonnes de type numérique dans le tableau de données <code>iris</code>, on peut dans un premier temps sélectionner uniquement les colonnes numériques à l’aide de la fonction <code>select_if()</code> en précisant que l’on souhaite conserver uniquement les colonnes pour lesquelles l’application de la fonction <code>is.numeric()</code> retournerala valeur <code>TRUE</code>. Ensuite, si on applique la fonction <code>map_df()</code> au tableau de données <code>iris</code> dont seules les colonnes numériques ont été conservées, en fournissant à l’argument <code>.f</code> la fonction <code>mean()</code>, on obtient la moyenne pour chaque colonne de ce tableau :</p>
+<div class="sourceCode" id="cb995"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb995-1"><a href="boucles.html#cb995-1" aria-hidden="true"></a>iris <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb995-2"><a href="boucles.html#cb995-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">select_if</span>(is.numeric) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb995-3"><a href="boucles.html#cb995-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">map_df</span>(mean)</span></code></pre></div>
+<pre><code>## # A tibble: 1 x 4
+##   Sepal.Length Sepal.Width Petal.Length Petal.Width
+##          &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt;       &lt;dbl&gt;
+## 1         5.84        3.06         3.76        1.20</code></pre>
+<p>Si on applique une fonction à l’aide de <code>map()</code> aux colonnes d’un tableau de données, et que cette fonction retourne plusieurs valeurs, il est possible de faire à nouveau appel à une fonction de type <code>map</code> sur le résultat pour extraire un des résultats. Admettons par exemple que l’on souhaite effectuer un test de normalité sur chacune des colonnes (numériques) du tableau de données <code>iris</code>, puis extraire la valeur-p associée au test (en effectuant, par exemple un test de Shapiro-Wilk). La valeur-p est stocjée dans un élément du résutat retourné par la fonction <code>shapiro.test()</code> nommé <code>p.value</code></p>
+<div class="sourceCode" id="cb997"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb997-1"><a href="boucles.html#cb997-1" aria-hidden="true"></a>iris <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb997-2"><a href="boucles.html#cb997-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">select_if</span>(is.numeric) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb997-3"><a href="boucles.html#cb997-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">map</span>(shapiro.test) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb997-4"><a href="boucles.html#cb997-4" aria-hidden="true"></a><span class="st">  </span><span class="kw">map_dbl</span>(<span class="st">&quot;p.value&quot;</span>)</span></code></pre></div>
+<pre><code>## Sepal.Length  Sepal.Width Petal.Length  Petal.Width 
+## 1.018116e-02 1.011543e-01 7.412263e-10 1.680465e-08</code></pre>
+<p>Comme avec les listes (cf plus haut), il est possible d’appliquer plusieurs fonctions à chaque colonne du tableau de données et de retourner sous la forme d’un tibble chaque sous-résultat. On peut par ailleurs ajouter à la fonction <code>map_df()</code> l’argument <code>.id</code> auquel on indique la valeur <code>"variable"</code> pour faire figurer une colonne indiquant le nom de chaque colonne.</p>
+<div class="sourceCode" id="cb999"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb999-1"><a href="boucles.html#cb999-1" aria-hidden="true"></a>iris <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb999-2"><a href="boucles.html#cb999-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">select_if</span>(is.numeric) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb999-3"><a href="boucles.html#cb999-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">map_df</span>(<span class="op">~</span><span class="kw">tibble</span>(</span>
+<span id="cb999-4"><a href="boucles.html#cb999-4" aria-hidden="true"></a>    <span class="dt">mean =</span> <span class="kw">mean</span>(.),</span>
+<span id="cb999-5"><a href="boucles.html#cb999-5" aria-hidden="true"></a>    <span class="dt">q1 =</span> <span class="kw">quantile</span>(., <span class="dt">probs =</span> <span class="fl">.25</span>),</span>
+<span id="cb999-6"><a href="boucles.html#cb999-6" aria-hidden="true"></a>    <span class="dt">q3 =</span> <span class="kw">quantile</span>(., <span class="dt">probs =</span> <span class="fl">.75</span>)</span>
+<span id="cb999-7"><a href="boucles.html#cb999-7" aria-hidden="true"></a>    ),</span>
+<span id="cb999-8"><a href="boucles.html#cb999-8" aria-hidden="true"></a>    <span class="dt">.id =</span> <span class="st">&quot;variable&quot;</span></span>
+<span id="cb999-9"><a href="boucles.html#cb999-9" aria-hidden="true"></a>  )</span></code></pre></div>
+<pre><code>## # A tibble: 4 x 4
+##   variable      mean    q1    q3
+##   &lt;chr&gt;        &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+## 1 Sepal.Length  5.84   5.1   6.4
+## 2 Sepal.Width   3.06   2.8   3.3
+## 3 Petal.Length  3.76   1.6   5.1
+## 4 Petal.Width   1.20   0.3   1.8</code></pre>
+<p>Evidemment, il est possible d’appliquer certaines fonctions sur des variables factorielles. Par exemple, si on désire connaître le nombre de valeurs distinctes pour chaque variable catégorielle d’un tableau de données :</p>
+<div class="sourceCode" id="cb1001"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1001-1"><a href="boucles.html#cb1001-1" aria-hidden="true"></a>iris <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb1001-2"><a href="boucles.html#cb1001-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">select_if</span>(is.factor) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb1001-3"><a href="boucles.html#cb1001-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">map_df</span>(<span class="op">~</span><span class="kw">tibble</span>(</span>
+<span id="cb1001-4"><a href="boucles.html#cb1001-4" aria-hidden="true"></a>    <span class="dt">n_dist =</span> <span class="kw">n_distinct</span>(.),</span>
+<span id="cb1001-5"><a href="boucles.html#cb1001-5" aria-hidden="true"></a>    <span class="dt">class =</span> <span class="kw">class</span>(.x)</span>
+<span id="cb1001-6"><a href="boucles.html#cb1001-6" aria-hidden="true"></a>    ),</span>
+<span id="cb1001-7"><a href="boucles.html#cb1001-7" aria-hidden="true"></a>  <span class="dt">.id =</span> <span class="st">&quot;variable&quot;</span></span>
+<span id="cb1001-8"><a href="boucles.html#cb1001-8" aria-hidden="true"></a>  )</span></code></pre></div>
+<pre><code>## # A tibble: 0 x 0</code></pre>
+<p>Astuce : pour connaître le type de données de chaque colonne, on peut faire appel à la fonction <code>map_chr()</code> en appelant la fonction <code>class()</code> sur chaque colonne :</p>
+<div class="sourceCode" id="cb1003"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1003-1"><a href="boucles.html#cb1003-1" aria-hidden="true"></a>iris <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">map_chr</span>(class)</span></code></pre></div>
+<pre><code>## Sepal.Length  Sepal.Width Petal.Length  Petal.Width      Species 
+##    &quot;numeric&quot;    &quot;numeric&quot;    &quot;numeric&quot;    &quot;numeric&quot;  &quot;character&quot;</code></pre>
+</div>
+</div>
+<div id="boucles_vectorisation_plyr" class="section level2" number="4.4">
+<h2><span class="header-section-number">4.4</span> Avec {<code>plyr</code>}</h2>
+<p>Les fonctions que nous allons aborder dans cette section possèdent des noms faciles à se remémorer : la première lettre correspond au format d’entrée des données, la seconde au format de sortie souhaité, et la fin du nom se termine par le suffixe <code>ply</code> . Ainsi, la fonction <code>llapply()</code> prend en entrée une liste, effectue une opération sur les éléments, et retourne une liste <span class="citation">(Anderson <a href="#ref-Anderson_2012_A_Quick" role="doc-biblioref">2012</a>)</span>.</p>
+<p>Les différentes fonctions que nous allons passer en revue sont consignées dans le tableau ci-dessous, où les lignes correspondent aux formats d’entrée, et les lignes aux formats de sortie. Pour y avoir accès, il est possible de charger le <em>package</em>. Il est également possible de faire précéder l’appel des fonctions par le nom du <em>package</em> (il existe de nombreux conflits de noms de fonctions entre celle de {<code>plyr</code>} et d’autres <em>packages</em>…)</p>
+<table>
+<thead>
+<tr class="header">
+<th>Type</th>
+<th align="center"><code>array</code></th>
+<th align="center"><code>data.frame</code></th>
+<th align="center"><code>list</code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>array</code></td>
+<td align="center"><code>aaply()</code></td>
+<td align="center"><code>adply()</code></td>
+<td align="center"><code>alply()</code></td>
+</tr>
+<tr class="even">
+<td><code>data.frame</code></td>
+<td align="center"><code>daply()</code></td>
+<td align="center"><code>ddply()</code></td>
+<td align="center"><code>dlply()</code></td>
+</tr>
+<tr class="odd">
+<td><code>list</code></td>
+<td align="center"><code>laply()</code></td>
+<td align="center"><code>ldply()</code></td>
+<td align="center"><code>llply()</code></td>
+</tr>
+</tbody>
+</table>
+
+<div class="remarque">
+Il est possible d’avoir plusieurs arguments en <code>input</code> au lieu d’un seul objet. Les fonctions <code>mlply()</code>, <code>mdply()</code> et <code>maply()</code> s’en chargent. Si à la place du <code>m</code>, la première lettre est un <code>r</code>, il s’agit alors de fonction de réplications. Enfin, si la seconde lettre est un trait de soulignement (<code>_</code>), alors le résultat retourné n’est pas affiché (le code utilise la fonction <code>invisible()</code>).
+</div>
+<p>Tous les arguments de ces fonctions commencent par un point (<code>.</code>), afin d’éviter des incompatibilités avec la fonction à appliquer.</p>
+<div id="boucles_vectorisation_plyr_a_ply" class="section level3" number="4.4.1">
+<h3><span class="header-section-number">4.4.1</span> Array en <em>input</em></h3>
+<p>Les fonctions <code>aaply()</code>, <code>adply()</code> et <code>alply()</code> appliquent une fonction à chaque portion d’un <em>array</em> et ensuitent joignent le résultat sous forme d’un <em>array</em>, d’un <em>data frame</em> ou d’une <em>list</em> respectivement.</p>
+<p>l’argument <code>.margins</code> détermine la manière de découper le tableau. Il y en a quatre pour un tableau en deux dimensions :</p>
+<ol style="list-style-type: decimal">
+<li><code>.margins = 1</code> : par lignes ;</li>
+<li><code>.margins = 2</code> : par colonnes ;</li>
+<li><code>.margins = c(1,2)</code> : par cellule ;</li>
+<li><code>.margins = c()</code> : ne pas faire de découpement.</li>
+</ol>
+<p>Pour un tableau en trois dimensions, il y a trois découpages possibles en deux dimensions, trois en une dimension et une en zéro dimension (voir <span class="citation">Wickham (<a href="#ref-Wickham_2011_Split" role="doc-biblioref">2011</a>)</span>) au besoin.</p>
+<div class="sourceCode" id="cb1005"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1005-1"><a href="boucles.html#cb1005-1" aria-hidden="true"></a>tableau &lt;-<span class="st"> </span><span class="kw">array</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">24</span>, <span class="dt">dim =</span> <span class="kw">c</span>(<span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">2</span>),</span>
+<span id="cb1005-2"><a href="boucles.html#cb1005-2" aria-hidden="true"></a>                 <span class="dt">dimnames =</span> <span class="kw">list</span>(<span class="dt">ligne =</span> letters[<span class="dv">1</span><span class="op">:</span><span class="dv">3</span>],</span>
+<span id="cb1005-3"><a href="boucles.html#cb1005-3" aria-hidden="true"></a>                                 <span class="dt">colonne =</span> LETTERS[<span class="dv">1</span><span class="op">:</span><span class="dv">4</span>],</span>
+<span id="cb1005-4"><a href="boucles.html#cb1005-4" aria-hidden="true"></a>                                 <span class="dt">annee =</span> <span class="dv">2001</span><span class="op">:</span><span class="dv">2002</span>))</span>
+<span id="cb1005-5"><a href="boucles.html#cb1005-5" aria-hidden="true"></a>tableau</span></code></pre></div>
+<pre><code>## , , annee = 2001
+## 
+##      colonne
+## ligne A B C  D
+##     a 1 4 7 10
+##     b 2 5 8 11
+##     c 3 6 9 12
+## 
+## , , annee = 2002
+## 
+##      colonne
+## ligne  A  B  C  D
+##     a 13 16 19 22
+##     b 14 17 20 23
+##     c 15 18 21 24</code></pre>
+<div class="sourceCode" id="cb1007"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1007-1"><a href="boucles.html#cb1007-1" aria-hidden="true"></a><span class="co"># La moyenne des valeurs pour chaque ligne</span></span>
+<span id="cb1007-2"><a href="boucles.html#cb1007-2" aria-hidden="true"></a>plyr<span class="op">::</span><span class="kw">aaply</span>(tableau, <span class="dv">1</span>, mean) <span class="co"># résultat sous forme de tableau</span></span></code></pre></div>
+<pre><code>##    a    b    c 
+## 11.5 12.5 13.5</code></pre>
+<div class="sourceCode" id="cb1009"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1009-1"><a href="boucles.html#cb1009-1" aria-hidden="true"></a>plyr<span class="op">::</span><span class="kw">adply</span>(tableau, <span class="dv">1</span>, mean) <span class="co"># résultat sous forme de liste</span></span></code></pre></div>
+<pre><code>##   ligne   V1
+## 1     a 11.5
+## 2     b 12.5
+## 3     c 13.5</code></pre>
+<div class="sourceCode" id="cb1011"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1011-1"><a href="boucles.html#cb1011-1" aria-hidden="true"></a>plyr<span class="op">::</span><span class="kw">alply</span>(tableau, <span class="dv">1</span>, mean) <span class="co"># résultat sous forme de liste</span></span></code></pre></div>
+<pre><code>## $`1`
+## [1] 11.5
+## 
+## $`2`
+## [1] 12.5
+## 
+## $`3`
+## [1] 13.5
+## 
+## attr(,&quot;split_type&quot;)
+## [1] &quot;array&quot;
+## attr(,&quot;split_labels&quot;)
+##   ligne
+## 1     a
+## 2     b
+## 3     c</code></pre>
+<div class="sourceCode" id="cb1013"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1013-1"><a href="boucles.html#cb1013-1" aria-hidden="true"></a><span class="co"># La moyenne des valeurs pour chaque longitude</span></span>
+<span id="cb1013-2"><a href="boucles.html#cb1013-2" aria-hidden="true"></a><span class="co"># en ne simplifiant pas le résultat</span></span>
+<span id="cb1013-3"><a href="boucles.html#cb1013-3" aria-hidden="true"></a>plyr<span class="op">::</span><span class="kw">aaply</span>(tableau, <span class="dv">2</span>, mean, <span class="dt">.drop =</span> <span class="ot">FALSE</span>)</span></code></pre></div>
+<pre><code>##        
+## colonne  1
+##       A  8
+##       B 11
+##       C 14
+##       D 17</code></pre>
+<div class="sourceCode" id="cb1015"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1015-1"><a href="boucles.html#cb1015-1" aria-hidden="true"></a><span class="co"># Par lignes et colonnes</span></span>
+<span id="cb1015-2"><a href="boucles.html#cb1015-2" aria-hidden="true"></a>plyr<span class="op">::</span><span class="kw">aaply</span>(tableau, <span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>), mean)</span></code></pre></div>
+<pre><code>##      colonne
+## ligne A  B  C  D
+##     a 7 10 13 16
+##     b 8 11 14 17
+##     c 9 12 15 18</code></pre>
+<div class="sourceCode" id="cb1017"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1017-1"><a href="boucles.html#cb1017-1" aria-hidden="true"></a>plyr<span class="op">::</span><span class="kw">adply</span>(tableau, <span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>), mean)</span></code></pre></div>
+<pre><code>##    ligne colonne V1
+## 1      a       A  7
+## 2      b       A  8
+## 3      c       A  9
+## 4      a       B 10
+## 5      b       B 11
+## 6      c       B 12
+## 7      a       C 13
+## 8      b       C 14
+## 9      c       C 15
+## 10     a       D 16
+## 11     b       D 17
+## 12     c       D 18</code></pre>
+<div class="sourceCode" id="cb1019"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1019-1"><a href="boucles.html#cb1019-1" aria-hidden="true"></a><span class="co"># L&#39;affichage prend beaucoup de place</span></span>
+<span id="cb1019-2"><a href="boucles.html#cb1019-2" aria-hidden="true"></a><span class="co"># alply(tableau, c(1,2), mean)</span></span>
+<span id="cb1019-3"><a href="boucles.html#cb1019-3" aria-hidden="true"></a></span>
+<span id="cb1019-4"><a href="boucles.html#cb1019-4" aria-hidden="true"></a><span class="co"># Avec une fonction définie par l&#39;utilisateur</span></span>
+<span id="cb1019-5"><a href="boucles.html#cb1019-5" aria-hidden="true"></a>standardise &lt;-<span class="st"> </span><span class="cf">function</span>(x) (x <span class="op">-</span><span class="st"> </span><span class="kw">min</span>(x)) <span class="op">/</span><span class="st"> </span>(<span class="kw">max</span>(x) <span class="op">-</span><span class="st"> </span><span class="kw">min</span>(x))</span>
+<span id="cb1019-6"><a href="boucles.html#cb1019-6" aria-hidden="true"></a><span class="co"># Standardiser les valeurs par colonne</span></span>
+<span id="cb1019-7"><a href="boucles.html#cb1019-7" aria-hidden="true"></a>plyr<span class="op">::</span><span class="kw">aaply</span>(tableau, <span class="dv">2</span>, standardise)</span></code></pre></div>
+<pre><code>## , , annee = 2001
+## 
+##        ligne
+## colonne a          b         c
+##       A 0 0.07142857 0.1428571
+##       B 0 0.07142857 0.1428571
+##       C 0 0.07142857 0.1428571
+##       D 0 0.07142857 0.1428571
+## 
+## , , annee = 2002
+## 
+##        ligne
+## colonne         a         b c
+##       A 0.8571429 0.9285714 1
+##       B 0.8571429 0.9285714 1
+##       C 0.8571429 0.9285714 1
+##       D 0.8571429 0.9285714 1</code></pre>
+</div>
+<div id="boucles_vectorisation_plyr_d_ply" class="section level3" number="4.4.2">
+<h3><span class="header-section-number">4.4.2</span> <em>Data frame</em> en <em>input</em></h3>
+<p>En économétrie, les <em>data frames</em> sont très présents. Aussi, la connaissance des fonction <code>daply()</code>, <code>ddply()</code> et <code>dlply()</code> s’avère pratique. En effet, elles sont très utiles pour appliquer des fonctions à des groupes basés sur des combinaisons de variables. Actuellement, il est toutefois, selon moi, plus pratique d’avoir recours aux fonctions du <em>package</em> {<code>dplyr</code>} (<code>group_by()</code>, <code>summarise()</code>, <code>mutate()</code>, …, comme présentées dans la Section @ref(tableaux_de_donnees)). À titre informatif, ces notes de cours présentent toutefois les fonctions du <em>package</em> {<code>plyr</code>}.</p>
+<p>Avec les fonctions <code>d*ply()</code>, il est nécessaire d’indiquer quelles variables, ou fonctions de variables on souhaite utiliser, en l’indiquant à l’argument <code>.variables</code>. Elles peuvent être contenue dans le <em>data frame</em> fourni à l’argument <code>.data</code>, ou bien provenir de l’environnement global. <code>R</code> cherchera dans un premier temps si la variable est contenue dans le <em>data frame</em>, et, s’il ne trouve pas, ira chercher dans l’environnement global.</p>
+<p>Pour indiquer que l’on désire faire le regroupement selon une variable — mettons <code>variable_1</code> — il faudra fournir l’expression <code>.(variable_1)</code> à l’argument <code>.variables</code>. Si on souhaite effectuer les regroupement selon les interactions de plusieurs variables — <code>variable_1</code>, <code>variable_2</code> et <code>variable_3</code>, il faut alors utiliser l’expression suivante : <code>.(variable_1, variable_2, variable_3)</code>.</p>
+<div class="sourceCode" id="cb1021"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1021-1"><a href="boucles.html#cb1021-1" aria-hidden="true"></a>chomage &lt;-<span class="st"> </span></span>
+<span id="cb1021-2"><a href="boucles.html#cb1021-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">tibble</span>(<span class="dt">region =</span> <span class="kw">rep</span>(<span class="kw">c</span>(<span class="kw">rep</span>(<span class="st">&quot;Bretagne&quot;</span>, <span class="dv">4</span>), <span class="kw">rep</span>(<span class="st">&quot;Corse&quot;</span>, <span class="dv">2</span>)), <span class="dv">2</span>),</span>
+<span id="cb1021-3"><a href="boucles.html#cb1021-3" aria-hidden="true"></a>         <span class="dt">departement =</span> <span class="kw">rep</span>(<span class="kw">c</span>(<span class="st">&quot;Cotes-d&#39;Armor&quot;</span>, <span class="st">&quot;Finistere&quot;</span>,</span>
+<span id="cb1021-4"><a href="boucles.html#cb1021-4" aria-hidden="true"></a>                             <span class="st">&quot;Ille-et-Vilaine&quot;</span>, <span class="st">&quot;Morbihan&quot;</span>,</span>
+<span id="cb1021-5"><a href="boucles.html#cb1021-5" aria-hidden="true"></a>                             <span class="st">&quot;Corse-du-Sud&quot;</span>, <span class="st">&quot;Haute-Corse&quot;</span>), <span class="dv">2</span>),</span>
+<span id="cb1021-6"><a href="boucles.html#cb1021-6" aria-hidden="true"></a>         <span class="dt">annee =</span> <span class="kw">rep</span>(<span class="kw">c</span>(<span class="dv">2011</span>, <span class="dv">2010</span>), <span class="dt">each =</span> <span class="dv">6</span>),</span>
+<span id="cb1021-7"><a href="boucles.html#cb1021-7" aria-hidden="true"></a>         <span class="dt">ouvriers =</span> <span class="kw">c</span>(<span class="dv">8738</span>, <span class="dv">12701</span>, <span class="dv">11390</span>, <span class="dv">10228</span>, <span class="dv">975</span>, <span class="dv">1297</span>,</span>
+<span id="cb1021-8"><a href="boucles.html#cb1021-8" aria-hidden="true"></a>                      <span class="dv">8113</span>, <span class="dv">12258</span>, <span class="dv">10897</span>, <span class="dv">9617</span>, <span class="dv">936</span>, <span class="dv">1220</span>),</span>
+<span id="cb1021-9"><a href="boucles.html#cb1021-9" aria-hidden="true"></a>         <span class="dt">ingenieurs =</span> <span class="kw">c</span>(<span class="dv">1420</span>, <span class="dv">2530</span>, <span class="dv">3986</span>, <span class="dv">2025</span>, <span class="dv">259</span>, <span class="dv">254</span>,</span>
+<span id="cb1021-10"><a href="boucles.html#cb1021-10" aria-hidden="true"></a>                        <span class="dv">1334</span>, <span class="dv">2401</span>, <span class="dv">3776</span>, <span class="dv">1979</span>, <span class="dv">253</span>, <span class="dv">241</span>))</span>
+<span id="cb1021-11"><a href="boucles.html#cb1021-11" aria-hidden="true"></a></span>
+<span id="cb1021-12"><a href="boucles.html#cb1021-12" aria-hidden="true"></a>chomage</span></code></pre></div>
+<pre><code>## # A tibble: 12 x 5
+##    region   departement     annee ouvriers ingenieurs
+##    &lt;chr&gt;    &lt;chr&gt;           &lt;dbl&gt;    &lt;dbl&gt;      &lt;dbl&gt;
+##  1 Bretagne Cotes-d&#39;Armor    2011     8738       1420
+##  2 Bretagne Finistere        2011    12701       2530
+##  3 Bretagne Ille-et-Vilaine  2011    11390       3986
+##  4 Bretagne Morbihan         2011    10228       2025
+##  5 Corse    Corse-du-Sud     2011      975        259
+##  6 Corse    Haute-Corse      2011     1297        254
+##  7 Bretagne Cotes-d&#39;Armor    2010     8113       1334
+##  8 Bretagne Finistere        2010    12258       2401
+##  9 Bretagne Ille-et-Vilaine  2010    10897       3776
+## 10 Bretagne Morbihan         2010     9617       1979
+## 11 Corse    Corse-du-Sud     2010      936        253
+## 12 Corse    Haute-Corse      2010     1220        241</code></pre>
+<div class="sourceCode" id="cb1023"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1023-1"><a href="boucles.html#cb1023-1" aria-hidden="true"></a><span class="co"># Total chomeurs en Bretagne et en Corse pour les années 2010 et 2011</span></span>
+<span id="cb1023-2"><a href="boucles.html#cb1023-2" aria-hidden="true"></a><span class="co"># Sous forme de data frame</span></span>
+<span id="cb1023-3"><a href="boucles.html#cb1023-3" aria-hidden="true"></a>plyr<span class="op">::</span><span class="kw">ddply</span>(chomage, plyr<span class="op">::</span>.(annee), summarise, <span class="dt">total_chomeurs =</span> <span class="kw">sum</span>(ouvriers <span class="op">+</span><span class="st"> </span>ingenieurs))</span></code></pre></div>
+<pre><code>##   annee total_chomeurs
+## 1  2010          53025
+## 2  2011          55803</code></pre>
+<div class="sourceCode" id="cb1025"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1025-1"><a href="boucles.html#cb1025-1" aria-hidden="true"></a><span class="co"># Sous forme de tableau</span></span>
+<span id="cb1025-2"><a href="boucles.html#cb1025-2" aria-hidden="true"></a>plyr<span class="op">::</span><span class="kw">daply</span>(chomage, plyr<span class="op">::</span>.(annee), summarise, <span class="dt">total_chomeurs =</span> <span class="kw">sum</span>(ouvriers <span class="op">+</span><span class="st"> </span>ingenieurs))</span></code></pre></div>
+<pre><code>## $`2010`
+## [1] 53025
+## 
+## $`2011`
+## [1] 55803</code></pre>
+<div class="sourceCode" id="cb1027"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1027-1"><a href="boucles.html#cb1027-1" aria-hidden="true"></a><span class="co"># Sous forme de liste</span></span>
+<span id="cb1027-2"><a href="boucles.html#cb1027-2" aria-hidden="true"></a>plyr<span class="op">::</span><span class="kw">dlply</span>(chomage, plyr<span class="op">::</span>.(annee), summarise, <span class="dt">total_chomeurs =</span> <span class="kw">sum</span>(ouvriers <span class="op">+</span><span class="st"> </span>ingenieurs))</span></code></pre></div>
+<pre><code>## $`2010`
+##   total_chomeurs
+## 1          53025
+## 
+## $`2011`
+##   total_chomeurs
+## 1          55803
+## 
+## attr(,&quot;split_type&quot;)
+## [1] &quot;data.frame&quot;
+## attr(,&quot;split_labels&quot;)
+##   annee
+## 1  2010
+## 2  2011</code></pre>
+<div class="sourceCode" id="cb1029"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1029-1"><a href="boucles.html#cb1029-1" aria-hidden="true"></a><span class="co"># Total chomeurs pour les années 2010 et 2011, par région du data frame</span></span>
+<span id="cb1029-2"><a href="boucles.html#cb1029-2" aria-hidden="true"></a>plyr<span class="op">::</span><span class="kw">ddply</span>(chomage, plyr<span class="op">::</span>.(annee, region), summarise,</span>
+<span id="cb1029-3"><a href="boucles.html#cb1029-3" aria-hidden="true"></a>      <span class="dt">total_chomeurs =</span> <span class="kw">sum</span>(ouvriers <span class="op">+</span><span class="st"> </span>ingenieurs))</span></code></pre></div>
+<pre><code>##   annee   region total_chomeurs
+## 1  2010 Bretagne          50375
+## 2  2010    Corse           2650
+## 3  2011 Bretagne          53018
+## 4  2011    Corse           2785</code></pre>
+<div class="sourceCode" id="cb1031"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1031-1"><a href="boucles.html#cb1031-1" aria-hidden="true"></a><span class="co"># Nombre d&#39;observations pour chaque groupe</span></span>
+<span id="cb1031-2"><a href="boucles.html#cb1031-2" aria-hidden="true"></a>plyr<span class="op">::</span><span class="kw">ddply</span>(chomage, plyr<span class="op">::</span>.(annee, region), nrow) </span></code></pre></div>
+<pre><code>##   annee   region V1
+## 1  2010 Bretagne  4
+## 2  2010    Corse  2
+## 3  2011 Bretagne  4
+## 4  2011    Corse  2</code></pre>
+<div class="sourceCode" id="cb1033"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1033-1"><a href="boucles.html#cb1033-1" aria-hidden="true"></a><span class="co"># En utilisant une fonction définie par l&#39;utilisateur</span></span>
+<span id="cb1033-2"><a href="boucles.html#cb1033-2" aria-hidden="true"></a>plyr<span class="op">::</span><span class="kw">ddply</span>(chomage, plyr<span class="op">::</span>.(annee, region), <span class="cf">function</span>(x){</span>
+<span id="cb1033-3"><a href="boucles.html#cb1033-3" aria-hidden="true"></a>  moy_ouvriers &lt;-<span class="st"> </span><span class="kw">mean</span>(x<span class="op">$</span>ouvriers)</span>
+<span id="cb1033-4"><a href="boucles.html#cb1033-4" aria-hidden="true"></a>  moy_ingenieurs &lt;-<span class="st"> </span><span class="kw">mean</span>(x<span class="op">$</span>ingenieurs)</span>
+<span id="cb1033-5"><a href="boucles.html#cb1033-5" aria-hidden="true"></a>  <span class="kw">data.frame</span>(<span class="dt">moy_ouvriers =</span> moy_ouvriers, <span class="dt">moy_ingenieurs =</span> moy_ingenieurs)</span>
+<span id="cb1033-6"><a href="boucles.html#cb1033-6" aria-hidden="true"></a>})</span></code></pre></div>
+<pre><code>##   annee   region moy_ouvriers moy_ingenieurs
+## 1  2010 Bretagne     10221.25        2372.50
+## 2  2010    Corse      1078.00         247.00
+## 3  2011 Bretagne     10764.25        2490.25
+## 4  2011    Corse      1136.00         256.50</code></pre>
+</div>
+<div id="boucles_vectorisation_plyr_l_ply" class="section level3" number="4.4.3">
+<h3><span class="header-section-number">4.4.3</span> <em>List</em> en <em>input</em></h3>
+<p>Les fonctions du type <code>l*ply()</code> prennent une liste en entrée. Il n’y a donc pas de paramétrage à effectuer pour choisir un découpage, il est déjà fait.</p>
+<div class="sourceCode" id="cb1035"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1035-1"><a href="boucles.html#cb1035-1" aria-hidden="true"></a><span class="kw">set.seed</span>(<span class="dv">1</span>)</span>
+<span id="cb1035-2"><a href="boucles.html#cb1035-2" aria-hidden="true"></a>liste &lt;-</span>
+<span id="cb1035-3"><a href="boucles.html#cb1035-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">list</span>(<span class="dt">normale =</span><span class="kw">rnorm</span>(<span class="dv">10</span>),</span>
+<span id="cb1035-4"><a href="boucles.html#cb1035-4" aria-hidden="true"></a>       <span class="dt">logiques =</span><span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>),</span>
+<span id="cb1035-5"><a href="boucles.html#cb1035-5" aria-hidden="true"></a>       <span class="dt">x =</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="ot">NA</span>, <span class="dv">3</span>))</span>
+<span id="cb1035-6"><a href="boucles.html#cb1035-6" aria-hidden="true"></a></span>
+<span id="cb1035-7"><a href="boucles.html#cb1035-7" aria-hidden="true"></a><span class="co"># Obtenir la longueur de chaque élément de la liste</span></span>
+<span id="cb1035-8"><a href="boucles.html#cb1035-8" aria-hidden="true"></a>plyr<span class="op">::</span><span class="kw">laply</span>(liste, length)</span></code></pre></div>
+<pre><code>## [1] 10  3  3</code></pre>
+<div class="sourceCode" id="cb1037"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1037-1"><a href="boucles.html#cb1037-1" aria-hidden="true"></a>plyr<span class="op">::</span><span class="kw">ldply</span>(liste, length)</span></code></pre></div>
+<pre><code>##        .id V1
+## 1  normale 10
+## 2 logiques  3
+## 3        x  3</code></pre>
+<div class="sourceCode" id="cb1039"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1039-1"><a href="boucles.html#cb1039-1" aria-hidden="true"></a>plyr<span class="op">::</span><span class="kw">llply</span>(liste, length)</span></code></pre></div>
+<pre><code>## $normale
+## [1] 10
+## 
+## $logiques
+## [1] 3
+## 
+## $x
+## [1] 3</code></pre>
+<div class="sourceCode" id="cb1041"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1041-1"><a href="boucles.html#cb1041-1" aria-hidden="true"></a><span class="co"># Calculer la moyenne pour chaque élément</span></span>
+<span id="cb1041-2"><a href="boucles.html#cb1041-2" aria-hidden="true"></a>plyr<span class="op">::</span><span class="kw">llply</span>(liste, mean, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb1041-3"><a href="boucles.html#cb1041-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">unlist</span>()</span></code></pre></div>
+<pre><code>##   normale  logiques         x 
+## 0.1322028 0.6666667 1.5000000</code></pre>
+<div class="sourceCode" id="cb1043"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1043-1"><a href="boucles.html#cb1043-1" aria-hidden="true"></a><span class="co"># Appliquer une fonction définie par l&#39;utilisateur</span></span>
+<span id="cb1043-2"><a href="boucles.html#cb1043-2" aria-hidden="true"></a>plyr<span class="op">::</span><span class="kw">llply</span>(liste, <span class="cf">function</span>(x, y) x <span class="op">/</span><span class="kw">mean</span>(x, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>) <span class="op">+</span><span class="st"> </span>y, <span class="dt">y =</span> <span class="dv">2</span>)</span></code></pre></div>
+<pre><code>## $normale
+##  [1] -2.7385827  3.3891033 -4.3208096 14.0669232  4.4924421 -4.2061356
+##  [7]  5.6869803  7.5847895  6.3552892 -0.3099997
+## 
+## $logiques
+## [1] 3.5 3.5 2.0
+## 
+## $x
+## [1]  2 NA  4</code></pre>
+</div>
+<div id="boucles_vectorisation_plyr_parallel" class="section level3" number="4.4.4">
+<h3><span class="header-section-number">4.4.4</span> Calcul parallèle</h3>
+<p>En utilisant plusieurs processeurs, on peut effectuer des calculs parallèles, ce qui accélère les calculs dans certains cas. En effet, quand il est possible de fractionner les opérations à effectuer en morceaux, on peut en réaliser une partie sur un processeur, une autre sur un second processeur, et ainsi de suite. Les résultats obtenus sont ensuite rassemblés avant d’être retournés. Le <em>package</em> {<code>doMC</code>} (ou {<code>doSMP</code>} sur Windows) peut être chargé pour utiliser la fonction de calcul parallèle proposé par les fonctions <code>**ply()</code>. Il suffit de préciser le nombre de cœurs souhaité en faisant appel à la fonction <code>registerDoMC()</code>, et de fixer la valeur <code>TRUE</code> à l’argument <code>.parallel</code> de la fonction <code>**ply()</code>.</p>
+<div class="sourceCode" id="cb1045"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1045-1"><a href="boucles.html#cb1045-1" aria-hidden="true"></a>df &lt;-<span class="st"> </span></span>
+<span id="cb1045-2"><a href="boucles.html#cb1045-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">data.frame</span>(<span class="dt">valeur_1 =</span> <span class="kw">rnorm</span>(<span class="dv">12000</span>),</span>
+<span id="cb1045-3"><a href="boucles.html#cb1045-3" aria-hidden="true"></a>         <span class="dt">id =</span> <span class="kw">rep</span>(month.abb, <span class="dt">each =</span> <span class="dv">1000</span>))</span>
+<span id="cb1045-4"><a href="boucles.html#cb1045-4" aria-hidden="true"></a></span>
+<span id="cb1045-5"><a href="boucles.html#cb1045-5" aria-hidden="true"></a><span class="co"># Fonction lente (et inutile)</span></span>
+<span id="cb1045-6"><a href="boucles.html#cb1045-6" aria-hidden="true"></a>f &lt;-<span class="st"> </span><span class="cf">function</span>(x){</span>
+<span id="cb1045-7"><a href="boucles.html#cb1045-7" aria-hidden="true"></a>  res &lt;-<span class="st"> </span><span class="kw">rep</span>(<span class="ot">NA</span>, <span class="kw">nrow</span>(x))</span>
+<span id="cb1045-8"><a href="boucles.html#cb1045-8" aria-hidden="true"></a>  <span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="kw">length</span>(res)){</span>
+<span id="cb1045-9"><a href="boucles.html#cb1045-9" aria-hidden="true"></a>    res[i] &lt;-<span class="st"> </span><span class="kw">mean</span>(x[<span class="dv">1</span><span class="op">:</span>i, <span class="st">&quot;valeur_1&quot;</span>],)</span>
+<span id="cb1045-10"><a href="boucles.html#cb1045-10" aria-hidden="true"></a>  }</span>
+<span id="cb1045-11"><a href="boucles.html#cb1045-11" aria-hidden="true"></a>  <span class="kw">mean</span>(res)</span>
+<span id="cb1045-12"><a href="boucles.html#cb1045-12" aria-hidden="true"></a>}</span>
+<span id="cb1045-13"><a href="boucles.html#cb1045-13" aria-hidden="true"></a></span>
+<span id="cb1045-14"><a href="boucles.html#cb1045-14" aria-hidden="true"></a><span class="kw">library</span>(doMC)</span>
+<span id="cb1045-15"><a href="boucles.html#cb1045-15" aria-hidden="true"></a><span class="co"># Définir le parallel backend avec le package foreach</span></span>
+<span id="cb1045-16"><a href="boucles.html#cb1045-16" aria-hidden="true"></a><span class="kw">registerDoMC</span>(<span class="dt">cores=</span><span class="dv">4</span>)</span>
+<span id="cb1045-17"><a href="boucles.html#cb1045-17" aria-hidden="true"></a></span>
+<span id="cb1045-18"><a href="boucles.html#cb1045-18" aria-hidden="true"></a><span class="kw">system.time</span>(plyr<span class="op">::</span><span class="kw">ddply</span>(df, plyr<span class="op">::</span>.(id), f))</span></code></pre></div>
+<pre><code>##    user  system elapsed 
+##   0.312   0.023   0.338</code></pre>
+<div class="sourceCode" id="cb1047"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1047-1"><a href="boucles.html#cb1047-1" aria-hidden="true"></a><span class="kw">system.time</span>(plyr<span class="op">::</span><span class="kw">ddply</span>(df, plyr<span class="op">::</span>.(id), f, <span class="dt">.parallel =</span> <span class="ot">TRUE</span>))</span></code></pre></div>
+<pre><code>##    user  system elapsed 
+##   0.709   0.395   0.467</code></pre>
+</div>
+</div>
+<div id="boucles_vectorisation_apply" class="section level2" number="4.5">
+<h2><span class="header-section-number">4.5</span> Avec {<code>base</code>}</h2>
+<p>Le tableau ci-dessous recense les fonctions principales <em>de la famille apply</em> du <em>package</em> {<code>base</code>}.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Fonction</th>
+<th align="center">Input</th>
+<th align="center">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><code>apply()</code></td>
+<td align="center">Matrice ou tableau</td>
+<td align="center">Vecteur ou tableau ou liste</td>
+</tr>
+<tr class="even">
+<td align="center"><code>lapply()</code></td>
+<td align="center">Liste ou vecteur</td>
+<td align="center">Liste</td>
+</tr>
+<tr class="odd">
+<td align="center"><code>sapply()</code></td>
+<td align="center">Liste ou vecteur</td>
+<td align="center">Vecteur ou matrice ou liste</td>
+</tr>
+<tr class="even">
+<td align="center"><code>vapply()</code></td>
+<td align="center">Liste ou vecteur</td>
+<td align="center">Vecteur ou matrice ou liste</td>
+</tr>
+<tr class="odd">
+<td align="center"><code>tapply()</code></td>
+<td align="center">Tableau et facteurs</td>
+<td align="center">Tableau ou liste</td>
+</tr>
+<tr class="even">
+<td align="center"><code>mapply()</code></td>
+<td align="center">Listes et/ou vecteurs</td>
+<td align="center">Vecteur ou matrice ou liste</td>
+</tr>
+</tbody>
+</table>
+<div id="boucles_vectorisation_apply_lapply" class="section level3" number="4.5.1">
+<h3><span class="header-section-number">4.5.1</span> La fonction <code>lapply</code></h3>
+<p>La fonction <code>lapply()</code> applique à chaque élément du premier argument qui lui est donné une fonction indiquée en second argument et retourne le résultat sous forme de liste. La syntaxe est la suivante :</p>
+<div class="sourceCode" id="cb1049"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1049-1"><a href="boucles.html#cb1049-1" aria-hidden="true"></a><span class="kw">lapply</span>(X, FUN, ...)</span></code></pre></div>
+<p>avec <code>X</code> la liste ou le vecteur donné en argument sur lequel on désire appliquer la fonction <code>FUN</code>. L’argument <code>...</code> permet comme expliqué dans une précédente remarque, de fournir des arguments à une fonction imbriquée, en l’occurance à celle que l’on souhaite appliquer à tous les éléments de <code>X</code>.</p>
+<div class="sourceCode" id="cb1050"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1050-1"><a href="boucles.html#cb1050-1" aria-hidden="true"></a>liste &lt;-<span class="st"> </span></span>
+<span id="cb1050-2"><a href="boucles.html#cb1050-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">list</span>(<span class="dt">normale =</span> <span class="kw">rnorm</span>(<span class="dv">10</span>),</span>
+<span id="cb1050-3"><a href="boucles.html#cb1050-3" aria-hidden="true"></a>       <span class="dt">logiques =</span> <span class="kw">c</span>(<span class="ot">TRUE</span>,  <span class="ot">TRUE</span>, <span class="ot">FALSE</span>),</span>
+<span id="cb1050-4"><a href="boucles.html#cb1050-4" aria-hidden="true"></a>       <span class="dt">x =</span> <span class="kw">c</span>(<span class="dv">0</span>, <span class="ot">NA</span>, <span class="dv">3</span>))</span>
+<span id="cb1050-5"><a href="boucles.html#cb1050-5" aria-hidden="true"></a></span>
+<span id="cb1050-6"><a href="boucles.html#cb1050-6" aria-hidden="true"></a><span class="co"># Obtenir la liste des longueurs de chaque élément</span></span>
+<span id="cb1050-7"><a href="boucles.html#cb1050-7" aria-hidden="true"></a><span class="kw">lapply</span>(liste, length)</span></code></pre></div>
+<pre><code>## $normale
+## [1] 10
+## 
+## $logiques
+## [1] 3
+## 
+## $x
+## [1] 3</code></pre>
+<div class="sourceCode" id="cb1052"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1052-1"><a href="boucles.html#cb1052-1" aria-hidden="true"></a><span class="co"># Calculer la moyenne pour chaque élément</span></span>
+<span id="cb1052-2"><a href="boucles.html#cb1052-2" aria-hidden="true"></a><span class="kw">lapply</span>(liste, mean, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
+<pre><code>## $normale
+## [1] 0.04319732
+## 
+## $logiques
+## [1] 0.6666667
+## 
+## $x
+## [1] 1.5</code></pre>
+<p>On peut créer une fonction à l’intérieur de l’appel à la fonction <code>lapply()</code>. Le premier argument est nécessairement un élément du vecteur auquel on souhaite appliquer la fonction.</p>
+<div class="sourceCode" id="cb1054"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1054-1"><a href="boucles.html#cb1054-1" aria-hidden="true"></a><span class="kw">lapply</span>(liste, <span class="cf">function</span>(x) x <span class="op">/</span><span class="st"> </span><span class="kw">mean</span>(x, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>))</span></code></pre></div>
+<pre><code>## $normale
+##  [1] -17.375456  -6.647068  19.251983 -12.199524 -42.424943  24.224455
+##  [7] -12.030570  24.388223  31.518789   1.294111
+## 
+## $logiques
+## [1] 1.5 1.5 0.0
+## 
+## $x
+## [1]  0 NA  2</code></pre>
+<div class="sourceCode" id="cb1056"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1056-1"><a href="boucles.html#cb1056-1" aria-hidden="true"></a><span class="co"># Si la fonction doit posséder plusieurs arguments</span></span>
+<span id="cb1056-2"><a href="boucles.html#cb1056-2" aria-hidden="true"></a><span class="kw">lapply</span>(liste, <span class="cf">function</span>(x, y) x <span class="op">/</span><span class="st"> </span><span class="kw">mean</span>(x, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>) <span class="op">+</span><span class="st"> </span>y, <span class="dt">y =</span> <span class="dv">2</span>)</span></code></pre></div>
+<pre><code>## $normale
+##  [1] -15.375456  -4.647068  21.251983 -10.199524 -40.424943  26.224455
+##  [7] -10.030570  26.388223  33.518789   3.294111
+## 
+## $logiques
+## [1] 3.5 3.5 2.0
+## 
+## $x
+## [1]  2 NA  4</code></pre>
+<p>On peut appliquer la fonction <code>lapply()</code> sur des tableaux de données, dans la mesure où ces derniers sont des listes. Cela s’avère pratique pour réaliser des opérations pour chaque colonne d’un tableau de données. Afin de prendre moins de place dans l’affichage, l’exemple suivant utilise la fonction <code>unlist()</code> pour aplatir la liste.</p>
+<div class="sourceCode" id="cb1058"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1058-1"><a href="boucles.html#cb1058-1" aria-hidden="true"></a><span class="kw">data</span>(cars)</span>
+<span id="cb1058-2"><a href="boucles.html#cb1058-2" aria-hidden="true"></a></span>
+<span id="cb1058-3"><a href="boucles.html#cb1058-3" aria-hidden="true"></a><span class="co"># Afficher le type de chaque colonne de la data frame &quot;cars&quot;</span></span>
+<span id="cb1058-4"><a href="boucles.html#cb1058-4" aria-hidden="true"></a><span class="kw">unlist</span>(<span class="kw">lapply</span>(cars, class))</span></code></pre></div>
+<pre><code>##     speed      dist 
+## &quot;numeric&quot; &quot;numeric&quot;</code></pre>
+<div class="sourceCode" id="cb1060"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1060-1"><a href="boucles.html#cb1060-1" aria-hidden="true"></a><span class="co"># Calculer la moyenne pour chaque colonne</span></span>
+<span id="cb1060-2"><a href="boucles.html#cb1060-2" aria-hidden="true"></a><span class="kw">unlist</span>(<span class="kw">lapply</span>(cars, mean))</span></code></pre></div>
+<pre><code>## speed  dist 
+## 15.40 42.98</code></pre>
+
+<div class="remarque">
+<p>Attention, ce qui suit relève plus d’un tour de passe-passe que de la programmation élégante.</p>
+<p>Si la fonction que l’on souhaite appliquer aux éléments de notre vecteur retourne un vecteur ligne de même longueur pour chaque élément, la fonction <code>do.call()</code> peut devenir un outil très pratique pour créer une <em>data frame</em>. Par exemple, définissons une liste à l’aide de <code>lapply()</code>: <code>l &lt;- lapply(1:3, function(x) cbind(valeur = x, lettre = LETTERS[x]))</code>. Ensuite, pour coller les lignes entre-elles : <code>do.call("rbind", l) %&gt;% data.frame()</code>.</p>
+L’appel de <code>do.call("rbind", x)</code> revient à faire <code>rbind(x[1], x[2], ..., x[n])</code> avec <code>x</code> un vecteur de taile <span class="math inline">\(n\)</span>.
+</div>
+</div>
+<div id="boucles_vectorisation_apply_sapply" class="section level3" number="4.5.2">
+<h3><span class="header-section-number">4.5.2</span> La fonction <code>sapply()</code></h3>
+<p>La fonction <code>sapply()</code> applique une fonction aux éléments d’un vecteur ou d’une liste et peut retourner un vecteur, une liste ou une matrice. Elle possède la syntaxe suivante :</p>
+<div class="sourceCode" id="cb1062"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1062-1"><a href="boucles.html#cb1062-1" aria-hidden="true"></a><span class="kw">sapply</span>(X, FUN, simplify, USE.NAMES)</span></code></pre></div>
+<p>où <code>X</code> est le vecteur ou la liste auquel on souhaite appliquer la fonction <code>FUN</code>. Lorsque <code>simplify</code> vaut <code>FALSE</code>, le résultat est retourné sous forme de liste, exactement comme <code>lapply()</code> (la fonction <code>sapply()</code> s’appuie sur la fonction <code>lapply()</code>). Lorsque <code>simplify</code> vaut <code>TRUE</code> (par défaut), le résultat est retourné dans une forme simplifiée, si cela est possible. Si tous les éléments retournés par la fonction <code>FUN</code> sont des scalaires, alors <code>sapply()</code> retourne un vecteur ; sinon, si les éléments retournés ont la même taille, <code>sapply()</code> retourne une matrice avec une colonne pour chaque élément de <code>X</code> auquel la fonction <code>FUN</code> est appliquée. l’argument <code>USE.NAMES</code>, quand il vaut <code>TRUE</code> (par défaut), et si <code>X</code> est de type <code>character</code>, utilise <code>X</code> comme nom pour le résultat, à moins que le résultat possède déjà des noms.</p>
+<pre class="rboucles_vectorisation_apply_sapply"><code>(x &lt;- list(a = 1:10, beta = exp(-3:3), logic = c(TRUE,FALSE,FALSE,TRUE)))
+
+# Application de la fonction quantile() à chaque élément
+# pour obtenir la médiane et les quartiles
+
+# Avec lapply()
+lapply(x, quantile)
+
+# Avec sapply
+sapply(x, quantile)
+
+# Exemple avec USE.NAMES
+sapply(LETTERS[1:3], nchar)
+sapply(LETTERS[1:3], nchar, USE.NAMES = FALSE)</code></pre>
+</div>
+<div id="boucles_vectorisation_apply_vapply" class="section level3" number="4.5.3">
+<h3><span class="header-section-number">4.5.3</span> La fonction <code>vapply</code></h3>
+<p>La fonction <code>vapply</code> est similaire à <code>sapply()</code>, mais elle possède un type de valeurs spécifié, ce qui peut rendre l’utilisation plus sûre (et parfois plus rapide). Lorsqu’on lui fournit un <em>data frame</em>, <code>vapply</code> retourne le même résultat que <code>sapply()</code>. Cependant, quand on lui fournit une liste vide, <code>vapply</code> retourne un vecteur logique de longueur nulle (ce qui est plus sensé que la liste vide que returne <code>sapply()</code>).</p>
+<div class="sourceCode" id="cb1064"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1064-1"><a href="boucles.html#cb1064-1" aria-hidden="true"></a><span class="kw">vapply</span>(X, FUN, FUN.VALUE, ..., USE.NAMES)</span></code></pre></div>
+<p>avec <code>X</code>, <code>FUN</code>, <code>...</code> et <code>USE.NAMES</code> les mêmes arguments que pour <code>sapply()</code>. l’argument <code>FUN.VALUE</code> doit être un vecteur, un masque pour la valeur retournée par la fonction de <code>FUN</code>.</p>
+<div class="sourceCode" id="cb1065"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1065-1"><a href="boucles.html#cb1065-1" aria-hidden="true"></a><span class="co"># Retourner le vecteur </span></span>
+<span id="cb1065-2"><a href="boucles.html#cb1065-2" aria-hidden="true"></a><span class="kw">sapply</span>(cars, is.numeric)</span></code></pre></div>
+<pre><code>## speed  dist 
+##  TRUE  TRUE</code></pre>
+<div class="sourceCode" id="cb1067"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1067-1"><a href="boucles.html#cb1067-1" aria-hidden="true"></a><span class="kw">vapply</span>(cars, is.numeric, <span class="dt">FUN.VALUE =</span> <span class="kw">logical</span>(<span class="dv">1</span>))</span></code></pre></div>
+<pre><code>## speed  dist 
+##  TRUE  TRUE</code></pre>
+<div class="sourceCode" id="cb1069"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1069-1"><a href="boucles.html#cb1069-1" aria-hidden="true"></a><span class="co"># Avec la liste vide</span></span>
+<span id="cb1069-2"><a href="boucles.html#cb1069-2" aria-hidden="true"></a><span class="kw">sapply</span>(<span class="kw">list</span>(), is.numeric)</span></code></pre></div>
+<pre><code>## list()</code></pre>
+<div class="sourceCode" id="cb1071"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1071-1"><a href="boucles.html#cb1071-1" aria-hidden="true"></a><span class="kw">vapply</span>(<span class="kw">list</span>(), is.numeric, <span class="dt">FUN.VALUE =</span> <span class="kw">logical</span>(<span class="dv">1</span>))</span></code></pre></div>
+<pre><code>## logical(0)</code></pre>
+</div>
+<div id="boucles_vectorisation_apply_apply" class="section level3" number="4.5.4">
+<h3><span class="header-section-number">4.5.4</span> La fonction <code>apply()</code></h3>
+<p>La fonction <code>apply()</code> possède la syntaxe suivante :
+&lt;&lt;boucles_vectorisation_apply_apply_syntaxe, eval = FALSE&gt;&gt;=
+apply(X, MARGIN, FUN, …)
+@
+avec <code>X</code> une matrice ou un tableau, <code>MARGIN</code> indiquant si on souhaite appliquer la fonction <code>FUN</code> aux lignes (<code>MARGIN = 1</code>) ou aux colonnes (<code>MARGIN = 2</code>), et <code>...</code> des arguments supplémentaires éventuels à passer à la fonction <code>FUN</code>.</p>
+<div class="sourceCode" id="cb1073"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1073-1"><a href="boucles.html#cb1073-1" aria-hidden="true"></a>(X &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">9</span>, <span class="dt">ncol =</span> <span class="dv">3</span>))</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    1    4    7
+## [2,]    2    5    8
+## [3,]    3    6    9</code></pre>
+<div class="sourceCode" id="cb1075"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1075-1"><a href="boucles.html#cb1075-1" aria-hidden="true"></a><span class="co"># Somme par ligne</span></span>
+<span id="cb1075-2"><a href="boucles.html#cb1075-2" aria-hidden="true"></a><span class="kw">apply</span>(X, <span class="dt">MARGIN =</span> <span class="dv">1</span>, sum)</span></code></pre></div>
+<pre><code>## [1] 12 15 18</code></pre>
+<div class="sourceCode" id="cb1077"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1077-1"><a href="boucles.html#cb1077-1" aria-hidden="true"></a><span class="co"># Somme par colonne</span></span>
+<span id="cb1077-2"><a href="boucles.html#cb1077-2" aria-hidden="true"></a><span class="kw">apply</span>(X, <span class="dt">MARGIN =</span> <span class="dv">2</span>, sum)</span></code></pre></div>
+<pre><code>## [1]  6 15 24</code></pre>
+<div class="sourceCode" id="cb1079"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1079-1"><a href="boucles.html#cb1079-1" aria-hidden="true"></a><span class="co"># Fonction définie par l&#39;utilisateur</span></span>
+<span id="cb1079-2"><a href="boucles.html#cb1079-2" aria-hidden="true"></a><span class="kw">apply</span>(X, <span class="dt">MARGIN =</span> <span class="dv">1</span>, <span class="cf">function</span>(x) <span class="kw">sum</span>(x) <span class="op">/</span><span class="st"> </span><span class="kw">sum</span>(X))</span></code></pre></div>
+<pre><code>## [1] 0.2666667 0.3333333 0.4000000</code></pre>
+</div>
+<div id="boucles_vectorisation_apply_tapply" class="section level3" number="4.5.5">
+<h3><span class="header-section-number">4.5.5</span> La fonction <code>tapply()</code></h3>
+<p>La fonction <code>tapply()</code> s’applique à chaque cellule d’un tableau, sur des regroupements définis par les variables catégorielles fournies. La syntaxe est la suivante :</p>
+<div class="sourceCode" id="cb1081"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1081-1"><a href="boucles.html#cb1081-1" aria-hidden="true"></a><span class="kw">tapply</span>(X,INDEX, FUN, ..., simplify)</span></code></pre></div>
+<p>avec <code>X</code> le taleau de données, <code>INDEX</code> une liste d’un ou plusieurs facteurs, chacun de même taille que <code>X</code>. l’argument <code>FUN</code> renseigne la fonction que l’on souhaite appliquer. Si <code>SIMPLIFY</code> vaut <code>FALSE</code>, le résultat est un tableau de mode <code>list</code>. Sinon (par défaut), le résultat est un tableau de scalaires.</p>
+<div class="sourceCode" id="cb1082"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1082-1"><a href="boucles.html#cb1082-1" aria-hidden="true"></a><span class="kw">data</span>(iris)</span>
+<span id="cb1082-2"><a href="boucles.html#cb1082-2" aria-hidden="true"></a><span class="kw">head</span>(iris)</span></code></pre></div>
+<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          5.1         3.5          1.4         0.2  setosa
+## 2          4.9         3.0          1.4         0.2  setosa
+## 3          4.7         3.2          1.3         0.2  setosa
+## 4          4.6         3.1          1.5         0.2  setosa
+## 5          5.0         3.6          1.4         0.2  setosa
+## 6          5.4         3.9          1.7         0.4  setosa</code></pre>
+<div class="sourceCode" id="cb1084"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1084-1"><a href="boucles.html#cb1084-1" aria-hidden="true"></a><span class="co"># Moyenne de la longueur des sépales par espèce</span></span>
+<span id="cb1084-2"><a href="boucles.html#cb1084-2" aria-hidden="true"></a><span class="kw">tapply</span>(iris<span class="op">$</span>Sepal.Length, iris<span class="op">$</span>Species, mean)</span></code></pre></div>
+<pre><code>##     setosa versicolor  virginica 
+##      5.006      5.936      6.588</code></pre>
+<div class="sourceCode" id="cb1086"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1086-1"><a href="boucles.html#cb1086-1" aria-hidden="true"></a><span class="co"># Pour retourner le résultat sous forme de liste</span></span>
+<span id="cb1086-2"><a href="boucles.html#cb1086-2" aria-hidden="true"></a><span class="kw">tapply</span>(iris<span class="op">$</span>Sepal.Length, iris<span class="op">$</span>Species, mean, <span class="dt">simplify =</span> <span class="ot">FALSE</span>)</span></code></pre></div>
+<pre><code>## $setosa
+## [1] 5.006
+## 
+## $versicolor
+## [1] 5.936
+## 
+## $virginica
+## [1] 6.588</code></pre>
+</div>
+<div id="boucles_vectorisation_apply_mapply" class="section level3" number="4.5.6">
+<h3><span class="header-section-number">4.5.6</span> La fonction <code>mapply()</code></h3>
+<p>La fonction <code>mapply()</code> applique une fonction à plusieurs listes ou vecteurs. La syntaxe est la suivante :</p>
+<div class="sourceCode" id="cb1088"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1088-1"><a href="boucles.html#cb1088-1" aria-hidden="true"></a><span class="kw">mapply</span>(FUN, ..., MoreArgs, SIMPLIFY, USE.NAMES)</span></code></pre></div>
+<p>avec <code>FUN</code> la fonction à appliquer aux vecteurs ou listes fournies (grâce à <code>...</code>), <code>MoreArgs</code> une liste d’arguments supplémentaires à fournir à la fonction à appliquer. Les arguments <code>SIMPLIFY</code> et <code>USE.NAMES</code> ont le même usage que pour la fonction <code>sapply()</code>.</p>
+<div class="sourceCode" id="cb1089"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1089-1"><a href="boucles.html#cb1089-1" aria-hidden="true"></a>(l1 &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">a =</span> <span class="kw">c</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>), <span class="dt">b =</span> <span class="kw">c</span>(<span class="dv">6</span><span class="op">:</span><span class="dv">10</span>)))</span></code></pre></div>
+<pre><code>## $a
+## [1] 1 2 3 4 5
+## 
+## $b
+## [1]  6  7  8  9 10</code></pre>
+<div class="sourceCode" id="cb1091"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1091-1"><a href="boucles.html#cb1091-1" aria-hidden="true"></a>(l2 &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">c =</span> <span class="kw">c</span>(<span class="dv">11</span><span class="op">:</span><span class="dv">15</span>), <span class="dt">d =</span> <span class="kw">c</span>(<span class="dv">16</span><span class="op">:</span><span class="dv">20</span>)))</span></code></pre></div>
+<pre><code>## $c
+## [1] 11 12 13 14 15
+## 
+## $d
+## [1] 16 17 18 19 20</code></pre>
+<div class="sourceCode" id="cb1093"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1093-1"><a href="boucles.html#cb1093-1" aria-hidden="true"></a><span class="co"># La somme des éléments correspondants de l1 et l2</span></span>
+<span id="cb1093-2"><a href="boucles.html#cb1093-2" aria-hidden="true"></a><span class="kw">mapply</span>(sum, l1<span class="op">$</span>a, l1<span class="op">$</span>b, l2<span class="op">$</span>c, l2<span class="op">$</span>d)</span></code></pre></div>
+<pre><code>## [1] 34 38 42 46 50</code></pre>
+<div class="sourceCode" id="cb1095"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1095-1"><a href="boucles.html#cb1095-1" aria-hidden="true"></a><span class="co"># Attention au recyclage silencieux !</span></span>
+<span id="cb1095-2"><a href="boucles.html#cb1095-2" aria-hidden="true"></a>(l1 &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">a =</span> <span class="kw">c</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>), <span class="dt">b =</span> <span class="kw">c</span>(<span class="dv">6</span><span class="op">:</span><span class="dv">20</span>)))</span></code></pre></div>
+<pre><code>## $a
+## [1] 1 2 3 4 5
+## 
+## $b
+##  [1]  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20</code></pre>
+<div class="sourceCode" id="cb1097"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1097-1"><a href="boucles.html#cb1097-1" aria-hidden="true"></a><span class="kw">mapply</span>(sum, l1<span class="op">$</span>a, l1<span class="op">$</span>b, l2<span class="op">$</span>c, l2<span class="op">$</span>d)</span></code></pre></div>
+<pre><code>##  [1] 34 38 42 46 50 39 43 47 51 55 44 48 52 56 60</code></pre>
+</div>
+<div id="boucles_vectorisation_Vectorize" class="section level3" number="4.5.7">
+<h3><span class="header-section-number">4.5.7</span> La fonction <code>Vectorize()</code></h3>
+<p>La fonction <code>Vectorize()</code> permet de convertir une fonction scalaire en une fonction vectorielle. Attention, cela ne permet pas d’améliorer la rapidité d’exécution du code. Par contre, son utilisation assez intuitive permet de gagner du temps. Il s’agit donc de faire l’arbitrage entre le temps passé à trouver un moyen élégant et efficace pour effectuer une opération en passant par de réels calculs vectoriels et le gain d’exécution que ce calcul vectoriel apporte vis-à-vis d’une boucle. La syntaxe de la fonction <code>Vectorize()</code> est la suivante :</p>
+<div class="sourceCode" id="cb1099"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1099-1"><a href="boucles.html#cb1099-1" aria-hidden="true"></a><span class="kw">Vectorize</span>(FUN, vectorize.args, SIMPLIFY, USE.NAMES)</span></code></pre></div>
+<p>avec <code>FUN</code> une fonction à appliquer, <code>vectorize.args</code> un vecteur d’arguments (de type caractère) qui devraient être vectorisés (par défaut, tous les arguments de <code>FUN</code>). Les arguments <code>SIMPLIFY</code> et <code>USE.NAMES</code> on le même emploi que dans la fonction <code>sapply()</code>.</p>
+<div class="sourceCode" id="cb1100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1100-1"><a href="boucles.html#cb1100-1" aria-hidden="true"></a>f &lt;-<span class="st"> </span><span class="cf">function</span>(<span class="dt">x =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">3</span>, y) <span class="kw">c</span>(x, y)</span>
+<span id="cb1100-2"><a href="boucles.html#cb1100-2" aria-hidden="true"></a><span class="co"># On &quot;vectorise&quot; la fonction f</span></span>
+<span id="cb1100-3"><a href="boucles.html#cb1100-3" aria-hidden="true"></a>vf &lt;-<span class="st"> </span><span class="kw">Vectorize</span>(f, <span class="dt">SIMPLIFY =</span> <span class="ot">FALSE</span>)</span>
+<span id="cb1100-4"><a href="boucles.html#cb1100-4" aria-hidden="true"></a><span class="kw">f</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">3</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">3</span>)</span></code></pre></div>
+<pre><code>## [1] 1 2 3 1 2 3</code></pre>
+<div class="sourceCode" id="cb1102"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1102-1"><a href="boucles.html#cb1102-1" aria-hidden="true"></a><span class="kw">vf</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">3</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">3</span>)</span></code></pre></div>
+<pre><code>## [[1]]
+## [1] 1 1
+## 
+## [[2]]
+## [1] 2 2
+## 
+## [[3]]
+## [1] 3 3</code></pre>
+<div class="sourceCode" id="cb1104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1104-1"><a href="boucles.html#cb1104-1" aria-hidden="true"></a><span class="co"># Vectorise seulement y, pas x</span></span>
+<span id="cb1104-2"><a href="boucles.html#cb1104-2" aria-hidden="true"></a><span class="kw">vf</span>(<span class="dt">y =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">3</span>)</span></code></pre></div>
+<pre><code>## [[1]]
+## [1] 1 2 3 1
+## 
+## [[2]]
+## [1] 1 2 3 2
+## 
+## [[3]]
+## [1] 1 2 3 3</code></pre>
+</div>
+</div>
+<div id="boucles_exercices" class="section level2" number="4.6">
+<h2><span class="header-section-number">4.6</span> Exercices</h2>
+<!-- % ======== % -->
+<!-- % EXERCICE % -->
+<!-- % ======== % -->
+
+<div class="exframe">
+<p><strong>Exercice 1. Boucle <code>while()</code></strong></p>
+<ol style="list-style-type: decimal">
+<li>à l’aide de la fonction <code>while()</code>, créer une boucle qui permet de calculer la factorielle d’un nombre ;</li>
+<li>Réutiliser le code de la question précédente pour en faire une fonction qui, lorsqu’on lui donne un nombre, retourne sa factorielle. Comparer le résultat avec la fonction <code>factorial()</code>.</li>
+</ol>
+</div>
+<!-- % ======== % -->
+<!-- % EXERCICE % -->
+<!-- % ======== % -->
+
+<div class="exframe">
+<p><strong>Exercice 2. Boucles <code>while()</code> et <code>for()</code></strong></p>
+<ol style="list-style-type: decimal">
+<li>Choisir un nombre mystère entre 1 et 100, et le stocker dans un objet que l’on nommera <code>nombre_mystere</code>. Ensuite, créer une boucle qui à chaque itération effectue un tirage aléatoire d’un entier compris entre 1 et 100. Tant que le nombre tiré est différent du nombre mystère, la boucle doit continuer. à la sortie de la boucle, une variable que l’on appellera <code>nb_tirages</code> contiendra le nombre de tirages réalisés pour obtenir le nombre mystère ;</li>
+<li>Utiliser le code de la question précédente pour réaliser la fonction <code>trouver_nombre</code>, qui, lorsqu’on lui donne un nombre compris entre 1 et 100, retourne le nombre de tirages aléatoires d’entiers compris entre 1 et 100 nécessaires avant de tirer le nombre mystère ;</li>
+<li>En utilisant une boucle <code>for</code>, faire appel 1000 fois à la fonction <code>trouver_nombre()</code> qui vient d’être créée. à chaque itération, stocker le résultat dans un élément d’un vecteur que l’on appellera <code>nb_essais_rep</code>. Enfin, afficher la moyenne du nombre de tirages nécessaires pour retrouver le nombre magique.</li>
+</ol>
+<p><code>nb_essais_rep &lt;- rep(NA, 1000)</code></p>
+</div>
+<!-- % ======== % -->
+<!-- % EXERCICE % -->
+<!-- % ======== % -->
+
+<div class="exframe">
+<p><strong>Exercice 3. Boucles <code>for()</code></strong></p>
+<ol style="list-style-type: decimal">
+<li>Parcourir les entiers de 1 à 20 à l’aide d’une boucle <code>for</code> en affichant dans la console à chaque itération si le nombre courant est pair ;</li>
+<li>L’objet <code>month.name</code> est un vecteur contenant les noms des mois du calendrier, en anglais. Parcourir chacun des éléments de ce vecteur, et afficher dans la console pour chacun des mois si le nombre de caractères composant le nom du mois est pair ou impair.</li>
+</ol>
+</div>
+<!-- % ======== % -->
+<!-- % EXERCICE % -->
+<!-- % ======== % -->
+
+<div class="exframe">
+<p><strong>Exercice 4. Suite de Fibonacci</strong></p>
+<p>Utiliser une boucle <code>for</code> pour reproduire la suite de Fibonacci jusqu’à son dixième terme (la séquence <span class="math inline">\(F_n\)</span> est définie par la relation de récurrence suivante : <span class="math inline">\(F_{n} = F_{n-1} + F_{n-2}\)</span> ; les valeurs initiales sont : <span class="math inline">\(F_0 = 0\)</span> et <span class="math inline">\(F_{1} = 1\)</span>).</p>
+</div>
+<!-- % ======== % -->
+<!-- % EXERCICE % -->
+<!-- % ======== % -->
+
+<div class="exframe">
+<p><strong>Exercice 5. Barre de progression</strong></p>
+Considérons le vecteur de chaînes de caractères <code>ids</code> ainsi que la liste <code>res</code> :
+</div>
+<div class="sourceCode" id="cb1106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1106-1"><a href="boucles.html#cb1106-1" aria-hidden="true"></a><span class="kw">library</span>(magrittr)</span>
+<span id="cb1106-2"><a href="boucles.html#cb1106-2" aria-hidden="true"></a>n &lt;-<span class="st"> </span><span class="dv">1000</span></span>
+<span id="cb1106-3"><a href="boucles.html#cb1106-3" aria-hidden="true"></a>ids &lt;-<span class="st"> </span></span>
+<span id="cb1106-4"><a href="boucles.html#cb1106-4" aria-hidden="true"></a><span class="st">  </span><span class="kw">str_c</span>(<span class="kw">sample</span>(LETTERS, n, <span class="dt">replace =</span> <span class="ot">TRUE</span>),</span>
+<span id="cb1106-5"><a href="boucles.html#cb1106-5" aria-hidden="true"></a>        <span class="kw">sample</span>(letters, n, <span class="dt">replace =</span> <span class="ot">TRUE</span>)) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb1106-6"><a href="boucles.html#cb1106-6" aria-hidden="true"></a><span class="st">  </span><span class="kw">unique</span>()</span>
+<span id="cb1106-7"><a href="boucles.html#cb1106-7" aria-hidden="true"></a>res &lt;-<span class="st"> </span><span class="kw">vector</span>(<span class="st">&quot;list&quot;</span>, <span class="kw">length</span>(ids))</span></code></pre></div>
+
+<div class="exframe">
+<p>Parcourir les éléments du vecteur  à l’aide d’une boucle <code>for()</code>. à chaque itération, stocker dans l’élément de la liste <code>res</code> dont la position correspond à celle de l’identifiant courant dans <code>ids</code> les informations suivantes : (i) l’identifiant courant et (ii) la somme de <span class="math inline">\(50 000\)</span> tirages aléatoires selon une <span class="math inline">\(\mathcal{N}(0,1)\)</span>.</p>
+<p>Afficher l’état d’avancement de la boucle à l’aide d’une barre de progression.</p>
+</div>
+<!-- % ======== % -->
+<!-- % EXERCICE % -->
+<!-- % ======== % -->
+
+<div class="exframe">
+<p><strong>Exercice 6. Fonctions appliquées aux éléments d’une liste</strong></p>
+<p>Soit une liste nommée <code>twittos</code>, disponible à l’adresse suivante : <a href="http://egallic.fr/Enseignement/R/Exercices/donnees/twittos.rda" class="uri">http://egallic.fr/Enseignement/R/Exercices/donnees/twittos.rda</a>. Elle contient des informations fictives sur des utilisateurs de Twitter ; chaque élément de cette liste est une liste dont les éléments sont les suivants :</p>
+<ul>
+<li><code>screen_name</code> : nom d’utilisateur ;</li>
+<li><code>nb_tweets</code> : nombre de tweets ;</li>
+<li><code>nb_followers</code> : nombre de followers ;</li>
+<li><code>nb_friends</code> : nombre de followings ;</li>
+<li><code>created_at</code> : date de création du compte ;</li>
+<li><code>location</code> : ville renseignée.</li>
+</ul>
+<ol style="list-style-type: decimal">
+<li>Importer le contenu du fichier dans la session <code>R</code> ;</li>
+<li>Utiliser la fonction <em>map</em> appropriée sur <code>twittos</code> pour récupérer une liste contenant uniquement les noms d’utilisateurs. Faire de même pour le nombre de followers, puis appliquer <code>unlist()</code> au résultat ;</li>
+<li>Créer une fonction qui, quand on lui fournit un élément de la liste <code>twittos</code>, c’est-à-dire les informations sous forme de liste d’un seul utilisateur, retourne ces informations sous forme de tableau de données. Nommer cette fonction <code>twittos_to_df</code> ;</li>
+<li>Appliquer la fonction <code>twittos_to_df()</code> au premier élément de la liste <code>twittos</code>, puis utiliser la fonction <em>map</em> appropriée pour appliquer la fonction <code>twittos_to_df()</code> à tous les éléments de la liste. Stocker ce dernier résultat dans un objet appelé <code>res</code> ;</li>
+<li>Quelle est la structure de l’objet <code>res</code> obtenu à la question précédente ?</li>
+<li>Importer le fichier disponible à cette adresse dans la session <code>R</code> : <a href="http://egallic.fr/Enseignement/R/Exercices/donnees/dates_tw.rda" class="uri">http://egallic.fr/Enseignement/R/Exercices/donnees/dates_tw.rda</a>. Il s’agit d’une liste donc chaque élément contient une liste indiquant le nom d’un utilisateur et la date de chacun de ses tweets.</li>
+<li>Appliquer la fonction <em>map</em> appropriée à la liste <code>dates_tw</code> qui vient d’être importée dans <code>R</code>, pour afficher l’heure moyenne des tweets pour chaque utilisateur, puis faire de même pour l’écart-type.</li>
+</ol>
+</div>
+<!-- % ======== % -->
+<!-- % EXERCICE % -->
+<!-- % ======== % -->
+
+<div class="exframe">
+<p><strong>Exercice 7. Fonctions appliquées aux éléments d’une matrice</strong></p>
+<ol style="list-style-type: decimal">
+<li>Créer une matrice de dimension <span class="math inline">\(100\times 5\)</span>, donc chaque vecteur colonne est composé de tirages issus d’une loi Normale centrée réduite ;</li>
+<li>Utiliser la fonction <code>apply()</code> pour calculer la moyenne des valeurs de chaque colonne ;</li>
+<li>Utiliser la fonction <code>apply()</code> pour calculer l’écart-type des valeurs de chaque colonne.</li>
+</ol>
+</div>
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-Anderson_2012_A_Quick">
+<p>Anderson, Sean. 2012. “A Quick Introduction to Plyr.” <a href="http://seananderson.ca/courses/12-plyr/plyr_2012.pdf">http://seananderson.ca/courses/12-plyr/plyr_2012.pdf</a>.</p>
+</div>
+<div id="ref-Burns_2011_R">
+<p>Burns, Patrick. 2011. “The R Inferno.” <a href="http://www.burns-stat.com/pages/Tutor/R_inferno.pdf">http://www.burns-stat.com/pages/Tutor/R_inferno.pdf</a>.</p>
+</div>
+<div id="ref-Ross_2014_Vectorization">
+<p>Ross, Noam. 2014. “Vectorization in R: Why?” <a href="http://www.noamross.net/blog/2014/4/16/vectorization-in-r--why.html">http://www.noamross.net/blog/2014/4/16/vectorization-in-r--why.html</a>.</p>
+</div>
+<div id="ref-Wickham_2011_Split">
+<p>Wickham, Hadley. 2011. “The Split-Apply-Combine Strategy for Data Analysis.”</p>
+</div>
+<div id="ref-Wickham_2014_Advanced_R_Functionals">
+<p>Wickham, Hadley. 2014. “Functionals.” In <em>Advanced <code>R</code></em>. <a href="http://adv-r.had.co.nz/Functionals.html">http://adv-r.had.co.nz/Functionals.html</a>.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="fonction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="graphiques.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf"],
+"toc": {
+"collapse": "subsubsection",
+"scroll_highlight": true
+},
+"toc_depth": 5,
+"search": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

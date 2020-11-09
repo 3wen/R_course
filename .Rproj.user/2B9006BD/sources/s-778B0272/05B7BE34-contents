@@ -13,7 +13,9 @@ lof: yes
 fontsize: 11pt
 monofont: "Source Code Pro"
 monofontoptions: "Scale=0.7"
+github-repo: 3wen/R_course
 site: bookdown::bookdown_site
+repo: https://github.com/3wen/R_course
 output:
   bookdown::gitbook:
     css: styles/style.css
@@ -27,6 +29,8 @@ output:
         after: null
       search: yes
       edit: https://github.com/3wen/R_course/edit/master/%s
+      sharing: 
+        github: yes
   bookdown::pdf_book:
     toc_depth: 4
     highlight: default
